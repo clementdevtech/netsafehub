@@ -36,6 +36,7 @@ let previousState = {};
 
   document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
+    alert('the site is still under development so most links don't work');
     clickedbar();
     addprofile();
     category();
