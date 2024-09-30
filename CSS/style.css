@@ -1,0 +1,157 @@
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+
+form {
+    width: 100%; 
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"], textarea, input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; 
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Blog list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+li{
+    background-color: #fff;
+    list-style: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li a{
+    text-decoration: none;
+}
+li button {
+    margin-left: 10px;
+}
+
+form.inline {
+    display: inline-block;
+    margin: 0;
+}
+
+.ad-placeholder {
+    border: 2px dashed #ccc;
+    padding: 10px;
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0;
+    color: #999;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.acc_dashboard{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.balance{
+   background: #fff;
+   width: 20vw;
+   height: 10vw;
+   margin-left: 1%;
+   border: 1px solid rgba(0, 0, 0, 0.5);
+   overflow: hidden;
+}
+.cash-shell{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.cash{
+    margin-left: 6%;
+    font-size: 120%;
+}
+.transaction-section{
+    margin-left: 30%;
+    display: block;
+}
+.reactions{
+    display: flex;
+}
+
+ @media screen and (max-width: 768px){
+      img{
+        width: 100%;
+        height: auto;
+      }
+      .reactions button{
+        margin: 1px;
+ }
+.acc_dashboard{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.balance{
+   width: 50vw;
+   height: 30vw;
+}
+.transaction-section{
+    margin-left: 1%;
+}
+li{
+    justify-content: space-between;
+    font-size: 80%;
+    padding: 5px;
+    margin: 10px 0;
+    gap: 2rem;
+}
+.manage-blogs{
+    display: none;
+ }
+}

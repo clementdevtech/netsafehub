@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= blog.title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><%= blog.title %></h1>
+    <p>Published on <%= blog.date.toDateString() %></p>
+  </header>
+
+  <main>
+    <article>
+      <div><%- blog.content %></div>
+    </article>
+
+    <section>
+      <h2>Reactions</h2>
+      <form class = 'reactions' method="POST" action="/blog/<%= blog.id %>/react">
+        <button type="submit" name="reaction" value="like">👍 Like (<%= reactionCounts.like || 0 %>)</button>
+        <button type="submit" name="reaction" value="love">❤️ Love (<%= reactionCounts.love || 0 %>)</button>
+        <button type="submit" name="reaction" value="haha">😂 Haha (<%= reactionCounts.haha || 0 %>)</button>
+        <button type="submit" name="reaction" value="dislike">👎 Dislike (<%= reactionCounts.dislike || 0 %>)</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Comments</h2>
+      <ul>
+        <% comments.forEach(comment => { %>
+          <li>
+            <strong><%= comment.name %></strong> <em><%= comment.date.toDateString() %></em>
+            <p><%= comment.comment %></p>
+          </li>
+        <% }) %>
+      </ul>
+
+      <h3>Add a Comment</h3>
+      <form method="POST" action="/blog/<%= blog.id %>/comment">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <textarea name="comment" placeholder="Your Comment" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
