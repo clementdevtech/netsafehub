@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <script src="https://cdn.tiny.cloud/1/06pwkkf4ng5s7m6autauhvs5gythgbmrgukmyfi69jrfbc7j/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <title>Admin Panel</title>
+    <script>
+
+function showSection(sectionId) {
+            document.querySelectorAll('.admin-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+      tinymce.init({
+        selector: 'textarea#content',
+        plugins: 'link image media code',
+        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | link image media | code',
+        automatic_uploads: true,
+        images_upload_url: '/upload-image',
+        media_upload_url: '/upload-video',
+        file_picker_types: 'image media',
+        image_advtab: true,
+        media_live_embeds: true,
+    
+        link_target_list: [
+          { title: 'Open in new tab', value: '_blank' },
+          { title: 'Open in same tab', value: '_self' }
+        ],
+    
+        images_upload_handler: function (blobInfo, success, failure) {
+    const formData = new FormData();
+    formData.append('file', blobInfo.blob(), blobInfo.filename());
+
+    fetch('/upload-image', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Image upload failed');
+        }
+        return response.json();
+    })
+    .then(result => {
+        if (result && result.filePath) {
+            // Provide the URL for the uploaded image
+            success(result.filePath);
+        } else {
+            throw new Error('Invalid server response');
+        }
+    })
+    .catch(error => {
+        console.error('Image upload error:', error);
+        failure('Image upload failed: ' + error.message);
+    });
+},
+    
+        media_upload_handler: function (blobInfo, success, failure) {
+          const formData = new FormData();
+          formData.append('file', blobInfo.blob(), blobInfo.filename());
+    
+          fetch('/upload-video', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(result => {
+            success(result.filePath);
+          })
+          .catch(error => {
+            failure('Video upload failed: ' + error.message);
+          });
+        },
+    
+        setup: function (editor) {
+          editor.on('BeforeSetContent', function (e) {
+            if (e.content.includes('[<ad><ad>]')) {
+              e.content = e.content.replace(/\[<ad><ad>\]/g, '<div class="ad-placeholder">[Ad Section]</div>');
+            }
+          });
+    
+          editor.on('SaveContent', function (e) {
+            e.content = e.content.replace(/<div class="ad-placeholder">.*?<\/div>/g, '[<ad><ad>]');
+          });
+        },
+    
+        content_style: 'img, video { max-width: 100%; height: auto; } .ad-placeholder { border: 2px dashed #ccc; padding: 10px; text-align: center; font-style: italic; }'
+      });
+    </script>
+</head>
+<body>
+    <h1>Admin Panel</h1>
+
+    <nav>
+      <div class="header">
+          <li><a href="#" onclick="showSection('accountDetails')">View Account Details</a></li>
+          <li><a href="#" onclick="showSection('withdraw')">Withdraw</a></li>
+          <li><a href="#" onclick="showSection('deposit')">Deposit</a></li>
+          <li><a href="#" onclick="showSection('add-blogs')">Add Blogs</a></li>
+          <li class="manage-blogs"><a href="#" onclick="showSection('blogs')">Manage Blogs</a></li>
+      </div>
+  </nav>
+
+<!-- Account Details Section -->
+<div id="accountDetails" class="admin-section" style="display: none;">
+  <h2>Account Details</h2>
+  <div class="acc_dashboard">
+  <div class="balance">
+  <p class="cash-shell"><strong>Balance:</strong> <p class="cash"><%= accountDetails.balance %></p></p>
+  </div>
+  <div class="transaction-section">
+  <p><strong>Transaction History:</strong></p>
+  <% if (accountDetails.transactions.length > 0) { %>
+      <ul>
+          <% accountDetails.transactions.forEach(transaction => { %>
+              <li><%= transaction.type %>: $<%= transaction.amount %> - <%= transaction.status %> on <%= transaction.created_at %></li>
+          <% }) %>
+      </ul>
+  <% } else { %>
+      <p>No transactions found.</p>
+  <% } %>
+</div>
+</div>
+</div>
+
+<!-- Withdraw Section -->
+<div id="withdraw" class="admin-section" style="display: none;">
+  <h2>Withdraw Funds</h2>
+  <form action="/withdraw" method="POST">
+    <p class="available-balance">Balance: <%= accountDetails.balance %></p>
+      <label for="withdrawAmount">Amount:</label>
+      <input type="number" name="amount" id="withdrawAmount" required>
+      <label for="withdrawMethod">Method:</label>
+      <select name="method" id="withdrawMethod" required>
+          <option value="paypal">PayPal</option>
+          <option value="mpesa">M-Pesa</option>
+          <option value="bank">Bank</option>
+      </select>
+      <button type="submit">Withdraw</button>
+  </form>
+</div>
+
+<!-- Deposit Section -->
+<div id="deposit" class="admin-section" style="display: none;">
+  <h2>Deposit Funds</h2>
+  <form action="/deposit" method="POST">
+      <label for="depositAmount">Amount:</label>
+      <input type="number" name="amount" id="depositAmount" required>
+      <label for="depositMethod">Method:</label>
+      <select name="method" id="depositMethod" required>
+          <option value="paypal">PayPal</option>
+          <option value="mpesa">M-Pesa</option>
+          <option value="bank">Bank</option>
+      </select>
+      <button type="submit">Deposit</button>
+  </form>
+</div>
+  <div id="add-blogs" class="admin-section" style="display: block;">
+  <h2>Add Blog</h2>
+
+  <form action="/admin/add" method="POST" onsubmit="tinymce.triggerSave();">
+    <input type="text" name="title" placeholder="Title" required>
+    <textarea id="content" name="content" placeholder="Content"></textarea>
+    <button type="submit">Add Blog</button>
+  </form>
+   </div>
+  <!-- Manage Blogs Section -->
+  <div id="blogs" class="admin-section" style="display: none;">
+      <h2>Manage Blogs</h2>
+      <ul>
+          <% blogs.forEach(blog => { %>
+              <li>
+                  <%= blog.title %>
+                  <button onclick="location.href='/admin/edit/<%= blog.id %>'">Edit</button>
+                  <form action="/admin/delete/<%= blog.id %>" method="POST">
+                      <button type="submit">Delete</button>
+                  </form>
+              </li>
+          <% }) %>
+      </ul>
+  </div>
+
+  <script>
+      window.onload = function() {
+          showSection('add-blogs');
+      };
+  </script>
+</body>
+</html>

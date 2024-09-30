@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+</head>
+<body>
+    <h1>Subscribe to Our Service</h1>
+    <form id="subscription-form" method="POST">
+        <h3>Select Payment Method</h3>
+        <div>
+            <input type="radio" id="paypal" name="paymentMethod" value="paypal" required>
+            <label for="paypal">PayPal</label>
+        </div>
+        <div>
+            <input type="radio" id="mpesa" name="paymentMethod" value="mpesa" required>
+            <label for="mpesa">MPESA</label>
+        </div>
+        <div>
+            <input type="radio" id="bank" name="paymentMethod" value="bank" required>
+            <label for="bank">Bank Transfer</label>
+        </div>
+
+        <button type="submit">Subscribe</button>
+    </form>
+
+    <script>
+        document.getElementById('subscription-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+            let response;
+
+            switch (paymentMethod) {
+                case 'paypal':
+                    response = await fetch('/api/subscribe/paypal', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ userId: 'user_id_example' })
+                    });
+
+                    const result = await response.json();
+                    if (result.approvalUrl) {
+                        window.location.href = result.approvalUrl;
+                    } else {
+                        alert('Error creating PayPal order');
+                    }
+                    break;
+                // Add handling for other payment methods here
+            }
+        });
+    </script>
+</body>
+</html>
