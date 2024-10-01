@@ -36,7 +36,7 @@ let previousState = {};
 
   document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
-    alert('the site is still under development so most links don't work');
+    alert('This site is still under development');
     clickedbar();
     addprofile();
     category();
@@ -150,8 +150,27 @@ const header = document.querySelector('.header');
         navLinks.classList.toggle('nav-links-active');
         Screen.classList.toggle('screen-active');
         header.classList.toggle('active-header');
+        event.stopPropagation();
     });
+     document.addEventListener('click', (event) => {
+        if (!hamburgerMenu.contains(event.target) && !navLinks.contains(event.target)) {
+            closeMenu();
+        }
+    });
+    function closeMenu() {
+        navLinks.classList.remove('nav-links-active');
+        Screen.classList.remove('screen-active');
+        header.classList.remove('active-header');
 }
+}
+
+
+
+
+
+
+
+
 
   function displayitems(){
         const currenthash = window.location.hash.split('#').pop();
@@ -249,8 +268,35 @@ const header = document.querySelector('.header');
             }
       });
    }
+
+
+
+//mobile view for the card
+   document.querySelectorAll('.more_info').forEach(morebtn=>{
+    morebtn.addEventListener('click',(event)=>{
+      event.preventDefault();
+      const parentelement = event.target.closest('div');
+      parentelement.querySelector('.info').style.display='block';
+      event.target.style.display='none'
+    });
+   });
+
+   document.querySelectorAll('.less_info').forEach(lessbtn=>{
+    lessbtn.addEventListener('click',(event)=>{
+      event.preventDefault();
+      const parentelement = event.target.closest('div');
+      parentelement.querySelector('.info').style.display='none';
+      parentelement.querySelector('.more_info').style.display='block'
+    });
+   });
+
+
+
+
+
 //........................................contact section...........................................
    document.getElementById('send-email').addEventListener('submit',(event)=>{
+    event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;

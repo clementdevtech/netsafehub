@@ -126,6 +126,7 @@ h2 {
     overflow-x: auto;
     overflow: auto;
 }
+
 .slide_show{
     overflow: hidden;
     width: auto;
@@ -134,10 +135,7 @@ h2 {
 .course-preview{
     padding: 5px;
 }
-.course-preview:hover{
-     cursor: pointer;
-     font-weight: bolder;
-}
+
 #courses{
     width: 100%;
 }
@@ -560,7 +558,7 @@ button:hover {
     background: #0056b3;
 }
 
-/* Responsive Design */
+/* ......................................Responsive Design.......................................... */
 @media (max-width: 768px) {
     body{
         width: 100%;
@@ -577,6 +575,12 @@ button:hover {
     header .nav-links li {
         margin: 10px 0;
     }
+    h2{
+        font-size: 120%;
+    }
+    .info{
+    display: none;
+}
     .active-header{
 
         background-image: url('photos/logo1.png');
@@ -611,7 +615,7 @@ button:hover {
         scroll-snap-points-x: none;
     }
     .slide_show{
-        width: 120%;
+        width: 210%;
     }
     .courses_slideshow{
         width: 100%;
@@ -650,11 +654,11 @@ button:hover {
     }
     .more_info,.less_info{
     display: flex;
-    font-size: 120%;
+    font-size: 90%;
     font-weight: bold;
 }
   .more_info:hover,.less_info:hover{
-    color: blue;
+    color: red;
 }
 
 .discussion{
