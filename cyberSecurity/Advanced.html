@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity advanced</title>
+    <script type="text/javascript" src="../course_script/function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/course_styles.css">
+    </head>
+<body>
+    <header>
+        <h1>Cybersecurity </h1>
+        <div class="rewards">
+        <div id="rewards">
+            Rewards: <span>0</span> points
+        </div>
+        <div id="hearts">
+            Hearts: <span class="heart">❤️</span> <span class="heart">❤️</span> <span class="heart">❤️</span>
+        </div>
+        </div>
+   </header>
+   <div class="course">
+<section>
+    <h2>1. Network Security</h2>
+
+    <h3 course-id="cba1" class="cba-intro">1.1 Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)</h3>
+    <div class="theory cba1">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Intrusion Detection Systems (IDS) are designed to detect malicious activities or policy violations.</p>
+        <ul>
+            <li><strong>Network-based IDS (NIDS):</strong> Monitors network traffic for suspicious activities.</li>
+            <li><strong>Host-based IDS (HIDS):</strong> Runs on individual devices to monitor system calls, file integrity, and logs.</li>
+        </ul>
+        <p>Intrusion Prevention Systems (IPS) not only detect threats but also take action to prevent them in real time.</p>
+
+        <h4>2. Functioning</h4>
+        <h5>Detection Methods:</h5>
+        <ul>
+            <li><strong>Signature-based Detection:</strong> Compares traffic against known attack signatures.</li>
+            <li><strong>Anomaly-based Detection:</strong> Flags deviations from normal network behavior.</li>
+            <li><strong>Hybrid Detection:</strong> Combines both approaches for better accuracy.</li>
+        </ul>
+
+        <h4>3. Machine Learning Applications</h4>
+        <p>Machine learning algorithms can enhance IDS/IPS:</p>
+        <ul>
+            <li><strong>Supervised Learning:</strong> Trains models using labeled datasets.</li>
+            <li><strong>Unsupervised Learning:</strong> Identifies patterns without labeled data.</li>
+            <li><strong>Reinforcement Learning:</strong> Adapts detection mechanisms based on feedback.</li>
+        </ul>
+
+        <h4>4. Configuration and Best Practices</h4>
+        <ul>
+            <li>Tune sensitivity to minimize false positives.</li>
+            <li>Regularly update signatures and rules.</li>
+            <li>Integrate with the incident response plan.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba1">
+        <div class="question">
+            <label for="q1"><h5>Question:</h5> What type of detection method flags deviations from normal behavior?</label><br>
+            <form id="q1" class="task-form">
+                <input type="radio" name="task1" value="correct"> Anomaly-based Detection<br>
+                <input type="radio" name="task1" value="wrong"> Signature-based Detection<br>
+                <span class="feedback" id="q1-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba1 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+    <h3 course-id="cba2" class="locked">1.2 Firewalls and VPNs</h3>
+    <div class="theory cba2">
+        <div class="course-container">
+        <h4>1. Firewalls</h4>
+        <h5>Types of Firewalls:</h5>
+        <ul>
+            <li><strong>Packet Filtering Firewalls:</strong> Inspects packets at the network layer.</li>
+            <li><strong>Stateful Inspection Firewalls:</strong> Monitors active connections.</li>
+            <li><strong>Next-Generation Firewalls (NGFW):</strong> Includes deep packet inspection and application awareness.</li>
+            <li><strong>Application-Aware Firewalls:</strong> Controls traffic at the application layer.</li>
+        </ul>
+
+        <h4>2. Functionality</h4>
+        <ul>
+            <li><strong>Traffic Control:</strong> Enforces policies for allowing or blocking traffic.</li>
+            <li><strong>Logging and Monitoring:</strong> Provides logs for forensic analysis.</li>
+        </ul>
+
+        <h4>3. VPNs (Virtual Private Networks)</h4>
+        <p>VPNs secure communication by encrypting data, ensuring privacy and data integrity.</p>
+        <h5>Types of VPNs:</h5>
+        <ul>
+            <li><strong>Site-to-Site VPN:</strong> Connects entire networks.</li>
+            <li><strong>Remote Access VPN:</strong> Allows users to connect remotely.</li>
+        </ul>
+        <h5>Protocols:</h5>
+        <ul>
+            <li><strong>IPSec:</strong> Secures IP communications.</li>
+            <li><strong>OpenVPN:</strong> An open-source protocol using SSL/TLS.</li>
+            <li><strong>L2TP:</strong> Often combined with IPSec for encryption.</li>
+        </ul>
+
+        <h4>4. Best Practices</h4>
+        <ul>
+            <li>Regularly update VPN software.</li>
+            <li>Use strong authentication methods like MFA.</li>
+            <li>Encrypt all traffic to maintain confidentiality.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba2">
+        <div class="question">
+            <label for="q2"><h5>Question:</h5> What is a primary purpose of VPNs?</label><br>
+            <form id="q2" class="task-form">
+                <input type="radio" name="task2" value="correct"> To secure communication over the internet<br>
+                <input type="radio" name="task2" value="wrong"> To increase network speed<br>
+                <span class="feedback" id="q2-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba2 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba3" class="locked">1.3 Network Protocols and Architecture</h3>
+    <div class="theory">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Network protocols are rules governing data transmission. Each serves specific functions with different security implications.</p>
+
+        <h4>2. Common Network Protocols:</h4>
+        <ul>
+            <li><strong>TCP/IP:</strong> The foundational protocol suite for the internet.</li>
+            <li><strong>IP Addressing:</strong> IPv4 and IPv6 addressing, including subnetting.</li>
+            <li><strong>TCP/UDP:</strong> TCP ensures reliable communication; UDP is connectionless.</li>
+            <li><strong>HTTP/HTTPS:</strong> HTTP is for web communication; HTTPS adds SSL/TLS security.</li>
+            <li><strong>FTP/SFTP:</strong> Used for file transfers; SFTP encrypts data.</li>
+            <li><strong>DNS:</strong> Translates domain names into IP addresses.</li>
+        </ul>
+
+        <h4>3. Network Architecture Principles</h4>
+        <ul>
+            <li><strong>Defense in Depth:</strong> Layering multiple security measures.</li>
+            <li><strong>Segmentation and VLANs:</strong> Dividing networks to enhance security.</li>
+            <li><strong>Zero Trust Architecture:</strong> Always verify, never trust.</li>
+        </ul>
+
+        <h4>4. Security Implications of Protocols</h4>
+        <p>Understanding common vulnerabilities associated with each protocol is crucial for security.</p>
+        <ul>
+            <li><strong>Protocol Vulnerabilities:</strong> Replay attacks, man-in-the-middle attacks.</li>
+            <li><strong>Security Enhancements:</strong> Use secure versions and strong encryption.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id = "cba3">
+        <div class="question">
+            <label for="q3"><h5>Question:</h5> What architecture principle involves layering multiple security measures?</label><br>
+            <form id="q3" class="task-form">
+                <input type="radio" name="task3" value="correct"> Defense in Depth<br>
+                <input type="radio" name="task3" value="wrong"> Zero Trust Architecture<br>
+                <span class="feedback" id="q3-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba3 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+
+<section>
+    <h2>2. Application Security</h2>
+
+    <h3 course-id ="cba4" class="locked">2.1 Secure Coding Practices</h3>
+    <div class="theory cba4">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Secure coding practices are essential to prevent vulnerabilities that attackers can exploit. By following these best practices, developers can reduce the risk of security flaws in their applications.</p>
+
+        <h4>2. Common Vulnerabilities and Mitigations</h4>
+        <ul>
+            <li><strong>Input Validation:</strong>
+                <ul>
+                    <li><strong>Best Practice:</strong> Validate and sanitize all user inputs.</li>
+                    <li><strong>Mitigation:</strong> Use whitelisting over blacklisting to allow only expected input formats.</li>
+                </ul>
+            </li>
+            <li><strong>Output Encoding:</strong>
+                <ul>
+                    <li><strong>Best Practice:</strong> Encode outputs to prevent cross-site scripting (XSS) attacks.</li>
+                    <li><strong>Mitigation:</strong> Use appropriate encoding functions for different contexts.</li>
+                </ul>
+            </li>
+            <li><strong>Authentication and Session Management:</strong>
+                <ul>
+                    <li><strong>Best Practice:</strong> Implement secure authentication mechanisms.</li>
+                    <li><strong>Mitigation:</strong> Use secure cookies and implement proper session timeouts.</li>
+                </ul>
+            </li>
+            <li><strong>Error Handling:</strong>
+                <ul>
+                    <li><strong>Best Practice:</strong> Do not reveal sensitive information in error messages.</li>
+                    <li><strong>Mitigation:</strong> Use generic error messages for users while logging detailed errors for developers.</li>
+                </ul>
+            </li>
+            <li><strong>Secure Dependencies:</strong>
+                <ul>
+                    <li><strong>Best Practice:</strong> Regularly update libraries and frameworks.</li>
+                    <li><strong>Mitigation:</strong> Use tools to identify vulnerable dependencies.</li>
+                </ul>
+            </li>
+            <li><strong>Least Privilege Principle:</strong>
+                <ul>
+                    <li><strong>Best Practice:</strong> Grant users the minimum permissions necessary.</li>
+                    <li><strong>Mitigation:</strong> Regularly review and adjust permissions.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Coding Standards and Guidelines</h4>
+        <p>Adopt language-specific coding standards (e.g., OWASP’s Secure Coding Practices) and conduct code reviews focused on security.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task_id="cba4">
+        <div class="question">
+            <label for="q4"><h5>Question:</h5> What is the best practice for input validation?</label><br>
+            <form id="q4" class="task-form">
+                <input type="radio" name="task4" value="correct"> Validate and sanitize all user inputs<br>
+                <input type="radio" name="task4" value="wrong"> Trust all user inputs<br>
+                <span class="feedback" id="q1-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba4 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba5" class="locked">2.2 Web Application Vulnerabilities</h3>
+    <div class="theory cba5">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Web applications are frequently targeted by attackers. Understanding the OWASP Top Ten vulnerabilities is crucial for developers and security professionals.</p>
+
+        <h4>2. OWASP Top Ten Vulnerabilities</h4>
+        <ul>
+            <li><strong>Injection:</strong> 
+                <ul>
+                    <li><strong>Description:</strong> Occurs when untrusted data is sent as part of a command or query.</li>
+                    <li><strong>Mitigation:</strong> Use parameterized queries and prepared statements.</li>
+                </ul>
+            </li>
+            <li><strong>Broken Authentication:</strong>
+                <ul>
+                    <li><strong>Description:</strong> Flaws that allow attackers to compromise user accounts.</li>
+                    <li><strong>Mitigation:</strong> Implement secure authentication mechanisms.</li>
+                </ul>
+            </li>
+            <li><strong>Sensitive Data Exposure:</strong>
+                <ul>
+                    <li><strong>Description:</strong> Inadequate protection of sensitive data.</li>
+                    <li><strong>Mitigation:</strong> Use encryption for data at rest and in transit.</li>
+                </ul>
+            </li>
+            <li><strong>XML External Entities (XXE):</strong>
+                <ul>
+                    <li><strong>Description:</strong> An attack that exploits XML parsers.</li>
+                    <li><strong>Mitigation:</strong> Disable external entity processing.</li>
+                </ul>
+            </li>
+            <li><strong>Broken Access Control:</strong>
+                <ul>
+                    <li><strong>Description:</strong> Failure to enforce proper access controls.</li>
+                    <li><strong>Mitigation:</strong> Implement role-based access control (RBAC).</li>
+                </ul>
+            </li>
+            <li><strong>Security Misconfiguration:</strong>
+                <ul>
+                    <li><strong>Description:</strong> Default settings and misconfigured security headers.</li>
+                    <li><strong>Mitigation:</strong> Regularly review security configurations.</li>
+                </ul>
+            </li>
+            <li><strong>Cross-Site Scripting (XSS):</strong>
+                <ul>
+                    <li><strong>Description:</strong> Allows attackers to inject malicious scripts.</li>
+                    <li><strong>Mitigation:</strong> Use output encoding and Content Security Policy (CSP).</li>
+                </ul>
+            </li>
+            <li><strong>Insecure Deserialization:</strong>
+                <ul>
+                    <li><strong>Description:</strong> Vulnerabilities arising from insecure deserialization.</li>
+                    <li><strong>Mitigation:</strong> Avoid serialization of sensitive data.</li>
+                </ul>
+            </li>
+            <li><strong>Using Components with Known Vulnerabilities:</strong>
+                <ul>
+                    <li><strong>Description:</strong> Utilizing libraries with known vulnerabilities.</li>
+                    <li><strong>Mitigation:</strong> Regularly update dependencies.</li>
+                </ul>
+            </li>
+            <li><strong>Insufficient Logging and Monitoring:</strong>
+                <ul>
+                    <li><strong>Description:</strong> Lack of proper logging can delay detection.</li>
+                    <li><strong>Mitigation:</strong> Implement robust logging practices.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id ="cba5">
+        <div class="question">
+            <label for="q5">Question: What is a common mitigation for SQL Injection?</label><br>
+            <form id="q5" class="task-form">
+                <input type="radio" name="task5" value="correct"> Use parameterized queries<br>
+                <input type="radio" name="task5" value="wrong"> Use dynamic queries<br>
+                <span class="feedback" id="q5-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba5 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+    <h3 course-id="cba6" class="locked">2.3 Secure Software Development Lifecycle (SDLC)</h3>
+    <div class="theory cba6">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>The Secure Software Development Lifecycle (SDLC) integrates security at every phase of the software development process.</p>
+
+        <h4>2. SDLC Phases</h4>
+        <ul>
+            <li><strong>Planning:</strong> Identify security requirements and establish security policies.</li>
+            <li><strong>Requirements Analysis:</strong> Define security requirements and conduct threat modeling.</li>
+            <li><strong>Design:</strong> Implement security design principles and review for security flaws.</li>
+            <li><strong>Development:</strong> Follow secure coding practices and use code analysis tools.</li>
+            <li><strong>Testing:</strong> Conduct security testing, including vulnerability assessments.</li>
+            <li><strong>Deployment:</strong> Ensure secure configurations and implement security controls.</li>
+            <li><strong>Maintenance:</strong> Continuously monitor for vulnerabilities and patch software.</li>
+            <li><strong>Disposal:</strong> Follow secure data disposal methods.</li>
+        </ul>
+
+        <h4>3. Best Practices</h4>
+        <ul>
+            <li><strong>Security Training:</strong> Provide developers with security training.</li>
+            <li><strong>Regular Audits and Assessments:</strong> Conduct audits to ensure compliance.</li>
+            <li><strong>Feedback Loop:</strong> Establish a feedback loop for continuous improvement.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba6">
+        <div class="question">
+            <label for="q6"><h5>Question:</h5> What phase of the SDLC involves conducting threat modeling?</label><br>
+            <form id="q6" class="task-form">
+                <input type="radio" name="task6" value="correct"> Requirements Analysis<br>
+                <input type="radio" name="task6" value="wrong"> Design<br>
+                <span class="feedback" id="q6-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba6 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<section>
+    <h2>3. Threat Intelligence and Analysis</h2>
+
+    <h3 course-id="cba7">3.1 Understanding Threat Landscapes</h3>
+    <div class="theory cba7">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Understanding threat landscapes involves analyzing the evolving tactics, techniques, and procedures (TTPs) that attackers use to compromise systems and data. This analysis helps organizations proactively defend against potential threats.</p>
+
+        <h4>2. Components of Threat Intelligence</h4>
+        <ul>
+            <li><strong>Threat Actors:</strong>
+                <ul>
+                    <li><strong>Types:</strong> Classify threat actors based on motivations and capabilities (e.g., nation-states, cybercriminals).</li>
+                    <li><strong>Profiles:</strong> Develop profiles of known threat actors to understand their goals and methods.</li>
+                </ul>
+            </li>
+            <li><strong>Attack Vectors:</strong>
+                <ul>
+                    <li><strong>Common Vectors:</strong> Identify common attack vectors (e.g., phishing, malware).</li>
+                    <li><strong>Emerging Vectors:</strong> Stay updated on new vectors due to technological advancements.</li>
+                </ul>
+            </li>
+            <li><strong>Tactics, Techniques, and Procedures (TTPs):</strong>
+                <ul>
+                    <li><strong>Tactics:</strong> General strategies used by attackers.</li>
+                    <li><strong>Techniques:</strong> Specific methods to execute tactics.</li>
+                    <li><strong>Procedures:</strong> Detailed steps for performing a technique.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Threat Intelligence Sources</h4>
+        <ul>
+            <li><strong>Open Source Intelligence (OSINT):</strong> Utilize publicly available data to gather information about threats.</li>
+            <li><strong>Commercial Intelligence:</strong> Leverage platforms providing actionable intelligence reports.</li>
+            <li><strong>Internal Intelligence:</strong> Analyze logs and incidents from within your organization.</li>
+        </ul>
+
+        <h4>4. Threat Intelligence Frameworks</h4>
+        <ul>
+            <li><strong>MITRE ATT&CK:</strong> A framework categorizing attacker behavior.</li>
+            <li><strong>Diamond Model of Intrusion Analysis:</strong> A model to understand relationships between adversaries and victims.</li>
+        </ul>
+
+        <h4>5. Analysis Techniques</h4>
+        <ul>
+            <li><strong>Link Analysis:</strong> Visualize relationships between actors and targets.</li>
+            <li><strong>Behavioral Analysis:</strong> Analyze malware behavior to predict future actions.</li>
+            <li><strong>Threat Hunting:</strong> Proactively search for threats using intelligence.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id = "cba7">
+        <div class="question">
+            <label for="q7"><h5>Question:</h5> What is the purpose of analyzing attack vectors?</label><br>
+            <form id="q7" class="task-form">
+                <input type="radio" name="task7" value="correct"> To identify how attacks are exploited<br>
+                <input type="radio" name="task7" value="wrong"> To create new attack methods<br>
+                <span class="feedback" id="q7-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba7 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+    <h3 course-id="cba8" class="locked">3.2 Analyzing Malware and Performing Reverse Engineering</h3>
+    <div class="theory cba8">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Malware analysis is critical for understanding how malicious software operates and how to defend against it. Reverse engineering helps uncover malware capabilities and intentions.</p>
+
+        <h4>2. Types of Malware</h4>
+        <ul>
+            <li><strong>Viruses:</strong> Self-replicating malware that attaches to legitimate programs.</li>
+            <li><strong>Worms:</strong> Standalone malware that spreads across networks.</li>
+            <li><strong>Trojans:</strong> Malware disguised as legitimate software.</li>
+            <li><strong>Ransomware:</strong> Encrypts data and demands payment for decryption.</li>
+        </ul>
+
+        <h4>3. Reverse Engineering Tools</h4>
+        <ul>
+            <li><strong>IDA Pro:</strong> An interactive disassembler and debugger.
+                <ul>
+                    <li><strong>Disassembly:</strong> Converts binary code into assembly language.</li>
+                    <li><strong>Graph View:</strong> Visualizes control flow.</li>
+                    <li><strong>Scripting:</strong> Automates tasks using IDAPython.</li>
+                </ul>
+            </li>
+            <li><strong>Ghidra:</strong> A free reverse engineering tool developed by the NSA.
+                <ul>
+                    <li><strong>Decompiler:</strong> Converts machine code into a high-level representation.</li>
+                    <li><strong>Collaboration:</strong> Supports multiple users working on the same project.</li>
+                    <li><strong>Cross-Platform Support:</strong> Available on various operating systems.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>4. Dynamic Analysis Techniques</h4>
+        <ul>
+            <li><strong>Sandboxing:</strong> Run malware in isolated environments to observe behavior.</li>
+            <li><strong>Behavioral Analysis:</strong> Monitor system changes during execution.</li>
+            <li><strong>Network Traffic Analysis:</strong> Examine network traffic generated by malware.</li>
+        </ul>
+
+        <h4>5. Static Analysis Techniques</h4>
+        <ul>
+            <li><strong>Binary Analysis:</strong> Examine binary code without execution.</li>
+            <li><strong>Signature-Based Detection:</strong> Use tools to identify known malicious signatures.</li>
+        </ul>
+
+        <h4>6. Malware Documentation and Reporting</h4>
+        <p>Create detailed reports on malware behavior and indicators of compromise (IOCs) to help detect and prevent future infections.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id ="cba8">
+        <div class="question">
+            <label for="q8"><h5>Question:</h5> What is the purpose of reverse engineering malware?</label><br>
+            <form id="q8" class="task-form">
+                <input type="radio" name="task8" value="correct"> To uncover its capabilities and intentions<br>
+                <input type="radio" name="task8" value="wrong"> To promote its use<br>
+                <span class="feedback" id="q8-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba8 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+</section>
+
+<section>
+    <h2>4. Cryptography</h2>
+
+    <h3 course-id="cba9" class="locked">4.1 Encryption Algorithms and Their Applications</h3>
+    <div class="theory cba9">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Encryption is a fundamental aspect of cybersecurity, providing confidentiality by transforming plaintext into ciphertext. Understanding various encryption algorithms helps in selecting appropriate methods for different security needs.</p>
+
+        <h4>2. Types of Encryption Algorithms</h4>
+        <ul>
+            <li><strong>Symmetric Encryption:</strong>
+                <ul>
+                    <li><strong>Definition:</strong> Uses the same key for both encryption and decryption.</li>
+                    <li><strong>Examples:</strong>
+                        <ul>
+                            <li><strong>AES (Advanced Encryption Standard):</strong> Widely used; offers key sizes of 128, 192, and 256 bits.</li>
+                            <li><strong>DES (Data Encryption Standard):</strong> An older standard, now considered insecure.</li>
+                            <li><strong>Blowfish:</strong> A fast symmetric cipher with variable-length keys (32-448 bits).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Limitations:</strong> Key distribution challenge; if the key is compromised, all encrypted data is at risk.</li>
+                </ul>
+            </li>
+            <li><strong>Asymmetric Encryption:</strong>
+                <ul>
+                    <li><strong>Definition:</strong> Uses a pair of keys (public and private).</li>
+                    <li><strong>Examples:</strong>
+                        <ul>
+                            <li><strong>RSA (Rivest-Shamir-Adleman):</strong> Widely used for secure data transmission.</li>
+                            <li><strong>ECC (Elliptic Curve Cryptography):</strong> Offers similar security to RSA with smaller key sizes.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Limitations:</strong> Slower than symmetric algorithms; requires larger key sizes for security.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Applications and Limitations</h4>
+        <ul>
+            <li><strong>Applications:</strong>
+                <ul>
+                    <li>Data at Rest: Encryption of stored data (e.g., hard drives).</li>
+                    <li>Data in Transit: Protecting data as it moves across networks (e.g., HTTPS).</li>
+                    <li>Digital Signatures: Ensuring data integrity and authenticity.</li>
+                </ul>
+            </li>
+            <li><strong>Limitations:</strong>
+                <ul>
+                    <li>Key Management: Relies heavily on secure key management practices.</li>
+                    <li>Performance: Some algorithms may introduce latency in resource-constrained environments.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+</div>
+
+    <h3 course-id="cba10" class="locked">4.2 Key Management Practices</h3>
+    <div class="theory cba10">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Key management involves the creation, distribution, storage, and destruction of cryptographic keys. Effective key management is crucial for maintaining the security of cryptographic systems.</p>
+
+        <h4>2. Key Lifecycle Management</h4>
+        <ul>
+            <li><strong>Key Generation:</strong> Use strong, random sources for generating keys.</li>
+            <li><strong>Key Distribution:</strong> Implement secure methods for distributing keys (e.g., PKI).</li>
+            <li><strong>Key Storage:</strong> Store keys securely using HSMs or encrypted storage solutions.</li>
+            <li><strong>Key Rotation:</strong> Regularly update keys to limit exposure if compromised.</li>
+            <li><strong>Key Revocation:</strong> Establish processes to revoke and replace compromised keys.</li>
+        </ul>
+
+        <h4>3. Best Practices</h4>
+        <ul>
+            <li>Use Strong Keys: Ensure keys are of adequate length and complexity (e.g., 256 bits for symmetric keys).</li>
+            <li>Access Control: Restrict access to keys to authorized personnel only.</li>
+            <li>Audit and Monitoring: Regularly audit key management practices and monitor for unauthorized access.</li>
+        </ul>
+    </div>
+
+    <h3 course-id ="cba11" class="locked">4.3 Digital Signatures and Certificates</h3>
+    <div class="theory cba11">
+        <h4>1. Overview</h4>
+        <p>Digital signatures provide a means of verifying the authenticity and integrity of a message or document. Digital certificates, issued by a trusted certificate authority (CA), facilitate secure communication.</p>
+
+        <h4>2. Digital Signatures</h4>
+        <p><strong>How They Work:</strong></p>
+        <ul>
+            <li>A digital signature is created by hashing the message and encrypting the hash with the sender's private key.</li>
+            <li>The recipient verifies the signature by decrypting it with the sender's public key and comparing the resulting hash.</li>
+        </ul>
+        <p><strong>Applications:</strong></p>
+        <ul>
+            <li>Email Signing: Ensuring authenticity of email communications.</li>
+            <li>Document Signing: Verifying integrity and authenticity of electronic documents.</li>
+        </ul>
+
+        <h4>3. Digital Certificates</h4>
+        <p><strong>Role:</strong> Digital certificates link a public key to an entity and are issued by trusted CAs.</p>
+        <p><strong>Components:</strong></p>
+        <ul>
+            <li>Subject: The entity associated with the certificate.</li>
+            <li>Public Key: The public key for the corresponding private key.</li>
+            <li>CA Signature: The signature of the issuing CA, ensuring the certificate’s authenticity.</li>
+        </ul>
+        <p><strong>Usage:</strong></p>
+        <ul>
+            <li>SSL/TLS: Securing communications over the internet.</li>
+            <li>Code Signing: Verifying the integrity of software.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+</div>
+
+    <h3 course-id="cba12" class="locked">4.4 Post-Quantum Cryptography</h3>
+    <div class="theory cba12">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Post-quantum cryptography refers to algorithms designed to be secure against threats posed by quantum computers, which could break widely used algorithms like RSA and ECC.</p>
+
+        <h4>2. Emerging Algorithms</h4>
+        <ul>
+            <li><strong>Lattice-Based Cryptography:</strong> Utilizes mathematical structures known as lattices.</li>
+            <li><strong>Code-Based Cryptography:</strong> Based on error-correcting codes.</li>
+            <li><strong>Hash-Based Cryptography:</strong> Utilizes hash functions to create secure digital signatures.</li>
+        </ul>
+
+        <h4>3. Importance of Post-Quantum Readiness</h4>
+        <ul>
+            <li>Transition Planning: Organizations should begin planning for the transition to quantum-resistant algorithms.</li>
+            <li>Research and Development: Continued research into post-quantum algorithms is essential.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <h3 course-id ="cba13">4.5 Implementation Attacks</h3>
+    <div class="theory cba13">
+        <h4>1. Overview</h4>
+        <p>Implementation attacks target the practical execution of cryptographic algorithms, exploiting weaknesses in the implementation.</p>
+
+        <h4>2. Types of Implementation Attacks</h4>
+        <ul>
+            <li><strong>Side-Channel Attacks:</strong> Exploit information gained from the physical implementation (e.g., timing, power consumption).</li>
+            <li><strong>Fault Injection Attacks:</strong> Induce faults to force the system into an erroneous state, potentially leaking sensitive information.</li>
+        </ul>
+
+        <h4>3. Mitigation Strategies</h4>
+        <ul>
+            <li><strong>Constant-Time Algorithms:</strong> Implement algorithms that run in constant time to avoid timing side channels.</li>
+            <li><strong>Power Analysis Countermeasures:</strong> Use techniques to obscure power consumption patterns.</li>
+            <li><strong>Redundancy and Error Correction:</strong> Utilize redundancy to detect and mitigate the effects of fault attacks.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+</div>
+
+</section>
+
+<section>
+    <h2>5. Incident Response and Forensics</h2>
+
+    <h3 course-id = "cba14" class="locked">5.1 Incident Detection and Response Strategies</h3>
+    <div class="theory cba14">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Incident response is the process of preparing for, detecting, and effectively responding to cybersecurity incidents. A well-defined strategy minimizes damage and supports quick recovery.</p>
+
+        <h4>2. Incident Response Life Cycle</h4>
+        <ul>
+            <li><strong>Preparation:</strong>
+                <ul>
+                    <li>Develop a detailed incident response plan outlining roles, responsibilities, and procedures.</li>
+                    <li>Conduct regular training and simulations to ensure the response team is well-prepared.</li>
+                    <li>Implement security measures and tools to monitor and detect incidents proactively.</li>
+                </ul>
+            </li>
+            <li><strong>Detection and Analysis:</strong>
+                <ul>
+                    <li>Utilize Security Information and Event Management (SIEM) systems to aggregate and analyze log data for potential incidents.</li>
+                    <li>Deploy Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS) to identify suspicious activities.</li>
+                    <li>Establish internal and external reporting processes for incidents.</li>
+                </ul>
+            </li>
+            <li><strong>Containment, Eradication, and Recovery:</strong>
+                <ul>
+                    <li><strong>Containment:</strong> Limit the incident’s impact by isolating affected systems.</li>
+                    <li><strong>Eradication:</strong> Identify and eliminate the root cause of the incident (e.g., malware removal).</li>
+                    <li><strong>Recovery:</strong> Restore systems to normal operations while monitoring for any signs of residual issues.</li>
+                </ul>
+            </li>
+            <li><strong>Post-Incident Activity:</strong>
+                <ul>
+                    <li>Conduct a post-incident review to analyze the response and identify areas for improvement.</li>
+                    <li>Update the incident response plan based on lessons learned and emerging threats.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Best Practices</h4>
+        <ul>
+            <li>Establish a clear communication plan for stakeholders during incidents.</li>
+            <li>Utilize threat intelligence to enhance detection and response capabilities.</li>
+            <li>Regularly review and update incident response procedures and technologies.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id ="cba14">
+        <div class="question" >
+            <label for="q14"><h5>Question:</h5> What is the primary purpose of the incident response life cycle?</label><br>
+            <form id="q14" class="task-form">
+                <input type="radio" name="task14" value="correct"> To prepare for, detect, and respond to incidents<br>
+                <input type="radio" name="task14" value="wrong"> To conduct security audits<br>
+                <span class="feedback" id="q14-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba14 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+    <h3 course-id="cba15" class="locked">5.2 Digital Forensics Methodologies</h3>
+    <div class="theory cba15">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Digital forensics investigates digital devices and systems to collect, preserve, and analyze evidence related to cybersecurity incidents or crimes.</p>
+
+        <h4>2. Forensic Process</h4>
+        <ul>
+            <li><strong>Evidence Collection:</strong>
+                <ul>
+                    <li>Follow proper procedures to maintain evidence integrity (e.g., chain of custody).</li>
+                    <li>Use write-blockers to prevent data alteration during collection.</li>
+                    <li>Collect evidence from various sources (e.g., hard drives, cloud storage, network logs).</li>
+                </ul>
+            </li>
+            <li><strong>Evidence Preservation:</strong>
+                <ul>
+                    <li>Create bit-for-bit images of storage devices to preserve the original data.</li>
+                    <li>Store evidence securely to prevent tampering.</li>
+                </ul>
+            </li>
+            <li><strong>Analysis:</strong>
+                <ul>
+                    <li>Use forensic tools to analyze the collected data for indicators of compromise (IoCs).</li>
+                    <li>Recover deleted files, examine logs, and analyze artifacts (e.g., browser history, emails) to reconstruct events.</li>
+                    <li>Document findings meticulously to support potential legal proceedings.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Challenges in Digital Forensics</h4>
+        <ul>
+            <li>Data encryption and obfuscation can complicate evidence analysis.</li>
+            <li>Large volumes of data necessitate efficient processing techniques.</li>
+            <li>Maintaining the integrity and authenticity of evidence is crucial.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba15">
+        <div class="question">
+            <label for="q15"><h5>Question:</h5> What is a major challenge in digital forensics?</label><br>
+            <form id="q15" class="task-form">
+                <input type="radio" name="task15" value="correct"> Data encryption complicating evidence analysis<br>
+                <input type="radio" name="task15" value="wrong"> Too few digital devices to analyze<br>
+                <span class="feedback" id="q15-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba15 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+    <h3 course-id ="cba16" class="locked">5.3 Forensic Analysis Tools</h3>
+    <div class="theory cba16">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Forensic analysis tools are essential for conducting investigations, enabling systematic collection, preservation, and analysis of digital evidence.</p>
+
+        <h4>2. Popular Forensic Tools</h4>
+        <ul>
+            <li><strong>EnCase:</strong>
+                <ul>
+                    <li>Widely used for acquiring and analyzing digital evidence.</li>
+                    <li>Supports multiple file systems and operating systems, with remote acquisition capabilities.</li>
+                </ul>
+            </li>
+            <li><strong>FTK (Forensic Toolkit):</strong>
+                <ul>
+                    <li>Offers powerful search and analysis features, including keyword searching and file signature analysis.</li>
+                    <li>User-friendly interface for forensic investigators, with tools for email analysis and password recovery.</li>
+                </ul>
+            </li>
+            <li><strong>Sleuth Kit:</strong>
+                <ul>
+                    <li>Open-source collection of command-line tools for forensic analysis of disk images and file systems.</li>
+                    <li>Capabilities include analyzing file systems, recovering deleted files, and examining file metadata.</li>
+                </ul>
+            </li>
+            <li><strong>X1 Social Discovery:</strong>
+                <ul>
+                    <li>Specialized for collecting and analyzing social media and online content.</li>
+                    <li>Useful for investigations involving online interactions and communications.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Best Practices for Tool Usage</h4>
+        <ul>
+            <li>Keep forensic tools updated to ensure compatibility with the latest operating systems and file systems.</li>
+            <li>Familiarize yourself with multiple tools to leverage their unique features.</li>
+            <li>Document all actions taken during the forensic investigation for transparency and reproducibility.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id = "cba16">
+        <div class="question">
+            <label for="q16"><h5>Question:</h5> What is a key consideration when using forensic tools?</label><br>
+            <form id="q16" class="task-form">
+                <input type="radio" name="task16" value="correct"> Keeping tools updated for compatibility<br>
+                <input type="radio" name="task16" value="wrong"> Using only one tool for all cases<br>
+                <span class="feedback" id="q16-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba16 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba17" class="locked">5.4 Threat Intelligence Platforms (TIPs)</h3>
+    <div class="theory cba17">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Threat Intelligence Platforms aggregate, analyze, and disseminate threat intelligence to enhance an organization's incident response capabilities.</p>
+
+        <h4>2. Functions of TIPs</h4>
+        <ul>
+            <li><strong>Aggregation:</strong> Collect data from various sources, including internal logs, open-source intelligence (OSINT), commercial feeds, and community sharing platforms.</li>
+            <li><strong>Analysis:</strong> Correlate and analyze threat data to identify trends, emerging threats, and vulnerabilities specific to the organization.</li>
+            <li><strong>Sharing:</strong> Facilitate the sharing of threat intelligence with other organizations, industry peers, or government entities to enhance collective defense.</li>
+        </ul>
+
+        <h4>3. Benefits of Using TIPs</h4>
+        <ul>
+            <li><strong>Enhanced Incident Response:</strong> Provides context to incidents by correlating them with known threats and vulnerabilities.</li>
+            <li><strong>Proactive Defense:</strong> Enables organizations to identify and mitigate threats before they result in incidents.</li>
+            <li><strong>Operational Efficiency:</strong> Automates data collection and analysis, allowing security teams to focus on more critical tasks.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id ="cba18">
+        <div class="question">
+            <label for="q18"><h5>Question:</h5> What is one key benefit of using Threat Intelligence Platforms?</label><br>
+            <form id="q18" class="task-form">
+                <input type="radio" name="task18" value="correct"> Proactive defense against emerging threats<br>
+                <input type="radio" name="task18" value="wrong"> Increased costs for incident response<br>
+                <span class="feedback" id="q18-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba18 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    <section>
+    <h2>6. Governance, Risk, and Compliance (GRC)</h2>
+
+    <h3 course-id="cba19" class="locked">6.1 Security Policies and Frameworks</h3>
+    <div class="theory cba19">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Security policies and frameworks provide a structured approach for organizations to manage information security, risk, and compliance. They set the foundation for an organization’s security posture and guide decision-making.</p>
+
+        <h4>2. Key Frameworks</h4>
+        <ul>
+            <li><strong>NIST Cybersecurity Framework (CSF):</strong>
+                <ul>
+                    <li>Developed by the National Institute of Standards and Technology, the NIST CSF provides a flexible framework for managing cybersecurity risks.</li>
+                    <li>It consists of five core functions: Identify, Protect, Detect, Respond, and Recover.</li>
+                    <li>Organizations can customize the framework to align with their specific risk management practices and regulatory requirements.</li>
+                </ul>
+            </li>
+            <li><strong>ISO/IEC 27001:</strong>
+                <ul>
+                    <li>An international standard for information security management systems (ISMS) that provides a systematic approach to managing sensitive company information.</li>
+                    <li>ISO 27001 emphasizes continuous improvement and risk management, requiring organizations to assess their information security risks and implement appropriate controls.</li>
+                    <li>Certification to ISO 27001 demonstrates a commitment to information security and can enhance an organization’s reputation.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Best Practices</h4>
+        <ul>
+            <li>Regularly review and update security policies to reflect changing threats and business needs.</li>
+            <li>Involve stakeholders from various departments (IT, HR, Legal) in policy development and review.</li>
+            <li>Ensure that policies are communicated effectively and provide training to staff on compliance.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id ="cba19">
+        <div class="question">
+            <label for="q19"><h5>Question:</h5> What is the primary purpose of security policies and frameworks?</label><br>
+            <form id="q19" class="task-form">
+                <input type="radio" name="task19" value="correct"> To manage information security, risk, and compliance<br>
+                <input type="radio" name="task19" value="wrong"> To create financial reports<br>
+                <span class="feedback" id="q19-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba19 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba20" class="locked">6.2 Risk Management Strategies</h3>
+    <div class="theory cba20">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Risk management involves identifying, assessing, and mitigating risks that could adversely affect an organization’s operations and assets.</p>
+
+        <h4>2. Risk Assessment Methodologies</h4>
+        <ul>
+            <li><strong>Qualitative Risk Assessment:</strong>
+                <ul>
+                    <li>Focuses on the subjective evaluation of risks based on factors such as impact and likelihood.</li>
+                    <li>Often uses risk matrices to categorize risks into high, medium, and low levels.</li>
+                </ul>
+            </li>
+            <li><strong>Quantitative Risk Assessment:</strong>
+                <ul>
+                    <li>Involves numerical analysis to quantify risks, often using statistical methods and data analysis.</li>
+                    <li>Provides more objective insights into the potential financial impact of risks.</li>
+                </ul>
+            </li>
+            <li><strong>Hybrid Approach:</strong>
+                <ul>
+                    <li>Combines both qualitative and quantitative methods to provide a comprehensive view of risk.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Implementing Risk Management Strategies</h4>
+        <ul>
+            <li>Establish a risk management framework that aligns with business objectives and regulatory requirements.</li>
+            <li>Conduct regular risk assessments to identify emerging risks and vulnerabilities.</li>
+            <li>Develop risk treatment plans to prioritize and address identified risks, employing measures such as risk avoidance, transfer, acceptance, or mitigation.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba20">
+        <div class="question">
+            <label for="q20"><h5>Question:</h5> What does risk management primarily involve?</label><br>
+            <form id="q20" class="task-form">
+                <input type="radio" name="task20" value="correct"> Identifying, assessing, and mitigating risks<br>
+                <input type="radio" name="task20" value="wrong"> Developing marketing strategies<br>
+                <span class="feedback" id="q20-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba20 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba21" class="locked">6. Regulatory Compliance</h3>
+    <div class="theory cba21">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Regulatory compliance involves adhering to laws, regulations, and standards that govern how organizations must handle data and conduct business.</p>
+
+        <h4>2. Key Regulations</h4>
+        <ul>
+            <li><strong>General Data Protection Regulation (GDPR):</strong>
+                <ul>
+                    <li>A comprehensive data protection law in the European Union that mandates how personal data must be processed and protected.</li>
+                    <li>Requires organizations to obtain explicit consent from individuals for data processing, implement data protection by design and default, and report data breaches within 72 hours.</li>
+                </ul>
+            </li>
+            <li><strong>Health Insurance Portability and Accountability Act (HIPAA):</strong>
+                <ul>
+                    <li>U.S. legislation that mandates the protection of sensitive patient health information.</li>
+                    <li>Establishes standards for electronic health care transactions and requires covered entities to implement administrative, physical, and technical safeguards to protect patient information.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Compliance Requirements</h4>
+        <ul>
+            <li>Conduct regular audits and assessments to ensure adherence to regulatory requirements.</li>
+            <li>Maintain detailed records of data processing activities and risk assessments.</li>
+            <li>Provide training and awareness programs for employees on compliance obligations.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba21">
+        <div class="question">
+            <label for="q21"><h5>Question:</h5> What is the main goal of regulatory compliance?</label><br>
+            <form id="q21" class="task-form">
+                <input type="radio" name="task21" value="correct"> Adhering to laws and regulations governing data handling<br>
+                <input type="radio" name="task21" value="wrong"> Increasing product sales<br>
+                <span class="feedback" id="q21-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba21 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba22" class="locked">6.4 Continuous Compliance</h3>
+    <div class="theory cba22">
+        <div class="course-container">
+        <h4>1. Overview</h4>
+        <p>Continuous compliance refers to the ongoing processes and practices that organizations implement to ensure they remain compliant with regulations and standards.</p>
+
+        <h4>2. Tools and Technologies</h4>
+        <ul>
+            <li><strong>Compliance Management Platforms:</strong>
+                <ul>
+                    <li>Tools that help organizations track compliance obligations, manage audits, and automate reporting.</li>
+                    <li>Examples include RSA Archer, MetricStream, and OneTrust.</li>
+                </ul>
+            </li>
+            <li><strong>Automated Compliance Checks:</strong>
+                <ul>
+                    <li>Technologies that perform real-time monitoring and assessment of systems to identify compliance gaps.</li>
+                    <li>Implement security controls and policies that can adapt to changes in regulations automatically.</li>
+                </ul>
+            </li>
+            <li><strong>Risk and Compliance Assessment Tools:</strong>
+                <ul>
+                    <li>Tools that help organizations assess and prioritize risks continuously, ensuring that compliance is maintained over time.</li>
+                    <li>Examples include GRC platforms that integrate risk management, compliance, and audit functionalities.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Best Practices for Continuous Compliance</h4>
+        <ul>
+            <li>Establish a culture of compliance within the organization by promoting accountability at all levels.</li>
+            <li>Implement regular training sessions to keep employees informed about compliance changes and requirements.</li>
+            <li>Use metrics and dashboards to monitor compliance status and identify areas for improvement proactively.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id = "cba22">
+        <div class="question">
+            <label for="q22"><h5>Question:</h5> What is the purpose of continuous compliance?</label><br>
+            <form id="q22" class="task-form">
+                <input type="radio" name="task22" value="correct"> To ensure ongoing adherence to regulations and standards<br>
+                <input type="radio" name="task22" value="wrong"> To decrease operational costs<br>
+                <span class="feedback" id="q22-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba22 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section>
+    <h2>7. Incident Response and Forensics</h2>
+
+    <h3 course-id ="cba23" class="locked">7.1 Incident Handling Process</h3>
+    <div class="theory cba23">
+        <div class="course-container">
+        <h4>1. Preparation</h4>
+        <ul>
+            <li><strong>Policies:</strong> Develop and implement incident response policies that define roles, responsibilities, and procedures for handling incidents.</li>
+            <li><strong>Training:</strong> Conduct regular training and simulations to prepare the incident response team and other staff.</li>
+            <li><strong>Tools:</strong> Acquire and configure tools that will be used during incidents, such as SIEM systems and forensic software.</li>
+        </ul>
+
+        <h4>2. Detection</h4>
+        <ul>
+            <li><strong>Monitoring Systems:</strong> Continuously monitor systems for suspicious activity using IDS/IPS, SIEM solutions, etc.</li>
+            <li><strong>Alerts:</strong> Establish a system for alerting the incident response team of potential incidents.</li>
+        </ul>
+
+        <h4>3. Containment</h4>
+        <ul>
+            <li><strong>Short-Term Containment:</strong> Quickly isolate affected systems to prevent further damage.</li>
+            <li><strong>Long-Term Containment:</strong> Implement temporary fixes to keep systems operational during investigation.</li>
+        </ul>
+
+        <h4>4. Eradication</h4>
+        <ul>
+            <li><strong>Identifying Threats:</strong> Investigate the incident to determine the root cause and extent of the compromise.</li>
+            <li><strong>Removing Threats:</strong> Eliminate malware and unauthorized access, patching software as needed.</li>
+        </ul>
+
+        <h4>5. Recovery</h4>
+        <ul>
+            <li><strong>Restoring Systems:</strong> Restore affected systems and data from backups, ensuring they are secure.</li>
+            <li><strong>Monitoring:</strong> Continue to monitor for any signs of residual threats.</li>
+        </ul>
+
+        <h4>6. Lessons Learned</h4>
+        <ul>
+            <li><strong>Post-Incident Review:</strong> Conduct a comprehensive review of the incident.</li>
+            <li><strong>Improvements:</strong> Update incident response plans and training based on lessons learned.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba23">
+        <div class="question">
+            <label for="q23"><h5>Question:</h5> What is the first phase of the incident handling process?</label><br>
+            <form id="q23" class="task-form">
+                <input type="radio" name="task23" value="correct"> Preparation<br>
+                <input type="radio" name="task23" value="wrong"> Eradication<br>
+                <span class="feedback" id="q23-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba23 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba24" class="locked">7.2 Digital Forensics</h3>
+    <div class="theory cba24">
+        <div class="course-container">
+        <h4>1. Techniques</h4>
+        <ul>
+            <li><strong>Disk Imaging:</strong> Create a bit-for-bit copy of a storage device to preserve evidence.</li>
+            <li><strong>Log Analysis:</strong> Analyze logs to uncover indicators of compromise and system events.</li>
+            <li><strong>Memory Analysis:</strong> Capture and analyze volatile memory to detect running processes and network connections.</li>
+        </ul>
+
+        <h4>2. Tools</h4>
+        <ul>
+            <li><strong>EnCase:</strong> A powerful forensic tool for imaging and analysis of digital evidence.</li>
+            <li><strong>FTK Imager:</strong> A lightweight forensic imaging tool for creating forensic images and basic file analysis.</li>
+            <li><strong>Autopsy:</strong> An open-source platform for analyzing disk images and logs.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id ="cba24">
+        <div class="question">
+            <label for="q24"><h5>Question:</h5> What is the purpose of disk imaging in digital forensics?</label><br>
+            <form id="q24" class="task-form">
+                <input type="radio" name="task24" value="correct"> To preserve evidence without altering original data<br>
+                <input type="radio" name="task24" value="wrong"> To delete unnecessary files<br>
+                <span class="feedback" id="q24-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba24 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba25" class="locked">7.3 Threat Hunting</h3>
+    <div class="theory cba25">
+        <div class="course-container">
+        <h4>1. Approaches</h4>
+        <ul>
+            <li><strong>Hypothesis-Driven:</strong> Actively searching for evidence based on hypotheses.</li>
+            <li><strong>Indicator-Driven:</strong> Searching for specific indicators of compromise (IOCs) in the environment.</li>
+        </ul>
+
+        <h4>2. Tools</h4>
+        <ul>
+            <li><strong>SIEM Solutions:</strong> Tools like Splunk and LogRhythm that aggregate log data for threat hunting.</li>
+            <li><strong>Custom Scripts:</strong> Scripting languages like Python or PowerShell can be used to automate searches for patterns or anomalies.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba25">
+        <div class="question">
+            <label for="q25"><h5>Question:</h5> What is the main focus of threat hunting?</label><br>
+            <form id="q25" class="task-form">
+                <input type="radio" name="task25" value="correct"> Proactively searching for signs of malicious activity<br>
+                <input type="radio" name="task25" value="wrong"> Only responding to security alerts<br>
+                <span class="feedback" id="q25-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba25 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section>
+    <h2>8. Cloud Security</h2>
+
+    <h3 course-id="cba26" class="locked">8.1 Cloud Security Posture Management (CSPM)</h3>
+    <div class="theory cba26">
+        <div class="course-container">
+        <h4>1. Understanding CSPM</h4>
+        <ul>
+            <li><strong>Definition:</strong> CSPM refers to tools and practices that help organizations assess, manage, and improve the security posture of their cloud infrastructure.</li>
+            <li><strong>Purpose:</strong> CSPM tools automate the monitoring of cloud environments to ensure adherence to security policies and regulatory standards.</li>
+        </ul>
+
+        <h4>2. Key Features of CSPM Tools</h4>
+        <ul>
+            <li><strong>Continuous Monitoring:</strong> CSPM solutions continuously scan cloud resources for compliance and vulnerabilities.</li>
+            <li><strong>Automated Remediation:</strong> Many CSPM tools offer automated fixes for misconfigurations.</li>
+            <li><strong>Compliance Reporting:</strong> CSPM solutions generate compliance reports for various standards.</li>
+            <li><strong>Visibility and Inventory:</strong> Provide visibility into cloud resources and track changes to configurations.</li>
+        </ul>
+
+        <h4>3. Benefits of CSPM</h4>
+        <ul>
+            <li><strong>Reduced Risk:</strong> Identifying and remediating vulnerabilities reduces the risk of breaches.</li>
+            <li><strong>Improved Compliance:</strong> Automated checks help maintain adherence to regulatory requirements.</li>
+            <li><strong>Operational Efficiency:</strong> Streamlines security operations for teams.</li>
+        </ul>
+
+        <h4>4. Popular CSPM Tools</h4>
+        <ul>
+            <li>CloudHealth</li>
+            <li>Prisma Cloud</li>
+            <li>Dome9 (by Akamai)</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba26">
+        <div class="question">
+            <label for="q26"><h5>Question:</h5> What is the main purpose of CSPM tools?</label><br>
+            <form id="q26" class="task-form">
+                <input type="radio" name="task26" value="correct"> To assess and improve the security posture of cloud infrastructure<br>
+                <input type="radio" name="task26" value="wrong"> To create new cloud services<br>
+                <span class="feedback" id="q26-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="checck">Check answers</button>
+                    <div class="hint-cba26 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba27" class="locked">8.2 Zero Trust Architecture</h3>
+    <div class="theory cba27">
+        <div class="course-container">
+        <h4>1. Understanding Zero Trust</h4>
+        <ul>
+            <li><strong>Definition:</strong> Zero Trust requires strict identity verification for every access request.</li>
+            <li><strong>Core Principle:</strong> No user or device should be trusted by default; every request must be authenticated.</li>
+        </ul>
+
+        <h4>2. Key Components of Zero Trust Architecture</h4>
+        <ul>
+            <li><strong>Identity and Access Management (IAM):</strong> Ensures proper authentication and authorization.</li>
+            <li><strong>Micro-Segmentation:</strong> Limits lateral movement within the network.</li>
+            <li><strong>Least Privilege Access:</strong> Grants minimal permissions necessary for tasks.</li>
+            <li><strong>Continuous Monitoring:</strong> Detects and responds to suspicious activities in real-time.</li>
+            <li><strong>Encryption:</strong> Protects data in transit and at rest from unauthorized access.</li>
+        </ul>
+
+        <h4>3. Benefits of Zero Trust Architecture</h4>
+        <ul>
+            <li><strong>Enhanced Security:</strong> Reduces the risk of unauthorized access.</li>
+            <li><strong>Reduced Attack Surface:</strong> Limits pathways for attackers.</li>
+            <li><strong>Better Compliance:</strong> Implements robust security controls to protect data.</li>
+        </ul>
+
+        <h4>4. Implementing Zero Trust in Cloud Environments</h4>
+        <ul>
+            <li><strong>Adopt a Cloud-First Approach:</strong> Design security policies specifically for cloud environments.</li>
+            <li><strong>Integrate with Existing Security Solutions:</strong> Leverage existing tools to support the Zero Trust model.</li>
+            <li><strong>Regularly Review and Update Policies:</strong> Adapt policies to evolving threats and changes.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba27">
+        <div class="question">
+            <label for="q27"><h5>Question:</h5> What is the core principle of Zero Trust?</label><br>
+            <form id="q27" class="task-form">
+                <input type="radio" name="task27" value="correct"> Never trust, always verify<br>
+                <input type="radio" name="task27" value="wrong"> Trust but verify<br>
+                <span class="feedback" id="q2-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba27 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section>
+    <h2>9. Advanced Tools and Techniques</h2>
+
+    <h3 course-id="cba28" class="locked">9.1 Threat Detection Engineering</h3>
+    <div class="theory cba28">
+        <div class="course-container">
+        <h4>1. Understanding SIEM</h4>
+        <ul>
+            <li><strong>Definition:</strong> SIEM systems aggregate and analyze security data for real-time visibility into security events.</li>
+            <li><strong>Components:</strong> Key components include log management, event correlation, alerting, and reporting.</li>
+        </ul>
+
+        <h4>2. Creating Custom Detection Rules</h4>
+        <ul>
+            <li><strong>Rule Creation:</strong> Custom rules instruct the SIEM on how to identify specific threats based on behavior.</li>
+            <li><strong>Example:</strong> Detecting multiple failed login attempts from a single IP address.</li>
+            <li><strong>Common Approaches:</strong>
+                <ul>
+                    <li>Signature-Based Detection</li>
+                    <li>Anomaly-Based Detection</li>
+                    <li>Behavioral Detection</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>3. Best Practices for Rule Implementation</h4>
+        <ul>
+            <li><strong>Understand the Environment:</strong> Tailor detection rules to the specific network architecture and user behavior.</li>
+            <li><strong>Continuous Testing and Tuning:</strong> Regularly refine rules to minimize false positives.</li>
+            <li><strong>Collaboration with Threat Intelligence:</strong> Integrate threat feeds to enhance detection.</li>
+            <li><strong>Documentation and Review:</strong> Maintain a review process for all detection rules.</li>
+        </ul>
+
+        <h4>4. Evaluating Effectiveness</h4>
+        <ul>
+            <li><strong>Metrics and Reporting:</strong> Use KPIs to assess rule effectiveness, such as detection rate and false positive rate.</li>
+            <li><strong>Feedback Loop:</strong> Analysts report on rule accuracy to inform future adjustments.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba28">
+        <div class="question">
+            <label for="q28"><h5>Question:</h5> What is a common approach in creating detection rules for SIEM systems?</label><br>
+            <form id="q28" class="task-form">
+                <input type="radio" name="task28" value="correct"> Anomaly-Based Detection<br>
+                <input type="radio" name="task28" value="wrong"> Manual Inspection Only<br>
+                <span class="feedback" id="q28-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba28 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cba29">8.2 Machine Learning Algorithms</h3>
+    <div class="theory cba29">
+        <div class="course-container">
+        <h4>1. Understanding Machine Learning in Cybersecurity</h4>
+        <ul>
+            <li><strong>Definition:</strong> Machine learning uses algorithms to identify patterns and make predictions from data.</li>
+            <li><strong>Applications in Cybersecurity:</strong> Used for anomaly detection, intrusion detection, and malware classification.</li>
+        </ul>
+
+        <h4>2. Common Machine Learning Algorithms</h4>
+        <ul>
+            <li><strong>Supervised Learning:</strong> Training on labeled datasets. Examples include Decision Trees and SVM.</li>
+            <li><strong>Unsupervised Learning:</strong> Identifying patterns without labels. Examples include k-Means Clustering.</li>
+            <li><strong>Semi-Supervised Learning:</strong> Combines labeled and unlabeled data for training.</li>
+            <li><strong>Deep Learning:</strong> Uses neural networks for complex pattern recognition.</li>
+        </ul>
+
+        <h4>3. Training Machine Learning Models</h4>
+        <ul>
+            <li><strong>Data Collection:</strong> Gather relevant data from logs and network traffic.</li>
+            <li><strong>Feature Engineering:</strong> Select relevant attributes from the data.</li>
+            <li><strong>Model Selection:</strong> Choose the appropriate algorithm for the specific use case.</li>
+            <li><strong>Training and Testing:</strong> Evaluate model performance using a split dataset.</li>
+        </ul>
+
+        <h4>4. Challenges and Considerations</h4>
+        <ul>
+            <li><strong>Quality of Data:</strong> Model effectiveness depends on high-quality training data.</li>
+            <li><strong>Overfitting and Underfitting:</strong> Balance complexity in models is crucial.</li>
+            <li><strong>Interpretability:</strong> Understanding how models make decisions is important.</li>
+            <li><strong>Continuous Learning:</strong> Mechanisms should allow models to adapt to new threats.</li>
+        </ul>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="cba29">
+        <div class="question">
+            <label for="q29"><h5>Question:</h5> What is an application of machine learning in cybersecurity?</label><br>
+            <form id="q29" class="task-form">
+                <input type="radio" name="task29" value="correct"> Anomaly Detection<br>
+                <input type="radio" name="task29" value="wrong"> Manual Log Review<br>
+                <span class="feedback" id="q29-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cba29 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+
+</section>
+</div>
+</body>
+</html>

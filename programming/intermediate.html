@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming in Cybersecurity Basics</title>
+    <script type="text/javascript" src="../course_script/function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/course_styles.css">
+    </head>
+<body>
+    <header>
+        <h1>Programming</h1>
+        <div class="rewards">
+        <div id="rewards">
+            Rewards: <span>0</span> points
+        </div>
+        <div id="hearts">
+            Hearts: <span class="heart">❤️</span> <span class="heart">❤️</span> <span class="heart">❤️</span>
+        </div>
+        </div>
+   </header>
+   <div class="course">
+<section>
+    <h2>1. Scripting for Automation</h2>
+
+    <article>
+        <h3 course-id="pi1" class="locked">1.1 Why It’s Important</h3>
+        <div class="theory pi1">
+            <div class="course-container">
+                <p>Automation is essential for handling repetitive tasks, streamlining security operations, and increasing efficiency in detecting vulnerabilities, managing logs, and conducting attacks or tests (like brute force or penetration testing). Automated scripts can continuously scan for weaknesses, manage incidents, and configure defenses without constant manual input.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+            
+            <div class="task" task-id="pi1">
+                <div class="question">
+                    <label for="q1"><h5>Question:</h5> Why is automation important in cybersecurity?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q1' class="task-form">
+                        <input type="radio" name="task1" value="wrong"> It makes all systems invulnerable.<br>
+                        <input type="radio" name="task1" value="correct"> It helps streamline repetitive tasks and increases efficiency.<br>
+                        <input type="radio" name="task1" value="wrong"> It eliminates the need for human intervention entirely.<br>
+                        <span class="feedback" id="q1-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi1 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi2" class="locked">1.2 Key Languages to Learn</h3>
+        <div class="theory pi2">
+            <div class="course-container">
+                <h4>Python:</h4>
+                <p><strong>Why:</strong> Python is a versatile and beginner-friendly language with an extensive collection of libraries that are widely used in cybersecurity for network scanning, penetration testing, and automating security tasks.</p>
+                
+                <h4>Relevant Libraries:</h4>
+                <ul>
+                    <li><strong>Scapy:</strong> A powerful library for manipulating and analyzing network packets.</li>
+                    <li><strong>Socket:</strong> A built-in library for creating low-level networking programs.</li>
+                    <li><strong>Paramiko:</strong> Used for handling SSH connections.</li>
+                    <li><strong>Requests:</strong> Simplifies handling HTTP requests.</li>
+                </ul>
+
+                <h4>Practical Example:</h4>
+                <p>Write a Python script using Scapy to scan a network for active hosts or open ports.</p>
+                <pre><code>
+from scapy.all import *
+
+def scan_network(ip_range):
+    answered, unanswered = srp(Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(pdst=ip_range), timeout=2, verbose=False)
+    for send, receive in answered:
+        print(f"IP: {receive.psrc}, MAC: {receive.hwsrc}")
+
+scan_network("192.168.1.0/24")
+                </code></pre>
+                
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi2">
+                <div class="question">
+                    <label for="q8"><h5>Question:</h5> What is one use of Python in cybersecurity?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id="q2" class="task-form">
+                        <input type="radio" name="task2" value="wrong"> It is only used for web development.<br>
+                        <input type="radio" name="task2" value="correct"> It can automate network scanning and penetration testing.<br>
+                        <input type="radio" name="task2" value="wrong"> It is not suitable for automation.<br>
+                        <span class="feedback" id="q2-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi2 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi3" class="locked">1.3 Bash:</h3>
+        <div class="theory pi3">
+            <div class="course-container">
+                <p><strong>Why:</strong> Bash is a command-line scripting language native to Unix/Linux systems, essential for automating tasks.</p>
+                
+                <h4>Practical Example:</h4>
+                <p>A Bash script to monitor file changes in a directory:</p>
+                <pre><code>
+#!/bin/bash
+inotifywait -m /path/to/monitor -e create -e modify -e delete |
+while read path action file; do
+    echo "File $file in directory $path was $action"
+done
+                </code></pre>
+                
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi3">
+                <div class="question">
+                    <label for="q3"><h5>Question:</h5> What is one common use of Bash in cybersecurity?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q3' class="task-form">
+                        <input type="radio" name="task3" value="wrong"> To write complex GUI applications.<br>
+                        <input type="radio" name="task3" value="correct"> To automate command-line tasks and monitor system activities.<br>
+                        <input type="radio" name="task3" value="wrong"> To create mobile applications.<br>
+                        <span class="feedback" id="q3-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi3 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi4" class="locked">1.4 PowerShell:</h3>
+        <div class="theory pi4">
+            <div class="course-container">
+                <p><strong>Why:</strong> PowerShell is the go-to scripting language for automating tasks in Windows environments.</p>
+                
+                <h4>Practical Example:</h4>
+                <p>PowerShell script to monitor login attempts:</p>
+                <pre><code>
+Get-EventLog -LogName Security -InstanceId 4625 | Where-Object { $_.TimeGenerated -gt (Get-Date).AddDays(-1) } | 
+Select-Object TimeGenerated, EntryType, Message
+                </code></pre>
+                
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi4">
+                <div class="question">
+                    <label for="q4"><h5>Question:</h5> What is one advantage of using PowerShell in cybersecurity?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q4' class="task-form">
+                        <input type="radio" name="task4" value="wrong"> It only works on Linux systems.<br>
+                        <input type="radio" name="task4" value="correct"> It automates tasks and manages Windows security settings effectively.<br>
+                        <input type="radio" name="task4" value="wrong"> It is not used for security tasks.<br>
+                        <span class="feedback" id="q4-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi4 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi5" class="locked">1.5 Practical Applications in Cybersecurity</h3>
+        <div class="theory pi5">
+            <div class="course-container">
+                <h4>Network Scanning:</h4>
+                <p>Write scripts to automate network scanning using Python’s Scapy or Nmap libraries.</p>
+                
+                <h4>Automated Vulnerability Scanning:</h4>
+                <p>Use Python and tools like OpenVAS, Nessus, or Nikto to automate the detection of vulnerabilities.</p>
+                
+                <h4>Brute Force and Penetration Testing:</h4>
+                <p>Write Python scripts for brute force attacks and combine them with Paramiko.</p>
+
+                <h4>Automating Log Management:</h4>
+                <pre><code>
+# Bash Script Example: Check for failed login attempts in Linux
+grep "Failed password" /var/log/auth.log | awk '{print $1, $2, $3, $11}' > failed_attempts.txt
+                </code></pre>
+
+                <h4>Incident Response:</h4>
+                <pre><code>
+# Bash Script Example: Block an IP after failed login attempts
+ATTEMPTS=$(grep "Failed password" /var/log/auth.log | grep "192.168.1.100" | wc -l)
+if [ "$ATTEMPTS" -gt 5 ]; then
+    iptables -A INPUT -s 192.168.1.100 -j DROP
+fi
+                </code></pre>
+
+                <pre><code>
+# PowerShell Script Example: Block an IP after suspicious login attempts
+$ip = "192.168.1.100"
+$attempts = Get-EventLog -LogName Security -InstanceId 4625 | Where-Object { $_.Message -like "*$ip*" } | Measure-Object
+if ($attempts.Count -gt 5) {
+    New-NetFirewallRule -DisplayName "Block IP $ip" -Direction Inbound -RemoteAddress $ip -Action Block
+}
+                </code></pre>
+
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi5">
+                <div class="question">
+                    <label for="q15"><h5>Question:</h5> Why is scripting important in cybersecurity?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q5' class="task-form">
+                        <input type="radio" name="task5" value="wrong"> It is only useful for programmers.<br>
+                        <input type="radio" name="task5" value="correct"> It helps automate tedious tasks and improve efficiency.<br>
+                        <input type="radio" name="task5" value="wrong"> It is not relevant for cybersecurity.<br>
+                        <span class="feedback" id="q5-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi5 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<section id="secure-coding-practices">
+    <article>
+        <h2>2. Secure Coding Practices</h2>
+
+     <article>
+        <h3 course-id ="pi6" class="locked">2.1 Key Concepts</h3>
+        <div class="theory pi6">
+            <div class="course-container">
+            <h4>1. Input Validation</h4>
+            <p>Input validation is the first line of defense against many types of attacks. It ensures that all incoming data (whether from users, APIs, or external services) is properly validated and sanitized.</p>
+
+            <p><strong>Why It's Important:</strong> Attackers can exploit user input to inject malicious code or trigger vulnerabilities. Without proper validation, SQL injection, XSS, or buffer overflows can easily compromise an application.</p>
+
+            <p><strong>Types of Input Validation:</strong></p>
+            <ul>
+                <li>Whitelist Validation: Only allow input that matches a predefined list of acceptable values or patterns.</li>
+                <li>Blacklist Validation: Reject known bad characters or patterns.</li>
+            </ul>
+
+            <p><strong>Best Practices:</strong></p>
+            <ul>
+                <li>Validate input on both the client and server side.</li>
+                <li>Always assume input is potentially malicious.</li>
+            </ul>
+
+            <h5>Practical Example in Python:</h5>
+            <pre><code>
+import re
+
+def sanitize_input(user_input):
+    # Allow only alphanumeric characters to prevent SQL injection
+    if re.match("^[a-zA-Z0-9_]*$", user_input):
+        return user_input
+    else:
+        raise ValueError("Invalid input")
+            </code></pre>
+
+            <h5>Try it Out:</h5>
+            <textarea id="python-sanitize-input" rows="4" placeholder="Enter user input to test..."></textarea>
+            <button class="run-code" onclick="runSanitizeInput()">Run</button>
+            <div id="sanitize-output"></div>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+            <div class="task" task-id="pi6">
+                <div class="question">
+                    <form id="q6" class="task-form">
+                        <label for="q6"><h5>question</h5>Why is input validation important?</label><br>
+                        <input type="radio" name="task6" value="wrong"> It is only useful for programmers.<br>
+                        <input type="radio" name="task6" value="correct"> It helps prevent attacks through malicious input.<br>
+                        <input type="radio" name="task6" value="wrong"> It slows down the application.<br>
+                        <span class="feedback" id="q6-feedback"></span>
+                    </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-pi6 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+   
+
+   <article>
+        
+ <h3 course-id="pi7" class="locked">2.1.1 Output Encoding</h3>
+    <div class="theory pi7">
+        <div class="course-container">
+            <p>Output encoding ensures that data is properly escaped before it is rendered in a web page or passed into a database. This is crucial for preventing XSS attacks.</p>
+
+            <p><strong>Why It's Important:</strong> Encoding outputs makes it difficult for attackers to execute malicious scripts.</p>
+
+            <p><strong>Types of Encoding:</strong></p>
+            <ul>
+                <li>HTML Encoding: Ensures that characters like <, >, and & are properly encoded.</li>
+                <li>URL Encoding: Ensures that special characters in URLs are encoded.</li>
+                <li>JavaScript Encoding: Escapes data before embedding it in JavaScript code.</li>
+            </ul>
+
+            <h5>Practical Example in Python:</h5>
+            <pre><code>
+import html
+
+def render_page(user_input):
+    # Encode user input to prevent XSS
+    safe_input = html.escape(user_input)
+    return f"<p>{safe_input}</p>"
+            </code></pre>
+
+            <h5>Try it Out:</h5>
+            <textarea id="python-render-page" rows="4" placeholder="Enter user input to render..."></textarea>
+            <button class="run-code" onclick="runRenderPage()">Run</button>
+            <div id="render-output"></div>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="pi7">
+            <div class="question">
+                <form id="pi7" class="task-form">
+            <label for="q2"><h5>Question:</h5>  What does output encoding prevent?</label><br>
+            <input type="radio" name="task2" value="correct"> It prevents XSS attacks.<br>
+            <input type="radio" name="task2" value="wrong"> It prevents SQL injection.<br>
+            <input type="radio" name="task2" value="wrong"> It speeds up the application.<br>
+            <span class="feedback" id="q2-feedback"></span>
+        </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-pi7 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+</article>
+
+
+<article>
+    <h3 course-id="pi8" class="locked">2.1.2 Use of Safe Libraries</h3>
+        <div class="theory pi8">
+            <div class="course-container">
+            <p>Instead of writing custom code for critical operations, use well-established libraries that have been thoroughly tested for security vulnerabilities.</p>
+
+            <p><strong>Why It's Important:</strong> Trusted libraries have built-in security mechanisms and are regularly updated to patch vulnerabilities.</p>
+
+            <p><strong>Examples of Secure Libraries:</strong></p>
+            <ul>
+                <li><strong>Python:</strong> bcrypt, cryptography, Flask.</li>
+                <li><strong>PHP:</strong> PDO, password_hash().</li>
+                <li><strong>JavaScript:</strong> DOMPurify.</li>
+            </ul>
+
+            <h5>Practical Example: Password Hashing using Python’s bcrypt library:</h5>
+            <pre><code>
+import bcrypt
+
+def hash_password(password):
+    # Generate a salt and hash the password
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(password.encode('utf-8'), salt)
+    return hashed
+            </code></pre>
+
+            <h5>Try it Out:</h5>
+            <input type="text" id="password-input" placeholder="Enter password to hash...">
+            <button class="run-code" onclick="runHashPassword()">Hash</button>
+            <div id="hash-output"></div>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+         
+         <div class="task" task-id="pi8">
+            <div class="question">
+                <form id="q8" class="task-form">
+            <label for="q8"><h5>Question:</h5>  Why should you use libraries instead of writing custom code?</label><br>
+            <input type="radio" name="task8" value="correct"> Libraries are more secure and regularly updated.<br>
+            <input type="radio" name="task8" value="wrong"> Custom code is always better.<br>
+            <input type="radio" name="task8" value="wrong"> Libraries are unnecessary.<br>
+            <span class="feedback" id="q8-feedback"></span>
+        </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-pi8 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+</article>
+
+<article>
+   <h3 course-id="pi9" class="locked">2.2 Common Vulnerabilities and How to Mitigate Them</h3>
+      
+      <div class="theory pi9">
+        <div class="course-container">
+            <h4>1. SQL Injection</h4>
+            <p>SQL injection occurs when an attacker manipulates a SQL query by injecting malicious code into user input fields.</p>
+
+            <p><strong>Prevention:</strong></p>
+            <ul>
+                <li>Always use prepared statements or parameterized queries.</li>
+                <li>Avoid building SQL queries by directly concatenating user input.</li>
+                <li>Sanitize input data.</li>
+            </ul>
+
+            <h5>Practical Example in Python with sqlite3:</h5>
+            <pre><code>
+import sqlite3
+
+conn = sqlite3.connect('database.db')
+cursor = conn.cursor()
+cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
+            </code></pre>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+        
+        <div class="task" task-id="pi9">
+            <div class="question">
+                <form id="q9" class="task-form">
+            <label for="q9"><h5>Question:</h5>  How can you prevent SQL injection?</label><br>
+            <input type="radio" name="task9" value="correct"> Use prepared statements or parameterized queries.<br>
+            <input type="radio" name="task9" value="wrong"> Concatenate user input into queries.<br>
+            <input type="radio" name="task9" value="wrong"> Ignore user input.<br>
+            <span class="feedback" id="q9-feedback"></span>
+        </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-pi9 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+</article>
+
+
+<article>
+
+    <h3 course-id="pi10" class="locked">2.2.1 Cross-Site Scripting (XSS)</h3>
+    <div class="theory pi10">
+        <div class="course-container">
+            <p>XSS vulnerabilities occur when an attacker is able to inject malicious scripts into web pages viewed by other users.</p>
+
+            <p><strong>Prevention:</strong></p>
+            <ul>
+                <li>Input Validation: Ensure all input fields are validated.</li>
+                <li>Output Encoding: Always encode output before displaying it in HTML.</li>
+                <li>Use Content Security Policy (CSP) headers to restrict execution of untrusted scripts.</li>
+            </ul>
+
+            <h5>Practical Example in a Python web application:</h5>
+            <pre><code>
+from flask import Flask, render_template, request
+import html
+
+app = Flask(__name__)
+
+@app.route('/input')
+def input_page():
+    user_input = request.args.get('input')
+    safe_input = html.escape(user_input)
+    return f"<p>{safe_input}</p>"
+            </code></pre>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id=pi10>
+            <div class="question">
+            <form id="q10" class="task-form">
+            <label for="q10"><h5>Question:</h5>  What is the main method to prevent XSS?</label><br>
+            <input type="radio" name="task10" value="correct"> Input validation and output encoding.<br>
+            <input type="radio" name="task10" value="wrong"> Only input validation.<br>
+            <input type="radio" name="task10" value="wrong"> Disabling JavaScript.<br>
+            <span class="feedback" id="q10-feedback"></span>
+        </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-pi10 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+</article>
+
+
+    <h3 course-id="pi11" class="locked">2.2.2 Buffer Overflow</h3>
+       <div class="theory pi11">
+         <div class="course-container">
+            <p>Buffer overflow occurs when a program writes more data to a buffer than it can hold.</p>
+
+            <p><strong>Prevention:</strong></p>
+            <ul>
+                <li>Use languages like Python or Java that handle memory management automatically.</li>
+                <li>If using C or C++, ensure bounds checking.</li>
+                <li>Always validate input sizes before processing data.</li>
+            </ul>
+
+            <h5>Practical Example in C:</h5>
+            <pre><code>
+char buffer[50];
+strncpy(buffer, user_input, sizeof(buffer) - 1);
+buffer[49] = '\0';  // Ensure null termination
+            </code></pre>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+        
+        <div class="task" task-id="pi11">
+            <div class="question">
+                <form id="q11" class="task-form">
+            <label for="q11"><h5>Question:</h5>  Which of the following can help prevent buffer overflow?</label><br>
+            <input type="radio" name="task11" value="correct"> Use bounds checking in C or C++.<br>
+            <input type="radio" name="task11" value="wrong"> Use any programming language without restrictions.<br>
+            <input type="radio" name="task11" value="wrong"> Ignore buffer sizes.<br>
+            <span class="feedback" id="q11-feedback"></span>
+        </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-pi11 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+</article>
+
+
+
+<article>
+    <h3 course-id="pi12" class="locked">2.3 Implementing Secure APIs</h3>
+       <div class="theory pi12">
+        <div class="course-container">
+            <h4>1. Authentication</h4>
+            <p>Use OAuth 2.0 or JWT tokens to securely authenticate API requests. Ensure tokens are properly encrypted and validated at every request.</p>
+
+            <h5>Practical Example (Python Flask API):</h5>
+            <pre><code>
+from flask import Flask, request, jsonify
+from flask_jwt_extended import JWTManager, create_access_token
+
+app = Flask(__name__)
+app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'
+jwt = JWTManager(app)
+
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.json.get('username', None)
+    password = request.json.get('password', None)
+    # Validate credentials (e.g., check hashed password in DB)
+    access_token = create_access_token(identity=username)
+    return jsonify(access_token=access_token)
+            </code></pre>
+
+    <h4>2. Data Handling</h4>
+            <p>Always validate and sanitize data coming through APIs to prevent injection attacks. Use HTTPS to encrypt all data in transit and implement rate limiting to prevent brute force attacks on authentication endpoints.</p>
+
+        <p>By following these secure coding practices, you can significantly reduce vulnerabilities in your applications, ensuring they are resilient against common attacks like SQL injection, XSS, and buffer overflows.</p>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+        <div class="task" task-id="pi2">
+            <div class="question">
+         <form id="q12" class="task-form">
+            <label for="q12"><h5>Question:</h5>  What should be used to securely authenticate API requests?</label><br>
+            <input type="radio" name="task12" value="correct"> OAuth 2.0 or JWT tokens.<br>
+            <input type="radio" name="task12" value="wrong"> Basic Authentication only.<br>
+            <input type="radio" name="task12" value="wrong"> No authentication required.<br>
+            <span class="feedback" id="q12-feedback"></span>
+        </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-pi12 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+    </div>
+</article>
+</section>
+
+
+<section>
+    <h2>3. Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS)</h2>
+    
+    <article>
+        <h3 course-id="pi13" class="locked">3.1 Purpose of IDS and IPS</h3>
+        <div class="theory pi13">
+            <div class="course-container">
+                <p><strong>Intrusion Detection Systems (IDS):</strong> IDS monitors network traffic and system activities for suspicious behavior and generates alerts for manual investigation.</p>
+                <p><strong>Intrusion Prevention Systems (IPS):</strong> IPS detects threats and actively responds by blocking or mitigating attacks in real-time, providing proactive protection.</p>
+
+                <h4>Key Differences between IDS and IPS:</h4>
+                <ul>
+                    <li><strong>IDS:</strong> Detection only, issues alerts to security personnel.</li>
+                    <li><strong>IPS:</strong> Detects and prevents threats by automatically taking action.</li>
+                </ul>
+
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi13">
+                <div class="question">
+                    <label for="q13"><h5>Question:</h5> What is the primary purpose of an IPS?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q13" class="task-form">
+                        <input type="radio" name="task13" value="correct"> Actively prevent attacks<br>
+                        <input type="radio" name="task13" value="wrong"> Monitor network traffic only<br>
+                        <span class="feedback" id="q13-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi13 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi14" class="locked">3.2 How IDS and IPS Work</h3>
+        <div class="theory pi14">
+            <div class="course-container">
+                <h4>Intrusion Detection Systems (IDS)</h4>
+                <p><strong>Signature-Based Detection:</strong> Compares traffic to known attack patterns.</p>
+                <p><strong>Anomaly-Based Detection:</strong> Identifies deviations from normal traffic by establishing a baseline.</p>
+                
+                <h4>Host-Based vs. Network-Based IDS:</h4>
+                <ul>
+                    <li><strong>Host-Based IDS (HIDS):</strong> Monitors individual devices.</li>
+                    <li><strong>Network-Based IDS (NIDS):</strong> Monitors entire network segments.</li>
+                </ul>
+
+                <p><strong>Example Tools:</strong> Snort, Suricata, OSSEC.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi14">
+                <div class="question">
+                    <label for="q14"><h5>Question:</h5> What does anomaly-based detection identify?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q14" class="task-form">
+                        <input type="radio" name="task14" value="correct"> Deviations from normal traffic<br>
+                        <input type="radio" name="task14" value="wrong"> Known attack signatures<br>
+                        <span class="feedback" id="q14-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi14 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi15" class="locked">3.3 Intrusion Prevention Systems (IPS)</h3>
+        <div class="theory pi15">
+            <div class="course-container">
+                <p><strong>Inline Monitoring:</strong> IPS sits inline to inspect packets and take immediate action.</p>
+                <h4>Types of IPS Detection Methods:</h4>
+                <ul>
+                    <li><strong>Signature-Based Detection:</strong> Detects threats using known signatures.</li>
+                    <li><strong>Anomaly-Based Detection:</strong> Monitors for deviations from normal traffic.</li>
+                    <li><strong>Behavior-Based Detection:</strong> Identifies abnormal activities using AI.</li>
+                </ul>
+                <p><strong>Example Tools:</strong> Cisco Firepower, Palo Alto NGFW, Suricata.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi15">
+                <div class="question">
+                    <label for="q15"><h5>Question:</h5> What is a key feature of IPS?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q15" class="task-form">
+                        <input type="radio" name="task15" value="correct"> Inline monitoring for real-time action<br>
+                        <input type="radio" name="task15" value="wrong"> Passive traffic monitoring<br>
+                        <span class="feedback" id="q15-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi15 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi16" class="locked">3.4 Advanced Features of IDS/IPS</h3>
+        <div class="theory pi16">
+            <div class="course-container">
+                <h4>Advanced Features of IDS/IPS:</h4>
+                <ul>
+                    <li><strong>Deep Packet Inspection (DPI):</strong> Examines the contents of data packets.</li>
+                    <li><strong>Heuristic-Based Detection:</strong> Identifies "attack-like" behaviors without signatures.</li>
+                    <li><strong>Contextual Awareness:</strong> Assesses traffic flow and user behaviors.</li>
+                    <li><strong>Integrated Threat Intelligence:</strong> Adapts to new threats using real-time threat intelligence.</li>
+                </ul>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi16">
+                <div class="question">
+                    <label for="q16"><h5>Question:</h5> What does Deep Packet Inspection (DPI) do?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q16" class="task-form">
+                        <input type="radio" name="task16" value="correct"> Examines packet contents<br>
+                        <input type="radio" name="task16" value="wrong"> Only checks packet headers<br>
+                        <span class="feedback" id="q16-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi16 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi17" class="locked">3.5 Challenges with IDS/IPS</h3>
+        <div class="theory pi17">
+            <div class="course-container">
+                <h4>Challenges Faced by IDS/IPS:</h4>
+                <ul>
+                    <li><strong>False Positives/Negatives:</strong> Balancing sensitivity and accuracy is challenging.</li>
+                    <li><strong>Encryption:</strong> Inspecting encrypted traffic can be difficult without decryption.</li>
+                    <li><strong>Performance Overhead:</strong> Inline IPS can introduce latency in high-traffic environments.</li>
+                </ul>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi17">
+                <div class="question">
+                    <label for="q17"><h5>Question:</h5> What is a common challenge for IPS systems?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q17" class="task-form">
+                        <input type="radio" name="task17" value="correct"> Performance overhead<br>
+                        <input type="radio" name="task17" value="wrong"> No encryption<br>
+                        <span class="feedback" id="q17-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi17 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi18" class="locked">3.6 Best Practices for Configuration</h3>
+        <div class="theory pi18">
+            <div class="course-container">
+                <h4>Best Practices:</h4>
+                <ul>
+                    <li><strong>Regular Updates:</strong> Keep signatures and detection rules up to date.</li>
+                    <li><strong>Tuning:</strong> Fine-tune thresholds to minimize false positives.</li>
+                    <li><strong>Integration:</strong> Integrate with Security Information and Event Management (SIEM) systems.</li>
+                    <li><strong>Policy Enforcement:</strong> Define clear policies for incident response and alerting.</li>
+                </ul>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi18">
+                <div class="question">
+                    <label for="q18"><h5>Question:</h5> What is an important best practice for IDS/IPS?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q18" class="task-form">
+                        <input type="radio" name="task18" value="correct"> Regular updates to signatures<br>
+                        <input type="radio" name="task18" value="wrong"> Disabling alerts<br>
+                        <span class="feedback" id="q18-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi18 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<section>
+    <h2>4. Cryptography Programming</h2>
+    
+    <article>
+        <h3 course-id="pi19" class="locked">4.1 Purpose</h3>
+        <div class="theory pi19">
+            <div class="course-container">
+                <p>Programming cryptographic functions is essential for protecting sensitive data. It ensures secure communication, data integrity, and authentication, which are fundamental for safeguarding user information and maintaining privacy.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+            
+            <div class="task" task-id="pi19">
+                <div class="question">
+                    <label for="q19"><h5>Question:</h5> Why is programming cryptographic functions essential?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q19" class="task-form">
+                        <input type="radio" name="task19" value="correct"> To protect sensitive data<br>
+                        <input type="radio" name="task19" value="wrong"> To improve internet speed<br>
+                        <span class="feedback" id="q19-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi19 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi20" class="locked">4.2 Languages</h3>
+        <div class="theory pi20">
+            <div class="course-container">
+                <h4>Programming Languages for Cryptography:</h4>
+                <ul>
+                    <li><strong>Python:</strong> Offers numerous libraries, such as PyCryptodome, that simplify the implementation of cryptographic algorithms.</li>
+                    <li><strong>C:</strong> Ideal for performance-critical encryption tasks, providing low-level control over memory and processing speed.</li>
+                </ul>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi20">
+                <div class="question">
+                    <label for="q20"><h5>Question:</h5> Which language is known for its libraries simplifying cryptographic implementation?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q20" class="task-form">
+                        <input type="radio" name="task20" value="correct"> Python<br>
+                        <input type="radio" name="task20" value="wrong"> Assembly<br>
+                        <span class="feedback" id="q20-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi20 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi21" class="locked">4.3 Symmetric Encryption</h3>
+        <div class="theory pi21">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Symmetric encryption uses the same key for both encryption and decryption. The primary challenge is securely sharing the key between parties.</p>
+                
+                <h4>Example:</h4>
+                <p>AES (Advanced Encryption Standard) is a widely used symmetric encryption algorithm.</p>
+
+                <h4>Practical Example: Implementing AES encryption in Python</h4>
+                <pre><code>from Crypto.Cipher import AES
+from Crypto.Random import get_random_bytes
+import base64
+
+# Function to encrypt data
+def encrypt(plaintext, key):
+    cipher = AES.new(key, AES.MODE_EAX)
+    ciphertext, tag = cipher.encrypt_and_digest(plaintext.encode())
+    return base64.b64encode(cipher.nonce + tag + ciphertext).decode()
+
+# Function to decrypt data
+def decrypt(enc_data, key):
+    raw_data = base64.b64decode(enc_data.encode())
+    nonce, tag, ciphertext = raw_data[:16], raw_data[16:32], raw_data[32:]
+    cipher = AES.new(key, AES.MODE_EAX, nonce=nonce)
+    return cipher.decrypt_and_verify(ciphertext, tag).decode()
+
+# Example usage
+key = get_random_bytes(16)  # AES-128 key
+plaintext = "Hello, World!"
+encrypted = encrypt(plaintext, key)
+print("Encrypted:", encrypted)
+decrypted = decrypt(encrypted, key)
+print("Decrypted:", decrypted)
+                </code></pre>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi21">
+                <div class="question">
+                    <label for="q21"><h5>Question:</h5> What is a key challenge of symmetric encryption?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q21" class="task-form">
+                        <input type="radio" name="task21" value="correct"> Securely sharing the key<br>
+                        <input type="radio" name="task21" value="wrong"> Having multiple keys<br>
+                        <span class="feedback" id="q21-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi21 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi22" class="locked">4.4 Asymmetric Encryption</h3>
+        <div class="theory pi22">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Asymmetric encryption uses a pair of keys: a public key for encryption and a private key for decryption. It solves the key distribution problem inherent in symmetric encryption.</p>
+                
+                <h4>Example:</h4>
+                <p>RSA (Rivest-Shamir-Adleman) is a commonly used asymmetric algorithm.</p>
+
+                <h4>Practical Example: Generating RSA keys and encrypting/decrypting messages</h4>
+                <pre><code>from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+import base64
+
+# Generate RSA key pair
+key = RSA.generate(2048)
+private_key = key.export_key()
+public_key = key.publickey().export_key()
+
+# Function to encrypt data using public key
+def rsa_encrypt(plaintext, pub_key):
+    cipher = PKCS1_OAEP.new(RSA.import_key(pub_key))
+    ciphertext = cipher.encrypt(plaintext.encode())
+    return base64.b64encode(ciphertext).decode()
+
+# Function to decrypt data using private key
+def rsa_decrypt(enc_data, priv_key):
+    cipher = PKCS1_OAEP.new(RSA.import_key(priv_key))
+    raw_data = base64.b64decode(enc_data.encode())
+    return cipher.decrypt(raw_data).decode()
+
+# Example usage
+plaintext = "Hello, RSA!"
+encrypted = rsa_encrypt(plaintext, public_key)
+print("Encrypted:", encrypted)
+decrypted = rsa_decrypt(encrypted, private_key)
+print("Decrypted:", decrypted)
+                </code></pre>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi22">
+                <div class="question">
+                    <label for="q22"><h5>Question:</h5> What is a key benefit of asymmetric encryption?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q22" class="task-form">
+                        <input type="radio" name="task22" value="correct"> Solves the key distribution problem<br>
+                        <input type="radio" name="task22" value="wrong"> Requires a single key<br>
+                        <span class="feedback" id="q22-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi22 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi23" class="locked">4.5 Hashing Algorithms</h3>
+        <div class="theory pi23">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Hashing is a one-way function that converts data into a fixed-size string of characters, which is typically a digest. It’s used to ensure data integrity.</p>
+                
+                <h4>Example:</h4>
+                <p>SHA-256 is a popular hashing algorithm known for its security.</p>
+
+                <h4>Practical Example: Hashing passwords using bcrypt</h4>
+                <pre><code>from bcrypt import hashpw, gensalt, checkpw
+
+# Function to hash a password
+def hash_password(password):
+    salt = gensalt()
+    hashed = hashpw(password.encode(), salt)
+    return hashed
+
+# Function to check if the password matches the hash
+def check_password(password, hashed):
+    return checkpw(password.encode(), hashed)
+
+# Example usage
+password = "secure_password"
+hashed_password = hash_password(password)
+print("Hashed Password:", hashed_password)
+is_correct = check_password(password, hashed_password)
+print("Password Match:", is_correct)
+                </code></pre>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi23">
+                <div class="question">
+                    <label for="q23"><h5>Question:</h5> What is the primary purpose of hashing?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q23" class="task-form">
+                        <input type="radio" name="task23" value="correct"> Ensure data integrity<br>
+                        <input type="radio" name="task23" value="wrong"> Encrypt data for confidentiality<br>
+                        <span class="feedback" id="q23-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi23 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi24" class="locked">4.6 Digital Signatures</h3>
+        <div class="theory pi24">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Digital signatures provide a way to verify the authenticity and integrity of a message. It involves hashing the message and then encrypting the hash with the sender's private key.</p>
+                
+                <h4>Practical Example: Creating a digital signature using RSA</h4>
+                <pre><code>from Crypto.Signature import pkcs1_15
+from Crypto.Hash import SHA256
+
+# Function to create a digital signature
+def create_signature(message, priv_key):
+    message_hash = SHA256.new(message.encode())
+    signature = pkcs1_15.new(RSA.import_key(priv_key)).sign(message_hash)
+    return base64.b64encode(signature).decode()
+
+# Function to verify a digital signature
+def verify_signature(message, signature, pub_key):
+    message_hash = SHA256.new(message.encode())
+    try:
+        pkcs1_15.new(RSA.import_key(pub_key)).verify(message_hash, base64.b64decode(signature.encode()))
+        return True
+    except (ValueError, TypeError):
+        return False
+
+# Example usage
+message = "Important message."
+signature = create_signature(message, private_key)
+print("Signature:", signature)
+is_verified = verify_signature(message, signature, public_key)
+print("Signature Verified:", is_verified)
+                </code></pre>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi24">
+                <div class="question">
+                    <label for="q24"><h5>Question:</h5> What does a digital signature verify?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q24" class="task-form">
+                        <input type="radio" name="task24" value="correct"> Authenticity and integrity of a message<br>
+                        <input type="radio" name="task24" value="wrong"> Confidentiality of a message<br>
+                        <span class="feedback" id="q24-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi24 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<section>
+    <h2>5. Network Programming</h2>
+    
+    <article>
+        <h3 course-id="pi25" class="locked">5.1 Purpose</h3>
+        <div class="theory pi25">
+            <div class="course-container">
+                <p>Programming network functions is crucial in cybersecurity, enabling the development of applications that can interact with network protocols. This includes tasks such as penetration testing, packet sniffing, and writing firewalls to protect systems from unauthorized access.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+            
+            <div class="task" task-id="pi25">
+                <div class="question">
+                    <label for="q25"><h5>Question:</h5> Why is programming network functions important in cybersecurity?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q25" class="task-form">
+                        <input type="radio" name="task25" value="correct"> To develop applications that interact with network protocols<br>
+                        <input type="radio" name="task25" value="wrong"> To enhance system graphics<br>
+                        <span class="feedback" id="q25-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi25 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi26" class="locked">5.2 Languages</h3>
+        <div class="theory pi26">
+            <div class="course-container">
+                <h4>Programming Languages for Network Programming:</h4>
+                <ul>
+                    <li><strong>Python:</strong> Useful for its simplicity and rich libraries like socket for low-level network operations, and scapy for packet manipulation.</li>
+                    <li><strong>C:</strong> Provides low-level access and performance advantages for applications that require efficient network handling, such as custom firewalls and packet inspectors.</li>
+                </ul>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi26">
+                <div class="question">
+                    <label for="q26"><h5>Question:</h5> Which language is noted for its simplicity and rich libraries for network operations?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q26" class="task-form">
+                        <input type="radio" name="task26" value="correct"> Python<br>
+                        <input type="radio" name="task26" value="wrong"> Java<br>
+                        <span class="feedback" id="q26-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi26 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi27" class="locked">5.3 Socket Programming</h3>
+        <div class="theory pi27">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Socket programming allows developers to create applications that communicate over the network using the Transmission Control Protocol (TCP) or the User Datagram Protocol (UDP).</p>
+                
+                <h4>Why It Matters:</h4>
+                <p>Understanding how to write code that interacts with network protocols is essential for tasks like building client-server applications, conducting network security assessments, and simulating network attacks.</p>
+
+                <h4>Practical Example: Creating a simple TCP client-server application in Python</h4>
+                <pre><code>import socket
+
+# Create a TCP socket
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+# Bind the socket to the address and port
+server_socket.bind(('localhost', 12345))
+server_socket.listen(1)
+
+print("Server is listening on port 12345...")
+
+while True:
+    # Accept a new connection
+    client_socket, addr = server_socket.accept()
+    print(f"Connection from {addr}")
+
+    # Receive data from the client
+    data = client_socket.recv(1024)
+    print(f"Received: {data.decode()}")
+
+    # Send a response
+    client_socket.send(b'Hello from the server!')
+
+    # Close the connection
+    client_socket.close()
+                </code></pre>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi27">
+                <div class="question">
+                    <label for="q27"><h5>Question:</h5> What is the purpose of socket programming?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q27" class="task-form">
+                        <input type="radio" name="task27" value="correct"> To enable communication between networked applications<br>
+                        <input type="radio" name="task27" value="wrong"> To manage file storage<br>
+                        <span class="feedback" id="q27-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi27 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi28" class="locked">5.4 Packet Sniffing</h3>
+        <div class="theory pi28">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Packet sniffing involves capturing and analyzing network traffic. This technique is useful for monitoring network communications, detecting intrusions, and troubleshooting network issues.</p>
+                
+                <h4>Tools:</h4>
+                <p>You can use Python libraries like scapy or third-party tools like Wireshark.</p>
+
+                <h4>Practical Example: Using scapy to capture and analyze packets</h4>
+                <pre><code>from scapy.all import *
+
+# Function to process each packet
+def packet_callback(packet):
+    print(packet.summary())
+
+# Start sniffing packets on the specified interface
+sniff(prn=packet_callback, count=10)  # Capture 10 packets
+                </code></pre>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi28">
+                <div class="question">
+                    <label for="q28"><h5>Question:</h5> What is the primary use of packet sniffing?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q28" class="task-form">
+                        <input type="radio" name="task28" value="correct"> Capturing and analyzing network traffic<br>
+                        <input type="radio" name="task28" value="wrong"> Compressing data files<br>
+                        <span class="feedback" id="q28-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi28 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi29" class="locked">5.5 Firewalls</h3>
+        <div class="theory pi29">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>A firewall is a security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. Firewalls can be hardware-based or software-based.</p>
+                
+                <h4>Importance:</h4>
+                <p>Writing firewall rules is critical for defining what traffic should be allowed or blocked, thus protecting systems from unauthorized access.</p>
+
+                <h4>Practical Example: Writing custom firewall rules using iptables in Linux</h4>
+                <pre><code># Flush existing rules
+sudo iptables -F
+
+# Allow traffic on the loopback interface
+sudo iptables -A INPUT -i lo -j ACCEPT
+
+# Allow established and related incoming connections
+sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
+# Allow SSH connections
+sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+
+# Allow HTTP and HTTPS traffic
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+
+# Drop all other incoming connections
+sudo iptables -A INPUT -j DROP
+                </code></pre>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi29">
+                <div class="question">
+                    <label for="q29"><h5>Question:</h5> What is the primary function of a firewall?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q29" class="task-form">
+                        <input type="radio" name="task29" value="correct"> To monitor and control network traffic<br>
+                        <input type="radio" name="task29" value="wrong"> To store data files<br>
+                        <span class="feedback" id="q29-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi29 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<section>
+    <h2>6. Binary Exploitation</h2>
+    
+    <article>
+        <h3 course-id="pi30" class="locked">6.1 Objective</h3>
+        <div class="theory pi30">
+            <div class="course-container">
+                <p>The goal of binary exploitation is to understand and exploit low-level system vulnerabilities found in compiled C/C++ programs. This knowledge is crucial for security professionals looking to identify weaknesses in software and develop defenses against them.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+            
+            <div class="task" task-id="pi30">
+                <div class="question">
+                    <label for="q30"><h5>Question:</h5> Why is understanding binary exploitation important for security professionals?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q30" class="task-form">
+                        <input type="radio" name="task30" value="correct"> To identify weaknesses in software and develop defenses<br>
+                        <input type="radio" name="task30" value="wrong"> To create user-friendly applications<br>
+                        <span class="feedback" id="q30-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi30 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi31" class="locked">6.2 Buffer Overflows</h3>
+        <div class="theory pi31">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>A buffer overflow occurs when data exceeds the allocated buffer's size, overwriting adjacent memory. This can lead to arbitrary code execution if an attacker can control the overwritten data.</p>
+                
+                <h4>Exploit Example:</h4>
+                <p>A basic buffer overflow exploit aims to overwrite the return address of a function with the address of shellcode (malicious code) that the attacker wants to execute.</p>
+
+                <h4>Vulnerable Application Example:</h4>
+                <pre><code># vulnerable.c
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void vulnerable_function(char *input) {
+    char buffer[64];
+    strcpy(buffer, input);  // Vulnerable to buffer overflow
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Usage: %s &lt;input&gt;\n", argv[0]);
+        return 1;
+    }
+    vulnerable_function(argv[1]);
+    return 0;
+                </code></pre>
+
+                <h4>Exploit Script Example:</h4>
+                <pre><code># exploit.py
+import os
+import subprocess
+
+# Address of the shellcode (example address, you need to find this in practice)
+shellcode_address = 0x080484b6
+
+# Construct payload
+payload = b"A" * 72  # Fill the buffer and overflow
+payload += shellcode_address.to_bytes(4, byteorder='little')  # Overwrite return address
+
+# Execute the vulnerable application with the payload
+subprocess.run(["./vulnerable", payload])
+                </code></pre>
+
+                <h4>Defending Against Buffer Overflows:</h4>
+                <ul>
+                    <li><strong>Stack Canaries:</strong> Random values placed before the return address that help detect buffer overflows.</li>
+                    <li><strong>Address Space Layout Randomization (ASLR):</strong> Randomizes memory addresses used by executable files to make it harder for attackers to predict where to jump in memory.</li>
+                </ul>
+
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi31">
+                <div class="question">
+                    <label for="q31"><h5>Question:</h5> What is a buffer overflow?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q31" class="task-form">
+                        <input type="radio" name="task31" value="correct"> When data exceeds the allocated buffer's size<br>
+                        <input type="radio" name="task31" value="wrong"> A type of file compression<br>
+                        <span class="feedback" id="q31-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi31 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi32" class="locked">6.3 Return-Oriented Programming (ROP)</h3>
+        <div class="theory pi32">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>ROP is an advanced exploitation technique that leverages small chunks of existing code (gadgets) within the binary, chaining them together to perform arbitrary operations. This technique is used when memory protections like DEP (Data Execution Prevention) are in place.</p>
+
+                <h4>How ROP Works:</h4>
+                <p>Instead of injecting code, an attacker finds gadgets that end in a return instruction and arranges them to form a new payload.</p>
+
+                <h4>Example Process:</h4>
+                <ol>
+                    <li>Identify gadgets within the executable using tools like ROPgadget or radare2.</li>
+                    <li>Construct a ROP chain using the addresses of these gadgets to perform the desired operations.</li>
+                </ol>
+
+                <h4>ROP Chain Example:</h4>
+                <pre><code># Example gadget addresses (you need to find these using a ROP gadget finder)
+pop_rdi_ret = 0x400123  # Example address to pop RDI
+pop_rsi_ret = 0x400456  # Example address to pop RSI
+syscall_ret = 0x400789  # Address of syscall instruction
+
+# Construct ROP chain
+rop_chain = [
+    pop_rdi_ret,
+    0x1,  # File descriptor for stdout
+    pop_rsi_ret,
+    address_of_message,  # Address of the message to print
+    syscall_ret,
+]
+
+# Sending the ROP chain to the vulnerable application
+payload = b"A" * 64  # Padding to overflow the buffer
+payload += b''.join([gadget.to_bytes(8, byteorder='little') for gadget in rop_chain])
+subprocess.run(["./vulnerable", payload])
+                </code></pre>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi32">
+                <div class="question">
+                    <label for="q32"><h5>Question:</h5> What is Return-Oriented Programming (ROP)?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q32" class="task-form">
+                        <input type="radio" name="task32" value="correct"> An exploitation technique that uses existing code chunks<br>
+                        <input type="radio" name="task32" value="wrong"> A method for securing applications<br>
+                        <span class="feedback" id="q32-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi32 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi33" class="locked">6.4 Practical Examples</h3>
+        <div class="theory pi33">
+            <div class="course-container">
+                <h4>Writing a Buffer Overflow Exploit:</h4>
+                <p>Identify a vulnerable program and analyze its assembly code to determine how to construct your exploit. Create a payload that overwrites the return address to point to your shellcode.</p>
+
+                <h4>Defending Against Memory Corruption Attacks:</h4>
+                <ul>
+                    <li><strong>Implement Stack Canaries:</strong> Modify the compilation flags in GCC:</li>
+                    <pre><code>gcc -fstack-protector-strong -o vulnerable vulnerable.c</code></pre>
+                    <li><strong>Implement ASLR:</strong> Ensure ASLR is enabled on your system (most modern Linux distributions have this enabled by default).</li>
+                    <li><strong>Check ASLR status:</strong></li>
+                    <pre><code>cat /proc/sys/kernel/randomize_va_space</code></pre>
+                </ul>
+
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi33">
+                <div class="question">
+                    <label for="q33"><h5>Question:</h5> What can be done to defend against buffer overflows?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q33" class="task-form">
+                        <input type="radio" name="task33" value="correct"> Implement Stack Canaries and ASLR<br>
+                        <input type="radio" name="task33" value="wrong"> Use only high-level languages<br>
+                        <span class="feedback" id="q33-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi33 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<section>
+    <h2>7. Secure APIs</h2>
+
+    <article>
+        <h3 course-id="pi34" class="locked">7.1 Objective</h3>
+        <div class="theory pi34">
+            <div class="course-container">
+                <p>In today's applications, APIs are essential for enabling communication between different software components. Understanding how to write secure APIs is crucial to prevent various attacks, including brute force, Distributed Denial of Service (DDoS), and injection attacks.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+            
+            <div class="task" task-id="pi34">
+                <div class="question">
+                    <label for="q34"><h5>Question:</h5> Why is it important to write secure APIs?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q34" class="task-form">
+                        <input type="radio" name="task34" value="correct"> To prevent various attacks like brute force and injection<br>
+                        <input type="radio" name="task34" value="wrong"> To improve user experience<br>
+                        <span class="feedback" id="q34-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi34 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi35" class="locked">7.2 Key Concepts</h3>
+        <div class="theory pi35">
+            <div class="course-container">
+                <h4>1. Authentication and Authorization</h4>
+                <p><strong>Definition:</strong> Authentication verifies the identity of a user, while authorization determines what resources a user can access.</p>
+
+                <h4>Secure Token-Based Authentication:</h4>
+                <p>OAuth2 is a widely adopted protocol that provides a secure method for access delegation and token management.</p>
+
+                <h4>Implementing JWT (JSON Web Tokens):</h4>
+                <p>JWTs are compact, URL-safe tokens that represent claims to be transferred between two parties. They can be used for authentication in web applications.</p>
+                
+                <h4>Components of a JWT:</h4>
+                <ul>
+                    <li><strong>Header:</strong> Contains metadata about the token type and signing algorithm.</li>
+                    <li><strong>Payload:</strong> Contains the claims (e.g., user ID, expiration).</li>
+                    <li><strong>Signature:</strong> Ensures the token’s integrity.</li>
+                </ul>
+
+                <h4>Example of JWT Implementation in Python:</h4>
+                <pre><code>from flask import Flask, request, jsonify
+import jwt
+import datetime
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+
+# Function to create JWT
+def create_token(user_id):
+    token = jwt.encode({
+        'user_id': user_id,
+        'exp': datetime.datetime.utcnow() + datetime.timedelta(minutes=30)
+    }, app.config['SECRET_KEY'], algorithm='HS256')
+    return token
+
+@app.route('/login', methods=['POST'])
+def login():
+    # Replace this with your actual authentication logic
+    user_id = request.json.get('user_id')
+    token = create_token(user_id)
+    return jsonify({'token': token})
+
+@app.route('/protected', methods=['GET'])
+def protected():
+    token = request.headers.get('Authorization').split()[1]
+    try:
+        data = jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+        return jsonify({'message': 'Protected content', 'user_id': data['user_id']})
+    except jwt.ExpiredSignatureError:
+        return jsonify({'message': 'Token expired!'}), 401
+    except jwt.InvalidTokenError:
+        return jsonify({'message': 'Invalid token!'}), 401
+
+if __name__ == '__main__':
+    app.run(debug=True)
+                </code></pre>
+
+                <h4>2. Rate Limiting</h4>
+                <p><strong>Definition:</strong> Rate limiting controls the number of requests a user can make to an API in a given time period. This is crucial for mitigating brute-force attacks and preventing abuse of the API.</p>
+
+                <h4>Implementation:</h4>
+                <p>You can use libraries like Flask-Limiter in a Flask application or built-in features in cloud services like AWS API Gateway.</p>
+
+                <h4>Example of Rate Limiting in Flask:</h4>
+                <pre><code>from flask_limiter import Limiter
+
+limiter = Limiter(app, key_func=get_remote_address)
+
+@app.route('/api/resource')
+@limiter.limit("5 per minute")  # Limit to 5 requests per minute
+def get_resource():
+    return jsonify({'data': 'This is your data!'})
+                </code></pre>
+
+                <h4>3. Input Sanitization</h4>
+                <p><strong>Definition:</strong> Input sanitization is the process of cleaning and validating input data to prevent injection attacks, such as SQL injection and command injection.</p>
+
+                <h4>Best Practices:</h4>
+                <ul>
+                    <li>Use parameterized queries or prepared statements when interacting with databases.</li>
+                    <li>Validate and sanitize all inputs based on expected formats.</li>
+                </ul>
+
+                <h4>Example of Secure API Using Parameterized Queries:</h4>
+                <pre><code>import sqlite3
+from flask import request, jsonify
+
+@app.route('/user/&lt;int:user_id&gt;', methods=['GET'])
+def get_user(user_id):
+    conn = sqlite3.connect('database.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
+    user = cursor.fetchone()
+    conn.close()
+
+    if user:
+        return jsonify({'user': user})
+    else:
+        return jsonify({'message': 'User not found'}), 404
+                </code></pre>
+
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi35">
+                <div class="question">
+                    <label for="q35"><h5>Question:</h5> What is input sanitization?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q35" class="task-form">
+                        <input type="radio" name="task35" value="correct"> The process of cleaning and validating input data<br>
+                        <input type="radio" name="task35" value="wrong"> A method for storing data<br>
+                        <span class="feedback" id="q35-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi35 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="pi36" class="locked">7.3 Practical Examples</h3>
+        <div class="theory pi36">
+            <div class="course-container">
+                <h4>Implementing JWT-based Authentication in a Python Web API:</h4>
+                <p>Use Flask and the PyJWT library to manage JWT tokens for user authentication and protect routes.</p>
+
+                <h4>Securing REST APIs Against Injection Attacks:</h4>
+                <p>Ensure all database queries use parameterized statements, and validate all incoming data to protect against SQL injection and other forms of injection attacks.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="pi36">
+                <div class="question">
+                    <label for="q36"><h5>Question:</h5> What is JWT used for?</label><br>
+                    <p>Select your answer:</p>
+                    <form id="q36" class="task-form">
+                        <input type="radio" name="task36" value="correct"> For user authentication<br>
+                        <input type="radio" name="task36" value="wrong"> For encrypting data<br>
+                        <span class="feedback" id="q36-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-pi36 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+</div>
+</body>
+</html>

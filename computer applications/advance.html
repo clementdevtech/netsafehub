@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Cybersecurity Applications</title>
+    <script type="text/javascript" src="../course_script/function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/course_styles.css">
+</head>
+<body>
+        <header>
+        <h1>Cybersecurity </h1>
+        <div class="rewards">
+        <div id="rewards">
+            Rewards: <span>0</span> points
+        </div>
+        <div id="hearts">
+            Hearts: <span class="heart">❤️</span> <span class="heart">❤️</span> <span class="heart">❤️</span>
+        </div>
+        </div>
+   </header>
+    <div class="course">
+        <section class="AdvancedNetworkSecurity">
+    <h2>1. Advanced Network Security</h2>
+<article>
+    <h3 course-id="cbd1" class="cb-intro">1.1 Intrusion Detection and Prevention Systems (IDPS)</h3>
+    <div class="theory cbd1">
+        <div class="course-container">
+            <p>IDPS are critical components in an organization's security architecture. They monitor network traffic and system activities for malicious activities or policy violations.</p>
+
+            <h4>Key Components:</h4>
+            <h5>Types of IDPS:</h5>
+            <ul>
+                <li><strong>Network-Based IDPS (NIDPS):</strong> Monitors network traffic for suspicious patterns and analyzes flows for known attack signatures.</li>
+                <li><strong>Host-Based IDPS (HIDPS):</strong> Installed on individual hosts to monitor system calls, file modifications, and application logs for malicious activity.</li>
+            </ul>
+
+            <h5>Detection Methods:</h5>
+            <ul>
+                <li><strong>Signature-Based Detection:</strong> Identifies threats by comparing observed events against predefined signatures.</li>
+                <li><strong>Anomaly-Based Detection:</strong> Establishes a baseline of normal activity and flags deviations as potential threats.</li>
+            </ul>
+
+            <h4>Key Features:</h4>
+            <ul>
+                <li><strong>Real-Time Monitoring:</strong> Provides alerts in real-time for immediate response to detected threats.</li>
+                <li><strong>Response Capabilities:</strong> Includes blocking traffic, terminating sessions, or alerting administrators.</li>
+                <li><strong>Logging and Reporting:</strong> Offers comprehensive logging and reporting features for incident analysis.</li>
+            </ul>
+
+            <h4>Popular IDPS Solutions:</h4>
+            <ul>
+                <li><strong>Snort:</strong> An open-source system offering real-time packet analysis and logging capabilities.</li>
+                <li><strong>Suricata:</strong> A threat detection engine capable of monitoring network traffic and providing detailed logging.</li>
+                <li><strong>OSSEC:</strong> A host-based intrusion detection system that performs log analysis and file integrity checking.</li>
+            </ul>
+
+            <h4>Usage:</h4>
+            <p>Organizations implement IDPS to enhance their security posture by actively monitoring for and responding to threats.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd1">
+            <div class="question">
+                <label for="q1"><h5>Question:</h5> Which of the following are types of IDPS?</label><br>
+                <p>Select all that apply:</p>
+                <form id='q1' class="task-form">
+                    <input type="checkbox" name="task1" value="correct"> Network-Based IDPS (NIDPS)</br>
+                    <input type="checkbox" name="task1" value="correct"> Host-Based IDPS (HIDPS)</br>
+                    <input type="checkbox" name="task1" value="wrong"> Web Application Firewall (WAF)</br>
+                    <input type="checkbox" name="task1" value="wrong"> Proxy Server</br>
+                    <span class="feedback" id="q1-feedback"></span>
+                </form>
+                   <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cbd1 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="cbd2" class="locked">1.2 Firewalls and VPNs</h3>
+    <div class="theory cbd2">
+        <div class="course-container">
+            <h4>Firewalls</h4>
+            <p>Firewalls are foundational elements in securing network traffic and protecting sensitive data.</p>
+
+            <h5>Types of Firewalls:</h5>
+            <ul>
+                <li><strong>Packet-Filtering Firewalls:</strong> Inspect packets and allow or deny traffic based on predefined rules.</li>
+                <li><strong>Stateful Inspection Firewalls:</strong> Track active connections and make decisions based on connection states.</li>
+                <li><strong>Application Layer Firewalls:</strong> Operate at the application layer to control traffic based on specific applications.</li>
+            </ul>
+
+            <h5>Advanced Configurations:</h5>
+            <ul>
+                <li><strong>Rule Sets:</strong> Create complex rule sets for various traffic types to minimize exposure.</li>
+                <li><strong>Access Control Lists (ACLs):</strong> Restrict access based on IP addresses, protocols, and ports.</li>
+            </ul>
+
+            <h4>VPNs</h4>
+            <p>VPNs secure connections over public networks.</p>
+
+            <h5>Types of VPNs:</h5>
+            <ul>
+                <li><strong>Site-to-Site VPNs:</strong> Connect entire networks using dedicated appliances.</li>
+                <li><strong>Remote Access VPNs:</strong> Allow users to connect securely to a private network remotely.</li>
+            </ul>
+
+            <h5>Advanced Configurations:</h5>
+            <ul>
+                <li><strong>Encryption Protocols:</strong> Implement strong protocols like IPsec and SSL/TLS to protect data.</li>
+                <li><strong>Authentication Mechanisms:</strong> Utilize multi-factor authentication (MFA) for enhanced security.</li>
+                <li><strong>Split Tunneling:</strong> Allow certain traffic to bypass the VPN while securing sensitive data.</li>
+            </ul>
+
+            <h4>Popular Firewall and VPN Solutions:</h4>
+            <ul>
+                <li><strong>Palo Alto Networks Firewall:</strong> A next-generation firewall with advanced threat protection.</li>
+                <li><strong>Cisco ASA:</strong> Combines VPN and advanced threat protection capabilities.</li>
+                <li><strong>OpenVPN:</strong> An open-source VPN solution for secure remote and site-to-site connections.</li>
+            </ul>
+
+            <h4>Usage:</h4>
+            <p>Organizations deploy firewalls and VPNs to safeguard their network infrastructure and ensure secure communications.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd2">
+            <div class="question">
+                <label for="q2"><h5>Question:</h5> Which of the following are types of firewalls?</label><br>
+                <p>Select all that apply:</p>
+                <form id='q2' class="task-form">
+                    <input type="checkbox" name="task2" value="correct"> Packet-Filtering Firewalls</br>
+                    <input type="checkbox" name="task2" value="correct"> Stateful Inspection Firewalls</br>
+                    <input type="checkbox" name="task2" value="correct"> Application Layer Firewalls</br>
+                    <input type="checkbox" name="task2" value="wrong"> Intrusion Detection System (IDS)</br>
+                    <span class="feedback" id="q2-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cbd2 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd3" class="locked">1.3 Network Segmentation and Zoning</h3>
+    <div class="theory cbd3">
+        <div class="course-container">
+            <h4>Network Segmentation and Zoning</h4>
+            <p>These techniques enhance security by limiting access and reducing attack surfaces.</p>
+
+            <h5>Key Concepts:</h5>
+            <ul>
+                <li><strong>Segmentation:</strong> Dividing a network into smaller segments to improve performance and security.</li>
+                <li><strong>Zoning:</strong> Creating different security zones within the network with distinct policies.</li>
+            </ul>
+
+            <h5>Techniques:</h5>
+            <ul>
+                <li><strong>Physical Segmentation:</strong> Using separate physical devices to create isolated segments.</li>
+                <li><strong>Logical Segmentation:</strong> Utilizing VLANs to segment networks logically within the same infrastructure.</li>
+                <li><strong>Micro-Segmentation:</strong> Applying security policies at a granular level to minimize the risk of breaches.</li>
+            </ul>
+
+            <h5>Benefits of Segmentation and Zoning:</h5>
+            <ul>
+                <li><strong>Enhanced Security:</strong> Limits access and reduces the attack surface.</li>
+                <li><strong>Improved Performance:</strong> Reduces congestion and enhances traffic management.</li>
+                <li><strong>Compliance:</strong> Helps enforce strict access controls to protect sensitive data.</li>
+            </ul>
+
+            <h4>Usage:</h4>
+            <p>Organizations implement segmentation and zoning to better manage risks and enhance security throughout their networks.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd3">
+            <div class="question">
+                <label for="q3"><h5>Question:</h5> Which of the following are benefits of network segmentation and zoning?</label><br>
+                <p>Select all that apply:</p>
+                <form id='q3' class="task-form">
+                    <input type="checkbox" name="task3" value="correct"> Enhanced Security</br>
+                    <input type="checkbox" name="task3" value="correct"> Improved Performance</br>
+                    <input type="checkbox" name="task3" value="correct"> Compliance</br>
+                    <input type="checkbox" name="task3" value="wrong"> Increased Latency</br>
+                    <span class="feedback" id="q3-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button type="submit">Check answers</button>
+                        <div class="hint-cbd3 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+
+<section class="ThreatAndVulnerabilityManagement">
+    <h2>2. Threat and Vulnerability Management</h2>
+<article>
+    <h3 course-id="cbd4" class="locked">2.1 Vulnerability Assessment and Management</h3>
+    <div class="theory cbd4">
+        <div class="course-container">
+            <p>Vulnerability assessment and management are critical for identifying, classifying, and mitigating vulnerabilities within an organization's systems and networks.</p>
+
+            <h4>Key Components:</h4>
+            <h5>Vulnerability Assessment:</h5>
+            <p>The process of systematically scanning and evaluating systems, applications, and networks for known vulnerabilities using various tools and methodologies.</p>
+
+            <h5>Advanced Methodologies:</h5>
+            <ul>
+                <li><strong>Automated Scanning Tools:</strong>
+                    <ul>
+                        <li><strong>Static Application Security Testing (SAST):</strong> Tools like Veracode and Fortify scan source code for vulnerabilities before the software runs.</li>
+                        <li><strong>Dynamic Application Security Testing (DAST):</strong> Tools like OWASP ZAP and Burp Suite test applications in a runtime environment for vulnerabilities like SQL injection and XSS.</li>
+                    </ul>
+                </li>
+                <li><strong>Risk-Based Vulnerability Management (RBVM):</strong> Assesses the risk associated with vulnerabilities, classifying them based on potential impact and likelihood of exploitation.</li>
+                <li><strong>Continuous Monitoring:</strong> Regularly scans systems and networks for new vulnerabilities and tracks remediation efforts.</li>
+                <li><strong>Threat Modeling:</strong> Incorporates techniques (e.g., STRIDE, DREAD) to identify potential vulnerabilities early in development.</li>
+            </ul>
+
+            <h4>Popular Vulnerability Assessment Tools:</h4>
+            <ul>
+                <li><strong>Nessus:</strong> A widely used scanner that identifies vulnerabilities, misconfigurations, and compliance issues.</li>
+                <li><strong>Qualys:</strong> A cloud-based solution providing vulnerability management and continuous monitoring.</li>
+                <li><strong>Rapid7 InsightVM:</strong> Offers live vulnerability management and endpoint assessment.</li>
+            </ul>
+
+            <h4>Usage:</h4>
+            <p>Organizations implement vulnerability assessment and management processes to identify and mitigate security risks proactively.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd4-task">
+            <div class="question">
+                <label for="q1"><h5>Question:</h5> Which of the following are components of vulnerability assessment?</label><br>
+                <p>Select all that apply:</p>
+                <form id='q4' class="task-form">
+                    <input type="checkbox" name="task4" value="correct"> Vulnerability Assessment</br>
+                    <input type="checkbox" name="task4" value="correct"> Risk-Based Vulnerability Management (RBVM)</br>
+                    <input type="checkbox" name="task4" value="wrong"> Incident Response Plan</br>
+                    <input type="checkbox" name="task4" value="wrong"> Security Awareness Training</br>
+                    <span class="feedback" id="q4-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cbd4 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="cbd5" class="locked">2.2 Penetration Testing Techniques</h3>
+    <div class="theory cbd5">
+        <div class="course-container">
+            <h4>Penetration Testing</h4>
+            <p>This involves simulating attacks on an organization's systems to identify vulnerabilities that could be exploited by attackers.</p>
+
+            <h5>Types of Penetration Testing:</h5>
+            <ul>
+                <li><strong>Black Box Testing:</strong> The tester has no prior knowledge of the system, simulating an external attacker's perspective.</li>
+                <li><strong>White Box Testing:</strong> The tester has full knowledge of the system, allowing for a more comprehensive assessment.</li>
+                <li><strong>Gray Box Testing:</strong> The tester has partial knowledge of the system, providing a balance between black and white box testing.</li>
+            </ul>
+
+            <h5>Advanced Methodologies:</h5>
+            <ul>
+                <li><strong>Red Teaming:</strong> A simulated attack by security professionals (red team) to identify vulnerabilities in an organization’s defenses.</li>
+                <li><strong>Blue Team vs. Red Team Exercises:</strong> Involves red teams conducting attacks while blue teams work to detect and respond.</li>
+            </ul>
+
+            <h5>Exploitation Techniques:</h5>
+            <p>Techniques used to exploit vulnerabilities found during the assessment, including software weaknesses and configuration errors.</p>
+
+            <h5>Reporting and Remediation:</h5>
+            <p>Documenting findings, providing actionable recommendations for remediation to improve the organization’s security posture.</p>
+
+            <h4>Popular Penetration Testing Tools:</h4>
+            <ul>
+                <li><strong>Metasploit:</strong> A framework for developing and executing exploit code against remote targets.</li>
+                <li><strong>Burp Suite:</strong> A web application security testing tool with features for scanning and exploiting vulnerabilities.</li>
+                <li><strong>Kali Linux:</strong> A Linux distribution pre-installed with numerous penetration testing tools for ethical hacking.</li>
+            </ul>
+
+            <h4>Usage:</h4>
+            <p>Organizations conduct penetration tests to identify security weaknesses and enhance their defenses against potential attacks.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd5">
+            <div class="question">
+                <label for="q5"><h5>Question:</h5> What is the primary goal of penetration testing?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q5' class="task-form">
+                    <input type="radio" name="task5" value="correct"> Identify vulnerabilities in systems</br>
+                    <input type="radio" name="task5" value="wrong"> Train employees on security policies</br>
+                    <input type="radio" name="task5" value="wrong"> Monitor network traffic for suspicious activity</br>
+                    <span class="feedback" id="q5-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd5 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd6" class="locked">2.3 Threat Intelligence</h3>
+    <div class="theory cbd6">
+        <div class="course-container">
+            <h4>Threat Intelligence</h4>
+            <p>Threat intelligence involves the collection and analysis of information about potential threats that could harm an organization.</p>
+
+            <h5>Types of Threat Intelligence:</h5>
+            <ul>
+                <li><strong>Strategic Intelligence:</strong> High-level information regarding potential threats impacting business operations.</li>
+                <li><strong>Tactical Intelligence:</strong> Information about specific tactics, techniques, and procedures (TTPs) used by adversaries.</li>
+                <li><strong>Operational Intelligence:</strong> Detailed insights into ongoing attacks, including indicators of compromise (IoCs).</li>
+            </ul>
+
+            <h5>Utilizing Threat Intelligence:</h5>
+            <ul>
+                <li><strong>Threat Intelligence Platforms (TIPs):</strong> Solutions that aggregate and analyze threat data from various sources, providing actionable intelligence.</li>
+                <li><strong>Sharing Threat Intelligence:</strong> Collaborating with organizations and information-sharing groups to improve collective defense.</li>
+                <li><strong>Threat Hunting:</strong> Proactively searching for indicators of compromise based on threat intelligence.</li>
+            </ul>
+
+            <h5>Benefits of Threat Intelligence:</h5>
+            <ul>
+                <li><strong>Proactive Defense:</strong> Anticipating threats to implement measures before attacks occur.</li>
+                <li><strong>Improved Incident Response:</strong> Providing context during incidents for more effective responses.</li>
+                <li><strong>Informed Decision-Making:</strong> Making strategic security investments based on threat intelligence insights.</li>
+            </ul>
+
+            <h4>Usage:</h4>
+            <p>Organizations leverage threat intelligence to enhance their security posture and improve incident response capabilities.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd6">
+            <div class="question">
+                <label for="q6"><h5>Question:</h5> Which type of threat intelligence focuses on specific tactics used by adversaries?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q6' class="task-form">
+                    <input type="radio" name="task6" value="wrong"> Strategic Intelligence</br>
+                    <input type="radio" name="task6" value="correct"> Tactical Intelligence</br>
+                    <input type="radio" name="task6" value="wrong"> Operational Intelligence</br>
+                    <span class="feedback" id="q6-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd6 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+<section class="CryptographyAndDataProtection">
+    <h2>3. Cryptography and Data Protection</h2>
+<article>
+    <h3 course-id="cbd7" class="locked">3.1 Advanced Cryptography</h3>
+    <div class="theory cbd7">
+        <div class="course-container">
+            <p>Cryptography is the practice of securing information by transforming it into a format that is unreadable to unauthorized users. It is fundamental in protecting data at rest and in transit.</p>
+
+            <h4>Key Concepts:</h4>
+
+            <h5>Symmetric Encryption:</h5>
+            <p>Uses the same key for both encryption and decryption. Both the sender and receiver must have the same secret key.</p>
+            <h6>Common Algorithms:</h6>
+            <ul>
+                <li><strong>AES (Advanced Encryption Standard):</strong> A widely used symmetric encryption algorithm known for its speed and security.</li>
+                <li><strong>DES (Data Encryption Standard):</strong> An older symmetric algorithm largely replaced by AES due to vulnerabilities.</li>
+            </ul>
+
+            <h5>Asymmetric Encryption:</h5>
+            <p>Utilizes a pair of keys: a public key (shared) and a private key (kept secret). The public key encrypts data, while the private key decrypts it.</p>
+            <h6>Common Algorithms:</h6>
+            <ul>
+                <li><strong>RSA (Rivest-Shamir-Adleman):</strong> A widely used asymmetric encryption algorithm for secure data transmission.</li>
+                <li><strong>ECC (Elliptic Curve Cryptography):</strong> An asymmetric algorithm offering similar security as RSA with smaller key sizes.</li>
+            </ul>
+
+            <h5>Hashing:</h5>
+            <p>A one-way function that transforms input data into a fixed-size string, known as a hash value. Hashing is not reversible.</p>
+            <h6>Common Algorithms:</h6>
+            <ul>
+                <li><strong>SHA-256:</strong> A widely used cryptographic hash function that produces a 256-bit hash value.</li>
+                <li><strong>MD5:</strong> An older hashing algorithm that produces a 128-bit hash value, not recommended for security-sensitive applications.</li>
+            </ul>
+
+            <h5>Digital Signatures:</h5>
+            <p>A cryptographic technique using asymmetric encryption to verify the authenticity and integrity of a message.</p>
+            <h6>Process:</h6>
+            <p>The sender hashes the message and encrypts the hash with their private key to create the digital signature.</p>
+
+            <h4>Applications of Advanced Cryptography:</h4>
+            <ul>
+                <li>Secure Communications: Protecting data during transmission (e.g., SSL/TLS).</li>
+                <li>Data Integrity: Ensuring data has not been altered.</li>
+                <li>Authentication: Verifying identities of users and devices.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd7">
+            <div class="question">
+                <label for="q7"><h5>Question:</h5> Which algorithm is recommended for modern symmetric encryption?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q7' class="task-form">
+                    <input type="radio" name="task7" value="correct"> AES (Advanced Encryption Standard)</br>
+                    <input type="radio" name="task7" value="wrong"> DES (Data Encryption Standard)</br>
+                    <input type="radio" name="task7" value="wrong"> MD5</br>
+                    <span class="feedback" id="q7-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd7 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 course-id="cbd8" class="locked">3.2 Public Key Infrastructure (PKI)</h3>
+    <div class="theory cbd8">
+        <div class="course-container">
+            <h4>Public Key Infrastructure (PKI)</h4>
+            <p>PKI is a framework for managing digital certificates and public-key encryption to enable secure communications and identity verification.</p>
+
+            <h5>Key Components:</h5>
+
+            <h6>Digital Certificates:</h6>
+            <p>Electronic documents that bind a public key with an identity using a digital signature.</p>
+
+            <h6>Certificate Authorities (CAs):</h6>
+            <p>Trusted entities that issue digital certificates, verifying the identity of the certificate requestor.</p>
+
+            <h6>Certificate Management:</h6>
+            <p>Involves issuing, renewing, revoking, and managing digital certificates, maintaining a Certificate Revocation List (CRL).</p>
+
+            <h6>Trust Relationships:</h6>
+            <p>PKI establishes a web of trust through hierarchies of CAs and allows for cross-certification.</p>
+
+            <h4>Applications of PKI:</h4>
+            <ul>
+                <li>Secure Email (S/MIME): Encrypting and signing emails.</li>
+                <li>SSL/TLS Certificates: Securing web traffic.</li>
+                <li>Digital Signatures: Authenticating documents and transactions.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd8">
+            <div class="question">
+                <label for="q8">Question: What is the primary role of a Certificate Authority (CA)?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q8' class="task-form">
+                    <input type="radio" name="task8" value="correct"> Issuing digital certificates</br>
+                    <input type="radio" name="task8" value="wrong"> Encrypting user data</br>
+                    <input type="radio" name="task8" value="wrong"> Monitoring network traffic</br>
+                    <span class="feedback" id="q8-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd8 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<article>
+    <h3 course-id="cbd9" class="locked">3.3 Data Loss Prevention (DLP)</h3>
+    <div class="theory cbd9">
+        <div class="course-container">
+            <h4>Data Loss Prevention (DLP)</h4>
+            <p>DLP refers to strategies and tools designed to prevent sensitive data from being lost or misused by unauthorized individuals.</p>
+
+            <h5>Key Components:</h5>
+
+            <h6>DLP Technologies:</h6>
+            <p>Software solutions that monitor, detect, and respond to potential data breaches.</p>
+
+            <h6>Policy Implementation:</h6>
+            <p>Organizations define DLP policies specifying how sensitive data should be handled and who has access to it.</p>
+
+            <h6>Data Classification:</h6>
+            <p>Classifying data based on sensitivity to apply appropriate security controls.</p>
+
+            <h6>Incident Response:</h6>
+            <p>Processes to respond to potential data loss incidents, including investigation and remediation.</p>
+
+            <h4>Popular DLP Solutions:</h4>
+            <ul>
+                <li><strong>Symantec DLP:</strong> Offers content inspection and policy enforcement.</li>
+                <li><strong>McAfee Total Protection for DLP:</strong> Provides data protection solutions across environments.</li>
+                <li><strong>Digital Guardian:</strong> A data-centric DLP solution protecting sensitive data across channels.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd9">
+            <div class="question">
+                <label for="q9"><h5>Question:</h5> Which component is crucial for preventing data breaches in DLP strategies?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q9' class="task-form">
+                    <input type="radio" name="task9" value="correct"> DLP Technologies</br>
+                    <input type="radio" name="task9" value="wrong"> Firewalls</br>
+                    <input type="radio" name="task9" value="wrong"> Antivirus Software</br>
+                    <span class="feedback" id="q9-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd9 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+<section class="AuthenticationAndAccessControl">
+    <h2>4. Authentication and Access Control</h2>
+
+<article>
+    <h3 course-id="cbd10" class="locked">4.1 Multi-Factor Authentication (MFA)</h3>
+    <div class="theory cbd10">
+        <div class="course-container">
+            <p>Multi-Factor Authentication (MFA) enhances security by requiring users to provide two or more verification factors to gain access to a resource. This adds an extra layer of security beyond just a username and password.</p>
+
+            <h4>Key Components:</h4>
+
+            <h5>Types of Authentication Factors:</h5>
+            <ul>
+                <li><strong>Something You Know:</strong> Typically a password or PIN.</li>
+                <li><strong>Something You Have:</strong> A physical device (smartphone, hardware token, smart card).</li>
+                <li><strong>Something You Are:</strong> Biometric factors (fingerprints, facial recognition).</li>
+                <li><strong>Somewhere You Are:</strong> Geographic location or device-specific criteria.</li>
+            </ul>
+
+            <h5>Advanced Implementations of MFA:</h5>
+            <ul>
+                <li><strong>Biometric Authentication:</strong> Utilizes unique biological traits for user verification.</li>
+                <li><strong>Adaptive Authentication:</strong> Adjusts requirements based on contextual information (user behavior, location, device).</li>
+            </ul>
+
+            <h4>Implementation Best Practices:</h4>
+            <ul>
+                <li>Enforce MFA across all sensitive systems and applications.</li>
+                <li>Educate users about the importance of MFA and how to use it effectively.</li>
+                <li>Regularly review and update MFA methods and policies based on evolving threats.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd10">
+            <div class="question">
+                <label for="q10">Question: What does Multi-Factor Authentication (MFA) add to security?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q10' class="task-form">
+                    <input type="radio" name="task10" value="correct"> An extra layer of security beyond a username and password.</br>
+                    <input type="radio" name="task10" value="wrong"> A faster login process.</br>
+                    <input type="radio" name="task10" value="wrong"> Simplified password management.</br>
+                    <span class="feedback" id="q10-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd10 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<article>
+    <h3 course-id="cbd11" class="locked">4.2 Identity and Access Management (IAM)</h3>
+    <div class="theory cbd11">
+        <div class="course-container">
+            <h4>Identity and Access Management (IAM)</h4>
+            <p>IAM refers to the policies, processes, and technologies used to manage digital identities and control access to resources within an organization.</p>
+
+            <h5>Key Components:</h5>
+
+            <h6>User Identity Management:</h6>
+            <p>Centralized management of user identities, ensuring accurate and up-to-date information about each user.</p>
+
+            <h6>Role-Based Access Control (RBAC):</h6>
+            <p>Assigns permissions based on user roles within the organization, simplifying permission management.</p>
+
+            <h4>Best Practices for IAM:</h4>
+            <ul>
+                <li>Implement the principle of least privilege (PoLP).</li>
+                <li>Regularly review access permissions and roles to prevent privilege creep.</li>
+                <li>Utilize automated IAM solutions to streamline processes.</li>
+                <li>Conduct regular audits to ensure adherence to access policies.</li>
+            </ul>
+
+            <h4>Popular IAM Solutions:</h4>
+            <ul>
+                <li><strong>Okta:</strong> Cloud-based IAM solution with user authentication and lifecycle management.</li>
+                <li><strong>Microsoft Azure Active Directory:</strong> An enterprise-level identity service integrating with numerous applications.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd11">
+            <div class="question">
+                <label for="q11">Question: What does Role-Based Access Control (RBAC) help to manage?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q11' class="task-form">
+                    <input type="radio" name="task11" value="correct"> User permissions based on roles within the organization.</br>
+                    <input type="radio" name="task11" value="wrong"> Network security protocols.</br>
+                    <input type="radio" name="task11" value="wrong"> Software installation processes.</br>
+                    <span class="feedback" id="q11-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd11 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="cbd12" class="locked">4.3 Single Sign-On (SSO)</h3>
+    <div class="theory cbd12">
+        <div class="course-container">
+            <h4>Single Sign-On (SSO)</h4>
+            <p>SSO allows users to authenticate once and gain access to multiple applications without re-entering credentials.</p>
+
+            <h5>Key Components:</h5>
+
+            <h6>SSO Architecture:</h6>
+            <p>Typically uses a centralized authentication server to manage user identities and authentication requests.</p>
+
+            <h4>Benefits of SSO:</h4>
+            <ul>
+                <li><strong>User Experience:</strong> Reduces password fatigue, increasing productivity.</li>
+                <li><strong>Improved Security:</strong> Enhances security through better monitoring of access controls.</li>
+                <li><strong>Reduced IT Support Costs:</strong> Fewer password-related issues lead to reduced help desk calls.</li>
+            </ul>
+
+            <h4>Configuring and Managing SSO Solutions:</h4>
+            <ul>
+                <li>Ensure support for secure protocols (e.g., SAML, OAuth).</li>
+                <li>Implement robust session management policies.</li>
+                <li>Regularly audit and update configurations and security settings.</li>
+            </ul>
+
+            <h4>Popular SSO Solutions:</h4>
+            <ul>
+                <li><strong>Okta SSO:</strong> Provides seamless access to a range of applications.</li>
+                <li><strong>OneLogin:</strong> Integrates with multiple applications to enhance user experience.</li>
+                <li><strong>Auth0:</strong> Flexible platform for identity management supporting SSO.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd12">
+            <div class="question">
+                <label for="q12"><h5>Question:</h5> What is a primary benefit of Single Sign-On (SSO)?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q12' class="task-form">
+                    <input type="radio" name="task12" value="correct"> Reduces the need to remember multiple passwords.</br>
+                    <input type="radio" name="task12" value="wrong"> Increases the number of passwords users must remember.</br>
+                    <input type="radio" name="task12" value="wrong"> Slows down the authentication process.</br>
+                    <span class="feedback" id="q12-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd12 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="MalwareAnalysisAndReverseEngineering">
+    <h2>5. Malware Analysis and Reverse Engineering</h2>
+
+<article>
+    <h3 course-id="cbd13" class="locked">5.1 Static and Dynamic Malware Analysis</h3>
+    <div class="theory cbd13">
+        <div class="course-container">
+            <h4>Static Malware Analysis</h4>
+            <p>Static analysis involves examining the malware code without executing it. This method helps identify the structure and potential behavior of the malware by analyzing its binary and source code.</p>
+
+            <h5>Key Techniques:</h5>
+            <ul>
+                <li><strong>File Inspection:</strong> Examining file headers and metadata to identify file types and potential obfuscation techniques.</li>
+                <li><strong>Disassembly:</strong> Using tools like IDA Pro or Ghidra to convert machine code into assembly code.</li>
+                <li><strong>Static Code Analysis:</strong> Using tools like RIPS and SonarQube to analyze the code for vulnerabilities.</li>
+                <li><strong>String Analysis:</strong> Searching for readable strings in the binary for indicators of compromise (IOCs).</li>
+                <li><strong>Dependency Analysis:</strong> Identifying libraries and external resources used by the malware.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Quick to perform without executing the malware.</li>
+                <li>Helps identify known signatures and IOCs.</li>
+            </ul>
+
+            <h4>Limitations:</h4>
+            <ul>
+                <li>May not reveal complete behavior, especially with runtime conditions.</li>
+                <li>Obfuscation can complicate analysis.</li>
+            </ul>
+
+            <h4>Dynamic Malware Analysis</h4>
+            <p>Dynamic analysis involves executing the malware in a controlled environment to observe its behavior in real time.</p>
+
+            <h5>Key Techniques:</h5>
+            <ul>
+                <li><strong>Behavioral Analysis:</strong> Monitoring system calls, network traffic, and file system changes.</li>
+                <li><strong>Process Monitoring:</strong> Using tools like Process Monitor (ProcMon) to track process activities.</li>
+                <li><strong>Network Analysis:</strong> Capturing network traffic using tools like Wireshark.</li>
+                <li><strong>API Hooking:</strong> Intercepting API calls made by the malware for detailed examination.</li>
+                <li><strong>Debugging:</strong> Using debuggers like OllyDbg to step through code execution.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Reveals real-time behavior and interactions.</li>
+                <li>Can identify actions not evident in static analysis.</li>
+            </ul>
+
+            <h4>Limitations:</h4>
+            <ul>
+                <li>Requires a secure environment to avoid infection.</li>
+                <li>Time-consuming, as it may involve extensive monitoring.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd13">
+            <div class="question">
+                <label for="q13"><h5>Question:</h5> What is a primary advantage of static malware analysis?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q13' class="task-form">
+                    <input type="radio" name="task13" value="correct"> It can be performed quickly without executing the malware.</br>
+                    <input type="radio" name="task13" value="wrong"> It reveals real-time behavior of the malware.</br>
+                    <input type="radio" name="task13" value="wrong"> It requires extensive monitoring.</br>
+                    <span class="feedback" id="q13-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd13 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd14" class="locked">5.2 Reverse Engineering</h3>
+    <div class="theory cbd14">
+        <div class="course-container">
+            <h4>Reverse Engineering</h4>
+            <p>Reverse engineering involves dissecting and analyzing software to understand its design, functionality, and vulnerabilities.</p>
+
+            <h5>Key Techniques:</h5>
+            <ul>
+                <li><strong>Disassembly and Decompilation:</strong> Using disassemblers (IDA Pro, Radare2) to convert machine code into assembly and decompilers (Ghidra, JD-GUI) to convert back into high-level language.</li>
+                <li><strong>Identifying Vulnerabilities:</strong> Analyzing code for weaknesses like buffer overflows and insecure function calls.</li>
+                <li><strong>Developing Defenses:</strong> Creating patches and updates based on the understanding of how malware operates.</li>
+                <li><strong>Documentation and Reporting:</strong> Generating detailed reports to document findings for future reference.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd14">
+            <div class="question">
+                <label for="q14"><h5>Question:</h5> What is a goal of reverse engineering in malware analysis?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q14' class="task-form">
+                    <input type="radio" name="task14" value="correct"> To understand the design and vulnerabilities of the malware.</br>
+                    <input type="radio" name="task14" value="wrong"> To create more malware.</br>
+                    <input type="radio" name="task14" value="wrong"> To improve the user interface of applications.</br>
+                    <span class="feedback" id="q14-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd14 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd15" class="locked">5.3 Sandboxing</h3>
+    <div class="theory cbd15">
+        <div class="course-container">
+            <h4>Sandboxing</h4>
+            <p>Sandboxing is the practice of creating isolated environments where malware can be executed and analyzed safely.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Sandbox Environments:</strong> Virtual machines or dedicated hardware simulating real environments for safe execution.</li>
+            </ul>
+
+            <h5>Key Features:</h5>
+            <ul>
+                <li><strong>Isolation:</strong> Prevents malware from affecting the host system.</li>
+                <li><strong>Behavioral Monitoring:</strong> Tools to monitor behavior during execution.</li>
+                <li><strong>Automated Analysis:</strong> Captures artifacts, behaviors, and network communications.</li>
+            </ul>
+
+            <h5>Use Cases:</h5>
+            <ul>
+                <li><strong>Threat Detection:</strong> Analyzing suspicious files and URLs in a safe environment.</li>
+                <li><strong>Malware Research:</strong> In-depth analysis of malware families and trends.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd15">
+            <div class="question">
+                <label for="q15"><h5>Question:</h5> What is the primary purpose of sandboxing in malware analysis?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q15' class="task-form">
+                    <input type="radio" name="task15" value="correct"> To analyze malware in an isolated environment without risking production systems.</br>
+                    <input type="radio" name="task15" value="wrong"> To execute malware in the main operating system.</br>
+                    <input type="radio" name="task15" value="wrong"> To distribute malware to users.</br>
+                    <span class="feedback" id="q15-feedback"></span>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd15 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+<section class="IncidentResponseAndForensics">
+    <h2>6. Incident Response and Forensics</h2>
+
+
+<article>
+    <h3 course-id="cbd16" class="locked">6.1 Incident Response Planning</h3>
+    <div class="theory cbd16">
+        <div class="course-container">
+            <h4>Incident Response Planning</h4>
+            <p>Incident Response Planning involves developing structured processes to effectively detect, respond to, and recover from security incidents.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Incident Response Team (IRT):</strong> A dedicated team responsible for handling security incidents, including roles like incident response manager and forensic investigators.</li>
+                <li><strong>Incident Response Lifecycle:</strong>
+                    <ul>
+                        <li><strong>Preparation:</strong> Establishing policies, tools, and training, along with creating playbooks for various incidents.</li>
+                        <li><strong>Detection and Analysis:</strong> Implementing systems to identify incidents and analyze their scope and impact.</li>
+                        <li><strong>Containment, Eradication, and Recovery:</strong> Steps to contain the incident, eradicate its cause, and recover systems.</li>
+                        <li><strong>Post-Incident Activities:</strong> Reviewing the incident for lessons learned and updating response plans.</li>
+                    </ul>
+                </li>
+                <li><strong>Playbooks:</strong> Detailed playbooks for specific incident types outlining response processes, roles, and communication protocols.</li>
+                <li><strong>Communication Plans:</strong> Establishing clear channels for internal and external communication during incidents.</li>
+                <li><strong>Regular Review and Testing:</strong> Conducting tabletop exercises to test and improve the incident response plan.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd16">
+            <div class="question">
+                <label for="q16"><h4>Question:</h4> What is a primary component of the Incident Response Lifecycle?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q16' class="task-form">
+                    <input type="radio" name="task16" value="correct"> Preparation involves establishing policies and tools.</br>
+                    <input type="radio" name="task16" value="wrong"> Conducting a final review after an incident.</br>
+                    <input type="radio" name="task16" value="wrong"> Focusing solely on eradication without recovery.</br>
+                    <span class="feedback" id="q16-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd16 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</article>
+
+<article>
+    <h3 course-id="cbd17" class="locked">6.2 Digital Forensics</h3>
+    <div class="theory cbd17">
+        <div class="course-container">
+            <h4>Digital Forensics</h4>
+            <p>Digital Forensics is the practice of collecting, preserving, analyzing, and presenting digital evidence in a legally admissible manner.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Forensic Investigation Process:</strong>
+                    <ul>
+                        <li><strong>Identification:</strong> Determining the scope of the incident and involved devices.</li>
+                        <li><strong>Collection:</strong> Gathering evidence in a forensically sound manner.</li>
+                        <li><strong>Preservation:</strong> Securing evidence to prevent tampering.</li>
+                        <li><strong>Analysis:</strong> Using forensic tools to identify relevant evidence and understand the timeline of events.</li>
+                    </ul>
+                </li>
+                <li><strong>Types of Digital Evidence:</strong>
+                    <ul>
+                        <li><strong>File Systems:</strong> Analyzing file structures to recover deleted files.</li>
+                        <li><strong>Network Traffic:</strong> Examining captured traffic for communication patterns.</li>
+                        <li><strong>Logs:</strong> Reviewing system logs for signs of malicious activity.</li>
+                    </ul>
+                </li>
+                <li><strong>Reporting and Presentation:</strong> Creating detailed reports for technical and non-technical stakeholders.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd17">
+            <div class="question">
+                <label for="q17"><h5>Question:</h5> What is the first step in the forensic investigation process?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q17' class="task-form">
+                    <input type="radio" name="task17" value="correct"> Identification involves determining the scope of the incident.</br>
+                    <input type="radio" name="task17" value="wrong"> Analysis comes first in the process.</br>
+                    <input type="radio" name="task17" value="wrong"> Reporting is the initial step in the process.</br>
+                    <span class="feedback" id="q17-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd17 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd18" class="locked">6.3 Security Information and Event Management (SIEM)</h3>
+    <div class="theory cbd18">
+        <div class="course-container">
+            <h4>Security Information and Event Management (SIEM)</h4>
+            <p>SIEM solutions provide real-time analysis of security alerts generated by applications and network hardware.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Data Aggregation:</strong> Centralizing log data from various sources for a holistic view.</li>
+                <li><strong>Log Management:</strong> Storing and managing log data for compliance and analysis.</li>
+                <li><strong>Event Correlation:</strong> Identifying patterns between different events to detect potential threats.</li>
+                <li><strong>Real-time Monitoring and Alerts:</strong> Continuous monitoring generates alerts for rapid detection.</li>
+                <li><strong>Incident Response Integration:</strong> Integrating with incident response tools for automated actions.</li>
+            </ul>
+
+            <h5>Reporting and Compliance:</h5>
+            <p>SIEM tools generate reports to demonstrate compliance with regulatory requirements.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd18">
+            <div class="question">
+                <label for="q18"><h5>Question:</h5> What is a primary function of SIEM solutions?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q18' class="task-form">
+                    <input type="radio" name="task18" value="correct"> SIEM solutions provide real-time analysis of security alerts.</br>
+                    <input type="radio" name="task18" value="wrong"> SIEM solutions only store data without analysis.</br>
+                    <input type="radio" name="task18" value="wrong"> SIEM solutions focus solely on incident response.</br>
+                    <span class="feedback" id="q18-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd18 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+<section class="CloudSecurity">
+    <h2>7. Cloud Security</h2>
+
+<article>
+    <h3 course-id="cbd19" class="locked">7.1 Cloud Security Posture Management (CSPM)</h3>
+    <div class="theory cbd19">
+        <div class="course-container">
+            <h4>Cloud Security Posture Management (CSPM)</h4>
+            <p>CSPM refers to practices and tools designed to improve an organization's security posture in cloud environments through continuous monitoring and management.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Continuous Monitoring:</strong> Provides visibility into cloud environments, identifying misconfigurations and vulnerabilities in real time.</li>
+                <li><strong>Automated Risk Assessment:</strong> Evaluates security posture against best practices and compliance frameworks.</li>
+                <li><strong>Configuration Management:</strong> Helps identify and remediate misconfigurations that could lead to vulnerabilities.</li>
+                <li><strong>Compliance Monitoring:</strong> Ensures adherence to regulations by continuously monitoring security controls.</li>
+                <li><strong>Integration with CI/CD Pipelines:</strong> Enforces security best practices from the development phase to production.</li>
+                <li><strong>Incident Response:</strong> Triggers alerts and automates response actions based on detected issues.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd19">
+            <div class="question">
+                <label for="q19"><h5>Question:</h5> What is the primary purpose of CSPM tools?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q19' class="task-form">
+                    <input type="radio" name="task19" value="correct"> To improve an organization's security posture in cloud environments.</br>
+                    <input type="radio" name="task19" value="wrong"> To provide backup solutions for cloud data.</br>
+                    <input type="radio" name="task19" value="wrong"> To enforce user access controls exclusively.</br>
+                    <span class="feedback" id="q19-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd19 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd20" class="locked">7.2 Cloud Access Security Brokers (CASB)</h3>
+    <div class="theory cbd20">
+        <div class="course-container">
+            <h4>Cloud Access Security Brokers (CASB)</h4>
+            <p>CASB solutions serve as intermediaries between users and cloud service providers, enforcing security policies and ensuring compliance.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Visibility:</strong> Provides insight into cloud usage and identifies unauthorized services.</li>
+                <li><strong>Data Security:</strong> Implements data loss prevention (DLP) policies to protect sensitive information.</li>
+                <li><strong>Access Control:</strong> Enforces policies to ensure only authorized users access sensitive data.</li>
+                <li><strong>Threat Protection:</strong> Offers monitoring and anomaly detection to identify potential security incidents.</li>
+                <li><strong>Compliance Management:</strong> Maintains compliance with regulations by enforcing security policies.</li>
+                <li><strong>Integration with Existing Security Solutions:</strong> Enhances security posture by integrating with existing tools.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd20">
+            <div class="question">
+                <label for="q20"><h5>Question:</h5> What is a key feature of CASB solutions?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q20' class="task-form">
+                    <input type="radio" name="task20" value="correct"> Providing visibility into cloud usage and identifying shadow IT.</br>
+                    <input type="radio" name="task20" value="wrong"> Exclusively encrypting data in transit.</br>
+                    <input type="radio" name="task20" value="wrong"> Limiting access controls to on-premise applications.</br>
+                    <span class="feedback" id="q20-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd20 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+<article>
+    <h3 course-id="cbd21" class="locked">7.3 Data Protection in the Cloud</h3>
+    <div class="theory cbd21">
+        <div class="course-container">
+            <h4>Data Protection in the Cloud</h4>
+            <p>Data protection in the cloud involves strategies and technologies to secure sensitive data stored in cloud environments.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Data Encryption:</strong> Encrypting data at rest and in transit to protect sensitive information.</li>
+                <li><strong>Access Controls:</strong> Implementing robust controls based on the principle of least privilege.</li>
+                <li><strong>Data Loss Prevention (DLP):</strong> Monitoring and controlling data flows to prevent leakage.</li>
+                <li><strong>Backup and Recovery:</strong> Regularly backing up data and implementing disaster recovery plans.</li>
+                <li><strong>Compliance Frameworks:</strong> Adhering to regulatory requirements for data protection.</li>
+                <li><strong>Secure API Practices:</strong> Implementing secure practices for APIs to protect data transmitted through them.</li>
+                <li><strong>Monitoring and Logging:</strong> Continuous monitoring and logging of data access to detect anomalies.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd21">
+            <div class="question">
+                <label for="q21"><h5>Question:</h5> What is a critical component of data protection in the cloud?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q21' class="task-form">
+                    <input type="radio" name="task21" value="correct"> Data encryption is essential for protecting sensitive information.</br>
+                    <input type="radio" name="task21" value="wrong"> Regular data loss is an acceptable risk.</br>
+                    <input type="radio" name="task21" value="wrong"> Access controls are optional for data protection.</br>
+                    <span class="feedback" id="q21-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd21 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+<section class="ComplianceRiskManagement">
+    <h2>8. Compliance and Risk Management</h2>
+
+<article>
+    <h3 course-id="cbd22" class="locked">8.1 Risk Assessment and Management</h3>
+    <div class="theory cbd22">
+        <div class="course-container">
+            <h4>Risk Assessment and Management</h4>
+            <p>This involves identifying, analyzing, and mitigating risks to an organization’s assets, including information systems, personnel, and data.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Risk Assessment Process:</strong>
+                    <ul>
+                        <li><strong>Identification:</strong> Identifying potential threats and vulnerabilities.</li>
+                        <li><strong>Analysis:</strong> Analyzing risks based on likelihood and impact.</li>
+                        <li><strong>Evaluation:</strong> Evaluating existing controls and their effectiveness.</li>
+                    </ul>
+                </li>
+                <li><strong>Risk Management Strategies:</strong>
+                    <ul>
+                        <li><strong>Mitigation:</strong> Implementing controls to reduce risk likelihood or impact.</li>
+                        <li><strong>Transfer:</strong> Transferring risk to a third party, e.g., insurance.</li>
+                        <li><strong>Acceptance:</strong> Accepting the risk when mitigation costs exceed potential impact.</li>
+                    </ul>
+                </li>
+                <li><strong>Continuous Monitoring:</strong> Ongoing monitoring of risks and controls.</li>
+                <li><strong>Risk Register:</strong> Documenting risks and management efforts.</li>
+                <li><strong>Stakeholder Communication:</strong> Keeping stakeholders informed about risk posture.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd22">
+            <div class="question">
+                <label for="q22"><h5>Question:</h5> What is the first step in the risk assessment process?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q22' class="task-form">
+                    <input type="radio" name="task22" value="correct"> Identification of potential threats and vulnerabilities.</br>
+                    <input type="radio" name="task22" value="wrong"> Analysis of existing controls.</br>
+                    <input type="radio" name="task22" value="wrong"> Development of a risk register.</br>
+                    <span class="feedback" id="q22-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd22 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd23" class="locked">8.2 Compliance Frameworks</h3>
+    <div class="theory cbd23">
+        <div class="course-container">
+            <h4>Compliance Frameworks</h4>
+            <p>Compliance frameworks provide structured guidelines to ensure adherence to legal, regulatory, and industry standards.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Overview of Major Frameworks:</strong>
+                    <ul>
+                        <li><strong>GDPR:</strong> EU regulation for data protection and privacy.</li>
+                        <li><strong>HIPAA:</strong> U.S. law for the protection of health information.</li>
+                        <li><strong>PCI-DSS:</strong> Security standards for protecting card payment information.</li>
+                    </ul>
+                </li>
+                <li><strong>Impact on Security Practices:</strong> Compliance frameworks require specific controls and procedures.</li>
+                <li><strong>Integration with Business Processes:</strong> Compliance should be part of overall business operations.</li>
+                <li><strong>Regular Training and Awareness:</strong> Essential for reinforcing compliance responsibilities among employees.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd23">
+            <div class="question">
+                <label for="q23"><h5>Question:</h5> What is the purpose of compliance frameworks?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q23' class="task-form">
+                    <input type="radio" name="task23" value="correct"> To provide structured guidelines for adhering to regulations.</br>
+                    <input type="radio" name="task23" value="wrong"> To solely protect financial data.</br>
+                    <input type="radio" name="task23" value="wrong"> To develop marketing strategies.</br>
+                    <span class="feedback" id="q23-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd23 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd24" class="locked">8.3 Audit and Compliance Management</h3>
+    <div class="theory cbd24">
+        <div class="course-container">
+            <h4>Audit and Compliance Management</h4>
+            <p>This focuses on preparing for audits, ensuring compliance with regulatory requirements, and maintaining effective governance processes.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Preparation for Audits:</strong> Establishing internal audit programs and conducting mock audits.</li>
+                <li><strong>Engaging External Auditors:</strong> Conducting independent assessments for insights and recommendations.</li>
+                <li><strong>Remediation Plans:</strong> Addressing deficiencies identified during audits.</li>
+                <li><strong>Continuous Compliance Monitoring:</strong> Ongoing monitoring of compliance with regulations.</li>
+                <li><strong>Stakeholder Reporting:</strong> Regularly reporting compliance status and audit findings.</li>
+                <li><strong>GRC Solutions:</strong> Utilizing tools to streamline compliance management processes.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd24">
+            <div class="question">
+                <label for="q24"><h5>Question:</h5> What is a critical step in audit and compliance management?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q24' class="task-form">
+                    <input type="radio" name="task24" value="correct"> Establishing an internal audit program to assess compliance.</br>
+                    <input type="radio" name="task24" value="wrong"> Ignoring feedback from external auditors.</br>
+                    <input type="radio" name="task24" value="wrong"> Focusing only on remediation plans.</br>
+                    <span class="feedback" id="q24-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd24 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+<section class="AdvancedToolsTechniques">
+    <h2>9. Advanced Tools and Techniques</h2>
+
+
+<article>
+    <h3 course-id="cbd25" class="locked">9.1 Security Automation</h3>
+    <div class="theory cbd25">
+        <div class="course-container">
+            <h4>Security Automation</h4>
+            <p>Security automation involves using technology to perform tasks and processes that would typically require human intervention, improving efficiency and reducing human error.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Automation of Repetitive Tasks:</strong> Automating tasks like log analysis and patch management.</li>
+                <li><strong>Incident Response Automation:</strong> Implementing automated workflows for faster incident responses.</li>
+                <li><strong>Integration with Security Tools:</strong> Enhancing data sharing and response capabilities through integration.</li>
+                <li><strong>Playbooks and Runbooks:</strong> Developing documents that outline automated response processes.</li>
+                <li><strong>Threat Intelligence Integration:</strong> Automating the integration of threat intelligence feeds.</li>
+            </ul>
+
+            <h5>Tools for Security Automation:</h5>
+            <ul>
+                <li>Palo Alto Networks Cortex XSOAR</li>
+                <li>Ansible</li>
+                <li>IBM Security QRadar SOAR</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd25">
+            <div class="question">
+                <label for="q25"><h5>Question:</h5> What is one benefit of security automation?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q25' class="task-form">
+                    <input type="radio" name="task25" value="correct"> Improves efficiency and reduces human error.</br>
+                    <input type="radio" name="task25" value="wrong"> Increases manual workload.</br>
+                    <input type="radio" name="task25" value="wrong"> Eliminates the need for security tools.</br>
+                    <span class="feedback" id="q25-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd25 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd26" class="locked">9.2 Threat Hunting</h3>
+    <div class="theory cbd26">
+        <div class="course-container">
+            <h4>Threat Hunting</h4>
+            <p>Threat hunting is a proactive cybersecurity practice involving the search for threats and vulnerabilities within an organization’s network.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Proactive Threat Detection:</strong> Actively searching for hidden threats that bypass defenses.</li>
+                <li><strong>Hypothesis-Driven Approach:</strong> Formulating hypotheses about potential attack vectors.</li>
+                <li><strong>Use of Advanced Tools:</strong> Utilizing SIEM systems, EDR solutions, and traffic analysis tools.</li>
+                <li><strong>Collaboration with Incident Response:</strong> Working closely with incident response teams.</li>
+            </ul>
+
+            <h5>Threat Hunting Methodologies:</h5>
+            <ul>
+                <li>TTP Analysis</li>
+                <li>Anomaly Detection</li>
+                <li>IOC Analysis</li>
+            </ul>
+
+            <h5>Tools for Threat Hunting:</h5>
+            <ul>
+                <li>Elastic Security</li>
+                <li>Splunk</li>
+                <li>MITRE ATT&CK Framework</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd26">
+            <div class="question">
+                <label for="q26"><h5>Question:</h5> What is a common methodology in threat hunting?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q26' class="task-form">
+                    <input type="radio" name="task26" value="correct"> TTP Analysis</br>
+                    <input type="radio" name="task26" value="wrong"> Automated Patch Management</br>
+                    <input type="radio" name="task26" value="wrong"> Network Configuration Management</br>
+                    <span class="feedback" id="q26-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd26 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3 course-id="cbd27" class="locked">9.3 Machine Learning in Cybersecurity</h3>
+    <div class="theory cbd27">
+        <div class="course-container">
+            <h4>Machine Learning in Cybersecurity</h4>
+            <p>Machine learning (ML) enhances threat detection and response by automating decision-making processes based on data analysis.</p>
+
+            <h5>Key Components:</h5>
+            <ul>
+                <li><strong>Anomaly Detection:</strong> Identifying deviations from baseline behavior.</li>
+                <li><strong>Malware Detection:</strong> Recognizing new or unknown malware through ML models.</li>
+                <li><strong>User Behavior Analytics (UBA):</strong> Detecting anomalous user behavior.</li>
+                <li><strong>Phishing Detection:</strong> Analyzing emails to identify phishing attempts.</li>
+                <li><strong>Automated Incident Response:</strong> Reducing response times through data analysis.</li>
+                <li><strong>Threat Intelligence Enhancement:</strong> Automating threat data analysis.</li>
+            </ul>
+
+            <h5>Challenges and Considerations:</h5>
+            <ul>
+                <li>Need for quality data for training</li>
+                <li>Risk of adversarial attacks against ML models</li>
+                <li>Potential for bias in ML algorithms</li>
+            </ul>
+
+            <h5>Tools for Machine Learning in Cybersecurity:</h5>
+            <ul>
+                <li>Darktrace</li>
+                <li>CylancePROTECT</li>
+                <li>IBM Watson for Cyber Security</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="cbd27">
+            <div class="question">
+                <label for="q7"><h5>Question:</h5> What is one application of machine learning in cybersecurity?</label><br>
+                <p>Select the correct answer:</p>
+                <form id='q7' class="task-form">
+                    <input type="radio" name="task7" value="correct"> Anomaly Detection</br>
+                    <input type="radio" name="task7" value="wrong"> Manual Log Analysis</br>
+                    <input type="radio" name="task7" value="wrong"> Firewall Configuration Management</br>
+                    <span class="feedback" id="q7-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answer</button>
+                        <div class="hint-cbd27 hint-image"><img src="../photos/hint.jfif"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+</div>
+</body>
+</html>

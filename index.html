@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,8 +6,8 @@
     <title>NetSafeHub</title>
     <link rel="icon" href="photos/logo.ico" type="image/x-icon">
     <link rel="shortcut icon" href="photos/logo.ico" type="image/x-icon">
-    <script type="text/javascript" src="functionality.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./javascript/functionality.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
 </head>
 <body>
     <header class="header">
@@ -42,27 +42,20 @@
             <p>Your go-to platform for cybersecurity and digital literacy.</p>
             <a href="#courses" class="btn Explore">Explore Courses</a>
         </div>
-        <div class="featured">
-            <h3>Featured Courses</h3>
-            <div class="corse_intro">
-                <div class="slide_show">
+<div class="featured">
+    <h3>Featured Courses</h3>
+    <div class="corse_intro">
+        <div class="slide_show">
             <div class="course-preview">
                 <div class="course-card">
-                    <img src="photos/download.jpg" alt="download">
+                    <img src="photos/download.jpg" alt="Cyber security">
                     <div class="course-info">
                         <h4 info="Cyber-security">Cyber security</h4>
-                        <p>In this comprehensive course, you will embark on a journey to understand the fundamentals of cybersecurity and how to safeguard your digital presence.<span class="more_info">show More...</span><p class="info">This course covers essential topics including basic security principles, threat identification, and protective measures. You'll learn about common cyber threats such as malware and phishing, and discover practical strategies to secure your personal and professional information. Through interactive lessons and real-world scenarios, you'll gain the knowledge and skills needed to protect yourself and your data from online threats. No prior experience is required—just a keen interest in learning how to stay safe in the digital world.<span class="less_info">show less</span></p>
-                            </p>
-                        <a href="course-details.html" class="btn more">Learn More</a>
-                    </div>
-                </div>
-                </div>
-                <div class="course-preview">
-                <div class="course-card">
-                    <img src="photos/Programming-Cyber-Security.png" alt="download">
-                    <div class="course-info">
-                        <h4 info="Programming">Programming in Cybersecurity</h4>
-                        <p>This course is designed to equip you with the skills to write code that not only functions but also defends against the ever-evolving landscape <span class="more_info">show more</span><p class="info">of cyber threats. You’ll learn how to identify and eliminate vulnerabilities during the development process, automate security tasks, and even create custom tools for detecting and responding to attacks. By mastering the integration of programming with cybersecurity principles, you’ll be prepared to build resilient systems and contribute to a safer digital world. focuses on creating secure software by following best practices that prevent vulnerabilities like SQL injection or cross-site scripting (XSS).<span class="less_info">show less</span></p></p>
+                        <p>
+                            In this comprehensive course, you will embark on a journey to understand the fundamentals of cybersecurity and how to safeguard your digital presence.
+                            <span class="more_info">show more...</span>
+                            <p class="info">This course covers essential topics including basic security principles, threat identification, and protective measures. You'll learn about common cyber threats such as malware and phishing, and discover practical strategies to secure your personal and professional information. Through interactive lessons and real-world scenarios, you'll gain the knowledge and skills needed to protect yourself and your data from online threats. No prior experience is required—just a keen interest in learning how to stay safe in the digital world.<span class="less_info">show less</span></p>
+                        </p>
                         <a href="course-details.html" class="btn more">Learn More</a>
                     </div>
                 </div>
@@ -70,160 +63,262 @@
 
             <div class="course-preview">
                 <div class="course-card">
-                    <img src="photos/computer_application.jpg" alt="download">
+                    <img src="photos/Programming-Cyber-Security.png" alt="Programming in Cybersecurity">
                     <div class="course-info">
-                        <h4 info='Computer-applications'> Computer Applications</h4>
-                        <p>This course teaches how to use various software tools and programs effectively. It covers essential productivity applications like word processors <span class="more_info">show more</span><p class="info">, spreadsheets, and presentation software. Students learn how to manage data with database tools, navigate the internet and web applications, and apply basic programming for automation. The course also addresses security practices to protect data and introduces emerging technologies. It combines theoretical knowledge with practical exercises to enhance students' skills in using and managing computer applications.<span class="less_info">show less</span></p></p>
+                        <h4 info="Programming">Programming in Cybersecurity</h4>
+                        <p>This course is designed to equip you with the skills to write code that not only functions but also defends against the ever-evolving landscape 
+                            <span class="more_info">show more</span>
+                            <p class="info">of cyber threats. You’ll learn how to identify and eliminate vulnerabilities during the development process, automate security tasks, and even create custom tools for detecting and responding to attacks. By mastering the integration of programming with cybersecurity principles, you’ll be prepared to build resilient systems and contribute to a safer digital world. focuses on creating secure software by following best practices that prevent vulnerabilities like SQL injection or cross-site scripting (XSS).<span class="less_info">show less</span></p>
+                        </p>
                         <a href="course-details.html" class="btn more">Learn More</a>
                     </div>
                 </div>
-                 </div>
-                 <div class="course-preview">
-                    <div class="course-card">
-                        <img src="photos/database.png" alt="download">
-                        <div class="course-info">
-                            <h4 info='Database-Management'>Database Management</h4>
-                            <p>This course focuses on protecting and securing database systems against threats while ensuring data integrity and availability. It covers key <span class="more_info">show more</span><p class="info">  topics such as access control, encryption, and best practices for database security. Students learn to defend against attacks like SQL injection, manage backups and recovery, and ensure compliance with data protection regulations. It equips learners with essential skills to secure databases in various environments, including cloud and big data platforms.<span class="less_info">show less</span></p></p>
-                            <a href="course-details.html" class="btn more">Learn More</a>
-                        </div>
-                    </div>
-                     </div>
             </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="courses">
-        <h2>Our Courses</h2>
-        <div class="course-filter">
-            <label for="category">Filter by Category:</label>
-            <select id="category" name="category">
-                <option value="all">All</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-            </select>
+            <div class="course-preview">
+                <div class="course-card">
+                    <img src="photos/computer_application.jpg" alt="Computer Applications">
+                    <div class="course-info">
+                        <h4 info='Computer-applications'>Computer Applications</h4>
+                        <p>This course teaches how to use various software tools and programs effectively. It covers essential productivity applications like word processors 
+                            <span class="more_info">show more</span>
+                            <p class="info">, spreadsheets, and presentation software. Students learn how to manage data with database tools, navigate the internet and web applications, and apply basic programming for automation. The course also addresses security practices to protect data and introduces emerging technologies. It combines theoretical knowledge with practical exercises to enhance students' skills in using and managing computer applications.<span class="less_info">show less</span></p>
+                        </p>
+                        <a href="course-details.html" class="btn more">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-preview">
+                <div class="course-card">
+                    <img src="photos/database.png" alt="Database Management">
+                    <div class="course-info">
+                        <h4 info='Database-Management'>Database Management</h4>
+                        <p>This course focuses on protecting and securing database systems against threats while ensuring data integrity and availability. It covers key 
+                            <span class="more_info">show more</span>
+                            <p class="info">topics such as access control, encryption, and best practices for database security. Students learn to defend against attacks like SQL injection, manage backups and recovery, and ensure compliance with data protection regulations. It equips learners with essential skills to secure databases in various environments, including cloud and big data platforms.<span class="less_info">show less</span></p>
+                        </p>
+                        <a href="course-details.html" class="btn more">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="courses_slideshow">
+    </div>
+</div>
+</section>
+
+    
+
+   <section id="courses">
+    <h2>Our Courses</h2>
+    <div class="course-filter">
+        <label for="category">Filter by Category:</label>
+        <select id="category" name="category">
+            <option value="all">All</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+    </div>
+
+    <div class="courses_slideshow">
         <div class="courses-container" id="courses-container">
+
+           
             <div id="Cyber-security" class="Course_info">
-            <div class="course-card beginner">
-                <img src="photos/cyber1.jpeg" class="course_image" alt="Course Title">
-                <div class="course-info">
-                    <h3>cyber security basics</h3>
-                    <p>This course introduces fundamental concepts, including types of cyber threats, basic security principles, and the importance of strong passwords.<span class="more_info">show more</span><p class="info"> It covers essential topics like the role of networking in cybersecurity, basic tools such as firewalls and antivirus software, and protection against social engineering attacks like phishing.<span class="less_info">show less</span></p></p>
-                    <a href="./cyberSecurity/cyberSecurity.html" class="btn">Learn More</a>
-                        </div>
-        </div>
-        <div class="course-card intermediate">
-            <img src="photos/cyber2.jpeg" class="course_image" alt="Course Title">
-            <div class="course-info">
-                <h3>Cybersecurity Intermediate</h3>
-                <p>This course trains learners to proactively search for threats within networks and systems. You'll learn about common attack vectors, threat intelligence,<span class="more_info">show more</span><p class="info"> and how to use advanced tools and techniques to detect and respond to potential security breaches before they cause harm.<span class="less_info">show less</span></p> </p>
-                <a href="./cyberSecurity/intermediate.html" class="btn">Learn More</a>
-                </div>
-    </div>
-    <div class="course-card advanced">
-        <img src="photos/cyber3.jpeg" class="course_image" alt="Course Title">
-        <div class="course-info">
-            <h3>Cybersecurity Advanced</h3>
-            <p>This Course focuses on sophisticated topics in cybersecurity, such as advanced threat detection, incident management, and ethical hacking. It covers in-depth<span class="more_info">show more</span><p class="info"> techniques for protecting systems, managing risks, and ensuring compliance with regulations. The course is aimed at professionals looking to enhance their expertise in handling complex security challenges and emerging technologies.<span class="less_info">show less</span></p>
-            </p>
-            <a href="course-details.html" class="btn">Learn More</a>
-            </div>
-</div>
-    </div>
-
-    <div id="Programming" class="Course_info">
-        <div class="course-card beginner">
-            <img src="photos/programming1.jpeg" class="course_image" alt="Course Title">
-            <div class="course-info">
-                <h3>Programming in Cybersecurity basics</h3>
-                <p>This course introduces the basics of coding with a focus on its application in security. It covers fundamental programming concepts, how to write<span class="more_info">show more</span><p class="info"> simple scripts for automating security tasks, and basic tools and techniques for analyzing and protecting systems.<span class="less_info">show less</span></p></p>
-                <a href="./programming/basic.html" class="btn">Learn More</a>
+                
+                <div class="beginner course-item">
+                    <img src="photos/cyber1.jpeg" class="course_image" alt="Cybersecurity Basics">
+                    <div class="course-info">
+                        <h3>Cybersecurity Basics</h3>
+                        <p>This course introduces fundamental concepts like types of cyber threats, basic security principles, and the importance of strong passwords.
+                            <span class="more_info">show more</span>
+                            <span class="info">It covers essential topics such as networking's role in cybersecurity, basic tools like firewalls and antivirus, and protection against social engineering attacks like phishing.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="./cyberSecurity/basics.html" class="btn">Learn More</a>
                     </div>
-    </div>
-    <div class="course-card intermediate">
-        <img src="photos/programming2.png" class="course_image" alt="Course Title">
-        <div class="course-info">
-            <h3>Programming in Cybersecurity Intermediate</h3>
-            <p>This course trians learners on  advances basic coding skills to address more complex security tasks. It includes developing and refining scripts for automating<span class="more_info">show more</span><p class="info"> security operations, analyzing and identifying vulnerabilities, and understanding and coding basic exploits. Additionally, it covers creating custom security tools to meet specific challenges.<span class="less_info">show less</span> </p></p>
-            <a href="./programming/intermediate.html" class="btn">Learn More</a>
+                </div>
+
+                
+                <div class="intermediate course-item">
+                    <img src="photos/cyber2.jpeg" class="course_image" alt="Cybersecurity Intermediate">
+                    <div class="course-info">
+                        <h3>Cybersecurity Intermediate</h3>
+                        <p>This course trains learners to proactively search for threats within networks and systems.
+                            <span class="more_info">show more</span>
+                            <span class="info">It includes learning common attack vectors, threat intelligence, and using advanced tools to detect and respond to security breaches before they cause harm.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="#" class="btn pay">Learn More</a>
+                    </div>
+                </div>
+
+                
+                <div class="advanced course-item">
+                    <img src="photos/cyber3.jpeg" class="course_image" alt="Cybersecurity Advanced">
+                    <div class="course-info">
+                        <h3>Cybersecurity Advanced</h3>
+                        <p>This course focuses on sophisticated topics like advanced threat detection, incident management, and ethical hacking.
+                            <span class="more_info">show more</span>
+                            <span class="info">It covers in-depth techniques for protecting systems, managing risks, and ensuring compliance with regulations, tailored for professionals handling complex security challenges.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="#" class="btn pay">Learn More</a>
+                    </div>
+                </div>
             </div>
-</div>
-<div class="course-card advanced">
-    <img src="photos/programming3.jpeg" class="course_image" alt="Course Title">
-    <div class="course-info">
-        <h3>Programming in Cybersecurity Advanced</h3>
-        <p>This course explores sophisticated coding techniques for high-level security challenges. It covers developing complex security tools, creating advanced exploits and<span class="more_info">show more</span><p class="info"> malware for testing defenses, and implementing sophisticated algorithms for threat detection and analysis.<span class="less_info">show less</span></p>
-        </p>
-        <a href="./programming/advanced.html" class="btn">Learn More</a>
-        </div>
-</div>
-</div>
 
-<div id="Computer-applications" class="Course_info">
-    <div class="course-card beginner">
-        <img src="photos/application1.jpeg" class="course_image" alt="Course Title">
-        <div class="course-info">
-            <h3>Computer Applications basics</h3>
-            <p>This course introduces fundamental software tools used for security tasks, such as productivity software for managing security workflows and basic security<span class="more_info">show more</span><p class="info"> applications for threat detection. It covers essential concepts for applying these tools to protect systems and data.<span class="less_info">show less</span></p>
-            </p>
-            <a href="course-details.html" class="btn">Learn More</a>
+            
+            <div id="Programming" class="Course_info">
+                
+                <div class="beginner course-item">
+                    <img src="photos/programming1.jpeg" class="course_image" alt="Programming in Cybersecurity Basics">
+                    <div class="course-info">
+                        <h3>Programming in Cybersecurity Basics</h3>
+                        <p>This course introduces coding basics with a focus on security applications.
+                            <span class="more_info">show more</span>
+                            <span class="info">Learn how to write simple scripts for automating security tasks and basic tools for analyzing and protecting systems.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="./programming/basic.html" class="btn">Learn More</a>
+                    </div>
                 </div>
-</div>
-<div class="course-card intermediate">
-    <img src="photos/application2.jpg" class="course_image" alt="Course Title">
-    <div class="course-info">
-        <h3>Computer Applications Intermediate</h3>
-        <p>The course focuses on using more advanced applications for managing and analyzing security data. It includes configuring and utilizing security information and event<span class="more_info">show more</span><p class="info"> management (SIEM) systems, advanced vulnerability scanners, and network monitoring tools to improve security practices.<span class="less_info">show less</span></p>
-        </p>
-        <a href="course-details.html" class="btn">Learn More</a>
-        </div>
-</div>
-<div class="course-card advanced">
-<img src="photos/application3.jpeg" class="course_image" alt="Course Title">
-<div class="course-info">
-    <h3>Computer Applications Advanced</h3>
-    <p>The course explores integrating and customizing sophisticated security applications, such as advanced threat detection systems and automated incident response tools.<span class="more_info">show more</span><p class="info"> It emphasizes creating and managing complex security architectures, and developing custom solutions to address specific, evolving cybersecurity challenges.<span class="less_info">show less</span></p>
-    </p>
-    <a href="course-details.html" class="btn">Learn More</a>
-    </div>
-</div>
-</div>
 
-
-<div id="Database-Management" class="Course_info">
-    <div class="course-card beginner">
-        <img src="photos/database1.jpeg" class="course_image" alt="Course Title">
-        <div class="course-info">
-            <h3>Database Management basics</h3>
-            <p>This course covers fundamental concepts like securing database access, basic encryption techniques, and implementing simple access controls. It introduces essential<span class="more_info">show more</span><p class="info"> practices for protecting databases from common threats and ensuring data integrity.<span class="less_info">show less</span>
-            </p></p>
-            <a href="course-details.html" class="btn">Learn More</a>
+               
+                <div class="intermediate course-item">
+                    <img src="photos/programming2.png" class="course_image" alt="Programming in Cybersecurity Intermediate">
+                    <div class="course-info">
+                        <h3>Programming in Cybersecurity Intermediate</h3>
+                        <p>This course advances coding skills to tackle complex security tasks.
+                            <span class="more_info">show more</span>
+                            <span class="info">Develop scripts for automating security operations, analyze vulnerabilities, and code basic exploits for securing systems.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="#" class="btn pay">Learn More</a>
+                    </div>
                 </div>
-</div>
-<div class="course-card intermediate">
-    <img src="photos/database2.jpeg" class="course_image" alt="Course Title">
-    <div class="course-info">
-        <h3>Database Management  Intermediate</h3>
-        <p>The course delves into more advanced security practices such as implementing advanced encryption methods, configuring database security settings, and managing backups and<span class="more_info">show more</span><p class="info"> recovery processes. It also includes techniques for identifying and mitigating vulnerabilities and threats.<span class="less_info">show less</span></p>
-        </p>
-        <a href="course-details.html" class="btn">Learn More</a>
+
+                
+                <div class="advanced course-item">
+                    <img src="photos/programming3.jpeg" class="course_image" alt="Programming in Cybersecurity Advanced">
+                    <div class="course-info">
+                        <h3>Programming in Cybersecurity Advanced</h3>
+                        <p>This course explores sophisticated coding techniques for high-level security challenges.
+                            <span class="more_info">show more</span>
+                            <span class="info">Develop complex security tools, advanced exploits, and sophisticated algorithms for threat detection and analysis.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="#" class="btn pay">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="Computer-applications" class="Course_info">
+               
+                <div class="beginner course-item">
+                    <img src="photos/application1.jpeg" class="course_image" alt="Computer Applications Basics">
+                    <div class="course-info">
+                        <h3>Computer Applications Basics</h3>
+                        <p>This course introduces fundamental software tools used for security tasks.
+                            <span class="more_info">show more</span>
+                            <span class="info">Learn basic productivity tools for managing security workflows and security applications for threat detection.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="./computer applications/basic.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+               
+                <div class="intermediate course-item">
+                    <img src="photos/application2.jpg" class="course_image" alt="Computer Applications Intermediate">
+                    <div class="course-info">
+                        <h3>Computer Applications Intermediate</h3>
+                        <p>Learn how to configure and utilize advanced security applications for analyzing security data.
+                            <span class="more_info">show more</span>
+                            <span class="info">This course covers SIEM systems, vulnerability scanners, and network monitoring tools for better security practices.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="#" class="btn pay">Learn More</a>
+                    </div>
+                </div>
+
+               
+                <div class="advanced course-item">
+                    <img src="photos/application3.jpeg" class="course_image" alt="Computer Applications Advanced">
+                    <div class="course-info">
+                        <h3>Computer Applications Advanced</h3>
+                        <p>This course explores integrating and customizing advanced security applications.
+                            <span class="more_info">show more</span>
+                            <span class="info">Learn to develop complex security architectures and customize tools to address sophisticated cybersecurity challenges.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="#" class="btn pay">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div id="Database-Management" class="Course_info">
+               
+                <div class="beginner course-item">
+                    <img src="photos/database1.jpeg" class="course_image" alt="Database Management Basics">
+                    <div class="course-info">
+                        <h3>Database Management Basics</h3>
+                        <p>This course covers securing database access and implementing basic encryption techniques.
+                            <span class="more_info">show more</span>
+                            <span class="info">Learn the essential practices for protecting databases and ensuring data integrity.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="./database/index.html" class="btn">Learn More</a>
+                    </div>
+                </div>
+
+                
+                <div class="intermediate course-item">
+                    <img src="photos/database2.jpeg" class="course_image" alt="Database Management Intermediate">
+                    <div class="course-info">
+                        <h3>Database Management Intermediate</h3>
+                        <p>Learn advanced database security practices like encryption, backups, and recovery processes.
+                            <span class="more_info">show more</span>
+                            <span class="info">Identify and mitigate database vulnerabilities and manage security configurations.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="#" class="btn pay">Learn More</a>
+                    </div>
+                </div>
+
+               
+                <div class="advanced course-item">
+                    <img src="photos/database.png" class="course_image" alt="Database Management Advanced">
+                    <div class="course-info">
+                        <h3>Database Management Advanced</h3>
+                        <p>Explore sophisticated database security measures such as data masking, advanced encryption, and regulatory compliance.
+                            <span class="more_info">show more</span>
+                            <span class="info">This course is tailored for professionals seeking to protect large-scale databases and ensure compliance with security regulations.
+                                <span class="less_info">show less</span>
+                            </span>
+                        </p>
+                        <a href="#" class="btn pay">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
-</div>
-<div class="course-card advanced">
-<img src="photos/database.png" class="course_image" alt="Course Title">
-<div class="course-info">
-    <h3>Database Management  Advanced</h3>
-    <p>The course focuses on integrating complex security measures like advanced threat detection and response systems within databases, performing in-depth forensic analysis,<span class="more_info">show more</span><p class="info"> and managing large-scale, multi-environment security setups. It emphasizes customizing security solutions for emerging and sophisticated threats in database management.<span class="less_info">show less</span></p></p>
-    <a href="course-details.html" class="btn">Learn More</a>
     </div>
-</div>
-</div>
-</div>
-</div>
-    </section>
+</section>
+
 
     <section id="resources">
         <h2>Tools & Resources</h2>
@@ -237,39 +332,39 @@
                     <div class="tool-info">
                         <h4>Wireshark</h4>
                         <p> This is a widely-used open-source network protocol analyzer that  helps in network troubleshooting, protocol analysis, and cybersecurity by allowing users<span class="more_info">show more</span><p class="info"> to view the raw data traveling through their network, analyze it for potential issues, and understand network behavior.<span class="less_info">show less</span></p></p>
-                        <a href="tool-link.html" class="btn">Learn More</a>
+                        <a href="https://www.wireshark.org/download.html" class="btn" target="_blank">Learn More</a>
                     </div>
                 </div>
                 <div class="tool-card">
                     <img src="photos/nmap.jpg" alt="Tool Name">
                     <div class="tool-info">
                         <h4>Nmap</h4>
-                        <p> This is a software that identifies devices on a network, their IP addresses, and their open ports.Detects vulnerabilities and potential<span class="more_info">show more</span><p class="info"> security issues and provides information about network topology and connected devices.<span class="less_info">show less</span></p></p>
-                        <a href="tool-link.html" class="btn">Learn More</a>
+                        <p> This is a software that identifies devices on a network, their IP addresses, and their open ports.Detects vulnerabilities and potential security issues and<span class="more_info">show more</span><p class="info"> provides information about network topology and connected devices.<span class="less_info">show less</span></p></p>
+                        <a href="https://nmap.org/download" class="btn" target="_blank">Learn More</a>
                     </div>
                 </div>
                 <div class="tool-card">
                     <img src="photos/snort.jpg" alt="Tool Name">
                     <div class="tool-info">
                         <h4>snort</h4>
-                        <p> is an open-source firewall and router software distribution based on FreeBSD. It provides a robust platform for managing network security<span class="more_info">show more</span><p class="info"> and routing with a user-friendly web interface. pfSense is widely used for network protection, VPN management, and advanced networking configurations.<span class="less_info">show less</span></p></p>
-                        <a href="tool-link.html" class="btn">Learn More</a>
+                        <p> is an open-source firewall and router software distribution based on FreeBSD. It provides a robust platform for managing network security and routing with a user-friendly web interface. pfSense is widely used for network protection, VPN management, and advanced networking configurations.</p>
+                        <a href="https://www.snort.org/downloads" class="btn" target="_blank">Learn More</a>
                     </div>
                 </div>
                 <div class="tool-card">
                     <img src="photos/pfsense.png" alt="Tool Name">
                     <div class="tool-info">
                         <h4>Pfsense</h4>
-                        <p> This is a widely-used open-source network protocol analyzer that  helps in network troubleshooting, protocol analysis, and cybersecurity by<span class="more_info">show more</span><p class="info"> allowing users to view the raw data traveling through their network, analyze it for potential issues, and understand network behavior.<span class="less_info">show less</span></p></p>
-                        <a href="tool-link.html" class="btn">Learn More</a>
+                        <p> This is a widely-used open-source network protocol analyzer that  helps in network troubleshooting, protocol analysis, and cybersecurity by allowing users to view the raw data traveling through their network, analyze it for potential issues, and understand network behavior.</p>
+                        <a href="https://www.pfsense.org/download/" class="btn" target="_blank">Learn More</a>
                     </div>
                 </div>
                 <div class="tool-card">
                     <img src="photos/naigos.jpg" alt="Tool Name">
                     <div class="tool-info">
                         <h4>Nagios</h4>
-                        <p> It is an open-source monitoring system used to track the status of network services, servers, and other network infrastructure. It provides<span class="more_info">show more</span><p class="info"> comprehensive monitoring, alerting, and reporting capabilities, making it a popular choice for network and system administrators.<span class="less_info">show less</span></p></p>
-                        <a href="tool-link.html" class="btn">Learn More</a>
+                        <p> It is an open-source monitoring system used to track the status of network services, servers, and other network infrastructure. It provides comprehensive monitoring,<span class="more_info">show more</span><p class="info"> alerting, and reporting capabilities, making it a popular choice for network and system administrators.<span class="less_info">show less</span></p></p>
+                        <a href="https://www.nagios.org/downloads/" class="btn" target="_blank">Learn More</a>
                     </div>
                 </div>
         </div>
@@ -283,40 +378,40 @@
                         <img src="photos/nessus.jpg" alt="Tool Name">
                         <div class="tool-info">
                             <h4> Nessus</h4>
-                            <p> It is a software designed to identify and assess vulnerabilities, misconfigurations, and security issues across a variety of systems <span class="more_info">show more</span><p class="info"> and applications.<span class="less_info">show less</span></p></p>
-                            <a href="tool-link.html" class="btn">Learn More</a>
+                            <p> It is a software designed to identify and assess vulnerabilities, misconfigurations, and security issues across a variety of systems and applications.</p>
+                            <a href="https://www.tenable.com/downloads/nessus?loginAttempted=true" class="btn" target="_blank">Learn More</a>
                         </div>
                     </div>
                     <div class="tool-card">
                         <img src="photos/open.jpg" alt="Tool Name">
                         <div class="tool-info">
                             <h4>OpenVAS</h4>
-                            <p> TOpenVAS (Open Vulnerability Assessment System) is an open-source vulnerability scanner that provides comprehensive vulnerability<span class="more_info">show more</span><p class="info"> management capabilities. It is part of the Greenbone Vulnerability Management (GVM) framework and is known for its extensive range of vulnerability checks and frequent updates.<span class="less_info">show less</span></p></p>
-                            <a href="tool-link.html" class="btn">Learn More</a>
+                            <p> TOpenVAS (Open Vulnerability Assessment System) is an open-source vulnerability scanner that provides comprehensive vulnerability management capabilities.<span class="more_info">show more</span><p class="info"> It is part of the Greenbone Vulnerability Management (GVM) framework and is known for its extensive range of vulnerability checks and frequent updates.<span class="less_info">show less</span></p></p>
+                            <a href="https://openvas.apps112.com/#google_vignette" class="btn" target="_blank">Learn More</a>
                         </div>
                     </div>
                     <div class="tool-card">
                         <img src="photos/qualys.jpg" alt="Tool Name">
                         <div class="tool-info">
                             <h4>Qualys Guard</h4>
-                            <p> Qualys Guard is a cloud-based vulnerability management and compliance tool that offers scalable and accessible vulnerability assessment <span class="more_info">show more</span><p class="info">services. It is known for its continuous scanning capabilities and seamless integration with other security and IT management tools<span class="less_info">show less</span></p></p>
-                            <a href="tool-link.html" class="btn">Learn More</a>
+                            <p> Qualys Guard is a cloud-based vulnerability management and compliance tool that offers scalable and accessible vulnerability assessment services. It is known for<span class="more_info">show more</span><p class="info"> its continuous scanning capabilities and seamless integration with other security and IT management tools<span class="less_info">show less</span></p></p>
+                            <a href="https://www.qualys.com/community-edition/" class="btn" target="_blank">Learn More</a>
                         </div>
                     </div>
                     <div class="tool-card">
                         <img src="photos/nexpose.jpg" alt="Tool Name">
                         <div class="tool-info">
                             <h4>Rapid7 Nexpose</h4>
-                            <p> Rapid7 Nexpose is a real-time vulnerability management tool that provides in-depth risk assessment and vulnerability detection.<span class="more_info">show more</span><p class="info"> It integrates well with other security tools and platforms, offering detailed reporting and actionable insights for remediation.<span class="less_info">show less</span></p></p>
-                            <a href="tool-link.html" class="btn">Learn More</a>
+                            <p> Rapid7 Nexpose is a real-time vulnerability management tool that provides in-depth risk assessment and vulnerability detection. It integrates well with<span class="more_info">show more</span><p class="info"> other security tools and platforms, offering detailed reporting and actionable insights for remediation.<span class="less_info">show less</span></p></p>
+                            <a href="https://www.rapid7.com/products/nexpose/download/" class="btn" target="_blank">Learn More</a>
                         </div>
                     </div>
                     <div class="tool-card">
                         <img src="photos/burp.jpg" alt="Tool Name">
                         <div class="tool-info">
                             <h4>Burp Suite</h4>
-                            <p> Burp Suite is a comprehensive web vulnerability scanner designed for security testing of web applications. Developed by PortSwigger,<span class="more_info">show more</span><p class="info"> it is widely used by security professionals to identify and address vulnerabilities in web applications, such as cross-site scripting (XSS), SQL injection, and other common web security issues.<span class="less_info">show less</span></p></p>
-                            <a href="tool-link.html" class="btn">Learn More</a>
+                            <p> Burp Suite is a comprehensive web vulnerability scanner designed for security testing of web applications. Developed by PortSwigger, it is widely used by security<span class="more_info">show more</span><p class="info"> professionals to identify and address vulnerabilities in web applications, such as cross-site scripting (XSS), SQL injection, and other common web security issues.<span class="less_info">show less</span></p></p>
+                            <a href="https://portswigger.net/burp/communitydownload" class="btn" target="_blank">Learn More</a>
                         </div>
                     </div>
             </div>
@@ -330,40 +425,40 @@
                             <img src="photos/sploit.jpg" alt="Tool Name">
                             <div class="tool-info">
                                 <h4>Metasploit</h4>
-                                <p>Metasploit is a widely used penetration testing framework developed by Rapid7. It provides a comprehensive suite of tools for <span class="more_info">show more</span><p class="info">developing, testing, and executing exploits against vulnerabilities.<span class="less_info">show less</span></p></p>
-                                <a href="tool-link.html" class="btn">Learn More</a>
+                                <p>Metasploit is a widely used penetration testing framework developed by Rapid7. It provides a comprehensive suite of tools for developing, testing, and executing<span class="more_info">show more</span><p class="info"> exploits against vulnerabilities.<span class="less_info">show less</span></p></p>
+                                <a href="https://www.metasploit.com/download" class="btn" target="_blank">Learn More</a>
                             </div>
                         </div>
                         <div class="tool-card">
                             <img src="photos/air.jpg" alt="Tool Name">
                             <div class="tool-info">
                                 <h4>Aircrack-ng</h4>
-                                <p> Aircrack-ng is a suite of tools for assessing Wi-Fi network security. It focuses on tasks such as capturing packets, analyzing <span class="more_info">show more</span><p class="info">wireless networks, and cracking WEP and WPA/WPA2 encryption keys.<span class="less_info">show less</span></p></p>
-                                <a href="tool-link.html" class="btn">Learn More</a>
+                                <p> Aircrack-ng is a suite of tools for assessing Wi-Fi network security. It focuses on tasks such as capturing packets, analyzing wireless networks, and cracking WEP<span class="more_info">show more</span><p class="info"> and WPA/WPA2 encryption keys.<span class="less_info">show less</span></p></p>
+                                <a href="https://www.aircrack-ng.org/" class="btn" target="_blank">Learn More</a>
                             </div>
                         </div>
                         <div class="tool-card">
                             <img src="photos/linux.jpg" alt="Tool Name">
                             <div class="tool-info">
                                 <h4>Kali Linux</h4>
-                                <p> Kali Linux is a specialized Linux distribution designed for penetration testing and security auditing. It comes pre-installed <span class="more_info">show more</span><p class="info">with a wide range of security tools and utilities, making it a comprehensive platform for ethical hacking and security assessments.<span class="less_info">show less</span></p></p>
-                                <a href="tool-link.html" class="btn">Learn More</a>
+                                <p> Kali Linux is a specialized Linux distribution designed for penetration testing and security auditing. It comes pre-installed with a wide range of security<span class="more_info">show more</span><p class="info"> tools and utilities, making it a comprehensive platform for ethical hacking and security assessments.<span class="less_info">show less</span></p></p>
+                                <a href="https://www.kali.org/get-kali/#kali-platforms" class="btn" target="_blank">Learn More</a>
                             </div>
                         </div>
                         <div class="tool-card">
                             <img src="photos/zap.jpg" alt="Tool Name">
                             <div class="tool-info">
                                 <h4>OWASP ZAP (Zed Attack Proxy)</h4>
-                                <p>OWASP ZAP is an open-source web application security scanner designed to identify vulnerabilities in web applications. It is<span class="more_info">show more</span><p class="info"> developed by the Open Web Application Security Project (OWASP) and is particularly useful for detecting common web security issues.<span class="less_info">show less</span></p> </p>
-                                <a href="tool-link.html" class="btn">Learn More</a>
+                                <p>OWASP ZAP is an open-source web application security scanner designed to identify vulnerabilities in web applications. It is developed by the Open Web Application<span class="more_info">show more</span><p class="info"> Security Project (OWASP) and is particularly useful for detecting common web security issues.<span class="less_info">show less</span></p> </p>
+                                <a href="https://www.zaproxy.org/download/" class="btn" target="_blank">Learn More</a>
                             </div>
                         </div>
                         <div class="tool-card">
                             <img src="photos/ettercap.jpg" alt="Tool Name">
                             <div class="tool-info">
                                 <h4>Ettercap</h4>
-                                <p>Ettercap is a comprehensive suite for man-in-the-middle attacks on LANs (Local Area Networks). It allows security professionals<span class="more_info">show more</span><p class="info"> to intercept and analyze network traffic, perform ARP (Address Resolution Protocol) poisoning, and carry out other types of network attacks to identify vulnerabilities and security weaknesses. <span class="less_info">show less</span></p></p>
-                                <a href="tool-link.html" class="btn">Learn More</a>
+                                <p>Ettercap is a comprehensive suite for man-in-the-middle attacks on LANs (Local Area Networks). It allows security professionals to intercept and analyze<span class="more_info">show more</span><p class="info">  network traffic, perform ARP (Address Resolution Protocol) poisoning, and carry out other types of network attacks to identify vulnerabilities and security weaknesses. <span class="less_info">show less</span></p></p>
+                                <a href="https://www.ettercap-project.org/downloads.html" class="btn" target="_blank">Learn More</a>
                             </div>
                         </div>
                 </div>
@@ -378,40 +473,40 @@
                                 <div class="tool-info">
                                     <h4> GPG (GNU Privacy Guard)
                                     </h4>
-                                    <p> GPG is an open-source implementation of the OpenPGP standard for encrypting and signing data and communications. It<span class="more_info">show more</span><p class="info"> is widely used for secure email communication and file encryption.<span class="less_info">show less</span></p></p>
-                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                    <p> GPG is an open-source implementation of the OpenPGP standard for encrypting and signing data and communications. It is widely used for secure email communication<span class="more_info">show more</span><p class="info"> and file encryption.<span class="less_info">show less</span></p></p>
+                                    <a href="https://gnupg.org/download/" class="btn" target="_blank">Learn More</a>
                                 </div>
                             </div>
                             <div class="tool-card">
                                 <img src="photos/open.jpg" alt="Tool Name">
                                 <div class="tool-info">
                                     <h4>OpenSSL</h4>
-                                    <p> OpenSSL is a robust toolkit for implementing secure communication protocols. It provides tools for managing certificates,<span class="more_info">show more</span><p class="info"> encryption, and SSL/TLS protocols.<span class="less_info">show less</span></p></p>
-                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                    <p> OpenSSL is a robust toolkit for implementing secure communication protocols. It provides tools for managing certificates, encryption, and SSL/TLS protocols.</p>
+                                    <a href="https://sourceforge.net/projects/openssl/" class="btn" target="_blank">Learn More</a>
                                 </div>
                             </div>
                             <div class="tool-card">
                                 <img src="photos/vera.jpg" alt="Tool Name">
                                 <div class="tool-info">
                                     <h4>VeraCrypt</h4>
-                                    <p> VeraCrypt is a free and open-source disk encryption software used to create encrypted volumes and secure entire disks. It is a<span class="more_info">show more</span><p class="info"> successor to TrueCrypt and offers enhanced security features.<span class="less_info">show less</span></p></p>
-                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                    <p> VeraCrypt is a free and open-source disk encryption software used to create encrypted volumes and secure entire disks. It is a successor to TrueCrypt <span class="more_info">show more</span><p class="info"> and offers enhanced security features.<span class="less_info">show less</span></p></p>
+                                    <a href="https://sourceforge.net/projects/veracrypt/" class="btn" target="_blank">Learn More</a>
                                 </div>
                             </div>
                             <div class="tool-card">
                                 <img src="photos/signal.jpg" alt="Tool Name">
                                 <div class="tool-info">
                                     <h4>Signal</h4>
-                                    <p> Signal is a secure messaging app known for its end-to-end encryption and privacy features. It is designed for secure text,<span class="more_info">show more</span><p class="info"> voice, and video communications.<span class="less_info">show less</span></p></p>
-                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                    <p> Signal is a secure messaging app known for its end-to-end encryption and privacy features. It is designed for secure text, voice, and video communications.</p>
+                                    <a href="https://signal.org/download/windows/" class="btn" target="_blank">Learn More</a>
                                 </div>
                             </div>
                             <div class="tool-card">
                                 <img src="photos/tor.jpg" alt="Tool Name">
                                 <div class="tool-info">
                                     <h4> Tor (The Onion Router)</h4>
-                                    <p>Tor is a network designed to provide anonymous communication over the internet by routing traffic through a series of volunteer-operated<span class="more_info">show more</span><p class="info"> servers. It helps protect user privacy and anonymity. <span class="less_info">show less</span></p></p>
-                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                    <p>Tor is a network designed to provide anonymous communication over the internet by routing traffic through a series of volunteer-operated servers. It helps <span class="more_info">show more</span><p class="info"> protect user privacy and anonymity. <span class="less_info">show less</span></p></p>
+                                    <a href="https://www.torproject.org/download/languages/" class="btn" target="_blank">Learn More</a>
                                 </div>
                             </div>
                     </div>
@@ -425,45 +520,47 @@
                                     <img src="photos/crowdstrike.jpg" alt="Tool Name">
                                     <div class="tool-info">
                                         <h4>CrowdStrike Falcon</h4>
-                                        <p> CrowdStrike Falcon is a cloud-native endpoint security solution that provides advanced threat detection and response<span class="more_info">show more</span><p class="info"> capabilities. It uses artificial intelligence (AI) and machine learning to protect endpoints from malware, ransomware, and other sophisticated attacks.<span class="less_info">show less</span></p></p>
-                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                        <p> CrowdStrike Falcon is a cloud-native endpoint security solution that provides advanced threat detection and response capabilities. It uses <span class="more_info">show more</span><p class="info"> artificial intelligence (AI) and machine learning to protect endpoints from malware, ransomware, and other sophisticated attacks.<span class="less_info">show less</span></p></p>
+                                        <a href="https://go.crowdstrike.com/gartner-magic-quadrant-for-endpoint-protection-platforms-report-october-2024.html?utm_campaign=brand&utm_content=crwd-brand-meta-afr-en-psp-x-trl-x-tct-x_x_x_security-x&utm_medium=sem&utm_source=goog&utm_term=crowdstrike%20endpoint%20protection%20platform&cq_cmp=20369484469&cq_plac=&gad_source=1&gclid=CjwKCAjw68K4BhAuEiwAylp3kqCzhNDjILKSfpFHJvmUag0kst8JysZ6I6i1GruAwvlJtkFQSiMV9hoC3TUQAvD_BwE" class="btn" target="_blank">Learn More</a>
                                     </div>
                                 </div>
                                 <div class="tool-card">
                                     <img src="photos/symantec.jpg" alt="Tool Name">
                                     <div class="tool-info">
                                         <h4> Symantec Endpoint Protection</h4>
-                                        <p> Symantec Endpoint Protection is a comprehensive security solution that combines antivirus, anti-malware, and firewall<span class="more_info">show more</span><p class="info"> features to protect endpoints. It provides advanced threat protection and centralized management for enterprise environments.<span class="less_info">show less</span></p></p>
-                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                        <p> Symantec Endpoint Protection is a comprehensive security solution that combines antivirus, anti-malware, and firewall features to protect endpoints.<span class="more_info">show more</span><p class="info"> It provides advanced threat protection and centralized management for enterprise environments.<span class="less_info">show less</span></p></p>
+                                        <a href="https://knowledge.broadcom.com/external/article/151364/download-symantec-enterprise-security-so.html" class="btn" target="_blank">Learn More</a>
                                     </div>
                                 </div>
                                 <div class="tool-card">
                                     <img src="photos/mdfe.jpg" alt="Tool Name">
                                     <div class="tool-info">
                                         <h4>Microsoft Defender for Endpoint</h4>
-                                        <p>Microsoft Defender for Endpoint is a unified endpoint security platform that provides advanced protection against threats,<span class="more_info">show more</span><p class="info"> including malware, ransomware, and phishing. It integrates with other Microsoft security services to offer comprehensive<span class="less_info">show less</span></p></p>
-                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                        <p>Microsoft Defender for Endpoint is a unified endpoint security platform that provides advanced protection against threats, including malware, ransomware, <span class="more_info">show more</span><p class="info"> and phishing. It integrates with other Microsoft security services to offer comprehensive<span class="less_info">show less</span></p></p>
+                                        <a href="https://learn.microsoft.com/en-us/defender-endpoint/download-client-analyzer" class="btn" target="_blank">Learn More</a>
                                     </div>
                                 </div>
                                 <div class="tool-card">
                                     <img src="photos/mcafee.jpg" alt="Tool Name">
                                     <div class="tool-info">
                                         <h4> McAfee Endpoint Security</h4>
-                                        <p> McAfee Endpoint Security provides a multi-layered approach to endpoint protection, including antivirus, anti-malware,<span class="more_info">show more</span><p class="info"> firewall, and web security features. It aims to protect endpoints from a variety of threats and provides centralized management.</p>
-                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                        <p> McAfee Endpoint Security provides a multi-layered approach to endpoint protection, including antivirus, anti-malware, firewall, and web security<span class="more_info">show more</span><p class="info"> features. It aims to protect endpoints from a variety of threats and provides centralized management.span class="less_info">show less</span></p></p>
+                                        <a href="https://www.mcafee.com/en-us/antivirus/downloads.html" class="btn" target="_blank">Learn More</a>
                                     </div>
                                 </div>
                                 <div class="tool-card">
                                     <img src="photos/bit.jpg" alt="Tool Name">
                                     <div class="tool-info">
                                         <h4>Bitdefender GravityZone</h4>
-                                        <p>Bitdefender GravityZone is a unified endpoint security solution offering comprehensive protection, including antivirus,<span class="more_info">show more</span><p class="info"> anti-malware, and advanced threat defense. It provides a centralized management console for streamlined security operations. <span class="less_info">show less</span></p></p>
-                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                        <p>Bitdefender GravityZone is a unified endpoint security solution offering comprehensive protection, including antivirus, anti-malware, and advanced<span class="more_info">show more</span><p class="info"> threat defense. It provides a centralized management console for streamlined security operations. <span class="less_info">show less</span></p></p>
+                                        <a href="https://www.bitdefender.com/en-us/consumer/" class="btn" target="_blank">Learn More</a>
                                     </div>
                                 </div>
-                        </div>
                             </div>
-                        </p>
+                        </div>
+                    </div>
+
+
                             <div id="siem-tools" class="tools">
                                 <h3>SIEM Tools
                                 </h3>
@@ -473,45 +570,47 @@
                                         <img src="photos/splunk.jpg" alt="Tool Name">
                                         <div class="tool-info">
                                             <h4>Splunk Enterprise Security</h4>
-                                            <p> Splunk Enterprise Security (ES) is a comprehensive SIEM solution that provides real-time visibility into an<span class="more_info">show more</span><p class="info"> organization's security posture. It offers advanced threat detection, incident response, and operational intelligence capabilities.<span class="less_info">show less</span></p></p>
-                                            <a href="tool-link.html" class="btn">Learn More</a>
+                                            <p> Splunk Enterprise Security (ES) is a comprehensive SIEM solution that provides real-time visibility into an organization's security posture. It<span class="more_info">show more</span><p class="info"> offers advanced threat detection, incident response, and operational intelligence capabilities.<span class="less_info">show less</span></p></p>
+                                            <a href="https://www.splunk.com/en_us/download.html" class="btn" target="_blank">Learn More</a>
                                         </div>
                                     </div>
                                     <div class="tool-card">
                                         <img src="photos/ibmradar.jpg" alt="Tool Name">
                                         <div class="tool-info">
                                             <h4>IBM QRadar</h4>
-                                            <p> IBM QRadar is a scalable SIEM platform that provides comprehensive security intelligence by collecting and<span class="more_info">show more</span><p class="info"> analyzing data from various sources. It helps organizations detect, investigate, and respond to security threats effectively.<span class="less_info">show less</span></p></p>
-                                            <a href="tool-link.html" class="btn">Learn More</a>
+                                            <p> IBM QRadar is a scalable SIEM platform that provides comprehensive security intelligence by collecting and analyzing data from various sources.<span class="more_info">show more</span><p class="info"> It helps organizations detect, investigate, and respond to security threats effectively.<span class="less_info">show less</span></p></p>
+                                            <a href="https://www.ibm.com/community/101/qradar/ce/" class="btn" target="_blank">Learn More</a>
                                         </div>
                                     </div>
                                     <div class="tool-card">
                                         <img src="photos/arc.jpg" alt="Tool Name">
                                         <div class="tool-info">
                                             <h4>ArcSight</h4>
-                                            <p> ArcSight, now part of Micro Focus, is a SIEM tool designed to provide real-time threat detection, compliance management,<span class="more_info">show more</span><p class="info"> and incident response. It offers a range of security analytics and management capabilities.<span class="less_info">show less</span></p></p>
-                                            <a href="tool-link.html" class="btn">Learn More</a>
+                                            <p> ArcSight, now part of Micro Focus, is a SIEM tool designed to provide real-time threat detection, compliance management, and incident response. It<span class="more_info">show more</span><p class="info"> offers a range of security analytics and management capabilities.<span class="less_info">show less</span></p></p>
+                                            <a href="https://www.microfocus.com/documentation/arcsight/arcsight-platform-21.1/as_platform_release_notes_HTML5/Content/ArcSightPlatform_ReleaseNotes/installation_files_download.htm" class="btn" target="_blank">Learn More</a>
                                         </div>
                                     </div>
                                     <div class="tool-card">
                                         <img src="photos/logrhythm.jpg" alt="Tool Name">
                                         <div class="tool-info">
                                             <h4> LogRhythm</h4>
-                                            <p> LogRhythm is a SIEM platform that provides integrated security intelligence and threat detection. It combines log management,<span class="more_info">show more</span><p class="info"> network forensics, and endpoint monitoring to deliver a comprehensive security solution.<span class="less_info">show less</span></p></p>
-                                            <a href="tool-link.html" class="btn">Learn More</a>
+                                            <p> LogRhythm is a SIEM platform that provides integrated security intelligence and threat detection. It combines log management, network<span class="more_info">show more</span><p class="info"> forensics, and endpoint monitoring to deliver a comprehensive security solution.<span class="less_info">show less</span></p></p>
+                                            <a href="https://docs.logrhythm.com/deploy/7.12.0/download-software-to-install-a-new-logrhythm-deplo" class="btn" target="_blank">Learn More</a>
                                         </div>
                                     </div>
                                     <div class="tool-card">
                                         <img src="photos/elasticsecurity.jpg" alt="Tool Name">
                                         <div class="tool-info">
                                             <h4>Elastic Security</h4>
-                                            <p> Elastic Security, formerly known as Elastic SIEM, is part of the Elastic Stack. It provides real-time threat detection,<span class="more_info">show more</span><p class="info"> security analytics, and incident response capabilities through a unified platform.<span class="less_info">show less</span></p></p>
-                                            <a href="tool-link.html" class="btn">Learn More</a>
+                                            <p> Elastic Security, formerly known as Elastic SIEM, is part of the Elastic Stack. It provides real-time threat detection, security analytics, and<span class="more_info">show more</span><p class="info"> incident response capabilities through a unified platform.<span class="less_info">show less</span></p></p>
+                                            <a href="https://www.elastic.co/downloads/elasticsearch" class="btn" target="_blank">Learn More</a>
                                         </div>
                                     </div>
                             </div>
                                 </div>
-                            </p>
+                            </div>
+
+
                                 <div id="incident-tools" class="tools">
                                     <h3>Incident Response and Forensics Tools</h3>
                                     <div class="slide_tools">
@@ -520,46 +619,48 @@
                                             <img src="photos/hive.jpg" alt="Tool Name">
                                             <div class="tool-info">
                                                 <h4> The Hive</h4>
-                                                <p>TheHive is an open-source incident response platform designed to manage and respond to security incidents. It provides a<span class="more_info">show more</span><p class="info"> centralized hub for tracking incidents, coordinating response efforts, and integrating with other security tools.<span class="less_info">show less</span></p> </p>
-                                                <a href="tool-link.html" class="btn">Learn More</a>
+                                                <p>TheHive is an open-source incident response platform designed to manage and respond to security incidents. It provides a centralized<span class="more_info">show more</span><p class="info"> hub for tracking incidents, coordinating response efforts, and integrating with other security tools.<span class="less_info">show less</span></p> </p>
+                                                <a href="https://help.hive.com/en/articles/5408066-download-the-apps" class="btn" target="_blank">Learn More</a>
                                             </div>
                                         </div>
                                         <div class="tool-card">
                                             <img src="photos/sift.jpg" alt="Tool Name">
                                             <div class="tool-info">
                                                 <h4>SIFT (SANS Investigative Forensic Toolkit)</h4>
-                                                <p> SIFT is a free and open-source forensic analysis tool developed by the SANS Institute. It provides a collection<span class="more_info">show more</span><p class="info"> of tools for analyzing digital evidence and performing forensic investigations<span class="less_info">show less</span></p></p>
-                                                <a href="tool-link.html" class="btn">Learn More</a>
+                                                <p> SIFT is a free and open-source forensic analysis tool developed by the SANS Institute. It provides a collection of tools for analyzing digital <span class="more_info">show more</span><p class="info"> evidence and performing forensic investigations<span class="less_info">show less</span></p></p>
+                                                <a href="https://www.sans.org/tools/sift-workstation/" class="btn" target="_blank">Learn More</a>
                                             </div>
                                         </div>
                                         <div class="tool-card">
                                             <img src="photos/ftk.jpg" alt="Tool Name">
                                             <div class="tool-info">
                                                 <h4> FTK Imager</h4>
-                                                <p>FTK Imager is a forensic imaging tool developed by AccessData that allows investigators to create and analyze disk<span class="more_info">show more</span><p class="info"> images of digital evidence. It is commonly used for evidence collection and verification.<span class="less_info">show less</span></p> </p>
-                                                <a href="tool-link.html" class="btn">Learn More</a>
+                                                <p>FTK Imager is a forensic imaging tool developed by AccessData that allows investigators to create and analyze disk images of digital<span class="more_info">show more</span><p class="info"> evidence. It is commonly used for evidence collection and verification.<span class="less_info">show less</span></p> </p>
+                                                <a href="https://www.exterro.com/ftk-product-downloads/ftk-imager-version-4-7-1" class="btn" target="_blank">Learn More</a>
                                             </div>
                                         </div>
                                         <div class="tool-card">
                                             <img src="photos/autospy.jpg" alt="Tool Name">
                                             <div class="tool-info">
                                                 <h4>Autopsy</h4>
-                                                <p> Autopsy is an open-source digital forensics platform that provides tools for analyzing and investigating digital evidence.<span class="more_info">show more</span><p class="info"> It is used for examining file systems, recovering deleted files, and analyzing artifacts.<span class="less_info">show less</span></p></p>
-                                                <a href="tool-link.html" class="btn">Learn More</a>
+                                                <p> Autopsy is an open-source digital forensics platform that provides tools for analyzing and investigating digital evidence. It is used for examining<span class="more_info">show more</span><p class="info"> file systems, recovering deleted files, and analyzing artifacts.<span class="less_info">show less</span></p></p>
+                                                <a href="https://www.autopsy.com/download/" class="btn" target="_blank">Learn More</a>
                                             </div>
                                         </div>
                                         <div class="tool-card">
                                             <img src="photos/cellebrite.jpg" alt="Tool Name">
                                             <div class="tool-info">
                                                 <h4>Cellebrite UFED</h4>
-                                                <p> Cellebrite UFED (Universal Forensic Extraction Device) is a commercial tool used for mobile device forensics. It<span class="more_info">show more</span><p class="info"> allows investigators to extract, analyze, and manage data from smartphones, tablets, and other mobile devices.<span class="less_info">show less</span></p></p>
-                                                <a href="tool-link.html" class="btn">Learn More</a>
+                                                <p> Cellebrite UFED (Universal Forensic Extraction Device) is a commercial tool used for mobile device forensics. It allows investigators to<span class="more_info">show more</span><p class="info"> extract, analyze, and manage data from smartphones, tablets, and other mobile devices.<span class="less_info">show less</span></p></p>
+                                                <a href="https://cellebrite.com/" class="btn" target="_blank">Learn More</a>
                                             </div>
                                         </div>
                                 </div>
                                     </div>
 
                                 </div>
+
+
                                     <div id="threat-tools" class="tools">
                                         <h3>Threat Intelligence Platforms</h3>
                                         <div class="slide_tools">
@@ -568,45 +669,47 @@
                                                 <img src="photos/recorder.jpg" alt="Tool Name">
                                                 <div class="tool-info">
                                                     <h4>Recorded Future</h4>
-                                                    <p>Recorded Future is a comprehensive threat intelligence platform that provides real-time threat data and analytics.<span class="more_info">show more</span><p class="info"> It integrates with existing security tools to offer actionable insights and context for threat detection and response.<span class="less_info">show less</span></p> </p>
-                                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                                    <p>Recorded Future is a comprehensive threat intelligence platform that provides real-time threat data and analytics. It integrates with<span class="more_info">show more</span><p class="info"> existing security tools to offer actionable insights and context for threat detection and response.<span class="less_info">show less</span></p> </p>
+                                                    <a href="https://info.threatmodeler.com/download-cloud-threat-modeling-for-dummies?=threat%20modeling%20tool&=Cloud+Threat+Modeling+Dummies+Guide&=adwords&=ppc&=2925331027&=21800677868&=170160490553&=716711976195&=g&=kwd-297386209640&=threat%20modeling%20tool&=b&=adwords&=3&={adgroup}&utm_term=threat%20modeling%20tool&utm_campaign=Cloud+Threat+Modeling+Dummies+Guide&utm_source=adwords&utm_medium=ppc&hsa_acc=2925331027&hsa_cam=21800677868&hsa_grp=170160490553&hsa_ad=716711976195&hsa_src=g&hsa_tgt=kwd-297386209640&hsa_kw=threat%20modeling%20tool&hsa_mt=b&hsa_net=adwords&hsa_ver=3&gad_source=1&gclid=CjwKCAjw68K4BhAuEiwAylp3kswZsVNno19pb08cpRi5BkXjGxVwATlNKih3482Te3VqiZ08FVBJ-RoC7IEQAvD_BwE" class="btn" target="_blank">Learn More</a>
                                                 </div>
                                             </div>
                                             <div class="tool-card">
                                                 <img src="photos/threat.jpg" alt="Tool Name">
                                                 <div class="tool-info">
                                                     <h4>ThreatConnect</h4>
-                                                    <p> ThreatConnect is a threat intelligence platform that provides integrated threat intelligence, automation,<span class="more_info">show more</span><p class="info"> and analytics. It helps organizations manage threat data, automate responses, and collaborate on threat intelligence.<span class="less_info">show less</span></p></p>
-                                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                                    <p> ThreatConnect is a threat intelligence platform that provides integrated threat intelligence, automation, and analytics. It helps<span class="more_info">show more</span><p class="info"> organizations manage threat data, automate responses, and collaborate on threat intelligence.<span class="less_info">show less</span></p></p>
+                                                    <a href="https://threatconnect.com/" class="btn" target="_blank">Learn More</a>
                                                 </div>
                                             </div>
                                             <div class="tool-card">
                                                 <img src="photos/anomali.jpg" alt="Tool Name">
                                                 <div class="tool-info">
                                                     <h4>Anomali</h4>
-                                                    <p>Anomali is a threat intelligence platform that offers threat data collection, analysis, and integration capabilities.<span class="more_info">show more</span><p class="info"> It provides insights into potential threats and vulnerabilities to enhance security operations. <span class="less_info">show less</span></p></p>
-                                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                                    <p>Anomali is a threat intelligence platform that offers threat data collection, analysis, and integration capabilities. It provides<span class="more_info">show more</span><p class="info"> insights into potential threats and vulnerabilities to enhance security operations. <span class="less_info">show less</span></p></p>
+                                                    <a href="https://www.anomali.com/products/threatstream" class="btn" target="_blank">Learn More</a>
                                                 </div>
                                             </div>
                                             <div class="tool-card">
                                                 <img src="photos/flash.jpg" alt="Tool Name">
                                                 <div class="tool-info">
                                                     <h4>Flashpoint</h4>
-                                                    <p>Flashpoint provides threat intelligence and risk management solutions by offering insights into cyber threats and<span class="more_info">show more</span><p class="info"> vulnerabilities. It focuses on deep and dark web monitoring and analysis.<span class="less_info">show less</span></p></p>
-                                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                                    <p>Flashpoint provides threat intelligence and risk management solutions by offering insights into cyber threats and vulnerabilities. It focuses<span class="more_info">show more</span><p class="info"> on deep and dark web monitoring and analysis.<span class="less_info">show less</span></p></p>
+                                                    <a href="https://flashpointarchive.org/downloads" class="btn" target="_blank">Learn More</a>
                                                 </div>
                                             </div>
                                             <div class="tool-card">
                                                 <img src="photos/intel.jpg" alt="Tool Name">
                                                 <div class="tool-info">
                                                     <h4>Intel 471</h4>
-                                                    <p>Intel 471 provides threat intelligence focused on cybercriminal activity, offering insights into the tactics, techniques,<span class="more_info">show more</span><p class="info"> and procedures used by threat actors. It helps organizations understand and mitigate targeted attacks.<span class="less_info">show less</span></p></p>
-                                                    <a href="tool-link.html" class="btn">Learn More</a>
+                                                    <p>Intel 471 provides threat intelligence focused on cybercriminal activity, offering insights into the tactics, techniques, and procedures <span class="more_info">show more</span><p class="info">used by threat actors. It helps organizations understand and mitigate targeted attacks.<span class="less_info">show less</span></p></p>
+                                                    <a href="https://intel471.com/" class="btn" target="_blank">Learn More</a>
                                                 </div>
                                             </div>
                                     </div>
                                         </div>
                                     </div>
+
+
                                         <div id="web-tools" class="tools">
                                             <h3>Web Application Security Tools</h3>
                                             <div class="slide_tools">
@@ -615,76 +718,51 @@
                                                     <img src="photos/acunetix.jpg" alt="Tool Name">
                                                     <div class="tool-info">
                                                         <h4>Acunetix</h4>
-                                                        <p> Acunetix is a commercial web application security scanner that provides automated scanning for vulnerabilities<span class="more_info">show more</span><p class="info"> such as SQL injection, XSS, and other common web threats. It is designed for both small and large-scale applications.<span class="less_info">show less</span></p></p>
-                                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                                        <p> Acunetix is a commercial web application security scanner that provides automated scanning for vulnerabilities such as SQL injection, <span class="more_info">show more</span><p class="info">XSS, and other common web threats. It is designed for both small and large-scale applications.<span class="less_info">show less</span></p></p>
+                                                        <a href="https://www.acunetix.com/support/docs/wvs/installing-acunetix-wvs/" class="btn" target="_blank">Learn More</a>
                                                     </div>
                                                 </div>
                                                 <div class="tool-card">
                                                     <img src="photos/net.jpg" alt="Tool Name">
                                                     <div class="tool-info">
                                                         <h4>Netsparker</h4>
-                                                        <p> Netsparker is a web application security scanner that identifies vulnerabilities such as SQL injection and XSS<span class="more_info">show more</span><p class="info"> in web applications. It provides automated scanning with a focus on accuracy and actionable results.<span class="less_info">show less</span></p></p>
-                                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                                        <p> Netsparker is a web application security scanner that identifies vulnerabilities such as SQL injection and XSS in web applications.<span class="more_info">show more</span><p class="info"> It provides automated scanning with a focus on accuracy and actionable results.<span class="less_info">show less</span></p></p>
+                                                        <a href="https://download.cnet.com/netsparker-community-edition/3000-10248_4-75181422.html" class="btn" target="_blank">Learn More</a>
                                                     </div>
                                                 </div>
                                                 <div class="tool-card">
                                                     <img src="photos/owasp.jpg" alt="Tool Name">
                                                     <div class="tool-info">
                                                         <h4> OWASP Dependency-Check</h4>
-                                                        <p>OWASP Dependency-Check is a tool for identifying known vulnerabilities in project dependencies and libraries.<span class="more_info">show more</span><p class="info"> It helps ensure that third-party components used in web applications do not introduce security risks.<span class="less_info">show less</span></p> </p>
-                                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                                        <p>OWASP Dependency-Check is a tool for identifying known vulnerabilities in project dependencies and libraries. It helps ensure that<span class="more_info">show more</span><p class="info"> third-party components used in web applications do not introduce security risks.<span class="less_info">show less</span></p> </p>
+                                                        <a href="https://owasp.org/www-project-dependency-check/" class="btn" target="_blank">Learn More</a>
                                                     </div>
                                                 </div>
                                                 <div class="tool-card">
                                                     <img src="photos/snyk.jpg" alt="Tool Name">
                                                     <div class="tool-info">
                                                         <h4>Snyk</h4>
-                                                        <p> Snyk is a security platform that focuses on identifying and fixing vulnerabilities in open-source laibraries<span class="more_info">show more</span><p class="info"> and container images. It integrates with development workflows to provide continuous security monitoring.<span class="less_info">show less</span></p></p>
-                                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                                        <p> Snyk is a security platform that focuses on identifying and fixing vulnerabilities in open-source laibraries and container<span class="more_info">show more</span><p class="info"> images. It integrates with development workflows to provide continuous security monitoring.<span class="less_info">show less</span></p></p>
+                                                        <a href="https://docs.snyk.io/snyk-cli/install-or-update-the-snyk-cli" class="btn" target="_blank">Learn More</a>
                                                     </div>
                                                 </div>
                                                 <div class="tool-card">
                                                     <img src="photos/wapiti.jpg" alt="Tool Name">
                                                     <div class="tool-info">
                                                         <h4>Wapiti</h4>
-                                                        <p>Wapiti is an open-source web application vulnerability scanner that allows you to audit the security of your web<span class="more_info">show more</span><p class="info"> applications. It is designed to identify vulnerabilities such as XSS, SQL injection, and other common issues. <span class="less_info">show less</span></p></p>
-                                                        <a href="tool-link.html" class="btn">Learn More</a>
+                                                        <p>Wapiti is an open-source web application vulnerability scanner that allows you to audit the security of your web applications. It<span class="more_info">show more</span><p class="info">  is designed to identify vulnerabilities such as XSS, SQL injection, and other common issues. <span class="less_info">show less</span></p></p>
+                                                        <a href="https://sourceforge.net/projects/wapiti/files/wapiti/wapiti-3.0.2/wapiti3-3.0.2.zip/download" class="btn" target="_blank">Learn More</a>
                                                     </div>
                                                 </div>
                                         </div>
                                             </div>
                                     </div>
         </div>
-
-
-        <div class="guides-section">
-            <h3>Guides & Checklists</h3>
-            <ul class="guide-list">
-                <!-- Example Guide -->
-                <li>
-                    <a href="guide-link.pdf" class="guide-item" download>
-                        <h4>Guide Title</h4>
-                        <p>A brief description of the guide.</p>
-                    </a>
-                </li>
-                <!-- Add more guides here -->
-            </ul>
-        </div>
-
-        <div class="glossary-section">
-            <h3>Glossary</h3>
-            <div class="glossary-list">
-                <!-- Example Term -->
-                <div class="glossary-term">
-                    <h4>Term</h4>
-                    <p>A definition of the term.</p>
-                </div>
-            </div>
-        </div>
     </section>
 
+
 <section id="blog">
-    <h1 style="display: flex; width: 100%; justify-content: space-between;">Our Blogs <button id="admin-button" onclick="location.href='/admin'">Admin Panel</button></h1>
+    <h1 style="display: none; width: 100%; justify-content: space-between;">Our Blogs <button id="admin-button" onclick="location.href='/admin'">Admin Panel</button></h1>
     <div class="blog-options">
         <ul class="blog-option" style="font-weight: bold;">For you</ul>
         <ul class="blog-option">Cyber security tools</ul>
@@ -698,6 +776,7 @@
         <p>No blogs available yet. Please check back later.</p>
     </div>
 </section>
+
 
 
 
@@ -726,7 +805,7 @@
             <div class="expert-qa">
                 <h3>Expert Q&A</h3>
                 <div class="qa-session">
-                    <h4>Moureen</h4>
+                    <h4>Gabriel</h4>
                     <p>Details about the Q&A session.</p>
                     <a href="qa-session" class="btn">Ask a Question</a>
                 </div>
@@ -748,15 +827,15 @@
             <h3>Meet the Team</h3>
             <div class="team-members">
                 <div class="team-member">
-                    <img src="photos/clement.png" class="moureen_image" alt="Team Member Name">
+                    <img src="photos/clement.png" class="moureen_image" alt="software developer and ux developer">
                     <h4>Clement Mwangi</h4>
                     <p>Clement is a ux designer with a deep understanding on how users' interact with digital tools.He has spent years designing inituative interface that make cyber security easy to navigate.
                          </p>
                          
-                         <img src="photos/moureen.jpeg" class="moureen_image" alt="Moureen">
+                         <img src="photos/Gabriel.jpeg" class="moureen_image" alt="Graphics designer">
                          
-                    <h4>Moureen Kariuki</h4>
-                    <p>Moureen is passionate about building and naturing online communication With background in digital marketting and customer engagement.She keeps the comminity informed,answers the question and gathers information to help the platform improve. </p>
+                    <h4>Gabriel Kiguru</h4>
+                    <p>Gabriel is passionate about building and naturing online communication With background in digital marketting and customer engagement.He keeps the community informed, answers the question and gathers information to help the platform improve. </p>
                 </div>
             </div>
         </div>
@@ -806,7 +885,7 @@
                 <h1 id="full-name-display"></h1>
                 <div class="user-info">
                     <h3>Username:</h3>
-                    <div class="p-details user_name_display"></div>
+                    <div class="p-details user_name_display" id="user_name_display"></div>
                 </div>
                 <div class="user-info">
                     <h3>Email:</h3>

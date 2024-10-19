@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Database Management in Cybersecurity</title>
+    <script type="text/javascript" src="../course_script/function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/course_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Database Management</h1>
+        <div class="rewards">
+        <div id="rewards">
+            Rewards: <span>0</span> points
+        </div>
+        <div id="hearts">
+            Hearts: <span class="heart">❤️</span> <span class="heart">❤️</span> <span class="heart">❤️</span>
+        </div>
+        </div>
+   </header>
+<div class="course">
+<section>
+    <h2>1. Database Architectures and Types</h2>
+    
+    <article>
+        <h3 course-id="dbi1" class="locked">1.1 Relational Databases (RDBMS)</h3>
+        <div class="theory dbi1">
+            <div class="course-container">
+                <p><strong>Relational Databases:</strong></p> 
+                <p>Relational databases use a structured, tabular approach to organizing data based on set theory and relational algebra. They utilize SQL for querying and data management.</p>
+                
+                <h4>Key Characteristics of RDBMS:</h4>
+                <ul>
+                    <li><strong>Data Structure:</strong> Organized into tables where rows represent records and columns represent attributes.</li>
+                    <li><strong>Schema-based:</strong> Data must follow a predefined schema with defined columns, data types, and constraints.</li>
+                    <li><strong>Relationships:</strong> Foreign keys establish connections between tables.</li>
+                    <li><strong>ACID Compliance:</strong> Ensures Atomicity, Consistency, Isolation, and Durability, which is crucial for transactional integrity.</li>
+                </ul>
+                
+                <h4>Advantages of RDBMS:</h4>
+                <ul>
+                    <li><strong>Data Integrity:</strong> Strict constraints ensure consistent and reliable data.</li>
+                    <li><strong>ACID Transactions:</strong> Ideal for applications requiring data reliability and atomic operations.</li>
+                    <li><strong>Mature Ecosystem:</strong> RDBMS have a vast array of tools and support due to their longevity in the market.</li>
+                </ul>
+
+                <h4>Disadvantages of RDBMS:</h4>
+                <ul>
+                    <li><strong>Scalability:</strong> Horizontal scaling can be challenging compared to NoSQL databases.</li>
+                    <li><strong>Complex Schema Management:</strong> Large evolving databases can make schema changes difficult.</li>
+                </ul>
+                
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="dbi1">
+                <div class="question">
+                    <label for="q1"><h5>Question:</h5> What is one advantage of relational databases?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q1' class="task-form">
+                        <input type="radio" name="task1" value="wrong"> They don't require a schema.<br>
+                        <input type="radio" name="task1" value="correct"> They ensure ACID compliance, ensuring data integrity.<br>
+                        <input type="radio" name="task1" value="wrong"> They always scale horizontally without any difficulty.<br>
+                        <span class="feedback" id="q1-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-dbi1 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="dbi2" class="locked">1.2 NoSQL Databases</h3>
+        <div class="theory dbi2">
+            <div class="course-container">
+                <p><strong>NoSQL Databases:</strong></p> 
+                <p>NoSQL databases are designed for scalability, performance, and flexibility, typically handling unstructured or semi-structured data. They do not require a predefined schema.</p>
+                
+                <h4>Key Characteristics of NoSQL:</h4>
+                <ul>
+                    <li><strong>Schema-less:</strong> Provides flexibility by not requiring a fixed schema for data storage.</li>
+                    <li><strong>Data Models:</strong> Includes document-based, column-family, key-value, and graph-based models.</li>
+                </ul>
+                
+                <h4>Advantages of NoSQL:</h4>
+                <ul>
+                    <li><strong>Horizontal Scaling:</strong> Easily scales across multiple servers.</li>
+                    <li><strong>High Availability:</strong> Optimized for distributed systems.</li>
+                    <li><strong>Flexible Data Structure:</strong> Can accommodate evolving data structures without schema changes.</li>
+                </ul>
+
+                <h4>Disadvantages of NoSQL:</h4>
+                <ul>
+                    <li><strong>Eventual Consistency:</strong> Prioritizes availability over immediate consistency.</li>
+                    <li><strong>Limited ACID Compliance:</strong> Generally does not fully comply with ACID principles.</li>
+                    <li><strong>Complex Querying:</strong> Query capabilities may be less powerful than SQL-based systems.</li>
+                </ul>
+                
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="dbi2">
+                <div class="question">
+                    <label for="q2"><h5>Question:</h5> Which feature of NoSQL databases allows them to scale across many servers?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q2' class="task-form">
+                        <input type="radio" name="task2" value="wrong"> Vertical Scaling<br>
+                        <input type="radio" name="task2" value="correct"> Horizontal Scaling<br>
+                        <input type="radio" name="task2" value="wrong"> Schema-based data structure<br>
+                        <span class="feedback" id="q2-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-dbi2 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="dbi3" class="locked">1.3 NewSQL Databases</h3>
+        <div class="theory dbi3">
+            <div class="course-container">
+                <p><strong>NewSQL Databases:</strong></p> 
+                <p>NewSQL databases combine the scalability of NoSQL with the strong ACID compliance of traditional relational databases.</p>
+                
+                <h4>Key Characteristics of NewSQL:</h4>
+                <ul>
+                    <li><strong>Scalability:</strong> NewSQL systems scale horizontally, using distributed architectures.</li>
+                    <li><strong>SQL-based:</strong> Retains SQL as the querying language.</li>
+                    <li><strong>ACID Transactions:</strong> Ensures strong consistency and reliability even in distributed environments.</li>
+                </ul>
+                
+                <h4>Advantages of NewSQL:</h4>
+                <ul>
+                    <li><strong>Scalable and Consistent:</strong> Offers both scalability and ACID compliance.</li>
+                    <li><strong>SQL Familiarity:</strong> Uses SQL, making it accessible to developers familiar with traditional databases.</li>
+                </ul>
+
+                <h4>Disadvantages of NewSQL:</h4>
+                <ul>
+                    <li><strong>Maturity:</strong> NewSQL databases are newer and may not have the extensive support or tools as older databases.</li>
+                    <li><strong>Complexity:</strong> Distributed architectures can add operational complexity.</li>
+                </ul>
+                
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="dbi3">
+                <div class="question">
+                    <label for="q3"><h5>Question:</h5> What is one key advantage of NewSQL databases?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q3' class="task-form">
+                        <input type="radio" name="task3" value="wrong"> Eventual Consistency<br>
+                        <input type="radio" name="task3" value="correct"> Strong ACID compliance with horizontal scalability.<br>
+                        <input type="radio" name="task3" value="wrong"> NoSQL-style querying<br>
+                        <span class="feedback" id="q3-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-dbi3 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<section>
+ <h2>2. Security Threats to Databases</h2>
+<article>
+    <h3 course-id="dbi4" class="locked">2.1 SQL Injection (SQLi)</h3>
+    <div class="theory dbi4">
+        <div class="course-container">
+            <p><strong>Overview of SQL Injection:</strong></p> 
+            <p>SQL Injection (SQLi) is a common and severe database vulnerability where attackers inject malicious SQL code into queries through input fields. If the inputs aren't properly validated, this can lead to unauthorized database manipulation.</p>
+            
+            <h4>How SQL Injection Works:</h4>
+            <ul>
+                <li>An attacker modifies input fields (e.g., login forms) with malicious SQL code.</li>
+                <li>For example, in an insecure query: 
+                    <code>SELECT * FROM users WHERE username = 'user' AND password = 'pass';</code> 
+                    If input isn't sanitized, it can be manipulated as: 
+                    <code>SELECT * FROM users WHERE username = '' OR '1'='1' --' AND password = '';</code></li>
+            </ul>
+
+            <h4>Consequences:</h4>
+            <ul>
+                <li><strong>Unauthorized Access:</strong> Attackers may retrieve confidential data or bypass login mechanisms.</li>
+                <li><strong>Data Manipulation:</strong> Inserting, updating, or deleting database records.</li>
+                <li><strong>Database Compromise:</strong> Gaining full control of the database in some cases.</li>
+            </ul>
+
+            <h4>Prevention:</h4>
+            <ul>
+                <li><strong>Input Validation:</strong> Always validate and sanitize user inputs.</li>
+                <li><strong>Parameterized Queries:</strong> Use prepared statements to avoid mixing SQL logic with data.</li>
+                <li><strong>ORM Usage:</strong> Object-Relational Mappers like SQLAlchemy can automatically generate safe SQL queries.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi4">
+            <div class="question">
+                <label for="q4"><h5>Question:</h5> What is one primary consequence of SQL injection?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q4' class="task-form">
+                    <input type="radio" name="task4" value="wrong"> Slows down database performance.<br>
+                    <input type="radio" name="task4" value="correct"> Enables unauthorized access to the database.<br>
+                    <input type="radio" name="task4" value="wrong"> Deletes user accounts.<br>
+                    <span class="feedback" id="q4-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi4 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi5" class="locked">2.2 Privilege Escalation</h3>
+    <div class="theory dbi5">
+        <div class="course-container">
+            <h4>What is Privilege Escalation?</h4>
+            <p>Privilege escalation occurs when a user gains access to higher privileges than intended, often through vulnerabilities or misconfigurations.</p>
+            
+            <h4>Types of Privilege Escalation:</h4>
+            <ul>
+                <li><strong>Vertical:</strong> A user gains administrator-level privileges.</li>
+                <li><strong>Horizontal:</strong> A user accesses another user’s data.</li>
+            </ul>
+
+            <h4>Causes and Consequences:</h4>
+            <ul>
+                <li><strong>Misconfigurations:</strong> Incorrectly granting users higher privileges.</li>
+                <li><strong>Vulnerabilities:</strong> Exploiting bugs to elevate privileges.</li>
+                <li>Potential impacts include unauthorized access to sensitive data and full system control.</li>
+            </ul>
+
+            <h4>Prevention:</h4>
+            <ul>
+                <li><strong>Principle of Least Privilege:</strong> Assign minimal required permissions to users.</li>
+                <li><strong>Role-Based Access Control:</strong> Implement strict RBAC policies.</li>
+                <li><strong>Regular Auditing:</strong> Frequently review user permissions.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi5">
+            <div class="question">
+                <label for="q5"><h5>Question:</h5> What is one method to prevent privilege escalation?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q5' class="task-form">
+                    <input type="radio" name="task5" value="wrong"> Removing all user accounts.<br>
+                    <input type="radio" name="task5" value="correct"> Implementing the principle of least privilege.<br>
+                    <input type="radio" name="task5" value="wrong"> Disabling the database.<br>
+                    <span class="feedback" id="q5-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi5 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi6" class="locked">2.3 Insider Threats</h3>
+    <div class="theory dbi6">
+        <div class="course-container">
+            <h4>Understanding Insider Threats:</h4>
+            <p>Insider threats involve employees or trusted individuals exploiting their access to a database for malicious purposes or due to negligence.</p>
+
+            <h4>Types of Insider Threats:</h4>
+            <ul>
+                <li><strong>Malicious Insiders:</strong> Those intentionally misusing access to steal data.</li>
+                <li><strong>Negligent Insiders:</strong> Employees who accidentally expose data or create vulnerabilities.</li>
+            </ul>
+
+            <h4>Potential Consequences:</h4>
+            <ul>
+                <li><strong>Data Theft:</strong> Insiders can steal or leak sensitive data.</li>
+                <li><strong>Operational Disruption:</strong> Sabotage of critical systems or deletion of data.</li>
+            </ul>
+
+            <h4>Prevention:</h4>
+            <ul>
+                <li><strong>Monitoring and Auditing:</strong> Regularly track database activity for suspicious behavior.</li>
+                <li><strong>Access Controls:</strong> Enforce strict access controls and limit unnecessary privileges.</li>
+                <li><strong>Employee Training:</strong> Educate employees about security best practices.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi6">
+            <div class="question">
+                <label for="q6"><h5>Question:</h5> What is one type of insider threat?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q6' class="task-form">
+                    <input type="radio" name="task6" value="wrong"> External attackers.<br>
+                    <input type="radio" name="task6" value="correct"> Negligent employees.<br>
+                    <input type="radio" name="task6" value="wrong"> Virus infections.<br>
+                    <span class="feedback" id="q6-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi6 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi7" class="locked">2.4 Database Backdoors</h3>
+    <div class="theory dbi7">
+        <div class="course-container">
+            <h4>What are Database Backdoors?</h4>
+            <p>Database backdoors are hidden entry points allowing attackers to bypass authentication or access controls. These backdoors can be planted by attackers or created by misconfigurations.</p>
+
+            <h4>How Backdoors Work:</h4>
+            <ul>
+                <li>Attackers exploit vulnerabilities to create hidden access points (e.g., malicious triggers or accounts).</li>
+                <li>Once a backdoor is created, attackers can access the database undetected, often repeatedly.</li>
+            </ul>
+
+            <h4>Consequences:</h4>
+            <ul>
+                <li><strong>Persistent Unauthorized Access:</strong> Attackers maintain long-term access to databases.</li>
+                <li><strong>Data Theft or Sabotage:</strong> Attackers may steal data or disrupt operations undetected.</li>
+            </ul>
+
+            <h4>Prevention:</h4>
+            <ul>
+                <li><strong>Regular Patching:</strong> Update database software to close known vulnerabilities.</li>
+                <li><strong>Auditing and Access Control:</strong> Regularly review accounts, permissions, and system activity.</li>
+                <li><strong>Code Reviews:</strong> Periodically review stored procedures and triggers for malicious alterations.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi7">
+            <div class="question">
+                <label for="q7"><h5>Question:</h5> What is one consequence of database backdoors?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q7' class="task-form">
+                    <input type="radio" name="task7" value="wrong"> Database running slower.<br>
+                    <input type="radio" name="task7" value="correct"> Persistent unauthorized access.<br>
+                    <input type="radio" name="task7" value="wrong"> Passwords becoming invalid.<br>
+                    <span class="feedback" id="q7-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi7 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+
+<section>
+ <h2>3. Access Control Mechanisms</h2>
+ <article>
+    <h3 course-id="dbi8" class="locked">3.1 Role-Based Access Control (RBAC)</h3>
+    <div class="theory dbi8">
+        <div class="course-container">
+            <h4>What is RBAC?</h4>
+            <p>Role-Based Access Control (RBAC) is a method for managing user permissions by assigning them to roles rather than individuals. Users are then assigned to roles based on their job responsibilities.</p>
+            
+            <h4>How RBAC Works:</h4>
+            <ul>
+                <li><strong>Roles:</strong> Represent a set of permissions (e.g., Admin, Manager, Analyst).</li>
+                <li><strong>Permissions:</strong> Each role has specific actions it can perform.</li>
+                <li><strong>User Assignment:</strong> Users are assigned to roles based on their job functions.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Simplified management through centralized role assignment.</li>
+                <li>Users receive necessary access based on their job functions.</li>
+                <li>Scalable management for large numbers of users.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A database administrator assigns a Data Analyst role to users who need to generate reports. This role allows read-only access to specific tables.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Implement role hierarchies for inheritance of permissions.</li>
+                <li>Define granular roles to avoid overly broad permissions.</li>
+                <li>Regularly review roles and permissions.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi8">
+            <div class="question">
+                <label for="q8"><h5>Question:</h5> What is one advantage of RBAC?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='qrb1' class="task-form">
+                    <input type="radio" name="task8" value="wrong"> It requires every user to have unique permissions.<br>
+                    <input type="radio" name="task8" value="correct"> It simplifies management of user permissions.<br>
+                    <input type="radio" name="task8" value="wrong"> It allows unrestricted access for all users.<br>
+                    <span class="feedback" id="q8-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi8 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi9" class="locked">3.2 Least Privilege Principle</h3>
+    <div class="theory dbi9">
+        <div class="course-container">
+            <h4>What is the Least Privilege Principle?</h4>
+            <p>This principle emphasizes limiting user access to the minimum permissions necessary for their job functions, thereby minimizing potential risks.</p>
+
+            <h4>How It Works:</h4>
+            <ul>
+                <li>Users receive only the permissions they need.</li>
+                <li>Temporary access may be granted for specific tasks and revoked afterward.</li>
+                <li>Separate privileges for administrative tasks.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Reduces the attack surface by limiting potential access.</li>
+                <li>Improves overall security by minimizing risk of data changes.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>An HR employee receives read-only access to employee records, preventing them from modifying any data.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Use RBAC to align permissions with roles.</li>
+                <li>Regularly audit access to maintain compliance with the principle.</li>
+                <li>Grant temporary elevated privileges as necessary.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi9">
+            <div class="question">
+                <label for="q9"><h5>Question:</h5> What is the purpose of the Least Privilege Principle?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q9' class="task-form">
+                    <input type="radio" name="task9" value="wrong"> To grant all users full access.<br>
+                    <input type="radio" name="task9" value="correct"> To limit user access to necessary permissions only.<br>
+                    <input type="radio" name="task9" value="wrong"> To allow temporary access to everyone.<br>
+                    <span class="feedback" id="q9-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-9 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi10" class="locked">3.3 Multi-Factor Authentication (MFA)</h3>
+    <div class="theory dbi10">
+        <div class="course-container">
+            <h4>What is MFA?</h4>
+            <p>Multi-Factor Authentication (MFA) enhances security by requiring two or more forms of authentication for database access.</p>
+
+            <h4>How MFA Works:</h4>
+            <ul>
+                <li>MFA uses multiple authentication methods, such as:</li>
+                <ul>
+                    <li>Something You Know: Passwords or PINs.</li>
+                    <li>Something You Have: Security tokens or mobile devices.</li>
+                    <li>Something You Are: Biometrics like fingerprints.</li>
+                </ul>
+                <li>For instance, a user must provide a password and a code sent to their phone to log in.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Increases security by adding layers of authentication.</li>
+                <li>Reduces risks associated with compromised passwords.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A database administrator logs in with a strong password and must also enter a one-time code sent to their mobile phone.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Enforce MFA for all critical accounts.</li>
+                <li>Encourage the use of varied authentication methods.</li>
+                <li>Provide backup options for users who lose access to primary methods.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi10">
+            <div class="question">
+                <label for="q10"><h5>Question:</h5> What is the main goal of MFA?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='qrb3' class="task-form">
+                    <input type="radio" name="task10" value="wrong"> To allow users to log in with any method.<br>
+                    <input type="radio" name="task10" value="correct"> To enhance security by requiring multiple forms of authentication.<br>
+                    <input type="radio" name="task10" value="wrong"> To eliminate the need for passwords altogether.<br>
+                    <span class="feedback" id="q10-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi10 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi11" class="locked">3.4 User Account Management</h3>
+    <div class="theory dbi11">
+        <div class="course-container">
+            <h4>What is User Account Management?</h4>
+            <p>User Account Management encompasses the processes for creating, managing, auditing, and deactivating user accounts in a database system.</p>
+
+            <h4>How It Works:</h4>
+            <ul>
+                <li><strong>Account Creation:</strong> Follow a predefined process for new accounts.</li>
+                <li><strong>Regular Audits:</strong> Periodically check user accounts for relevance and proper permissions.</li>
+                <li><strong>Revoking Access:</strong> Immediately revoke or adjust access for employees who leave or change roles.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Prevents unnecessary access to sensitive systems.</li>
+                <li>Improves overall security posture.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>During a quarterly audit, an administrator identifies and removes inactive accounts from the system.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Conduct regular audits of user access.</li>
+                <li>Immediately revoke access for departed employees.</li>
+                <li>Implement strong password policies.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi11">
+            <div class="question">
+                <label for="q11"><h5>Question:</h5> What is a benefit of effective User Account Management?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q11' class="task-form">
+                    <input type="radio" name="task11" value="wrong"> It allows unlimited access for all users.<br>
+                    <input type="radio" name="task11" value="correct"> It prevents unnecessary access to sensitive systems.<br>
+                    <input type="radio" name="task11" value="wrong"> It ignores the need for strong passwords.<br>
+                    <span class="feedback" id="q11-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi11 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</section>
+
+
+<section>
+ <h2>4. Encryption and Data Protection</h2>
+ <article>
+    <h3 course-id="dbi12" class="locked">4.1 Data-at-Rest Encryption</h3>
+    <div class="theory dbi12">
+        <div class="course-container">
+            <h4>What is Data-at-Rest Encryption?</h4>
+            <p>Data-at-Rest Encryption refers to the encryption of data stored on physical media, ensuring sensitive information remains secure even if unauthorized individuals access the storage medium.</p>
+
+            <h4>How It Works:</h4>
+            <ul>
+                <li><strong>Encryption Algorithms:</strong> Utilizes cryptographic algorithms (e.g., AES, RSA) to encode data, rendering it unreadable without the appropriate decryption key.</li>
+                <li><strong>Encryption at the File Level:</strong> Individual files or databases can be encrypted using specific tools or database features.</li>
+                <li><strong>Transparent Data Encryption (TDE):</strong> A method employed by databases like SQL Server and Oracle, TDE automatically encrypts database files without requiring changes to application code.</li>
+                <li><strong>PostgreSQL pgcrypto:</strong> PostgreSQL provides the pgcrypto extension, allowing for the encryption of specific columns within a database using various cryptographic functions.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Data Security: Protects sensitive information from unauthorized access, especially during physical theft or unauthorized access to backups.</li>
+                <li>Compliance: Assists organizations in meeting regulatory requirements for data protection, such as GDPR, HIPAA, and PCI DSS.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A financial institution uses TDE to encrypt its customer database, ensuring that in the event of a data breach, the encrypted data remains unreadable to attackers.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Use Strong Encryption Algorithms: Employ industry-standard algorithms like AES-256 for encryption.</li>
+                <li>Key Management: Implement a robust key management strategy, ensuring that encryption keys are securely stored and rotated regularly.</li>
+                <li>Audit Encryption Practices: Regularly review and audit encryption practices to ensure compliance with internal policies and regulatory requirements.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi12">
+            <div class="question">
+                <label for="q12"><h5>Question:</h5> What is the purpose of Data-at-Rest Encryption?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q12' class="task-form">
+                    <input type="radio" name="task12" value="wrong"> To make all data public.<br>
+                    <input type="radio" name="task12" value="correct"> To protect stored data from unauthorized access.<br>
+                    <input type="radio" name="task12" value="wrong"> To allow any user to modify data.<br>
+                    <span class="feedback" id="q12-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi12 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi13" class="locked">4.2 Data-in-Transit Encryption</h3>
+    <div class="theory dbi13">
+        <div class="course-container">
+            <h4>What is Data-in-Transit Encryption?</h4>
+            <p>Data-in-Transit Encryption involves encrypting data as it travels across networks, protecting it from interception or eavesdropping during transmission, particularly between client applications and database servers.</p>
+
+            <h4>How It Works:</h4>
+            <ul>
+                <li><strong>Transport Layer Security (TLS):</strong> TLS is a cryptographic protocol that provides secure communication over a computer network, ensuring data integrity, confidentiality, and authentication during transmission.</li>
+                <li><strong>Application Layer Encryption:</strong> Applications can also encrypt data before transmission to add an additional layer of security.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Protection Against Interception: Encrypting data in transit prevents attackers from reading sensitive information, even if they intercept the data packets.</li>
+                <li>Data Integrity: Ensures that data has not been tampered with during transmission.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>An online shopping platform uses TLS to encrypt user data, such as credit card information and shipping addresses, when users complete a transaction.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Always Use TLS: Enable TLS for all communications between applications and databases, especially over public networks.</li>
+                <li>Regularly Update Protocols: Keep TLS versions and encryption algorithms up to date to protect against known vulnerabilities.</li>
+                <li>Use Strong Certificates: Use strong SSL/TLS certificates issued by trusted certificate authorities to ensure secure connections.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi13">
+            <div class="question">
+                <label for="q13"><h5>Question:</h5> What is the main goal of Data-in-Transit Encryption?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q13' class="task-form">
+                    <input type="radio" name="task13" value="wrong"> To allow all data to be intercepted.<br>
+                    <input type="radio" name="task13" value="correct"> To protect data from interception during transmission.<br>
+                    <input type="radio" name="task13" value="wrong"> To speed up data transmission without security.<br>
+                    <span class="feedback" id="q13-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi13 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi14" class="locked">4.3 Tokenization</h3>
+    <div class="theory dbi14">
+        <div class="course-container">
+            <h4>What is Tokenization?</h4>
+            <p>Tokenization replaces sensitive data with non-sensitive placeholders, known as tokens, while the original data is securely stored in a separate vault.</p>
+
+            <h4>How It Works:</h4>
+            <ul>
+                <li><strong>Token Generation:</strong> When sensitive data (e.g., credit card numbers) is received, it is replaced with a randomly generated token that has no meaningful value.</li>
+                <li><strong>Token Vault:</strong> The original sensitive data is stored securely in a token vault, which is tightly controlled and monitored.</li>
+                <li><strong>Data Mapping:</strong> The system maintains a mapping between tokens and the original sensitive data, enabling secure access when needed.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Reduced Risk: If an application is compromised, only the tokens are exposed, not the actual sensitive data.</li>
+                <li>Compliance Support: Tokenization is particularly useful in compliance scenarios like PCI DSS, helping to reduce the scope of compliance audits.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A retail business uses tokenization to process customer payment information, replacing credit card numbers with tokens in its database to minimize the risk of data breaches.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Secure Token Vault: Ensure that the token vault is highly secure and access-controlled.</li>
+                <li>Limit Token Exposure: Avoid exposing tokens in logs or user interfaces to minimize the risk of token theft.</li>
+                <li>Implement Token Lifecycle Management: Manage the lifecycle of tokens effectively, including creation, usage, and revocation.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi14">
+            <div class="question">
+                <label for="q14"><h5>Question:</h5> What is the main advantage of Tokenization?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q14' class="task-form">
+                    <input type="radio" name="task14" value="wrong"> It allows sensitive data to be publicly visible.<br>
+                    <input type="radio" name="task14" value="correct"> It reduces the risk of data exposure by using tokens.<br>
+                    <input type="radio" name="task14" value="wrong"> It eliminates the need for encryption.<br>
+                    <span class="feedback" id="q14-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi14 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi15" class="locked">4.4 Database Auditing</h3>
+    <div class="theory dbi15">
+        <div class="course-container">
+            <h4>What is Database Auditing?</h4>
+            <p>Database Auditing involves monitoring and recording database activities to detect and respond to suspicious behavior, providing visibility into database access and modifications.</p>
+
+            <h4>How It Works:</h4>
+            <ul>
+                <li><strong>Activity Logging:</strong> Database systems log various activities, such as user logins, executed queries, and data modifications.</li>
+                <li><strong>Audit Trails:</strong> Maintain audit trails that record the who, what, when, and where of database interactions, allowing for thorough investigation and analysis.</li>
+                <li><strong>PostgreSQL pgAudit:</strong> PostgreSQL offers the pgAudit extension, which provides detailed session and object-level logging for audit purposes.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Increased Visibility: Auditing helps identify potential security breaches or unauthorized access in real time.</li>
+                <li>Compliance: Many regulations require organizations to maintain logs of access and modifications to sensitive data.</li>
+                <li>Accountability: Creates a record of actions taken within the database, promoting accountability among users.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A healthcare organization uses database auditing to monitor access to patient records, ensuring compliance with HIPAA regulations and identifying unauthorized access attempts.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Enable Comprehensive Auditing: Ensure all critical activities are logged, including logins, data modifications, and permission changes.</li>
+                <li>Regularly Review Audit Logs: Establish processes to review audit logs regularly for signs of suspicious activity.</li>
+                <li>Implement Alerting Mechanisms: Set up alerts to notify administrators of unusual or unauthorized activities.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi15">
+            <div class="question">
+                <label for="q15"><h5>Question:</h5> What is the purpose of Database Auditing?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q15' class="task-form">
+                    <input type="radio" name="task15" value="wrong"> To ignore all database activities.<br>
+                    <input type="radio" name="task15" value="correct"> To monitor and record database activities for security.<br>
+                    <input type="radio" name="task15" value="wrong"> To allow anyone to modify data.<br>
+                    <span class="feedback" id="q15-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi15 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+</section>
+
+
+<section>
+ <h2>5. Backup and Recovery</h2>
+ <article>
+    <h3 course-id="dbi16" class="locked">5.1 Backup Strategies</h3>
+    <div class="theory dbi16">
+        <div class="course-container">
+            <h4>What are Backup Strategies?</h4>
+            <p>Backup strategies involve various methods for creating copies of data to protect against loss due to hardware failure, accidental deletion, or unforeseen events. The main types of backup strategies include:</p>
+
+            <h4>Types of Backups:</h4>
+            <ul>
+                <li><strong>Full Backup:</strong>
+                    <p>A full backup captures all data at a specific point in time. It serves as the baseline for all other backups.</p>
+                    <h5>Advantages:</h5>
+                    <ul>
+                        <li>Simplifies data restoration since all data is stored in a single backup set.</li>
+                        <li>Provides a complete copy of the database, making recovery from catastrophic failures easier.</li>
+                    </ul>
+                    <h5>Disadvantages:</h5>
+                    <ul>
+                        <li>Requires more storage space and time to complete than other backup methods.</li>
+                        <li>May be impractical for large databases if performed frequently.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Differential Backup:</strong>
+                    <p>A differential backup captures only the data that has changed since the last full backup.</p>
+                    <h5>Advantages:</h5>
+                    <ul>
+                        <li>Faster and requires less storage space compared to full backups.</li>
+                        <li>Restoration is quicker than with incremental backups since only the last full backup and the latest differential backup are needed.</li>
+                    </ul>
+                    <h5>Disadvantages:</h5>
+                    <ul>
+                        <li>As time passes, the size of differential backups increases, potentially leading to longer backup windows.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Incremental Backup:</strong>
+                    <p>An incremental backup captures only the data that has changed since the last backup (whether that backup was full or incremental).</p>
+                    <h5>Advantages:</h5>
+                    <ul>
+                        <li>Requires the least amount of storage space and time to complete, making it efficient for large databases.</li>
+                        <li>Allows for frequent backups with minimal impact on system performance.</li>
+                    </ul>
+                    <h5>Disadvantages:</h5>
+                    <ul>
+                        <li>Restoration requires the last full backup and all incremental backups, complicating the recovery process and increasing the time needed to restore data.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Backup Strategy Example:</h4>
+            <p>A common backup strategy might involve a weekly full backup, supplemented by daily differential backups, allowing for quick recovery while minimizing storage costs.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Regular Backup Schedule: Establish a consistent backup schedule based on business requirements, data change frequency, and recovery time objectives (RTO).</li>
+                <li>Offsite Backups: Store backups in a secure offsite location or use cloud storage solutions to protect against local disasters.</li>
+                <li>Automate Backups: Utilize automated backup tools to ensure backups are created regularly without manual intervention.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi16">
+            <div class="question">
+                <label for="q16"><h5>Question:</h5> What is the primary advantage of a Full Backup?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q16' class="task-form">
+                    <input type="radio" name="task16" value="wrong"> It requires the least storage space.<br>
+                    <input type="radio" name="task16" value="correct"> It simplifies data restoration since all data is in one backup set.<br>
+                    <input type="radio" name="task16" value="wrong"> It is the fastest backup method.<br>
+                    <span class="feedback" id="q16-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi16 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi17" class="locked">5.2 Disaster Recovery Planning</h3>
+    <div class="theory dbi17">
+        <div class="course-container">
+            <h4>What is Disaster Recovery Planning (DRP)?</h4>
+            <p>Disaster Recovery Planning involves preparing for unexpected events that could compromise data integrity or availability. Effective DRP ensures that organizations can quickly recover from data loss incidents, such as hardware failures, natural disasters, or cyberattacks.</p>
+
+            <h4>Key Components of Disaster Recovery Planning:</h4>
+            <ul>
+                <li><strong>Failover Mechanism:</strong> Automatically switches to a standby database or server in the event of a failure, minimizing downtime and ensuring continuous availability.</li>
+                <li><strong>Replication:</strong> Creating copies of the database on different servers, either in real-time (synchronous replication) or at intervals (asynchronous replication), ensuring minimal data loss.</li>
+                <li><strong>Backup Site:</strong> Establish a backup site (cold, warm, or hot) to restore operations quickly in the event of a disaster.</li>
+                <ul>
+                    <li><strong>Cold Site:</strong> Equipped with infrastructure but no real-time data, requiring data restoration from backups.</li>
+                    <li><strong>Warm Site:</strong> Has some infrastructure and regularly updated data, allowing quicker recovery.</li>
+                    <li><strong>Hot Site:</strong> Fully equipped and mirrors the primary site in real-time, enabling immediate failover and minimal downtime.</li>
+                </ul>
+                <li><strong>Testing and Documentation:</strong> Regularly test the disaster recovery plan to ensure clarity and consistency during recovery efforts.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Reduced Downtime: A well-implemented DRP minimizes downtime and maintains business continuity.</li>
+                <li>Mitigates Data Loss: Rapid recovery mechanisms ensure data integrity and availability.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Regular DR Tests: Conduct regular disaster recovery drills to test the effectiveness of the plan.</li>
+                <li>Update the DR Plan: Review and update the DRP to account for changes in the IT environment and new threats.</li>
+                <li>Assign Roles and Responsibilities: Clearly define roles for team members involved in the recovery process.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi17">
+            <div class="question">
+                <label for="q17"><h5>Question:</h5> What is the main goal of Disaster Recovery Planning?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q17' class="task-form">
+                    <input type="radio" name="task17" value="wrong"> To ignore unexpected events.<br>
+                    <input type="radio" name="task17" value="correct"> To ensure quick recovery from data loss incidents.<br>
+                    <input type="radio" name="task17" value="wrong"> To keep all data publicly accessible.<br>
+                    <span class="feedback" id="q17-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi17 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi18" class="locked">5.3 Integrity Checks</h3>
+    <div class="theory dbi18">
+        <div class="course-container">
+            <h4>What are Integrity Checks?</h4>
+            <p>Integrity Checks refer to the processes and procedures used to ensure that backup data is complete, accurate, and free from corruption. Regularly verifying backups is crucial to ensure their reliability when needed.</p>
+
+            <h4>How Integrity Checks Work:</h4>
+            <ul>
+                <li><strong>Checksum Validation:</strong> Utilize checksums (hash functions) to verify the integrity of backup data, comparing the checksum of the original data with that of the backup.</li>
+                <li><strong>Test Restorations:</strong> Periodically perform test restorations of backup data to confirm usability.</li>
+                <li><strong>Monitoring Tools:</strong> Use monitoring tools and scripts to automate integrity checks and alert administrators of issues.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li>Data Reliability: Ensures backups are not corrupted and can be relied upon for recovery.</li>
+                <li>Early Detection of Issues: Allows for early detection of potential issues before they escalate.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Schedule Regular Checks: Implement a regular schedule for integrity checks, including checksum validation and test restorations.</li>
+                <li>Keep Detailed Logs: Maintain logs of integrity checks and test restorations to track the reliability of backup processes.</li>
+                <li>Monitor Storage Health: Regularly monitor the health of storage media used for backups.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi18">
+            <div class="question">
+                <label for="q18"><h5>Question:</h5> What is the purpose of Integrity Checks?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q18' class="task-form">
+                    <input type="radio" name="task18" value="wrong"> To make backups less reliable.<br>
+                    <input type="radio" name="task18" value="correct"> To ensure backups are complete and free from corruption.<br>
+                    <input type="radio" name="task18" value="wrong"> To avoid using checksums.<br>
+                    <span class="feedback" id="q18-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi18 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+</section>
+
+
+<section>
+ <h2>6. Database Hardening Techniques</h2>
+ <article>
+    <h3 course-id="dbi19" class="locked">6.1 Disable Unnecessary Features</h3>
+    <div class="theory dbi19">
+        <div class="course-container">
+            <h4>How It Works:</h4>
+            <ul>
+                <li><strong>Identify Unused Features:</strong> Conduct an inventory of the database features and services currently enabled. Determine which are not required for the database's intended use.</li>
+                <li><strong>Turn Off Unused Services:</strong> Disable or uninstall any unnecessary features, such as unused ports, database services, and extensions.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Reduced Attack Surface:</strong> By disabling unnecessary features, the number of potential vulnerabilities is minimized, reducing the chances of exploitation.</li>
+                <li><strong>Improved Performance:</strong> Reducing the number of active services can enhance database performance and stability.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A company using PostgreSQL only for web application data can disable features like the PostgreSQL Enterprise Manager or unused procedural languages (e.g., PL/Perl, PL/Python).</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Regularly Review Configurations: Conduct regular reviews of enabled features and services to ensure they are still relevant.</li>
+                <li>Document Changes: Keep a record of disabled features and services for future reference and compliance purposes.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi19">
+            <div class="question">
+                <label for="q19"><h5>Question:</h5> What is the primary advantage of disabling unnecessary features in a database?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q19' class="task-form">
+                    <input type="radio" name="task19" value="wrong"> It increases the number of potential vulnerabilities.<br>
+                    <input type="radio" name="task19" value="correct"> It reduces the attack surface and enhances performance.<br>
+                    <input type="radio" name="task19" value="wrong"> It complicates the database management process.<br>
+                    <span class="feedback" id="q19-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi19 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi20" class="locked">6.2 Patching and Updates</h3>
+    <div class="theory dbi20">
+        <div class="course-container">
+            <h4>How It Works:</h4>
+            <ul>
+                <li><strong>Monitor for Updates:</strong> Stay informed about available patches and updates from the database vendor. Subscribe to security alerts or notifications.</li>
+                <li><strong>Testing:</strong> Before applying updates to production environments, test them in a staging environment to ensure compatibility and stability.</li>
+                <li><strong>Scheduled Updates:</strong> Implement a regular schedule for applying patches and updates, balancing the need for security with operational continuity.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Vulnerability Mitigation:</strong> Patching known vulnerabilities helps protect against exploitation by attackers.</li>
+                <li><strong>Enhanced Performance and Features:</strong> Updates can improve database performance and introduce new features that enhance security.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A company using MySQL applies security patches as soon as they are released to protect against known vulnerabilities, such as SQL injection risks.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Prioritize Critical Patches: Focus on applying critical security patches as soon as possible, especially those related to vulnerabilities with known exploits.</li>
+                <li>Maintain Backup: Always create backups before applying patches to recover quickly in case of any issues arising from the update.</li>
+                <li>Automate Patching: Where possible, automate the patching process to ensure timely updates without manual intervention.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi20">
+            <div class="question">
+                <label for="q20"><h5>Question:</h5> Why is patching and updating databases important?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q20' class="task-form">
+                    <input type="radio" name="task20" value="wrong"> It complicates database management.<br>
+                    <input type="radio" name="task20" value="correct"> It mitigates vulnerabilities and enhances performance.<br>
+                    <input type="radio" name="task20" value="wrong"> It has no effect on security.<br>
+                    <span class="feedback" id="q20-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi20 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi21" class="locked">6.3 Configuration Hardening</h3>
+    <div class="theory dbi21">
+        <div class="course-container">
+            <h4>Key Areas of Focus:</h4>
+            <ul>
+                <li><strong>Enforce Strong Password Policies:</strong> Implement policies requiring complex passwords, regular password changes, and account lockout mechanisms after a certain number of failed login attempts.</li>
+                <li><strong>Restrict Access to Configuration Files:</strong> Secure configuration files with proper permissions to prevent unauthorized access.</li>
+                <li><strong>Disable Remote Access:</strong> If remote access is not necessary, disable it to reduce the risk of unauthorized access.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Enhanced Security:</strong> Properly configured databases are less susceptible to unauthorized access and attacks.</li>
+                <li><strong>Compliance:</strong> Hardening configurations can help organizations meet regulatory compliance requirements.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A PostgreSQL database administrator modifies the pg_hba.conf file to restrict access to only specific trusted IP addresses and enforces strong password policies.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Follow Security Benchmarks: Use security benchmarks (e.g., CIS Benchmarks) as guidelines for database configuration hardening.</li>
+                <li>Regular Audits: Perform regular security audits to assess and adjust configurations as necessary.</li>
+                <li>Limit Privileges: Follow the principle of least privilege by granting users only the permissions necessary for their roles.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi21">
+            <div class="question">
+                <label for="q21"><h5>Question:</h5> What is a key component of configuration hardening?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='qr3' class="task-form">
+                    <input type="radio" name="task21" value="wrong"> Allowing remote access for all users.<br>
+                    <input type="radio" name="task21" value="correct"> Enforcing strong password policies and limiting privileges.<br>
+                    <input type="radio" name="task21" value="wrong"> Ignoring security benchmarks.<br>
+                    <span class="feedback" id="q21-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi21 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi22" class="locked">6.4 Firewalls and Network Security</h3>
+    <div class="theory dbi22">
+        <div class="course-container">
+            <h4>Key Components:</h4>
+            <ul>
+                <li><strong>IP Whitelisting:</strong> Restrict database access to a defined list of trusted IP addresses. Only those addresses can connect to the database, reducing exposure to potential attacks.</li>
+                <li><strong>Database Firewalls:</strong> Utilize database firewalls to monitor and filter incoming traffic based on predefined security rules. They can help detect and block SQL injection attacks and other malicious activities.</li>
+                <li><strong>Segmentation:</strong> Place databases in a separate network segment, away from general user access, to minimize the risk of exposure to untrusted networks.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Controlled Access:</strong> Firewalls help enforce access controls, ensuring only authorized users can connect to the database.</li>
+                <li><strong>Threat Detection:</strong> Database firewalls can detect and respond to suspicious activities, enhancing overall security.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A corporate network uses a firewall to allow only specific application servers to communicate with the database server, preventing direct access from outside sources.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Regularly Update Firewall Rules: Continuously review and update firewall rules to adapt to changing security needs and threats.</li>
+                <li>Use Intrusion Detection Systems (IDS): Implement IDS to monitor network traffic for suspicious activities and potential threats.</li>
+                <li>Encrypt Network Traffic: Use TLS/SSL to encrypt network traffic between clients and databases, ensuring data confidentiality in transit.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi22">
+            <div class="question">
+                <label for="q22"><h5>Question:</h5> What is the purpose of implementing firewalls in database security?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q22' class="task-form">
+                    <input type="radio" name="task22" value="wrong"> To allow unrestricted access to the database.<br>
+                    <input type="radio" name="task22" value="correct"> To control access and detect suspicious activities.<br>
+                    <input type="radio" name="task22" value="wrong"> To disable all network connections.<br>
+                    <span class="feedback" id="q22-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi22 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+</section>
+
+
+<section> 
+    <h2>7. Advanced Threat Detection and Response</h2>
+    <article>
+    <h3 course-id="dbi23" class="locked">7.1 Anomaly Detection</h3>
+    <div class="theory dbi23">
+        <div class="course-container">
+            <h4>How It Works:</h4>
+            <ul>
+                <li><strong>Baseline Establishment:</strong> Initially, normal behavior is established through historical data analysis, identifying typical patterns of database usage (e.g., average read/write operations, peak access times).</li>
+                <li><strong>Real-time Monitoring:</strong> The system continuously monitors database activity, comparing it against the established baseline to identify deviations.</li>
+                <li><strong>Alert Generation:</strong> When an anomaly is detected, the system triggers alerts for further investigation.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Early Detection:</strong> Anomaly detection can identify unusual activities indicative of security breaches or insider threats early in the attack lifecycle.</li>
+                <li><strong>Adaptive Learning:</strong> Machine learning models can adapt over time, improving their ability to identify new patterns and threats as they emerge.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A database system configured to detect anomalies might alert administrators if a user suddenly performs an unusually high number of read operations, potentially indicating unauthorized access or a compromised account.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Regularly Update Baselines: Continuously update baseline behaviors to reflect changes in usage patterns and business operations.</li>
+                <li>Combine with Other Methods: Use anomaly detection in conjunction with other security measures for a more comprehensive approach to threat detection.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi23">
+            <div class="question">
+                <label for="q23"><h5>Question:</h5> What is the primary benefit of anomaly detection in database security?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q23' class="task-form">
+                    <input type="radio" name="task23" value="wrong"> It simplifies the database management process.<br>
+                    <input type="radio" name="task23" value="correct"> It allows for early detection of unusual activities indicative of security breaches.<br>
+                    <input type="radio" name="task23" value="wrong"> It eliminates the need for real-time monitoring.<br>
+                    <span class="feedback" id="q23-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi23 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi24" class="locked">7.2 Intrusion Detection Systems (IDS)</h3>
+    <div class="theory dbi24">
+        <div class="course-container">
+            <h4>Key Components:</h4>
+            <ul>
+                <li><strong>Signature-based Detection:</strong> This method uses predefined signatures of known attacks to detect malicious activities. It is effective against known threats but may struggle with zero-day attacks.</li>
+                <li><strong>Anomaly-based Detection:</strong> This approach focuses on identifying deviations from normal behavior, similar to anomaly detection but typically implemented at the network level.</li>
+            </ul>
+
+            <h4>Popular IDS Tools:</h4>
+            <ul>
+                <li><strong>Snort:</strong> An open-source network intrusion detection system that performs real-time traffic analysis and packet logging to identify malicious activity.</li>
+                <li><strong>OSSEC:</strong> A host-based intrusion detection system that provides log analysis, file integrity checking, and rootkit detection.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Immediate Alerts:</strong> IDS can provide real-time alerts when suspicious activities are detected, allowing for quick response to potential threats.</li>
+                <li><strong>Comprehensive Monitoring:</strong> It offers insights into traffic patterns and helps identify potential vulnerabilities in the network infrastructure.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>An IDS may alert administrators if it detects a series of failed login attempts from a single IP address, potentially indicating a brute-force attack.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Regularly Update Signatures: Ensure that the IDS signature database is kept up-to-date to detect the latest known threats effectively.</li>
+                <li>Integrate with Security Information and Event Management (SIEM): Use IDS data alongside SIEM solutions to correlate events and provide a more comprehensive view of security incidents.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi24">
+            <div class="question">
+                <label for="q24"><h5>Question:</h5> What does an Intrusion Detection System (IDS) primarily monitor?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q24' class="task-form">
+                    <input type="radio" name="task24" value="wrong"> User activity on the database.<br>
+                    <input type="radio" name="task24" value="correct"> Network traffic for suspicious activities.<br>
+                    <input type="radio" name="task24" value="wrong"> Database performance metrics.<br>
+                    <span class="feedback" id="q24-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi24 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi25" class="locked">7.3 Database Activity Monitoring (DAM)</h3>
+    <div class="theory dbi25">
+        <div class="course-container">
+            <h4>Key Features:</h4>
+            <ul>
+                <li><strong>Real-time Monitoring:</strong> DAM solutions track all database activity in real-time, allowing for immediate detection of anomalies or policy violations.</li>
+                <li><strong>Alerting and Reporting:</strong> They provide alerts for suspicious queries, such as those attempting to access sensitive data or execute unauthorized commands.</li>
+                <li><strong>Compliance Auditing:</strong> DAM tools help organizations meet regulatory compliance requirements by providing detailed logs of database activity and access.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Insider Threat Detection:</strong> DAM is particularly effective in detecting insider threats, as it monitors user activity and can identify unusual patterns that suggest misuse of access rights.</li>
+                <li><strong>Forensic Capabilities:</strong> In the event of a security incident, DAM solutions provide logs and reports that are invaluable for forensic investigations.</li>
+            </ul>
+
+            <h4>Example Scenario:</h4>
+            <p>A DAM system may alert security personnel if a user attempts to execute a DELETE statement on sensitive tables outside of normal business hours, indicating a possible compromise or policy violation.</p>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Implement Comprehensive Policies: Develop and enforce comprehensive policies governing database access and activity to enhance monitoring effectiveness.</li>
+                <li>Regularly Review Activity Logs: Continuously review activity logs and alerts generated by DAM systems to stay ahead of potential threats.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi25">
+            <div class="question">
+                <label for="q25"><h5>Question:</h5> What is the primary purpose of Database Activity Monitoring (DAM)?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q25' class="task-form">
+                    <input type="radio" name="task25" value="wrong"> To analyze network traffic patterns.<br>
+                    <input type="radio" name="task25" value="correct"> To continuously monitor database transactions for suspicious behavior.<br>
+                    <input type="radio" name="task25" value="wrong"> To enforce strong password policies.<br>
+                    <span class="feedback" id="q25-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi25 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+</section>
+
+<section>
+ <h2>8. Compliance and Legal Requirements</h2>
+ <article>
+    <h3 course-id="dbi26" class="locked">8.1 Regulatory Compliance</h3>
+    <div class="theory dbi26">
+        <div class="course-container">
+            <h4>Key Regulations:</h4>
+            <ul>
+                <li><strong>General Data Protection Regulation (GDPR):</strong> A comprehensive data protection regulation in the EU that mandates strict data privacy practices. Key provisions include:
+                    <ul>
+                        <li>The right to access and delete personal data.</li>
+                        <li>Data minimization and purpose limitation principles.</li>
+                        <li>Mandatory breach notification within 72 hours.</li>
+                    </ul>
+                </li>
+                <li><strong>Health Insurance Portability and Accountability Act (HIPAA):</strong> A US regulation that protects sensitive patient health information. Key requirements include:
+                    <ul>
+                        <li>Administrative, physical, and technical safeguards for protecting health information.</li>
+                        <li>Regular risk assessments to identify vulnerabilities.</li>
+                    </ul>
+                </li>
+                <li><strong>Payment Card Industry Data Security Standard (PCI DSS):</strong> A set of security standards for organizations handling credit card information, requiring:
+                    <ul>
+                        <li>Strong access control measures.</li>
+                        <li>Regular monitoring and testing of networks.</li>
+                        <li>Encryption of cardholder data.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Advantages of Compliance:</h4>
+            <ul>
+                <li><strong>Avoiding Penalties:</strong> Non-compliance can result in hefty fines and legal penalties.</li>
+                <li><strong>Reputation Management:</strong> Adhering to regulations enhances an organization’s reputation and builds trust with customers.</li>
+                <li><strong>Operational Security:</strong> Compliance often leads to improved data security practices.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Regular Compliance Audits: Conduct regular audits to ensure adherence to applicable regulations.</li>
+                <li>Employee Training: Provide training on data protection regulations to employees to foster a culture of compliance.</li>
+                <li>Appoint a Compliance Officer: Designate a compliance officer to oversee and manage compliance efforts.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi26">
+            <div class="question">
+                <label for="q26"><h5>Question:</h5> What is the main purpose of regulatory compliance in data management?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q26' class="task-form">
+                    <input type="radio" name="task26" value="correct"> To adhere to laws governing data protection and privacy.<br>
+                    <input type="radio" name="task26" value="wrong"> To reduce database storage costs.<br>
+                    <input type="radio" name="task26" value="wrong"> To enhance application performance.<br>
+                    <span class="feedback" id="q26-feedback"></span>
+
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi26 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi27" class="locked">8.2 Auditing and Reporting</h3>
+    <div class="theory dbi27">
+        <div class="course-container">
+            <h4>Key Elements of Auditing:</h4>
+            <ul>
+                <li><strong>Logging Activity:</strong> Record all database activities, including user logins, data access, modifications, and deletions.</li>
+                <li><strong>Report Generation:</strong> Regularly generate reports summarizing database activity, access attempts, and potential security incidents.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Incident Response:</strong> Detailed logs aid in investigating security incidents, helping organizations understand the nature and scope of breaches.</li>
+                <li><strong>Regulatory Compliance:</strong> Many regulations require organizations to maintain logs and reports to demonstrate compliance.</li>
+                <li><strong>Continuous Improvement:</strong> Auditing provides insights into areas of weakness in security practices, allowing for ongoing improvement.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li><strong>Centralized Logging:</strong> Use centralized logging systems to collect logs from all database activities for easier management and analysis.</li>
+                <li><strong>Regular Log Review:</strong> Conduct regular reviews of logs to identify suspicious activities or policy violations.</li>
+                <li><strong>Retention Policies:</strong> Establish retention policies for logs to ensure they are kept for a sufficient period to meet compliance requirements.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi27">
+            <div class="question">
+                <label for="q27"><h5>Question:</h5> What is one key element of auditing in data management?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q27' class="task-form">
+                    <input type="radio" name="task27" value="correct"> Logging all database activities.<br>
+                    <input type="radio" name="task27" value="wrong"> Conducting performance tuning.<br>
+                    <input type="radio" name="task27" value="wrong"> Updating software regularly.<br>
+                    <span class="feedback" id="q27-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi27 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi28" class="locked">8.3 Data Masking</h3>
+    <div class="theory dbi28">
+        <div class="course-container">
+            <h4>Key Techniques:</h4>
+            <ul>
+                <li><strong>Static Data Masking:</strong> Data is masked in a non-production database, creating a copy of the original data with sensitive information obscured. For example, actual names and Social Security numbers can be replaced with fictitious data.</li>
+                <li><strong>Dynamic Data Masking:</strong> Data is masked in real-time as it is accessed, ensuring sensitive information is not exposed to unauthorized users. For example, a developer accessing customer records may see only the last four digits of a Social Security number.</li>
+            </ul>
+
+            <h4>Advantages:</h4>
+            <ul>
+                <li><strong>Data Security:</strong> Masking reduces the risk of exposing sensitive data during development, testing, or training.</li>
+                <li><strong>Compliance:</strong> Data masking helps organizations comply with regulations that require the protection of sensitive information, particularly in non-production environments.</li>
+                <li><strong>Testing Accuracy:</strong> Developers can work with realistic datasets without compromising data privacy.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li><strong>Define Masking Policies:</strong> Establish clear policies on what data should be masked and the methods for masking.</li>
+                <li><strong>Regularly Review Masked Data:</strong> Ensure that masked data still meets the needs of development and testing without exposing sensitive information.</li>
+                <li><strong>Use Proven Tools:</strong> Utilize established data masking tools that comply with industry standards for effectiveness and security.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi28">
+            <div class="question">
+                <label for="q28"><h5>Question:</h5> What is the main purpose of data masking?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q28' class="task-form">
+                    <input type="radio" name="task28" value="correct"> To obscure sensitive data while allowing testing and development.<br>
+                    <input type="radio" name="task28" value="wrong"> To improve database performance.<br>
+                    <input type="radio" name="task28" value="wrong"> To reduce storage costs.<br>
+                    <span class="feedback" id="q28-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi28 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+</section>
+
+
+
+<section>
+ <h2>9. Incident Response for Databases</h2>
+ <article>
+    <h3 course-id="dbi29" class="locked">9.1 Breach Detection</h3>
+    <div class="theory dbi29">
+        <div class="course-container">
+            <h4>Key Methods of Breach Detection:</h4>
+            <ul>
+                <li><strong>Real-Time Monitoring:</strong> Implementing continuous monitoring solutions that analyze database activities and alert administrators of suspicious actions.</li>
+                <li><strong>Anomaly Detection Systems:</strong> Using machine learning algorithms to identify unusual patterns in database access that may indicate a breach.</li>
+                <li><strong>Database Activity Monitoring (DAM):</strong> Utilizing DAM tools to log and analyze all database transactions, flagging unauthorized queries or access attempts.</li>
+            </ul>
+
+            <h4>Signs of a Breach:</h4>
+            <ul>
+                <li>Unusual access patterns, such as logins from unexpected locations or at odd hours.</li>
+                <li>Large volumes of data being read or exported outside normal usage patterns.</li>
+                <li>Changes to critical database configurations or user permissions without proper authorization.</li>
+            </ul>
+
+            <h4>Advantages of Effective Breach Detection:</h4>
+            <ul>
+                <li><strong>Timely Response:</strong> Early detection allows organizations to respond quickly, potentially limiting data loss and damage.</li>
+                <li><strong>Reduced Impact:</strong> Swift identification of breaches can minimize operational disruption and reputational harm.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li>Implement Multi-Layered Security: Use a combination of monitoring tools and security policies to enhance breach detection capabilities.</li>
+                <li>Regularly Update Detection Rules: Continuously refine and update detection rules based on emerging threats and organizational changes.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi29">
+            <div class="question">
+                <label for="q29"><h5>Question:</h5> What is one key method of breach detection?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q29' class="task-form">
+                    <input type="radio" name="task29" value="correct"> Implementing real-time monitoring solutions.<br>
+                    <input type="radio" name="task29" value="wrong"> Reducing database storage costs.<br>
+                    <input type="radio" name="task29" value="wrong"> Improving database performance.<br>
+                    <span class="feedback" id="q29-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi29 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi30" class="locked">9.2 Forensics</h3>
+    <div class="theory dbi30">
+        <div class="course-container">
+            <h4>Key Forensic Activities:</h4>
+            <ul>
+                <li><strong>Log Analysis:</strong> Examining database logs to identify unauthorized access, suspicious queries, or changes to data.</li>
+                <li><strong>Transaction Review:</strong> Analyzing transactions leading up to the breach to determine how the attacker exploited vulnerabilities.</li>
+                <li><strong>Backup Examination:</strong> Reviewing backups to assess data integrity and identify any data exfiltrated or altered during the breach.</li>
+            </ul>
+
+            <h4>Tools for Forensics:</h4>
+            <ul>
+                <li><strong>Log Management Solutions:</strong> Tools that aggregate and analyze logs from multiple sources for forensic investigations.</li>
+                <li><strong>Database Forensics Software:</strong> Specialized software designed to analyze database transactions and identify anomalies.</li>
+            </ul>
+
+            <h4>Advantages of Forensics:</h4>
+            <ul>
+                <li><strong>Understanding Attack Vectors:</strong> Forensic investigations help organizations understand how attackers gained access, allowing for targeted remediation.</li>
+                <li><strong>Legal and Compliance Support:</strong> Thorough forensics can provide necessary documentation and evidence for legal proceedings or compliance investigations.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li><strong>Preserve Evidence:</strong> Ensure logs and affected data are preserved in their original state for accurate analysis.</li>
+                <li><strong>Engage Experts:</strong> Involve cybersecurity professionals or forensics experts to ensure a thorough and unbiased investigation.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi30">
+            <div class="question">
+                <label for="q30"><h5>Question:</h5> What is one key activity in forensics?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q30' class="task-form">
+                    <input type="radio" name="task30" value="correct"> Analyzing logs for unauthorized access.<br>
+                    <input type="radio" name="task30" value="wrong"> Optimizing database queries.<br>
+                    <input type="radio" name="task30" value="wrong"> Conducting software updates.<br>
+                    <span class="feedback" id="q30-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi30 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi31" class="locked">9.3 Containment and Mitigation</h3>
+    <div class="theory dbi31">
+        <div class="course-container">
+            <h4>Key Steps in Containment:</h4>
+            <ul>
+                <li><strong>Isolation:</strong> Temporarily disconnect the compromised database from the network to prevent further unauthorized access.</li>
+                <li><strong>Vulnerability Assessment:</strong> Identify and patch vulnerabilities that were exploited during the breach.</li>
+            </ul>
+
+            <h4>Mitigation Strategies:</h4>
+            <ul>
+                <li><strong>Data Restoration:</strong> Restore the database from clean, verified backups to eliminate any unauthorized changes or data corruption.</li>
+                <li><strong>Access Review:</strong> Conduct a thorough review of user permissions and access controls to ensure only authorized personnel have access to sensitive data.</li>
+            </ul>
+
+            <h4>Advantages of Effective Containment:</h4>
+            <ul>
+                <li><strong>Minimized Damage:</strong> Swift containment limits the potential impact of a breach and protects other systems from being compromised.</li>
+                <li><strong>Restoration of Services:</strong> Rapid restoration of database functionality enables business continuity and minimizes downtime.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li><strong>Develop an Incident Response Plan:</strong> Create a documented plan that outlines procedures for containment and mitigation in the event of a breach.</li>
+                <li><strong>Conduct Regular Drills:</strong> Practice incident response drills to ensure that the team is prepared to respond quickly and effectively to actual breaches.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi31">
+            <div class="question">
+                <label for="q31"><h5>Question:</h5> What is a key step in containment?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q31' class="task-form">
+                    <input type="radio" name="task31" value="correct"> Isolating the compromised database from the network.<br>
+                    <input type="radio" name="task31" value="wrong"> Adding more users to the database.<br>
+                    <input type="radio" name="task31" value="wrong"> Increasing storage capacity.<br>
+                    <span class="feedback" id="q31-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi31 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id="dbi32" class="locked">9.4 Post-Incident Review</h3>
+    <div class="theory dbi32">
+        <div class="course-container">
+            <h4>Key Elements of a Post-Incident Review:</h4>
+            <ul>
+                <li><strong>Incident Analysis:</strong> Review the circumstances surrounding the breach, including how it occurred, the effectiveness of the response, and any lapses in security.</li>
+                <li><strong>Root Cause Identification:</strong> Identify the root causes of the breach, such as technical vulnerabilities or human error.</li>
+                <li><strong>Recommendations for Improvement:</strong> Develop actionable recommendations based on the analysis to strengthen security measures and response procedures.</li>
+            </ul>
+
+            <h4>Advantages of Post-Incident Reviews:</h4>
+            <ul>
+                <li><strong>Enhanced Security Posture:</strong> Insights gained from the review process help organizations strengthen their defenses against future attacks.</li>
+                <li><strong>Continuous Improvement:</strong> Regular reviews create a culture of continuous improvement in security practices.</li>
+            </ul>
+
+            <h4>Best Practices:</h4>
+            <ul>
+                <li><strong>Document Findings:</strong> Keep detailed records of the review process and findings to inform future incident response planning.</li>
+                <li><strong>Share Lessons Learned:</strong> Share insights and lessons learned with relevant stakeholders to enhance awareness and preparedness.</li>
+            </ul>
+
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+        <div class="task" task-id="dbi32">
+            <div class="question">
+                <label for="q32"><h5>Question:</h5> What is one key element of a post-incident review?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q32' class="task-form">
+                    <input type="radio" name="task32" value="correct"> Review the circumstances surrounding the breach.<br>
+                    <input type="radio" name="task32" value="wrong"> Increase user access levels.<br>
+                    <input type="radio" name="task32" value="wrong"> Ignore the incident completely.<br>
+                    <span class="feedback" id="q32-feedback"></span>
+                </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-dbi32 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+</section>
+
+</div>
+</body>
+</html>

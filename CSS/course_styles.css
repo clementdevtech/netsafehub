@@ -1,0 +1,200 @@
+        Body{           
+            font-family: Arial, sans-serif;
+            background-color: rgba(197, 200, 206, 0.9);
+            color: #333:;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+        h1{
+            margin-left: 40%;
+        }
+        h2{
+            margin-left: 35%;
+        }
+         h3 {
+            margin-left: 1%;
+            border: 1px solid #ccc;
+            background-color: white;
+            padding: 5%;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        h3:hover{
+
+        }
+        
+        .locked {
+            opacity: 0.7;
+            pointer-events: none;
+            cursor: none;
+        }
+        .theory{
+            display: none;
+            margin-left: 3%;
+            width: 90%;
+            background: #ffff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            opacity: 1.0;
+            pointer-events: none;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+        }
+        h4{
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #16a085;
+        }
+       header {
+            width: 100%;
+            background-color: #0073e6;
+            color: white;
+            padding: 0;
+            margin-top: -10%;
+            margin-bottom: 10%;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            z-index: 999;
+        }
+        .rewards{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+       .heart {
+            color: red;
+            font-size: 1.5em;
+        }
+        .course{
+            position: relative;
+            margin-top: 10%;
+            width: 100%;
+            justify-content: center;
+        }
+
+       .task{
+        display: none;
+        pointer-events: auto;
+       }
+       input{
+        position: relative;
+        margin: 2vw 1vw;
+       }
+      .next{
+        position: relative;
+        margin-top: 5%;
+        margin-left: 70%;
+        color: blue;
+        pointer-events: auto;
+      }
+      .next:hover{
+        color: red;
+        cursor: pointer;
+      }
+
+      .question{
+        width: 100%;
+      }
+      .question form{
+        width: 100%;
+        margin-top: 10%;
+        padding: 3vw 0;
+        background-color: #e7f3fe;
+      }
+      .question p{
+        margin-top: 5%;
+        margin-bottom: -8vw;
+      }
+      .feedback{
+        position: relative;
+        margin-top: 50vw;
+
+      }
+
+      .actions{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5%;
+        width: 100%;
+        padding: 0%;
+        justify-content: space-around;
+        pointer-events: auto;
+      }
+      .check{
+        pointer-events: auto;
+      }
+       .actions button{
+        margin: 1%;
+      }
+      .hint-image{
+        display: flex;
+        flex-direction: row;
+      }
+      .hint-image img{
+        margin-left: -5%;
+        width: 5vw;
+        height: 5vw;
+      }
+      .hint-image img:hover{
+        cursor: pointer;
+      }
+      .nextsection{
+        margin-top: 2%;
+        color: grey;
+      }
+
+      .go-back{
+        pointer-events: auto;
+      }
+      .go-back:hover{
+         color: blue;
+         cursor: pointer;
+      }
+        @media screen and (max-width: 768px){
+            body{
+                width: 100%;
+            }
+            header {
+                 margin-top: -35%;
+            }
+            h1{
+                margin-left: 5%;
+            }
+             .course{
+                margin-top: 35%;
+             }
+            h2{
+                margin-left: 7%;
+                font-size: 130%;
+            }
+            h3{
+                font-size: 100%;
+                margin-left: 2%;
+            }
+            h4{
+                font-size: 90%;
+                margin-left: 0;
+            }
+            .theory{
+                margin-left: 1%;
+                width: 87%;
+                height: auto;
+            }
+            .task{
+                height: auto;
+            }
+        .question form{
+            padding: 20vw 0;
+            }
+            input{
+                margin: 5vw 4vw;
+            }
+       .hint-image img{
+        width: 10vw;
+        height: 10vw;
+      }

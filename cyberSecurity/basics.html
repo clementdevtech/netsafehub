@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Basics</title>
+    <script type="text/javascript" src="../course_script/function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/course_styles.css">
+    </head>
+<body>
+    <header>
+        <h1>Cybersecurity </h1>
+        <div class="rewards">
+        <div id="rewards">
+            Rewards: <span>0</span> points
+        </div>
+        <div id="hearts">
+            Hearts: <span class="heart">❤️</span> <span class="heart">❤️</span> <span class="heart">❤️</span>
+        </div>
+        </div>
+   </header>
+   <div class="course">
+	<section class="Introduction">
+		<h2>1. Introduction to Cybersecurity</h2>
+		<h3 course-id="cb1" class="cb-intro">1.1 What is Cybersecurity?</h3>
+		<div class="theory cb1">
+			<div class="course-container">
+			<p>In today's digital age, the importance of cybersecurity cannot be overstated. With the increasing reliance on technology in both personal and professional spheres, protecting sensitive data and systems from cyber threats is crucial for several reasons:</p>
+			<ul>
+				<li><span class="highlight">Protection of Sensitive Data:</span></br> Cybersecurity ensures the protection of personal, financial, and corporate data from breaches that could lead to identity theft, financial loss, or legal consequences.</li>
+				<li><span class="highlight">Maintaining Business Continuity:</span></br> Effective cybersecurity measures help organizations avoid disruptions in their operations caused by cyberattacks, ensuring that they can continue to serve customers and meet their business goals.</li>
+				<li><span class="highlight">Customer Trust:</span></br> Customers and clients trust organizations with their data. A cyberattack that results in a data breach can erode this trust and damage the organization's reputation, leading to loss of business.</li>
+				<li><span class="highlight">Compliance with Regulations:</span></br> Many industries are subject to regulations that require the protection of sensitive information. Compliance with these regulations is essential to avoid legal penalties and maintain customer confidence.</li>
+				<li><span class="highlight">National Security:</span></br> On a larger scale, cybersecurity is vital for protecting national infrastructure and ensuring the security of a country's information and communication systems.</li>
+				</ul>
+				<h4 style="font-weight: bold; background: red;"><li>Real-World Examples of Cybersecurity Breaches:</li></h4>
+				<h5 style="background: red;">The Equifax data breach (2017) exposed the personal information of 147 million people.<br>
+					WannaCry ransomware (2017) affected over 230,000 computers in 150 countries.</h5>
+					<div class="next"><strong>Next >></strong></div>
+				</div>
+					<div class="task" task-id="cb1">
+                        <div class="question">
+                            <label for="q1"><h5>Question:</h5> What are the primary goals of cybersecurity?</label><br>
+                            <p>Select all that apply</p>
+                            <form id='q1' class="task-form">
+                                <input type="checkbox" name="task1" value="correct"> Protection of Sensitive Data</br>
+                                <input type="checkbox" name="task1" value="wrong"> Free Internet Access</br>
+                                <input type="checkbox" name="task1" value="correct"> Maintaining Business Continuity</br>
+                                <input type="checkbox" name="task1" value="wrong"> Unlimited Data Storage</br>
+                                <input type="checkbox" name="task1" value="correct"> Customer Trust</br>
+                                <input type="checkbox" name="task1" value="correct"> Compliance with Regulations</br>
+                                <span class="feedback" id="q1-feedback"></span>
+                            </form>
+                                <div class="actions">
+                                    <button class="check">Check answers</button>
+                                    <div class="hint-cb1 hint-image"><img src="../photos/hint.jfif"></div>
+                                    <div class="nextsection"><strong>Next >></strong></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+
+        <h3 course-id="cb2" class="locked">1.2 Key Terms and Definitions</h3>
+        <div id="" class="theory cb2">
+            <div class="course-container">
+        	<h4>1. Cyber Attack:</h4> <p>An attempt to compromise the security of a system by breaching its defenses.</p>
+        	<h4>2. Threat Actor:</h4> <p>An individual or group involved in cyber attacks (e.g., hackers, cybercriminals).</p>
+        	<h4>3. Vulnerability:</h4> <p>A weakness in software, hardware, or procedures that can be exploited by a threat actor.</p>
+        	<h4>4. Exploit:</h4> <p>A technique used to take advantage of a vulnerability.</p>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+        <div class="task" task-id="cb2">
+<div class="question">
+    <label for="q2"><h5>Question:</h5> What is a Cyber Attack?</label><br>
+    <p>Select your answer:</p>
+    <form id='q2' class="task-form">
+        <input type="radio" name="task2" value="wrong"> A weakness in software, hardware, or procedures that can be exploited by a threat actor.</br>
+        <input type="radio" name="task2" value="wrong"> A technique used to take advantage of a vulnerability.</br>
+        <input type="radio" name="task2" value="correct"> An attempt to compromise the security of a system by breaching its defenses.</br>
+        <span class="feedback" id="q2-feedback"></span>
+    </form>
+            <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cb2 hint-image"><img src="../photos/hint.jfif"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+    </div>
+    </div>
+    </div>
+        <h3 course-id="cb3" class="locked">1.3 Types of Cyber Attacks</h3>
+        <div class="theory cb3">
+            <div class="course-container">
+        	<p>Cybersecurity threats are any malicious attempts to compromise the confidentiality, integrity, or availability of information systems or data. These threats can come from various sources, including hackers, cybercriminals, nation-states, or even insider threats. Below are some of the most common types of cybersecurity threats:</p>
+        	<h4>1. Malware</h4>
+        	<p>Malware, or malicious software, is a broad category of software designed to infiltrate, damage, or disable computers, networks, or systems. Malware can take many forms:</p>
+        	<ul>
+        		<li><strong>Viruses:</strong> A virus is a type of malware that attaches itself to legitimate software or files and spreads from one device to another. Once activated, it can corrupt files, steal data, or cause other types of harm.</li>
+        		<li><strong>Worms:</strong> Unlike viruses, worms can spread across networks without any human action, replicating themselves on every system they infect. They often exploit vulnerabilities in network security.</li>
+        		<li><strong>Trojan Horses:</strong> Trojans disguise themselves as legitimate software but carry a hidden payload. Once the software is installed, the Trojan can create backdoors, steal information, or allow unauthorized access to the system.</li>
+        		<li><strong>Ransomware:</strong> Ransomware locks users out of their systems or encrypts their data, demanding payment (usually in cryptocurrency) to restore access. It has become one of the most lucrative forms of cybercrime.</li>
+        		 <li><strong>Spyware:</strong> This type of malware secretly monitors and collects information about users' activities without their knowledge. Spyware can track keystrokes, capture screenshots, or steal login credentials.</li>
+        	</ul>
+        	<h4>2. Phishing</h4>
+        	<p>Phishing is a form of social engineering where attackers deceive individuals into revealing sensitive information by pretending to be a trusted entity. Phishing attacks can take several forms:</p>
+        	<ul>
+        		 <li><strong>Email Phishing:</strong> Attackers send emails that appear to be from legitimate organizations (e.g., banks, social media platforms) to trick users into clicking on malicious links or providing personal information.</li>
+        <li><strong>Spear Phishing:</strong> This is a more targeted form of phishing, where the attacker customizes the attack to a specific individual or organization, often using information gathered from social media or other sources.</li>
+        <li><strong>Whaling:</strong> Whaling targets high-profile individuals, such as executives or government officials, with phishing attacks that appear to be legitimate business communications.</li>
+        <li><strong>Smishing and Vishing:</strong> These are variants of phishing carried out via SMS (smishing) or voice calls (vishing), where attackers attempt to steal information or money by posing as legitimate entities.</li>
+    </ul>
+
+    <h4>3. Denial-of-Service (DoS) Attacks</h4>
+    <p>DoS attacks aim to make a network, service, or website unavailable by overwhelming it with a flood of traffic or sending it malicious requests that exhaust its resources. A more sophisticated version is the Distributed Denial-of-Service (DDoS) attack, where multiple compromised systems are used to launch the attack simultaneously, making it much harder to defend against.</p>
+
+    <h3>4. Man-in-the-Middle (MitM) Attacks</h3>
+    <p>In a MitM attack, the attacker intercepts and potentially alters the communication between two parties without their knowledge. This can occur in several ways:</p>
+    <ul>
+        <li><strong>Eavesdropping:</strong> The attacker secretly listens to or records communications.</li>
+        <li><strong>Session Hijacking:</strong> The attacker takes over a user's session with a website, such as an online banking session, and can then perform actions as if they were the user.</li>
+        <li><strong>SSL Stripping:</strong> The attacker downgrades a secure HTTPS connection to an unsecure HTTP connection, allowing them to intercept data that should have been encrypted.</li>
+    </ul>
+
+    <h4>5. SQL Injection</h4>
+    <p>SQL injection attacks occur when an attacker inserts malicious SQL code into a query, allowing them to manipulate a database. This can lead to unauthorized access to sensitive data, such as user accounts, or even the complete takeover of a database. SQL injection is one of the most common web application security vulnerabilities.</p>
+
+    <h4>6. Advanced Persistent Threats (APTs)</h4>
+    <p>APTs are prolonged and targeted cyberattacks where an intruder gains access to a network and remains undetected for an extended period. These attacks are often carried out by nation-states or well-funded groups and aim to steal sensitive data or monitor activities over time.</p>
+
+    <h4>7. Insider Threats</h4>
+    <p>Not all threats come from outside the organization. Insider threats involve employees, contractors, or business partners who have access to systems and data and misuse that access, either intentionally or unintentionally. Insider threats can be particularly dangerous because insiders often have legitimate access to critical systems and may not raise immediate suspicion.</p>
+
+    <h4>8. Zero-Day Exploits</h4>
+    <p>A zero-day exploit refers to an attack that targets a vulnerability in software that is unknown to the software vendor or the public. Since there is no patch available, these exploits are particularly dangerous and can cause significant damage before the vulnerability is discovered and fixed.</p>
+
+    <h4>9. Password Attacks</h4>
+    <p>Password attacks involve attempts to steal or guess passwords to gain unauthorized access to systems. Common techniques include:</p>
+    <ul>
+        <li><strong>Brute Force Attack:</strong> The attacker tries every possible combination of characters until the correct password is found.</li>
+        <li><strong>Dictionary Attack:</strong> The attacker uses a list of commonly used passwords or words from a dictionary to guess the password.</li>
+        <li><strong>Credential Stuffing:</strong> Attackers use previously stolen username-password pairs, often obtained from data breaches, to try to access other accounts where the same credentials may have been reused.</li>
+    </ul>
+
+
+    <h4>10. Social Engineering</h4>
+    <p>Social engineering is a broader category of attacks that involve manipulating individuals into giving up confidential information or performing actions that compromise security. Phishing is a type of social engineering, but other examples include:</p>
+    <ul>
+        <li><strong>Pretexting:</strong> The attacker fabricates a scenario (a pretext) to trick someone into giving up information.</li>
+        <li><strong>Baiting:</strong> The attacker offers something enticing, like a free download or USB drive, to lure the victim into a trap.</li>
+        <li><strong>Tailgating:</strong> An attacker physically follows someone into a restricted area, bypassing physical security controls.</li>
+    </ul>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb3">
+<div class="question">
+    <label for="q3"><h3>Question:</h3> Which of the following are types of cybersecurity threats?</label><br>
+    <p>Select all that apply:</p>
+    <form id='q3' class="task-form">
+        <input type="checkbox" name="task3" value="correct"> Malware</br>
+        <input type="checkbox" name="task3" value="correct"> Phishing</br>
+        <input type="checkbox" name="task3" value="wrong"> Data Encryption</br>
+        <input type="checkbox" name="task3" value="correct"> Denial-of-Service (DoS) Attacks</br>
+        <input type="checkbox" name="task3" value="wrong"> Cloud Computing</br>
+        <span class="feedback" id="q3-feedback"></span>
+    </form>
+     <div class="actions">
+       <button class="check">Check answers</button>
+       <div class="hint-cb3 hint-image"><img src="../photos/hint.jfif"></div>
+        <div class="nextsection"><strong>Next >></strong></div>
+    </div>
+</div>
+</div>
+</div>
+
+</section>
+
+
+<section>
+	<h2>2. Password Security</h2>
+	<h3 course-id="cb4" class="locked">2.1 Why Passwords are Critical</h3>
+	<div class="theory cb4">
+        <div class="course-container">
+		<p><strong>Passwords as the First Line of Defense:</strong></p> <p>Passwords are the most commonly used method to authenticate users and protect accounts, devices, and systems. Weak or reused passwords can lead to account compromise, making them an attractive target for attackers.</p>
+		<h4>Common Password Attacks:</h4>
+		 <h5>1. Brute Force Attacks:</h5> <p>Attackers use automated tools to try every possible password combination until they find the correct one.</p>
+		 <h5>2. Dictionary Attacks:</h5> <p>Attackers use lists of commonly used passwords (like "123456," "password") to guess a user's password.</p>
+		 <h5>3. Credential Stuffing:</h5> <p>When attackers use lists of compromised usernames and passwords from data breaches to try to log into other services.</p>
+		 <h4>Risks of Poor Password Practices:</h4></br>
+		 <h5>Reusing Passwords:</h5> <p>If you reuse passwords across multiple sites and one is breached, attackers can use the same password to access other accounts.</p>
+		 <h5>Weak Passwords:</h5> <p>Short or simple passwords can be easily guessed using automated tools.</p>
+          <div class="next"><strong>Next >></strong></div>
+      </div>
+        <div class="task" task-id="cb4">
+            <div class="question">
+                <div class="course-container"><div class="course-container">
+                <label for="q4"><h5>Question:</h5> Why is it essential to use a combination of letters, numbers, and symbols in passwords?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q4' class="task-form">
+                    <input type="radio" name="task4" value="wrong"> A weakness in software, hardware, or procedures that can be exploited by a threat actor.<br>
+                    <input type="radio" name="task4" value="correct"> To increase complexity and security.<br>
+                    <input type="radio" name="task4" value="wrong"> An attempt to compromise the security of a system by breaching its defenses.<br>
+                    <span class="feedback" id="q4-feedback"></span>
+                </form>
+                 <div class="actions">
+                  <button class="check">Check answers</button>
+                  <div class="hint-cb4 hint-image"><img src="../photos/hint.jfif"></div>
+                  <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+		</div>
+		<h3 course-id="cb5" class="locked">2.2 Creating Strong Passwords</h2>
+			<div class="theory cb5">
+            <div class="course-container">
+		<h4>Characteristics of Strong Passwords:</h4>
+		<h5>Minimum of 12 characters.</h5>
+		<li>A mix of uppercase and lowercase letters, numbers, and special characters.</li>
+		<li>Avoid dictionary words, common phrases, or predictable patterns (e.g., "qwerty," "12345").</li>
+			<p style="font-weight: bold;">Example of a Strong Password:</p>
+			<p style="color: blue;">“S3cuR3P@$$w0rD123!”</p>
+		<h5>Passphrases as an Alternative:</h5>
+		<li>Use a series of random words combined into a phrase that’s easy to remember but hard to guess (e.g., "correct-horse-battery-staple").</li>
+        <div class="next"><strong>Next >></strong></div>
+       </div>
+        <div class="task" task-id="cb5">
+            <div class="question">
+                <label for="q5"><h5>Question:</h5> What is an example of a strong password?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q5' class="task-form">
+                    <input type="radio" name="task5" value="wrong"> "123456"<br>
+                    <input type="radio" name="task5" value="correct"> “S3cuR3P@$$w0rD123!”<br>
+                    <input type="radio" name="task5" value="wrong"> "password"<br>
+                    <span class="feedback" id="q5-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cb5 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+	</div>
+</div>
+
+	<h3 course-id="cb6" class="locked">2.3 Managing Passwords</h3>
+	<div class="theory cb6">
+        <div class="course-container">
+		<h4>Password Managers:</h4>
+		<p>A tool that securely stores all your passwords and generates complex, unique passwords for each account.</p>
+		<h5>Examples:</h5> <p>LastPass, Bitwarden, Dashlane.</p>
+		<h5>Benefits:</h5> <p>You only need to remember one master password, while the manager generates and remembers the rest.</p>
+		<h4>Multi-Factor Authentication (MFA):</h4>
+		<p>An extra layer of security beyond passwords. It requires another verification step, like a text message code, fingerprint, or hardware token, to access an account.</p>
+		<p><strong>MFA significantly reduces the chances of account compromise.</strong></p>
+        <div class="next"><strong>Next >></strong></div>
+</div>
+
+        <div class="task" task-id="cb6">
+            <div class="question">
+                <label for="q6"><h5>Question:</h5> What is the primary benefit of using a password manager?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q6' class="task-form">
+                    <input type="radio" name="task6" value="wrong"> It allows you to use the same password for all accounts.<br>
+                    <input type="radio" name="task6" value="correct"> It securely stores and generates unique passwords for each account.<br>
+                    <input type="radio" name="task6" value="wrong"> It is not necessary if you remember your passwords.<br>
+                    <span class="feedback" id="q6-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cb6 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+	</div>
+</section>
+
+
+<section>
+	<h2>3. Phishing Awareness</h2>
+	<h3 course-id="cb7" class="locked">3.1 What is Phishing?</h3>
+	<div class="theory cb7">
+        <div class="course-container">
+	<p><strong>Definition:</strong></p> <p>Phishing is a type of social engineering where attackers disguise themselves as trustworthy entities to trick users into revealing personal information, such as login credentials or credit card numbers.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+        <div class="task" task-id="cb7">
+        <div class="question">
+            <label for="q7"><h5>Question:</h5> What is phishing primarily used for?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q7' class="task-form">
+                <input type="radio" name="task7" value="wrong"> To improve user experience online.<br>
+                <input type="radio" name="task7" value="correct"> To trick users into revealing personal information.<br>
+                <input type="radio" name="task7" value="wrong"> To protect user data.<br>
+                <span class="feedback" id="q7-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-cb7 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+	 </div>
+	 <h3 course-id="cb8" class="locked">3.2 Types of Phishing Attacks</h3>
+	 <div class="theory cb8">
+        <div class="course-container">
+	 	<h4>1. mail Phishing:</h4>
+	 	<p>The most common type of phishing, where attackers send emails that appear to come from reputable companies (banks, social media, etc.). These 
+	 	emails usually contain malicious links or attachments.</p>
+	 	<h4>2. Spear Phishing:</h4>
+	 	<p>A more targeted form of phishing where the attacker customizes emails for a specific individual, often using personal information to appear more convincing.</p>
+	 	<h4>3. Whaling:</h4>
+	 	<p>Phishing attacks aimed at high-level executives (CEOs, CFOs) or people with access to sensitive corporate data.</p>
+	 	<h4>4. Smishing and Vishing:</h4>
+	 	<h5> (a). Smishing:</h5> <p>Phishing through SMS text messages.</p>
+	 	<h5> (b). Vishing:</h5> <p>Phishing through voice calls, often pretending to be from tech support, a bank, or government agency.</p>
+        <div class="next"><strong>Next >></strong></div>
+</div>
+	 	<div class="task" task-id="cb8">
+            <div class="question">
+                <label for="q8"><h5>Question:</h5> Which of the following is a targeted phishing attack?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q8' class="task-form">
+                    <input type="radio" name="task8" value="wrong"> General email phishing.<br>
+                    <input type="radio" name="task8" value="correct"> Spear phishing.<br>
+                    <input type="radio" name="task8" value="wrong"> Whaling.<br>
+                    <span class="feedback" id="q8-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cb8 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+	 </div>
+	 <h3 course-id="cb9" class="locked">3.3 Recognizing Phishing Attempts</h3>
+	 <div class="theory cb9">
+        <div class="course-container">
+	 <h4>Common Signs of Phishing Emails:</h4>
+	 <li>Suspicious sender email address (e.g., official@bank.com vs. official@bank-online.com).</li>
+	 <li>Generic greetings like “Dear Customer” instead of your name.</li>
+	 <li>Urgent language like “Your account has been compromised!” or “Act now to avoid penalties.”</li>
+	 <li>Unexpected attachments or links.</li>
+
+	 <h4>Verifying Email Legitimacy:</h4>
+	 <li>Always double-check the sender’s email address.</li>
+	 <li>Hover over links (without clicking) to see where they actually lead.</li>
+	 <li>Contact the company directly using a trusted phone number or website, rather than responding to the email.</li>
+     <div class="next"><strong>Next >></strong></div>
+</div>
+       <div class="task" task-id="cb9">
+            <div class="question">
+                <label for="q9"><h5>Question:</h5> What should you do if you receive a suspicious email?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q9' class="task-form">
+                    <input type="radio" name="task9" value="wrong"> Click on any links to check if they are safe.<br>
+                    <input type="radio" name="task9" value="correct"> Verify the sender's email and contact the company directly.<br>
+                    <input type="radio" name="task9" value="wrong"> Respond to the email for clarification.<br>
+                    <span class="feedback" id="q9-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cb9 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+	</div>
+</section>
+<section>
+	<h2>4. Understanding Malware</h2>
+		<h3 course-id="cb10" class="locked">4.1 Types of Malware</h3>
+		<div class="theory cb10">
+            <div class="course-container">
+		<h4>Virus:</h4> <p>A type of malware that attaches itself to clean files and spreads throughout a system, infecting other files. Viruses usually require human action (e.g., opening a file) to spread.</p>
+		<h4>Worm:</h4> <p>A type of malware that replicates itself to spread to other computers without human intervention, exploiting vulnerabilities in networks.</p>
+		<h4>Trojan Horse:</h4> <p>Malware disguised as legitimate software. When a user installs the software, the malware is executed.</p>
+		<h4>Ransomware:</h4> <p>Locks or encrypts a user's data, demanding payment to restore access. Examples include WannaCry and Petya.</p>
+		<h4>Spyware:</h4> <p>Software that secretly records a user's actions, often stealing sensitive information like login credentials or credit card numbers.</p>
+        <div class="next"><strong>Next >></strong></div>
+</div>
+		<div class="task" task-id="cb10">
+            <div class="question">
+                <label for="q10"><h5>Question:</h5> Which type of malware requires human action to spread?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q10' class="task-form">
+                    <input type="radio" name="task10" value="correct"> Virus<br>
+                    <input type="radio" name="task10" value="wrong"> Worm<br>
+                    <input type="radio" name="task10" value="wrong"> Ransomware<br>
+                    <span class="feedback" id="q10-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cb10 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+	</div>
+		<h3 course-id="cb11" class="locked">4.2 How Malware Spreads</h3>
+		<div class="theory cb11">
+            <div class="course-container">
+		<h5>Infected Email Attachments:</h5> <p>Malware can be hidden in attachments that, once opened, infect the system.</p>
+		<h5>Malicious Links:</h5> <p>Clicking on malicious links (often found in phishing emails or on compromised websites) can download malware onto your device.</p>
+		<h5>Drive-by Downloads:</h5> <p>Simply visiting a compromised website can automatically download malware onto your device without your knowledge.</p>
+		<h5>Removable Media:</h5> <p>USB drives or external hard drives can spread malware from one system to another.</p>
+        <div class="next"><strong>Next >></strong></div>
+</div>
+		<div class="task" task-id="cb11">
+            <div class="question">
+                <label for="q11"><h5>Question:</h5> What is a common way malware spreads?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q11' class="task-form">
+                    <input type="radio" name="task11" value="correct"> Clicking on malicious links.<br>
+                    <input type="radio" name="task11" value="wrong"> Using strong passwords.<br>
+                    <input type="radio" name="task11" value="wrong"> Regular software updates.<br>
+                    <span class="feedback" id="q11-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cb11 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+	</div>
+	<h3 course-id="cb12" class="locked">4.3 Preventing Malware Infections</h3>
+	<div class="theory cb12">
+        <div class="course-container">
+		<h5>Antivirus Software:</h5>
+		<li>Antivirus programs detect, block, and remove malware. They rely on a database of known malware signatures to identify threats.</li>
+		<li>Keep your antivirus software updated to ensure protection against the latest threats.</li>
+		<h5>Avoiding Suspicious Downloads:</h5>
+		<li>Only download software from trusted sources, such as official app stores or company websites.</li>
+		<h5>Regular Software Updates:</h5>
+		<p>Keep your operating system and software up-to-date to patch vulnerabilities that malware can exploit.</p>
+        <div class="next"><strong>Next >></strong></div>
+</div>
+		<div class="task" task-id="cb12">
+            <div class="question">
+                <label for="q12"><h5>Question:</h5> Why is it important to keep antivirus software updated?</label><br>
+                <p>Select the one that applies:</p>
+                <form id='q12' class="task-form">
+                    <input type="radio" name="task12" value="wrong"> To make the computer run faster.<br>
+                    <input type="radio" name="task12" value="correct"> To protect against the latest threats.<br>
+                    <input type="radio" name="task12" value="wrong"> To avoid paying for updates.<br>
+                    <span class="feedback" id="q12-feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cb12 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+            </div>
+        </div>
+	</div>
+</section>
+<section>
+	<h2>5. Safe Browsing Habits</h2>
+	
+    <h3 course-id="cb13" class="locked">5.1 Avoid Clicking on Suspicious Links</h3>
+    <div class="theory cb13">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Malicious links can lead to websites that infect your device with malware or steal your personal information.</p>
+    <p><strong>Example:</strong> A pop-up ad promising a free prize might contain a link that downloads malware onto your computer.</p>
+    <p><strong>Scenario:</strong> While browsing, a user sees an advertisement claiming they’ve won a new iPhone. Clicking the ad leads to a website asking for personal information and payment for shipping fees—common signs of a scam.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+    <div class="task">
+                <div class="question">
+                    <label for="q13"><h5>Question:</h5> What should you do if you see a suspicious pop-up ad offering a prize?</label><br>
+                    <form id="q13" class="task-form">
+                        <input type="radio" name="task13" value="wrong"> Click it and claim the prize.<br>
+                        <input type="radio" name="task13" value="correct"> Close the ad and avoid clicking the link.<br>
+                         <span class="feedback" id="q13-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-cb13 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>
+                </div>
+    </div>
+     </div>
+    <h3 course-id="cb14" class="locked">5.2 Use Secure Connections</h3>
+    <div class="theory cb14">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Always ensure that websites use HTTPS (Hypertext Transfer Protocol Secure), which encrypts data exchanged between your browser and the website, protecting it from interception.</p>
+    <p><strong>Example:</strong> When shopping online, make sure the URL starts with "https://" and shows a padlock symbol in the browser’s address bar.</p>
+    <p><strong>Scenario:</strong> A user is about to enter credit card information on an online shopping site but notices the URL starts with "http://" instead of "https://". This lack of encryption indicates a potentially insecure connection, so the user should avoid entering sensitive information.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+        <div class="task">
+                <div class="question">
+                    <label for="q14"><h5>Question:</h5> What indicates that a website connection is secure?</label><br>
+                    <form id="q14" class="task-form">
+                        <input type="radio" name="task14" value="correct"> A URL that starts with "https://".<br>
+                        <input type="radio" name="task14" value="wrong"> A URL that starts with "http://".<br>
+                        <span class="feedback" id="q14-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-cb14 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>                    
+                </div>
+    </div>
+    </div>
+    <h3 course-id="cb15" class="locked">5.3 Be Cautious with Downloads</h3>
+    <div class="theory cb15">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Downloading files from unknown or untrusted sources can lead to malware infections.</p>
+    <p><strong>Example:</strong> Avoid downloading software, especially from pop-up ads or unofficial websites, as they may contain viruses or spyware.</p>
+    <p><strong>Scenario:</strong> A user is looking for free software and finds a download link on an unfamiliar website. Downloading the software could result in installing malware on their computer.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+        <div class="task">
+                <div class="question">
+                    <label for="q15"><h5>Question:</h5> What should you do if you find a software download on an unfamiliar website?</label><br>
+                    <form id="q15" class="task-form">
+                        <input type="radio" name="task15" value="correct"> Avoid downloading and look for trusted sources.<br>
+                        <input type="radio" name="task15" value="wrong"> Download it because it's free.<br>
+                        <span class="feedback" id="q15-feedback"></span>
+                    </form>
+                         <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-cb15 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>                   
+                </div>
+    </div>
+    </div>
+    <h3 course-id="cb16" class="locked">5.4 Keep Your Software Updated</h3>
+    <div class="theory cb16">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Regular updates patch security vulnerabilities in your operating system, browsers, and other software.</p>
+    <p><strong>Example:</strong> Installing updates for your browser ensures that you’re protected against the latest security threats.</p>
+    <p><strong>Scenario:</strong> A user receives a notification to update their browser but ignores it. The outdated browser could have unpatched vulnerabilities, leaving the user susceptible to cyberattacks.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+        <div class="task">
+                <div class="question">
+                    <label for="q16"><h5>Question:</h5> Why should you regularly update your browser?</label><br>
+                    <form id="q16" class="task-form">
+                        <input type="radio" name="task16" value="correct"> To patch security vulnerabilities.<br>
+                        <input type="radio" name="task16" value="wrong"> To make the browser look nicer.<br>
+                        <span class="feedback" id="q16-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-cb16 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>                    
+                </div>
+    </div>
+    </div>
+    <h3 course-id="cb17" class="locked">5.5 Use Security Tools</h3>
+    <div class="theory cb17">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Tools like antivirus software, firewalls, and browser extensions can help protect against online threats.</p>
+    <p><strong>Example:</strong> An ad-blocker can prevent malicious ads from displaying, reducing the risk of accidentally clicking on a harmful link.</p>
+    <p><strong>Scenario:</strong> A user installs antivirus software that actively scans websites for threats, alerting them before they visit potentially harmful sites.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+    <div class="task">
+                <div class="question">
+                    <label for="q17"><h5>Question:</h5> Which of the following can help protect you from malicious websites?</label><br>
+                    <form id="q17" class="task-form">
+                        <input type="radio" name="task17" value="correct"> Antivirus software and ad-blockers.<br>
+                        <input type="radio" name="task17" value="wrong"> Clicking on suspicious links.<br>
+                        <span class="feedback" id="q17-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-cb17 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>                    
+                </div>
+    </div>
+	</div>
+
+
+</section>
+<section>
+	<h2>6. Social Media Security</h2>
+	<h3 course-id="cb18" class="locked">6.1 The Dangers of Oversharing</h3>
+	<div class="theory cb18">
+        <div class="course-container">
+        <h4>Risks:</h4>
+		<p>Sharing too much personal information can lead to identity theft, social engineering attacks, or physical harm.</p>
+		<p><strong>Examples of Oversharing:</strong></p>
+		<p>Posting your location, vacation plans, or personal identification details (e.g., birthdate, address) can give attackers valuable information.</p>
+        <div class="next"><strong>Next >></strong></div>
+</div>
+		<div class="task">
+                <div class="question">
+                    <label for="q18"><h5>Question:</h5> Which of the following is an example of oversharing?</label><br>
+                    <form id="q18" class="task-form">
+                        <input type="radio" name="task18" value="correct"> Posting your vacation plans and daily whereabouts.<br>
+                        <input type="radio" name="task18" value="wrong"> Sharing a recipe you just tried.<br>
+                        <span class="feedback" id="q18-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-cb18 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>
+                </div>
+		</div>
+	</div>
+	<h3 course-id="cb19" class="locked">6.2 Securing Your Social Media Accounts</h3>
+	<div class="theory cb19">
+        <div class="course-container">
+		<h5>Privacy Settings:</h5>
+		<p>Adjust privacy settings on platforms like Facebook, Instagram, and Twitter to control who can view your profile, posts, and personal information.</p>
+		<h5>Two-Factor Authentication (2FA):</h5>
+		<p>Enable 2FA on your social media accounts to add an extra layer of protection. This ensures that even if your password is compromised, attackers cannot access your account without a second form of verification.</p>
+        <div class="next"><strong>Next >></strong></div>
+</div>
+		<div class="task">
+                <div class="question">
+                    <label for="q19"><h5>Question:</h5> How can you adjust the privacy settings on your social media profile to make sure only friends see your posts?</label><br>
+                    <form id="q19" class="task-form">
+                        <input type="radio" name="task19" value="correct"> Adjust your privacy settings so only friends can view your content.<br>
+                        <input type="radio" name="task19" value="wrong"> Post everything publicly for everyone to see.<br>
+                        <span class="feedback" class="feedback" id="q19-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-cb19 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>                   
+                </div>
+		</div>
+	</div>
+
+	<h3 course-id="cb20" class="locked">6.3 Recognizing and Avoiding Social Media Scams</h3>
+	<div class="theory cb20">
+        <div class="course-container">
+		<h5>Fake Profiles and Friend Requests:</h5>
+		<p>Be cautious about accepting friend requests from people you don’t know. Attackers often create fake profiles to gather information or trick users into clicking malicious links.</p>
+		<h5>Suspicious Links and Messages:</h5>
+		<p>If a social media message looks suspicious, don’t click on any links. Confirm with the sender directly before taking any action.</p>
+        <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb20">
+    <label for="q20" class="task-label"><strong>Question:</strong> What should you do if you receive a friend request from someone you don't recognize?</label><br>
+                <form id="q20"  class="task-form">
+                    <input type="radio" name="task20" value="correct"> <span>Decline the request and avoid engaging with them.</span><br>
+                    <input type="radio" name="task20" value="wrong"> <span>Accept the request immediately.</span><br>
+                    <span id="q20-feedback" class="feedback"></span>
+                </form>
+                    <div class="actions">
+                        <button class="check">Submit Answer</button>
+                        <div class="hint hint-cb20 hint-image"><span><i class="fas fa-lightbulb"></i></span></div>
+                        <div class="nextsection"><span><strong>Next >> </strong></span></div>
+                    </div>
+                </div>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	<h2>7: Common Cybersecurity Tools</h2>
+
+    <h3 course-id="cb21" class="locked">7.1 Antivirus Software</h3>
+    <div class="theory cb21">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Antivirus software is designed to detect, prevent, and remove malicious software (malware) such as viruses, worms, Trojans, ransomware, and spyware from computers and other devices.</p>
+    <h5>Functionality:</h5>
+    <ul>
+        <li><strong>Real-time Scanning:</strong> Monitors files and programs in real-time to detect and block malicious activity before it can cause harm.</li>
+        <li><strong>Regular Scans:</strong> Performs scheduled or on-demand scans of files and system areas to identify and remove malware.</li>
+        <li><strong>Heuristic Analysis:</strong> Uses algorithms to detect new, previously unknown threats by analyzing the behavior of programs.</li>
+    </ul>
+    <p><strong>Example:</strong> Norton, McAfee, and Bitdefender are popular antivirus programs that offer comprehensive protection against various types of malware.</p>
+    <p><strong>Scenario:</strong> A user downloads a file from the internet. The antivirus software scans the file and detects that it contains a virus, preventing the file from being opened and protecting the user's system from infection.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+    <div class="task" task-id="cb21">
+    <div class="question">
+        <label for="q1"><h5>Question:</h5> What is the main function of antivirus software?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q21' class="task-form">
+            <input type="radio" name="task21" value="correct"> To detect, prevent, and remove malware from systems.<br>
+            <input type="radio" name="task21" value="wrong"> To monitor network traffic for suspicious activity.<br>
+            <input type="radio" name="task21" value="wrong"> To encrypt sensitive data.<br>
+            <span class="feedback" id="q21-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb21 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>        
+    </div>
+    </div>
+    </div>
+    <h3 course-id="cb22" class="locked">7.2 Firewalls</h3>
+    <div class="theory cb22">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Firewalls are security systems that monitor and control incoming and outgoing network traffic based on predetermined security rules. They act as a barrier between a trusted internal network and untrusted external networks (such as the internet).</p>
+    <h3>Types of Firewalls:</h3>
+    <ul>
+        <li><strong>Network Firewalls:</strong> Protect entire networks by filtering traffic between networks or between a network and the internet. Examples include hardware firewalls and network-based firewalls.</li>
+        <li><strong>Host-based Firewalls:</strong> Installed on individual devices to monitor and control traffic to and from that device. Examples include software firewalls integrated into operating systems.</li>
+    </ul>
+    <p><strong>Example:</strong> The Windows Defender Firewall is a built-in firewall that provides network protection for Windows devices. Hardware firewalls, like those found in many routers, protect entire networks.</p>
+    <p><strong>Scenario:</strong> A user’s computer is behind a firewall that blocks unauthorized access attempts from external sources while allowing legitimate traffic to pass through. This helps prevent potential cyberattacks and unauthorized intrusions.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb22">
+    <div class="question">
+        <label for="q22"><h5>Question:</h5> What is the purpose of a firewall?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q22' class="task-form">
+            <input type="radio" name="task22" value="correct"> To filter incoming and outgoing network traffic.<br>
+            <input type="radio" name="task22" value="wrong"> To store backup copies of data.<br>
+            <input type="radio" name="task22" value="wrong"> To detect and remove malware.<br>
+            <span class="feedback" id="q22-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb22 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+    </div>
+</div>
+
+     </div>
+
+    <h3 course-id="cb23" class="locked">7.3 Virtual Private Networks (VPNs)</h3>
+    <div class="theory cb23">
+        <div class="course-container">
+    <p><strong>Definition:</strong> VPNs create a secure, encrypted connection over a less secure network, such as the internet. They allow users to send and receive data as if their devices were directly connected to a private network.</p>
+    <h3>Functionality:</h3>
+    <ul>
+        <li><strong>Encryption:</strong> Encrypts data transmitted over the internet, protecting it from interception and eavesdropping.</li>
+        <li><strong>IP Masking:</strong> Hides the user's IP address, making it difficult for websites and services to track their online activities.</li>
+        <li><strong>Secure Remote Access:</strong> Allows users to securely access a company's internal network from remote locations.</li>
+    </ul>
+    <p><strong>Example:</strong> NordVPN, ExpressVPN, and CyberGhost are popular VPN services that offer strong encryption and privacy features.</p>
+    <p><strong>Scenario:</strong> A user connects to a public Wi-Fi network at a coffee shop while using a VPN. The VPN encrypts their internet traffic, protecting their personal data from potential eavesdroppers on the public network.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb23">
+    <div class="question">
+        <label for="q23"><h5>Question:</h5> What does a VPN do?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q23' class="task-form">
+            <input type="radio" name="task23" value="correct"> Encrypts your internet connection for privacy and security.<br>
+            <input type="radio" name="task23" value="wrong"> Blocks all malicious traffic from entering the network.<br>
+            <input type="radio" name="task23" value="wrong"> Stores your data securely in the cloud.<br>
+            <span class="feedback" id="q23-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb23 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>       
+    </div>
+</div>
+
+    </div>
+    <h3 course-id="cb24" class="locked">7.4 Intrusion Detection Systems (IDS)</h3>
+    <div class="theory cb24">
+        <div class="course-container">
+    <p><strong>Definition:</strong> IDS monitors network traffic for suspicious activity and potential threats. It alerts administrators when potentially harmful behavior is detected.</p>
+    <h5>Types:</h5>
+    <ul>
+        <li><strong>Network IDS:</strong> Monitors network traffic for signs of attacks.</li>
+        <li><strong>Host-based IDS:</strong> Monitors activities on individual devices.</li>
+    </ul>
+    <p><strong>Example:</strong> Snort and Suricata are popular IDS tools that analyze network traffic and provide alerts for suspicious activity.</p>
+    <p><strong>Scenario:</strong> An IDS detects unusual patterns of network traffic that may indicate a potential cyberattack, such as a DDoS attack, and alerts the network administrator.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb24">
+    <div class="question">
+        <label for="q24"><h5>Question:</h5> What is the role of an Intrusion Detection System (IDS)?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q24' class="task-form">
+            <input type="radio" name="task24" value="correct"> To monitor network traffic for suspicious activity.<br>
+            <input type="radio" name="task24" value="wrong"> To block malicious traffic from entering the network.<br>
+            <input type="radio" name="task24" value="wrong"> To detect and remove malware from devices.<br>
+            <span class="feedback" id="q24-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb24 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+    </div>
+</div>
+
+    </div>
+
+    <h3 course-id="cb25" class="locked">7.5 Intrusion Prevention Systems (IPS)</h3>
+    <div class="theory cb25">
+        <div class="course-container">
+    <p><strong>Definition:</strong> IPS is similar to IDS but takes action to block or prevent detected threats in addition to providing alerts.</p>
+    <p><strong>Example:</strong> A firewall with integrated IPS functionality can block malicious traffic based on detected threats.</p>
+    <p><strong>Scenario:</strong> An IPS detects and blocks an attempted SQL injection attack targeting a web application, preventing the attack from succeeding.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb25">
+    <div class="question">
+        <label for="q25"><h5>Question:</h5> How does an Intrusion Prevention System (IPS) differ from an IDS?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q25' class="task-form">
+            <input type="radio" name="task25" value="correct"> It actively blocks or rejects malicious traffic.<br>
+            <input type="radio" name="task25" value="wrong"> It only monitors network traffic for suspicious activity.<br>
+            <input type="radio" name="task25" value="wrong"> It removes malware from infected systems.<br>
+            <span class="feedback" id="q25-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb25 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>       
+    </div>
+</div>
+
+    </div>
+    <h3 course-id="cb26" class="locked">7.6 Endpoint Detection and Response (EDR)</h3>
+    <div class="theory cb26">
+        <div class="course-container">
+    <p><strong>Definition:</strong> EDR solutions focus on detecting, investigating, and responding to threats on endpoints such as computers and mobile devices.</p>
+    <h5>Functionality:</h5>
+    <ul>
+        <li>Provides real-time monitoring, threat detection, and response capabilities.</li>
+    </ul>
+    <p><strong>Example:</strong> CrowdStrike Falcon and Carbon Black are EDR tools that offer comprehensive endpoint protection and incident response.</p>
+    <p><strong>Scenario:</strong> An EDR tool identifies unusual behavior on an employee's laptop, such as unauthorized file access, and takes corrective actions to mitigate the threat.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb26">
+    <div class="question">
+        <label for="q26"><h5>Question:</h5> What is the main function of EDR (Endpoint Detection and Response)?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q26' class="task-form">
+            <input type="radio" name="task26" value="correct"> To detect, investigate, and respond to threats on endpoints.<br>
+            <input type="radio" name="task26" value="wrong"> To block all network traffic from external sources.<br>
+            <input type="radio" name="task26" value="wrong"> To store backups of sensitive data.<br>
+            <span class="feedback" id="q26-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb26 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+    </div>
+</div>
+
+    </div>
+
+    <h3 course-id="cb27" class="locked">7.7 Security Information and Event Management (SIEM)</h3>
+    <div class="theory cb27">
+        <div class="course-container">
+    <p><strong>Definition:</strong> SIEM systems collect and analyze security data from various sources across an organization to provide real-time analysis and reporting.</p>
+    <h5>Functionality:</h5>
+    <ul>
+        <li>Aggregates logs and event data, correlates security events, and provides insights and alerts.</li>
+    </ul>
+    <p><strong>Example:</strong> Splunk and IBM QRadar are SIEM solutions that help organizations monitor and respond to security incidents.</p>
+    <p><strong>Scenario:</strong> A SIEM system detects a pattern of failed login attempts across multiple systems, correlates the data, and alerts security teams to a potential brute-force attack.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb27">
+    <div class="question">
+        <label for="q27"><h5>Question:</h5> What does a SIEM system do?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q27' class="task-form">
+            <input type="radio" name="task27" value="correct"> It aggregates and analyzes log data for security incidents.<br>
+            <input type="radio" name="task27" value="wrong"> It encrypts data on endpoints for security.<br>
+            <input type="radio" name="task27" value="wrong"> It backs up system files and data.<br>
+            <span class="feedback" id="q27-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb27 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+    </div>
+</div>
+
+    </div>
+
+    <h3 course-id="cb28" class="locked">7.8 Backup and Recovery Tools</h3>
+    <div class="theory cb28">
+        <div class="course-container">
+    <p><strong>Definition:</strong> Backup and recovery tools create copies of data and systems to ensure that information can be restored in case of data loss or system failure.</p>
+    <h5>Functionality:</h5>
+    <ul>
+        <li>Provides automated backups, data restoration, and disaster recovery capabilities.</li>
+    </ul>
+    <p><strong>Example:</strong> Acronis and Veeam are backup solutions that offer data protection and recovery options.</p>
+    <p><strong>Scenario:</strong> After a ransomware attack encrypts a company's files, backup and recovery tools enable the restoration of uninfected files from a recent backup, minimizing data loss.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb28">
+    <div class="question">
+        <label for="q28"><h5>Question:</h5> What is the purpose of backup and recovery tools?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q28' class="task-form">
+            <input type="radio" name="task28" value="correct"> To ensure data can be restored in case of a disaster or data loss.<br>
+            <input type="radio" name="task28" value="wrong"> To monitor system performance and security logs.<br>
+            <input type="radio" name="task28" value="wrong"> To encrypt data for secure transmission.<br>
+            <span class="feedback" id="q28-feedback"></span>
+        </form>
+             <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb28 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>       
+    </div>
+</div>
+
+    </div>
+
+</section>
+
+
+
+
+   <section>
+    <h2>8 Incident Response and Management</h2>
+    <h3 course-id="cb29" class="locked">8.1 Incident Response Lifecycle</h3>
+    <div class="theory cb29">
+        <div class="course-container">
+    <p>The incident response lifecycle is a systematic approach to managing and mitigating cybersecurity incidents. It typically includes the following stages:</p>
+    
+    <h4>1. Preparation</h4>
+    <p><strong>Definition:</strong> Preparation involves establishing and maintaining the incident response capabilities and infrastructure necessary to handle potential incidents.</p>
+    <h5>Activities:</h5>
+    <ul>
+        <li><strong>Developing Policies:</strong> Create incident response policies and procedures that outline roles, responsibilities, and communication plans.</li>
+        <li><strong>Training:</strong> Train the incident response team and other relevant personnel on the procedures and tools they will use.</li>
+        <li><strong>Tools and Resources:</strong> Ensure that the necessary tools, technologies, and resources (e.g., forensic tools, communication systems) are available and properly configured.</li>
+    </ul>
+    <p><strong>Example:</strong> An organization sets up a dedicated incident response team and acquires forensic software to analyze potential breaches.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb29">
+    <div class="question" class="task-form">
+        <label for="q29"><h5>Question:</h5> What is the primary goal of the Preparation stage in the Incident Response Lifecycle?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q29'>
+            <input type="radio" name="task29" value="correct"> Establish incident response capabilities and infrastructure.<br>
+            <input type="radio" name="task29" value="wrong"> Detect potential security threats and breaches.<br>
+            <input type="radio" name="task29" value="wrong"> Restore operations after a security incident.<br>
+            <span class="feedback" id="q29-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb29 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+    </div>
+</div>
+
+    </div>
+    <h3 course-id="cb30" class="locked">8.1.2. Detection and Analysis</h3>
+    <div class="theory cb30">
+        <div class="course-container">
+    <p><strong>Definition:</strong> This stage involves identifying and assessing potential security incidents to determine their nature and severity.</p>
+    <h5>Activities:</h5>
+    <ul>
+        <li><strong>Monitoring:</strong> Continuously monitor systems and networks for signs of suspicious activity or breaches.</li>
+        <li><strong>Identification:</strong> Use security tools and logs to detect anomalies that may indicate an incident.</li>
+        <li><strong>Analysis:</strong> Assess the scope and impact of the incident to understand its potential consequences and urgency.</li>
+    </ul>
+    <p><strong>Example:</strong> An intrusion detection system alerts the team to unusual network traffic, prompting further investigation to determine if it’s a sign of a cyberattack.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb30">
+    <div class="question">
+        <label for="q30"><h5>Question:</h5> What is the primary focus of the Detection and Analysis phase in the Incident Response Lifecycle?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q30' class="task-form">
+            <input type="radio" name="task30" value="correct"> Identify and assess potential security incidents to determine their nature and severity.<br>
+            <input type="radio" name="task30" value="wrong"> Develop policies and tools to respond to incidents.<br>
+            <input type="radio" name="task30" value="wrong"> Remove threats and restore normal operations.<br>
+            <span class="feedback" id="q30-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb30 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>       
+    </div>
+</div>
+
+    </div>
+    <h3 course-id="cb31" class="locked">8.1.3. Containment, Eradication, and Recovery</h3>
+    <div class="theory cb31">
+        <div class="course-container"> 
+           <p><strong>Definition:</strong> Once an incident is confirmed, this stage focuses on limiting its impact, removing the threat, and restoring normal operations.</p>
+    <h5>Activities:</h5>
+    <ul>
+        <li><strong>Containment:</strong> Implement measures to isolate affected systems and prevent the incident from spreading.</li>
+        <li><strong>Eradication:</strong> Remove the root cause of the incident, such as malware or unauthorized access.</li>
+        <li><strong>Recovery:</strong> Restore systems and services to normal operation, ensuring that no remnants of the threat remain.</li>
+    </ul>
+    <p><strong>Example:</strong> After discovering a ransomware infection, the team isolates the affected machines, removes the ransomware, and restores data from backups.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb31">
+    <div class="question">
+        <label for="q31"><h5>Question:</h5> Which of the following is NOT part of the Containment, Eradication, and Recovery phase?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q31' class="task-form">
+            <input type="radio" name="task31" value="correct"> Training staff on incident response procedures.<br>
+            <input type="radio" name="task31" value="wrong"> Isolating affected systems to prevent further damage.<br>
+            <input type="radio" name="task31" value="wrong"> Restoring systems to normal operations.<br>
+            <span class="feedback" id="q31-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb31 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>       
+    </div>
+</div>
+
+    </div>
+    <h3 course-id="cb32" class="locked">4. Post-Incident Activity</h3>
+    <div class="theory">
+        <div class="course-container">
+    <p><strong>Definition:</strong> After the incident has been resolved, this stage involves reviewing the response and implementing improvements.</p>
+    <h5>Activities:</h5>
+    <ul>
+        <li><strong>Post-Incident Review:</strong> Conduct a thorough analysis of the incident, including what happened, how it was handled, and what can be improved.</li>
+        <li><strong>Documentation:</strong> Document the incident details, response actions, and any lessons learned.</li>
+        <li><strong>Improvement:</strong> Update incident response plans, policies, and training based on the findings from the review.</li>
+    </ul>
+    <p><strong>Example:</strong> The team holds a debriefing session to discuss the incident response, identifies areas for improvement, and updates the response procedures accordingly.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+<div class="task" task-id="cb32">
+    <div class="question">
+        <label for="q32"><h5>Question:</h5> What is the primary goal of Post-Incident Activity in the Incident Response Lifecycle?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q32' class="task-form">
+            <input type="radio" name="task32" value="correct"> Review the incident response and make improvements.<br>
+            <input type="radio" name="task32" value="wrong"> Contain and eliminate the threat.<br>
+            <input type="radio" name="task32" value="wrong"> Detect new threats or vulnerabilities.<br>
+            <span class="feedback" id="q32-feedback"></span>
+        </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb32 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>       
+    </div>
+</div>
+
+    </div>
+
+    <h3 course-id="cb33" class="locked">8.2 Building an Incident Response Plan</h3>
+<div class="theory cb33">
+    <div class="course-container">
+        <p>An incident response plan (IRP) is a comprehensive document that outlines how an organization will respond to security incidents. Building an effective IRP involves several key steps:</p>
+        <ul>
+            <li><strong>Defining Objectives:</strong> This involves determining the goals and scope of the incident response, ensuring alignment with the organization's mission and risk tolerance.</li>
+            <li><strong>Establishing Roles and Responsibilities:</strong> Assign specific duties to team members to ensure a coordinated and efficient response.</li>
+            <li><strong>Developing Procedures and Guidelines:</strong> Create clear, actionable steps for detecting, responding to, and recovering from incidents.</li>
+            <li><strong>Implementing Training and Testing:</strong> Regularly train staff and test the IRP to ensure preparedness and identify areas for improvement.</li>
+            <li><strong>Reviewing and Updating:</strong> Continuously review and update the IRP to adapt to evolving threats and changes in the organization's structure.</li>
+        </ul>
+        <p>By defining clear objectives, organizations can focus their incident response efforts, allocate resources effectively, and measure success during and after incidents. Objectives should be specific, measurable, achievable, relevant, and time-bound (SMART) to guide the team in their response activities.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb33">
+        <div class="question">
+            <label for="q33"><h5>Question:</h5> What is the purpose of defining objectives in the Incident Response Plan?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q33' class="task-form">
+                <input type="radio" name="task33" value="correct"> To determine the goals and scope of the incident response plan.<br>
+                <input type="radio" name="task33" value="wrong"> To assign roles and responsibilities to the incident response team.<br>
+                <input type="radio" name="task33" value="wrong"> To develop detailed procedures for detecting and managing incidents.<br>
+                <span class="feedback" id="q33-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb33 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+    <h3 course_id="cb34" class="locked">8.2.1. Define Objectives</h3>
+    <div class="theory cb34">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Determine the goals and scope of the incident response plan, including what types of incidents it will address and the desired outcomes.</p>
+        <p>Defining objectives is crucial for guiding the incident response team's efforts and ensuring that resources are allocated effectively. Objectives should be specific, measurable, achievable, relevant, and time-bound (SMART) to enhance clarity and focus.</p>
+        <p><strong>Example:</strong> The plan aims to minimize downtime, protect sensitive data, and ensure regulatory compliance during a security breach. Specific objectives might include:</p>
+        <ul>
+            <li>Respond to critical incidents within 30 minutes.</li>
+            <li>Achieve a recovery time objective (RTO) of less than 4 hours.</li>
+            <li>Ensure that all sensitive data is encrypted and backed up regularly.</li>
+        </ul>
+        <p>By clearly defining these objectives, organizations can measure their incident response success and identify areas for improvement.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb34">
+        <div class="question">
+            <label for="q34"><h5>Question:</h5> Why is it important to define the goals and scope of the incident response plan?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q34' class="task-form">
+                <input type="radio" name="task34" value="correct"> To ensure the response team knows what incidents to prioritize and how to measure success.<br>
+                <input type="radio" name="task34" value="wrong"> To assign specific roles and responsibilities within the organization.<br>
+                <input type="radio" name="task34" value="wrong"> To create a detailed manual for incident response procedures.<br>
+                <span class="feedback" id="q34-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb34 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <h3 course-id="cb35" class="locked">8.2.2. Establish Roles and Responsibilities</h3>
+<div class="theory cb35">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Assign specific roles and responsibilities to individuals and teams involved in incident response.</p>
+        <h5>Components:</h5>
+        <ul>
+            <li><strong>Incident Response Team:</strong> Designate team members who will manage and coordinate the response. This includes defining leadership roles and responsibilities for team members based on their expertise.</li>
+            <li><strong>Communication Contacts:</strong> Identify internal and external contacts for communication during an incident. This includes public relations personnel, legal advisors, and IT support staff to ensure clear and efficient communication.</li>
+            <li><strong>Stakeholder Roles:</strong> Determine the responsibilities of stakeholders, including executives and department heads, in supporting the incident response process.</li>
+        </ul>
+        <p><strong>Example:</strong> The incident response team includes roles such as Incident Manager, Forensic Analyst, and Communication Lead, each with specific duties. The Incident Manager oversees the overall response, the Forensic Analyst handles the investigation, and the Communication Lead manages all internal and external communications.</p>
+        <p>By clearly defining roles and responsibilities, organizations can enhance coordination, improve response times, and reduce confusion during incidents.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb35">
+        <div class="question">
+            <label for="q35"><h5>Question:</h5> What is the significance of assigning roles and responsibilities in the incident response plan?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q35' class="task-form">
+                <input type="radio" name="task35" value="correct"> To ensure that each team member knows their specific duties and can respond effectively during an incident.<br>
+                <input type="radio" name="task35" value="wrong"> To limit the number of people involved in the incident response process.<br>
+                <input type="radio" name="task35" value="wrong"> To provide a general overview of the incident response team without specific duties.<br>
+                <span class="feedback" id="q35-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb35 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+
+    <h3 course-id="cb36" class="locked">8.2.3. Develop Procedures and Guidelines</h3>
+<div class="theory cb36">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Create detailed procedures for detecting, analyzing, containing, eradicating, and recovering from incidents.</p>
+        <h5>Components:</h5>
+        <ul>
+            <li><strong>Detection:</strong> Procedures for monitoring and identifying incidents, including the use of automated tools and regular audits to ensure timely detection.</li>
+            <li><strong>Response:</strong> Steps for containing and managing incidents, including isolation of affected systems and initiating a coordinated response from the incident response team.</li>
+            <li><strong>Analysis:</strong> Guidelines for investigating incidents, identifying root causes, and assessing impact to inform future prevention strategies.</li>
+            <li><strong>Recovery:</strong> Steps for restoring systems and data to normal operations while ensuring that vulnerabilities are addressed and systems are secure.</li>
+            <li><strong>Communication:</strong> Guidelines for internal and external communication to ensure stakeholders are informed and compliant with regulatory requirements.</li>
+        </ul>
+        <p><strong>Example:</strong> The plan includes a flowchart outlining steps for handling a data breach, from initial detection to notification of affected parties, ensuring a structured approach to managing the incident.</p>
+        <p>By developing clear and detailed procedures, organizations can improve their readiness and effectiveness in responding to incidents, reducing potential damage and recovery time.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb36">
+        <div class="question">
+            <label for="q36"><h5>Question:</h5> Why is it essential to create detailed procedures in the incident response plan?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q36' class="task-form">
+                <input type="radio" name="task36" value="correct"> To ensure a structured and efficient response to incidents, minimizing impact and recovery time.<br>
+                <input type="radio" name="task36" value="wrong"> To provide vague guidelines that can be interpreted flexibly during incidents.<br>
+                <input type="radio" name="task36" value="wrong"> To document the history of incidents without actionable steps.<br>
+                <span class="feedback" id="q36-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb36 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>            
+        </div>
+    </div>
+</div>
+
+
+    <h3 course-id="cb37" class="locked">8.2.4. Implement Training and Testing</h3>
+<div class="theory cb37">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Ensure that the incident response team and relevant personnel are trained on the plan and conduct regular tests to evaluate its effectiveness.</p>
+        <h5>Activities:</h5>
+        <ul>
+            <li><strong>Training:</strong> Provide training sessions to familiarize staff with the incident response procedures, ensuring that everyone understands their roles and responsibilities during an incident.</li>
+            <li><strong>Testing:</strong> Conduct tabletop exercises and simulations to test the plan and identify areas for improvement, allowing the team to practice their response in a controlled environment.</li>
+            <li><strong>Feedback:</strong> Collect feedback from participants after training and testing sessions to continuously improve the incident response plan.</li>
+        </ul>
+        <p><strong>Example:</strong> The organization runs a tabletop exercise simulating a cyberattack to test the response team’s readiness and identify gaps in the plan, with insights gathered to enhance future responses.</p>
+        <p>Regular training and testing ensure that the incident response team remains prepared and capable of effectively addressing incidents as they arise.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb37">
+        <div class="question">
+            <label for="q37"><h5>Question:</h5> What is the primary goal of training and testing in the incident response plan?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q37' class="task-form">
+                <input type="radio" name="task37" value="correct"> To ensure the incident response team is prepared to effectively handle incidents and identify areas for improvement.<br>
+                <input type="radio" name="task37" value="wrong"> To create a formal document that outlines the training schedule without practical application.<br>
+                <input type="radio" name="task37" value="wrong"> To reduce the number of incidents occurring within the organization.<br>
+                <span class="feedback" id="q37-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb37 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>          
+        </div>
+    </div>
+</div>
+
+
+    <h3 course-id="cb38" class="locked">8.2.5. Review and Update</h3>
+<div class="theory cb38">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Regularly review and update the incident response plan to ensure it remains relevant and effective in addressing new challenges.</p>
+        <h5>Activities:</h5>
+        <ul>
+            <li><strong>Feedback:</strong> Gather feedback from incidents and exercises to refine the plan, ensuring that lessons learned are incorporated into future revisions.</li>
+            <li><strong>Updates:</strong> Revise the plan based on changes in technology, emerging threats, and shifts in organizational structure or policies to maintain alignment with best practices.</li>
+            <li><strong>Review Schedule:</strong> Establish a regular review schedule (e.g., annually or after significant incidents) to ensure timely updates.</li>
+        </ul>
+        <p><strong>Example:</strong> After a major update to the IT infrastructure, the incident response plan is revised to include new systems and protocols, reflecting the current operational environment.</p>
+        <p>Continuous maintenance of the incident response plan is essential for ensuring preparedness and effective response to security incidents.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb38">
+        <div class="question">
+            <label for="q38"><h5>Question:</h5> Why is it important to regularly review and update the incident response plan?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q38' class="task-form">
+                <input type="radio" name="task38" value="correct"> To ensure the plan remains relevant and effective in addressing evolving threats and organizational changes.<br>
+                <input type="radio" name="task38" value="wrong"> To reduce the number of incidents and ensure no incidents occur in the organization.<br>
+                <input type="radio" name="task38" value="wrong"> To provide a static document that only needs to be reviewed every few years.<br>
+                 <span class="feedback" id="q38-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb38 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>    
+        </div>
+    </div>
+</div>
+
+
+    <h3 course-id="cb39" class="locked">8.3 Post-Incident Analysis and Lessons Learned</h3>
+<div class="theory cb39">
+    <div class="course-container">
+        <p>Post-incident analysis involves reviewing the incident and the organization's response to improve future handling of similar events. This stage is crucial for continuous improvement and strengthening the organization’s cybersecurity posture.</p>
+        <h5>Key Activities:</h5>
+        <ul>
+            <li><strong>Incident Review:</strong> Conduct a detailed examination of the incident, including the timeline of events, actions taken, and their effectiveness.</li>
+            <li><strong>Root Cause Analysis:</strong> Identify the underlying causes of the incident to prevent recurrence.</li>
+            <li><strong>Lessons Learned:</strong> Document insights gained from the incident to enhance future responses and update the incident response plan accordingly.</li>
+            <li><strong>Report Findings:</strong> Prepare a report summarizing the incident, the response, and recommendations for improvement.</li>
+        </ul>
+        <p><strong>Example:</strong> After a data breach, the organization conducts a post-incident analysis to determine how the breach occurred, evaluates the effectiveness of the response, and updates its security policies to prevent similar incidents in the future.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb39">
+        <div class="question">
+            <label for="q39"><h5>Question:</h5> What is the primary goal of post-incident analysis?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q39' class="task-form">
+                <input type="radio" name="task39" value="correct"> To improve future incident handling and strengthen the organization’s cybersecurity posture.<br>
+                <input type="radio" name="task39" value="wrong"> To assign blame for the incident and determine who was at fault.<br>
+                <input type="radio" name="task39" value="wrong"> To document the incident for compliance purposes without making further improvements.<br>
+                <span class="feedback" id="q39-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb39 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <h3 course-id="cb40" class="locked">8.3.1. Conduct a Post-Incident Review</h3>
+<div class="theory cb40">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Analyze the incident to understand what happened, how it was managed, and what the impact was.</p>
+        <h5>Activities:</h5>
+        <ul>
+            <li><strong>Timeline Review:</strong> Reconstruct the timeline of events to identify key actions and decisions.</li>
+            <li><strong>Effectiveness Assessment:</strong> Evaluate the effectiveness of the response and identify any issues or delays.</li>
+            <li><strong>Impact Analysis:</strong> Assess the overall impact of the incident on the organization, including financial, operational, and reputational effects.</li>
+        </ul>
+        <p><strong>Example:</strong> The review reveals that the response was delayed due to unclear communication protocols, and recommendations for clearer guidelines are made to prevent future delays.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb40">
+        <div class="question">
+            <label for="q40"><h5>Question:</h5> What is a key activity in analyzing an incident?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q40' class="task-form">
+                <input type="radio" name="task40" value="correct"> To evaluate the effectiveness of the response and identify any issues or delays.<br>
+                <input type="radio" name="task40" value="wrong"> To determine the cost of the incident for budget purposes.<br>
+                <input type="radio" name="task40" value="wrong"> To assign blame to individuals involved in the response.<br>
+                <span class="feedback" id="q40-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb40 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+    
+        <h3 course-id="cb41" class="locked">8.3.2. Document Findings and Recommendations</h3>
+<div class="theory cb41">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Record the findings from the review, including what went well, what didn’t, and recommendations for improvement.</p>
+        <h5>Components:</h5>
+        <ul>
+            <li><strong>Incident Summary:</strong> A detailed summary of the incident, including its causes and effects.</li>
+            <li><strong>Lessons Learned:</strong> Insights gained from the incident and response.</li>
+            <li><strong>Recommendations:</strong> Suggestions for enhancing the incident response plan and procedures.</li>
+        </ul>
+        <p><strong>Example:</strong> The documentation highlights that better detection tools are needed and recommends updating training programs.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb41">
+        <div class="question">
+            <label for="q41"><h5>Question:</h5> What is a key component of post-incident documentation?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q41' class="task-form">
+                <input type="radio" name="task41" value="correct"> To record lessons learned and recommendations for improvement.<br>
+                <input type="radio" name="task41" value="wrong"> To outline the responsibilities of team members during the incident.<br>
+                <input type="radio" name="task41" value="wrong"> To create a budget for future incident response activities.<br>
+                 <span class="feedback" id="q41-feedback"></span>
+            </form>
+
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb41 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+        <h3 course-id="cb42" class="locked">8.3.3. Implement Improvements</h3>
+<div class="theory cb42">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Use the findings from the review to make changes to the incident response plan, policies, and procedures.</p>
+        <h5>Activities:</h5>
+        <ul>
+            <li><strong>Plan Updates:</strong> Revise the incident response plan based on lessons learned.</li>
+            <li><strong>Training Adjustments:</strong> Update training materials and conduct refresher courses for staff.</li>
+            <li><strong>Tool Enhancements:</strong> Upgrade or acquire new tools and technologies to address identified gaps.</li>
+        </ul>
+        <p><strong>Example:</strong> The organization invests in advanced threat detection systems and enhances employee training to better handle future incidents.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb42">
+        <div class="question">
+            <label for="q42"><h5>Question:</h5> What is a primary goal of implementing changes after an incident review?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q42' class="task-form">
+                <input type="radio" name="task42" value="correct"> To improve the incident response plan and prevent future incidents.<br>
+                <input type="radio" name="task42" value="wrong"> To assign blame for the incident.<br>
+                <input type="radio" name="task42" value="wrong"> To develop a budget for purchasing software.<br>
+                <span class="feedback" id="q42-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb42 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>     
+        </div>
+    </div>
+</div>
+
+        <h3 course-id="cb43" class="locked">8.3.4. Share Lessons Learned</h3>
+<div class="theory cb43">
+    <div class="course-container">
+        <p><strong>Definition:</strong> Communicate the lessons learned from the incident with relevant stakeholders and teams to raise awareness and improve overall security.</p>
+        <h5>Activities:</h5>
+        <ul>
+            <li><strong>Internal Briefings:</strong> Share findings and recommendations with internal teams.</li>
+            <li><strong>External Reporting:</strong> If appropriate, report on the incident and response to external stakeholders, such as regulators or partners.</li>
+        </ul>
+        <p><strong>Example:</strong> The organization conducts a workshop for employees to discuss the incident and share best practices for preventing similar occurrences.</p>
+        <p>By effectively managing the incident response lifecycle, building a comprehensive incident response plan, and conducting thorough post-incident analysis, organizations can enhance their ability to respond to and recover from security incidents, ultimately strengthening their overall cybersecurity posture.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+    <div class="task" task-id="cb43">
+        <div class="question">
+            <label for="q43"><h5>Question:</h5> Why is it important to communicate lessons learned after an incident?</label><br>
+            <p>Select the one that applies:</p>
+            <form id='q43'>
+                <input type="radio" name="task43" value="correct"> To raise awareness and improve overall security within the organization.<br>
+                <input type="radio" name="task43" value="wrong"> To ensure only certain teams are aware of the incident.<br>
+                <input type="radio" name="task43" value="wrong"> To prepare for potential legal actions against the organization.<br>
+                 <span class="feedback" id="q43-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-cb43 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+</div>
+</body>
+</html>

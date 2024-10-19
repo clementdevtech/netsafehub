@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Databases</title>
+    <script type="text/javascript" src="../course_script/function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/course_styles.css">
+</head>
+<body>
+    <header>
+        <h1>DataBase management</h1>
+        <div class="rewards">
+        <div id="rewards">
+            Rewards: <span>0</span> points
+        </div>
+        <div id="hearts">
+            Hearts: <span class="heart">❤️</span> <span class="heart">❤️</span> <span class="heart">❤️</span>
+        </div>
+        </div>
+   </header>
+<div class="course">
+<section>
+    <h2>1: Introduction to Databases</h2>
+
+<article>
+    <h3 course-id = "db1" class="locked">1.1 What is a Database?</h3>
+    <div class="theory db1">
+        <div class="course-container">
+            <p><strong>Definition:</strong> A database is an organized collection of structured information, or data, that is stored electronically. Databases allow for efficient storage, retrieval, modification, and deletion of data, making them essential for managing information in various applications, from websites to enterprise systems.</p>
+            <h5>Importance of Databases:</h5>
+            <ul>
+                <li><strong>Data Organization:</strong> Databases organize vast amounts of data for easy management and retrieval.</li>
+                <li><strong>Efficiency:</strong> Allow for quick searching, filtering, and processing of data.</li>
+                <li><strong>Data Integrity:</strong> Ensure data consistency and accuracy through constraints like primary keys and foreign keys.</li>
+                <li><strong>Security:</strong> Offer access control, allowing different users varying levels of access.</li>
+                <li><strong>Scalability:</strong> Designed to scale efficiently with growing data infrastructure.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+    
+
+
+        <div class="task" task-id="db1">
+            <div class="question">
+            <form id='q1' class="task-form">
+                <label for="q1"><h5>Question:</h5> What is the main purpose of a database?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task1" value="correct"> To store and manage data efficiently.<br>
+                <input type="radio" name="task1" value="wrong"> To run applications.<br>
+                <input type="radio" name="task1" value="wrong"> To host websites.<br>
+                <span class="feedback" id="q1-feedback"></span>
+            </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-db1 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</article>
+
+<article>
+    <h3 course-id = "db2" class="locked">1.2 Types of Databases</h3>
+    <div class="theory db2">
+        <div class="course-container">
+            <h4>Relational Databases (RDBMS):</h4>
+            <p>Relational databases organize data into structured tables linked through keys (like primary and foreign keys) and use SQL for data interaction.</p>
+            <h5>Examples:</h5>
+            <ul>
+                <li>MySQL: Widely used in web applications.</li>
+                <li>PostgreSQL: Known for compliance and extensibility.</li>
+                <li>Microsoft SQL Server: Commonly used in enterprise environments.</li>
+                <li>Oracle Database: Known for performance in large-scale organizations.</li>
+            </ul>
+            <h5>Key Characteristics:</h5>
+            <ul>
+                <li><strong>Data Integrity:</strong> Organized into tables with strict rules ensuring accuracy.</li>
+                <li><strong>Schemas:</strong> Predefined schemas dictate structure and relationships.</li>
+                <li><strong>ACID Compliance:</strong> Ensures Atomicity, Consistency, Isolation, and Durability in transactions.</li>
+            </ul>
+            <h5>When to Use Relational Databases:</h5>
+            <ul>
+                <li>For applications requiring complex queries and transactions.</li>
+                <li>For systems needing strong data consistency and integrity.</li>
+            </ul>
+
+            <h4>NoSQL Databases:</h4>
+            <p>NoSQL databases store data in a non-tabular format, ideal for handling large-scale, distributed data storage without traditional relational constraints.</p>
+            <h5>Examples:</h5>
+            <ul>
+                <li>MongoDB: Document-oriented database using JSON-like documents.</li>
+                <li>Cassandra: Highly scalable for managing large amounts of data.</li>
+                <li>Redis: In-memory key-value store for caching and real-time analytics.</li>
+            </ul>
+            <h5>Key Characteristics:</h5>
+            <ul>
+                <li><strong>Flexibility:</strong> No fixed schema, allowing rapid changes in data structures.</li>
+                <li><strong>Scalability:</strong> Horizontally scalable across multiple servers.</li>
+                <li><strong>Eventual Consistency:</strong> Data becomes consistent across nodes over time.</li>
+            </ul>
+            <h5>When to Use NoSQL Databases:</h5>
+            <ul>
+                <li>For handling large amounts of unstructured data.</li>
+                <li>When speed, scalability, and flexibility are prioritized over strict integrity.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+    
+
+        <div class="task" task-id="db2">
+            <div class="question">
+            <form id='q2' class="task-form">
+                <label for="q2">Question: Which type of database is best for handling unstructured data?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task2" value="correct"> NoSQL Databases<br>
+                <input type="radio" name="task2" value="wrong"> Relational Databases<br>
+                <input type="radio" name="task2" value="wrong"> Flat File Databases<br>
+                <span class="feedback" id="q2-feedback"></span>
+            </form>
+                <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-db2 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+  
+<article>
+    <h3 course-id="db3" class="locked">1.3 Key Database Components</h3>
+    <div class="theory db3">
+        <div class="course-container">
+            <h4>Tables:</h4>
+            <p><strong>Definition:</strong> Core structure in a database where data is stored, representing entities with rows and columns.</p>
+            <h5>Columns (Fields):</h5>
+            <p>Define the data structure in the table, specifying data types.</p>
+            <p><strong>Example:</strong> In a “Users” table, columns could be user_id, name, email.</p>
+
+            <h5>Rows (Records):</h5>
+            <p>A row represents an individual entry in the table.</p>
+            <p><strong>Example:</strong> A row in the “Users” table could include user ID, name, email.</p>
+
+            <h4>Fields:</h4>
+            <p>A specific piece of data within a column. Fields are atomic units of data.</p>
+            <p><strong>Example:</strong> Each entry in the "email" column (like "user@example.com").</p>
+
+            <h4>Records:</h4>
+            <p>A single, complete set of fields in a table, forming one row.</p>
+            <p><strong>Example:</strong> A record in a "Customers" table might include customer ID, name, and address.</p>
+
+            <h4>Keys:</h4>
+            <ul>
+                <li><strong>Primary Key:</strong> A unique identifier for each record.</li>
+                <p><strong>Example:</strong> In a users table, user_id could be the primary key.</p>
+                <li><strong>Foreign Key:</strong> Refers to the primary key of another table, establishing relationships.</li>
+                <p><strong>Example:</strong> In an "Orders" table, user_id could link to the user.</p>
+                <li><strong>Composite Key:</strong> Made up of two or more columns to ensure uniqueness.</li>
+                <p><strong>Example:</strong> A combination of order_id and product_id in an "OrderDetails" table.</p>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+    
+
+   
+        <div class="task" task-id="db3">
+            <div class="question">
+                <label for="q3"><h5>Question:</h5> What is the purpose of a primary key in a database?</label><br>
+                <p>Select the one that applies:</p>
+            <form id='q3' class="task-form">
+                <input type="radio" name="task3" value="correct"> To uniquely identify each record in a table.<br>
+                <input type="radio" name="task3" value="wrong"> To store data types for each column.<br>
+                <input type="radio" name="task3" value="wrong"> To establish relationships between tables.<br>
+                <span class="feedback" id="q3-feedback"></span>
+            </form>
+                <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-db3 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</article>
+
+  
+</section>
+
+
+
+
+<section>
+    <h2>2: Common Database Threats</h2>
+
+<article>
+    <h3 course-id ="db4" class="locked">2.1 SQL Injection</h3>
+    <div class="theory db4">
+        <div class="course-container">
+            <p><strong>Definition:</strong> SQL Injection (SQLi) is a dangerous type of database attack where an attacker manipulates a poorly secured SQL query to execute malicious SQL code, gaining unauthorized access to the database.</p>
+            <h5>How Attackers Exploit SQL Vulnerabilities:</h5>
+            <ul>
+                <li><strong>User Input Exploitation:</strong> Occurs when an application directly embeds user input in an SQL query without proper sanitization. This can allow an attacker to inject malicious SQL code.</li>
+            </ul>
+            <h5>Example:</h5>
+            <pre>
+SELECT * FROM users WHERE username = 'inputUsername' AND password = 'inputPassword';
+            </pre>
+            <p>If the input is not sanitized, an attacker could input:</p>
+            <pre>
+inputUsername = 'admin' OR '1'='1'
+inputPassword = 'anything'
+            </pre>
+            <p>This transforms the query into:</p>
+            <pre>
+SELECT * FROM users WHERE username = 'admin' OR '1'='1' AND password = 'anything';
+            </pre>
+            <p>Since '1'='1' is always true, the attacker gains access as the admin.</p>
+            
+            <h5>Real-World Examples:</h5>
+            <ul>
+                <li><strong>2017 Equifax Breach:</strong> Attackers exploited an SQL injection vulnerability to access sensitive data of over 147 million people.</li>
+                <li><strong>2012 LinkedIn Breach:</strong> SQL injection allowed hackers to steal 6.5 million hashed passwords.</li>
+            </ul>
+
+            <h5>Prevention:</h5>
+            <ul>
+                <li>Input Validation and Sanitization: Use prepared statements to ensure user input cannot modify SQL query structure.</li>
+                <li>Stored Procedures: Define SQL queries securely on the server side.</li>
+                <li>Web Application Firewalls (WAFs): Implement WAFs to detect and block SQL injection attempts.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+            <div class="task" task-id="db4">
+                <div class="question">
+                    <label for="q4"><h5>Question:</h5> Which of the following are effective ways to prevent SQL injection attacks?</label><br>
+                    <p>Select all that apply.</p>
+                    <form id='q4' class="task-form">
+                        <input type="checkbox" name="task4" value="correct"> Input Validation and Sanitization<br>
+                        <input type="checkbox" name="task4" value="wrong"> Allowing All User Inputs<br>
+                        <input type="checkbox" name="task4" value="correct"> Using Prepared Statements<br>
+                        <input type="checkbox" name="task4" value="wrong"> Ignoring User Inputs<br>
+                        <span class="feedback" id="q4-feedback"></span>
+                    </form>
+                <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-db4 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+<article>
+    <h3 course-id="db5" class="locked">2.2 Database Misconfiguration</h3>
+    <div class="theory db5">
+        <div class="course-container">
+            <p><strong>Definition:</strong> Database misconfiguration occurs when databases are set up with weak or incorrect security settings, leaving them vulnerable to attacks.</p>
+            <h5>Common Causes:</h5>
+            <ul>
+                <li>Improperly set permissions.</li>
+                <li>Default passwords or credentials.</li>
+                <li>Unsecured database backups.</li>
+                <li>Exposed ports and services.</li>
+            </ul>
+
+            <h5>Misconfigured Access Controls:</h5>
+            <ul>
+                <li><strong>Open Access to Databases:</strong> Databases mistakenly left publicly accessible can lead to unauthorized data access.</li>
+                <p><strong>Example:</strong> A 2018 misconfigured database exposed personal details of 340 million people due to public access settings.</p>
+                <li><strong>Weak Permissions:</strong> Overprivileged users can perform unauthorized actions.</li>
+                <li><strong>Backup Misconfiguration:</strong> Unsecured backups can lead to data breaches.</li>
+            </ul>
+
+            <h5>Prevention:</h5>
+            <ul>
+                <li>Access Control Management: Implement the principle of least privilege.</li>
+                <li>Regular Audits: Perform security audits to identify misconfigurations.</li>
+                <li>Encrypt Backups: Always encrypt and securely store database backups.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+            <div class="task" task-id="db5">
+                <div class="question">
+                    <label for="q5"><h5>Question:</h5> What are some common causes of database misconfiguration?</label><br>
+                    <p>Select all that apply.</p>
+                    <form id='q5' class="task-form">
+                        <input type="checkbox" name="task5" value="correct"> Improperly Set Permissions<br>
+                        <input type="checkbox" name="task5" value="correct"> Default Passwords<br>
+                        <input type="checkbox" name="task5" value="wrong"> Comprehensive Security Audits<br>
+                        <input type="checkbox" name="task5" value="correct"> Unsecured Database Backups<br>
+                        <span class="feedback" id="q5-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-db5 hint-image"><img src="../photos/hint.jfif"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+   <article>
+    <h3 course-id ="db6" class="locked">2.3 Privilege Escalation</h3>
+    <div class="theory db6">
+        <div class="course-container">
+            <p><strong>Definition:</strong> Privilege Escalation occurs when an attacker gains limited access and exploits vulnerabilities to obtain higher-level privileges, such as admin access.</p>
+            <h5>How Attackers Exploit Privilege Escalation:</h5>
+            <ul>
+                <li><strong>Exploiting Weak Access Controls:</strong> Attackers take advantage of poorly configured access controls.</li>
+                <li><strong>Vulnerable Applications:</strong> Applications with coding flaws may allow privilege escalation.</li>
+            </ul>
+
+            <h5>Real-World Example:</h5>
+            <p><strong>Oracle Database Vulnerability (CVE-2017-10271):</strong> Allowed attackers to exploit a WebLogic server flaw to escalate privileges and execute arbitrary commands.</p>
+
+            <h5>Prevention:</h5>
+            <ul>
+                <li>Role-based Access Control (RBAC): Assign different privilege levels to various roles.</li>
+                <li>Regular Patch Management: Keep database software up to date to prevent exploitation of known vulnerabilities.</li>
+                <li>Audit Logs: Regularly review activity logs for unusual privilege changes.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+            <div class="task" task-id="db6">
+                <div class="question">
+                    <label for="q6">Question: Which methods can help prevent privilege escalation?</label><br>
+                    <p>Select all that apply.</p>
+                    <form id='q6' class="task-form">
+                        <input type="checkbox" name="task6" value="correct"> Role-based Access Control (RBAC)<br>
+                        <input type="checkbox" name="task6" value="correct"> Regular Patch Management<br>
+                        <input type="checkbox" name="task6" value="wrong"> Granting Admin Rights to All Users<br>
+                        <input type="checkbox" name="task6" value="correct"> Regular Audit of Activity Logs<br>
+                        <span class="feedback" id="q6-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-db6 hint-image"><img src="../photos/hint.jfif"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+<article>
+    <h3 course-id="db7" class="locked">2.4 Insider Threats</h3>
+    <div class="theory db7">
+        <div class="course-container">
+            <p><strong>Definition:</strong> Insider threats occur when trusted individuals misuse their access to the database, intentionally or unintentionally causing harm.</p>
+            <h5>Types of Insider Threats:</h5>
+            <ul>
+                <li><strong>Malicious Insiders:</strong> Employees who misuse their access for theft or manipulation.</li>
+                <li><strong>Negligent Insiders:</strong> Employees who accidentally expose sensitive information due to carelessness.</li>
+                <li><strong>Third-Party Insiders:</strong> Contractors who misuse access to the database.</li>
+            </ul>
+
+            <h5>Real-World Examples:</h5>
+            <ul>
+                <li><strong>Edward Snowden:</strong> Used authorized access to leak classified information.</li>
+                <li><strong>Capital One Data Breach (2019):</strong> A former employee exploited insider knowledge to steal personal data of over 100 million customers.</li>
+            </ul>
+
+            <h5>Prevention:</h5>
+            <ul>
+                <li>Access Restrictions: Limit access to sensitive data based on necessity.</li>
+                <li>Monitoring and Auditing: Continuously monitor database activity for unusual behavior.</li>
+                <li>User Education: Train employees on data security best practices.</li>
+                <li>Segregation of Duties: Implement checks and balances in critical actions.</li>
+            </ul>
+            <div class="next"><strong>Next >></strong></div>
+        </div>
+
+            <div class="task" task-id="db7">
+                <div class="question">
+                    <label for="q7">Question: What strategies can help mitigate insider threats?</label><br>
+                    <p> Select all that apply.</p>
+                    <form id='q7' class="task-form">
+                        <input type="checkbox" name="task7" value="correct"> Access Restrictions<br>
+                        <input type="checkbox" name="task7" value="correct"> Monitoring and Auditing<br>
+                        <input type="checkbox" name="task7" value="wrong"> Trusting All Employees<br>
+                        <input type="checkbox" name="task7" value="correct"> User Education<br>
+                        <span class="feedback" id="q4-feedback"></span>
+                    </form>
+                        <div class="actions">
+                            <button class="check">Check answers</button>
+                            <div class="hint-db7 hint-image"><img src="../photos/hint.jfif"></div>
+                            <div class="nextsection"><strong>Next >></strong></div>
+                        </div>                    
+                </div>
+            </div>
+        </div>
+    </article>
+
+</section>
+
+<section>
+    <h2>3. Database Security Principles</h2>
+
+    <article>
+    <h3 course-id="db8" class="locked">3.1 Confidentiality</h3>
+    <div class="theory db8">
+        <div class="course-container">
+    <p>Confidentiality means ensuring that sensitive information is only accessible to those authorized to see it. It is about protecting data from unauthorized access or disclosure.</p>
+
+    <h5>Key Aspects of Confidentiality:</h5>
+    <ul>
+        <li><strong>Access Control:</strong> Implement role-based access control (RBAC) to ensure users only have access to the data they need. Use methods such as passwords, multi-factor authentication (MFA), and encryption to control access.</li>
+        <li><strong>Encryption:</strong> Encrypt sensitive data both at rest (when stored in the database) and in transit (when being transferred over a network). Common encryption algorithms include AES (Advanced Encryption Standard).</li>
+        <li><strong>Data Masking:</strong> For environments where users access data without needing to see actual sensitive values (e.g., in a testing environment), data masking techniques can be used to obfuscate or hide the real data.</li>
+    </ul>
+
+    <h5>Importance in Cybersecurity:</h5>
+    <p>Confidentiality ensures that sensitive data (like personal information, financial details, or intellectual property) is only accessible by authorized users, preventing data leaks, theft, or espionage.</p>
+
+    <h5>Example:</h5>
+    <p>In healthcare databases, protecting patient medical records (e.g., through encryption and access control) ensures that only authorized healthcare providers or personnel can view them, thus maintaining confidentiality.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+        <div class="task" task-id="db8">
+            <div class="question">
+            <form id='q8' class="task-form">
+                <label for="q8"><h5>Question:</h5> What is a key method for ensuring confidentiality in a database?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task8" value="correct"> Encryption of sensitive data.<br>
+                <input type="radio" name="task8" value="wrong"> Keeping data in plain text.<br>
+                <input type="radio" name="task8" value="wrong"> Allowing all users full access.<br>
+                <span class="feedback" id="q8-feedback"></span>
+            </form>
+                <div class="actions">
+                    <button class="check">Check answers</button>
+                    <div class="hint-db8 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                    <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+        </div>
+    </div>
+</div>
+</article>
+    
+
+<article>
+
+    <h3 course-id="db9" class="locked">3.2 Integrity:</h3>
+        <div class="theory db9">
+            <div class="course-container">
+    <p>Integrity refers to the accuracy, consistency, and reliability of data. It ensures that the data in the database remains unaltered except by authorized users and processes. Any unauthorized modification—whether accidental or malicious—compromises the integrity of the data.</p>
+
+    <h5>Key Aspects of Integrity:</h5>
+    <ul>
+        <li><strong>Validation and Constraints:</strong> Use constraints like primary keys, foreign keys, and checks to enforce data integrity at the database level.</li>
+        <li><strong>Hashing:</strong> Hashing functions (e.g., SHA-256) are used to ensure data integrity by generating a unique digital fingerprint for data.</li>
+        <li><strong>Audit Logs:</strong> Implement audit trails to track changes to data, including who made the change, when it was made, and what was changed.</li>
+    </ul>
+
+    <h5>Importance in Cybersecurity:</h5>
+    <p>Ensuring data integrity is crucial in maintaining trust and ensuring that critical decisions are made based on accurate, unaltered data.</p>
+
+    <h5>Example:</h5>
+    <p>In an online banking system, if the integrity of transaction records is compromised, incorrect balances or unauthorized transactions could be displayed, leading to financial losses or fraudulent activities.</p>
+   <div class="next"><strong>Next >></strong></div>
+</div>
+
+    <div class="task" task-id="db9">
+        <div class="question">
+            <form id='q9' class="task-form">
+                <label for="q2"><h5>Question:</h5> What is one way to ensure data integrity in a database?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task9" value="correct"> Use validation and constraints.<br>
+                <input type="radio" name="task9" value="wrong"> Ignore data validation.<br>
+                <input type="radio" name="task9" value="wrong"> Allow unrestricted data entry.<br>
+                <span class="feedback" id="q9-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-db9 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+    
+<article>
+    <h3 course-id ="db10" class="locked">3.3 Availability:</h3>
+    <div class="theory db10">
+        <div class="course-container">
+    <p>Availability ensures that the database and the data it contains are accessible to authorized users when needed. Without availability, users may be unable to access critical information, disrupting business operations or services.</p>
+
+    <h5>Key Aspects of Availability:</h5>
+    <ul>
+        <li><strong>Redundancy:</strong> Implement data replication and backups to ensure that data is available even if the primary database fails.</li>
+        <li><strong>Disaster Recovery:</strong> Plan for disaster recovery by creating backup strategies and implementing automated failover procedures.</li>
+        <li><strong>Denial of Service (DoS) Protections:</strong> Use network firewalls, rate limiting, and security measures to protect against DoS attacks.</li>
+    </ul>
+
+    <h5>Importance in Cybersecurity:</h5>
+    <p>Availability ensures that critical applications and data are accessible when users need them, preventing service disruptions that could affect business continuity.</p>
+
+    <h5>Example:</h5>
+    <p>In e-commerce platforms, high availability is essential for maintaining uptime during peak traffic periods. Downtime could lead to significant financial losses and harm customer trust.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+        <div class="task" task-id="db10">
+            <div class="question">
+            <form id='q10' class="task-form">
+                <label for="q10"><h5>Question:</h5> Why is availability important in database security?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task10" value="correct"> It ensures that authorized users can access data when needed.<br>
+                <input type="radio" name="task10" value="wrong"> It allows all users to access sensitive data.<br>
+                <input type="radio" name="task10" value="wrong"> It focuses only on data encryption.<br>
+                <span class="feedback" id="q10-feedback"></span>
+               </form>
+                <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-db10 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </article>
+    
+<article>
+    <h3 course-id="db11" class="locked">3.4 Least Privilege Principle</h3>
+    <div class="theory db11">
+        <div class="course-container">
+    <p>The Least Privilege Principle is a fundamental security concept that advocates for limiting users' access rights to only what they need to perform their tasks. In a database environment, this principle helps minimize the potential damage that can occur if an account is compromised or misused.</p>
+
+    <h4>Key Aspects of the Least Privilege Principle:</h4>
+    <ul>
+        <li><strong>Role-based Access Control (RBAC):</strong> Assign users different roles based on their specific duties.</li>
+        <li><strong>Segregation of Duties:</strong> Ensure that critical database functions are split between different users.</li>
+        <li><strong>Time-limited Access:</strong> Use temporary privilege escalation for specific tasks.</li>
+    </ul>
+
+    <h4>Benefits of Least Privilege:</h4>
+    <ul>
+        <li><strong>Risk Reduction:</strong> By limiting the access level of each user, you reduce the impact of any single account being compromised.</li>
+        <li><strong>Insider Threat Mitigation:</strong> Employees with fewer privileges cannot access or alter sensitive data.</li>
+        <li><strong>Compliance:</strong> Many data protection regulations require organizations to implement least privilege policies.</li>
+    </ul>
+
+    <h5>Example:</h5>
+    <p>In a database of a financial institution, a customer service representative might have the ability to view account details but not modify them. An administrator, however, may have the authority to perform account changes.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+        <div class="task" task-id="db11">
+            <div class="question">
+            <form id='q11' class="task-form">
+                <label for="q11"><h5>Question:</h5> What does the Least Privilege Principle advocate for?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task11" value="correct"> Limiting user access to only what is necessary.<br>
+                <input type="radio" name="task11" value="wrong"> Granting all users full access.<br>
+                <input type="radio" name="task11" value="wrong"> Allowing unrestricted data entry.<br>
+                <span class="feedback" id="q11-feedback"></span>
+            </form>
+            <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-db11 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<section>
+    <h2>4. Database Access Control</h2>
+
+<article>
+    <h3 course-id="db12" class="locked">4.1 Authentication</h3>
+    <div class="theory db12">
+        <div class="course-container">
+    <p>Authentication is the process of verifying the identity of a user before granting access to the database.</p>
+
+    <h5>Strong Authentication Mechanisms:</h5>
+    <ul>
+        <li><strong>Passwords:</strong> Require strong, complex passwords to protect against brute force or dictionary attacks. Use secure hashing algorithms like bcrypt, scrypt, or PBKDF2 for password storage.</li>
+        <li><strong>Multi-factor Authentication (MFA):</strong> MFA adds an extra layer of security by requiring two or more verification factors:</li>
+        <ul>
+            <li>Something the user knows (e.g., password or PIN).</li>
+            <li>Something the user has (e.g., a security token or smartphone app).</li>
+            <li>Something the user is (e.g., fingerprint or facial recognition).</li>
+        </ul>
+    </ul>
+
+    <h5>Importance of MFA:</h5>
+    <p>MFA significantly reduces the risk of account compromise, ensuring that even if an attacker steals the password, they still need access to the second factor.</p>
+
+    <h5>Example of MFA in Database Access:</h5>
+    <p>In a database management system (DBMS), system administrators may use MFA, combining a password with a security token to prevent unauthorized access.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+        <div class="task" task-id="db12">
+            <div class="question">
+            <form id='q12' class="task-form">
+                <label for="q1"><h5>Question:</h5> What is a primary benefit of using multi-factor authentication (MFA)?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task12" value="correct"> It requires more than one form of verification.<br>
+                <input type="radio" name="task12" value="wrong"> It allows unlimited access to all users.<br>
+                <input type="radio" name="task12" value="wrong"> It eliminates the need for passwords.<br>
+                <span class="feedback" id="q12-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-db12 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+    
+
+<article>
+    <h3 course-id="db13" class="locked">4.2 Authorization:</h3>
+    <div class="theory db13">
+        <div class="course-container">
+    <p>Authorization controls what authenticated users are allowed to do once they access the system. It ensures that users only have access to the data and functions necessary for their role.</p>
+
+    <h5>Role-based Access Control (RBAC):</h5>
+    <p>RBAC is a method of managing user privileges based on predefined roles. Each role is assigned a set of permissions that dictate user actions on the database.</p>
+
+    <h5>How RBAC Works:</h5>
+    <ul>
+        <li><strong>Role Definition:</strong> Roles are defined according to job functions (e.g., "read-only user," "database administrator").</li>
+        <li><strong>User Assignment:</strong> Users are assigned roles, granting specific permissions (e.g., "read-only" user can view data but not modify it).</li>
+        <li><strong>Separation of Duties:</strong> RBAC maintains security by ensuring that no single user has excessive control over the system.</li>
+    </ul>
+
+    <h5>Benefits of RBAC:</h5>
+    <ul>
+        <li><strong>Minimized Risk:</strong> Users only have the privileges necessary for their work, reducing the risk of accidental or malicious data modification.</li>
+        <li><strong>Simplified Management:</strong> Permissions are managed centrally by role, making it easier to update or revoke access.</li>
+    </ul>
+
+    <h5>Example:</h5>
+    <p>In a hospital's patient record database, doctors may read and update patient records, while administrative staff may access financial information but not medical records. RBAC enforces these different levels of access automatically.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+    <div class="task" task-id="db13">
+        <div class="question">
+            <form id='q13' class="task-form">
+                <label for="q13"><h5>Question:</h5> What is the primary purpose of Role-based Access Control (RBAC)?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task13" value="correct"> To assign permissions based on user roles.<br>
+                <input type="radio" name="task13" value="wrong"> To give all users full access.<br>
+                <input type="radio" name="task13" value="wrong"> To eliminate user authentication.<br>
+                <span class="feedback" id="q13-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-db13 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+</article>
+
+<article>
+    <h3 course-id="db14" class="locked">4.3 Encryption for Database Security</h3>
+    <div class="theory db14">
+        <div class="course-container">
+    <p>Encryption is a critical component of database security, protecting sensitive data by converting it into a format that is unreadable without the decryption key.</p>
+
+    <h4>1. Data Encryption at Rest:</h4>
+    <p>Data at rest refers to stored data. Encrypting this data is important to protect it from unauthorized access, even if attackers gain physical access to the storage medium.</p>
+
+    <h5>Key Aspects:</h5>
+    <ul>
+        <li><strong>Disk-level Encryption:</strong> Full-disk encryption protects all data on the server’s hard drive using algorithms like AES-256.</li>
+        <li><strong>Column-level Encryption:</strong> Sensitive fields (e.g., passwords, credit card numbers) can be individually encrypted at the column level.</li>
+        <li><strong>Encryption Keys:</strong> Proper management of encryption keys is essential. Use strong keys, rotate them periodically, and store them securely.</li>
+    </ul>
+
+    <h5>Example:</h5>
+    <p>A retail company may encrypt credit card numbers at rest using AES-256. Even if an attacker accesses the database, the credit card numbers remain protected unless they also steal the encryption keys.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+        <div class="task" task-id="db14">
+            <div class="question">
+            <form id='q14' class="task-form">
+                <label for="q14"><h5>Question:</h5> What is a key benefit of encrypting data at rest?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task14" value="correct"> It protects data from unauthorized access even if storage is compromised.<br>
+                <input type="radio" name="task14" value="wrong"> It eliminates the need for authentication.<br>
+                <input type="radio" name="task14" value="wrong"> It allows unrestricted access to all users.<br>
+                <span class="feedback" id="q14-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-db14 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<article>
+    <h3>4.3.1 Data Encryption in Transit:</h3>
+    <div class="theory db15">
+        <div class="course-container">
+    <p>Data in transit refers to data being transmitted between the database and other systems. Encrypting this data ensures it cannot be intercepted and read during transmission.</p>
+
+    <h5>Key Aspects:</h5>
+    <ul>
+        <li><strong>SSL/TLS:</strong> These protocols encrypt data being transmitted between the database and client systems, preventing eavesdropping and alteration.</li>
+        <li><strong>VPNs:</strong> Virtual Private Networks create encrypted tunnels between remote systems and the database for added security.</li>
+    </ul>
+
+    <h5>Example:</h5>
+    <p>In an online banking application, sensitive data like account numbers and transaction details are encrypted with TLS during transmission, ensuring that intercepted data cannot be read or altered.</p>
+    <div class="next"><strong>Next >></strong></div>
+
+    <h5>Importance of Securing Sensitive Fields:</h5>
+    <p>Fields such as passwords, personally identifiable information (PII), and financial data require extra protection.</p>
+
+    <h5>Examples:</h5>
+    <ul>
+        <li><strong>Passwords:</strong> Store passwords securely by hashing them (e.g., bcrypt). This ensures that even if attackers breach the database, they cannot retrieve the original passwords.</li>
+        <li><strong>Personally Identifiable Information (PII):</strong> Encrypt PII both at rest and in transit to prevent unauthorized access.</li>
+    </ul>
+
+    <h5>Example:</h5>
+    <p>When users create accounts, their passwords are hashed using bcrypt before being stored. This prevents attackers from retrieving the original passwords even if the database is compromised.</p>
+
+</div>
+    
+    <div class="task" task-id="db15">
+        <div class="question">
+            <form id='q15' class="task-form">
+                <label for="q15"><h5>Question:</h5> Why is it important to encrypt data in transit?</label><br>
+                <p>Select the one that applies:</p>
+                <input type="radio" name="task15" value="correct"> It prevents attackers from intercepting and reading data during transmission.<br>
+                <input type="radio" name="task15" value="wrong"> It allows anyone to access the data without restrictions.<br>
+                <input type="radio" name="task15" value="wrong"> It reduces the need for secure passwords.<br>
+                <span class="feedback" id="q15-feedback"></span>
+            </form>
+            <div class="actions">
+                <button class="check">Check answers</button>
+                <div class="hint-db15 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                <div class="nextsection"><strong>Next >></strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+</article>
+
+</section>
+
+
+<section>
+<h2>5. Data Masking and Anonymization</h2>
+
+<article>
+<h3 course-id ="db16" class="locked">5.1 What is Data Masking?</h3>
+<div class="theory db16">
+    <div class="course-container">
+        <p>Data Masking is a process used to obfuscate or hide real data with modified or "masked" data to prevent unauthorized access to sensitive information. This technique is commonly used in non-production environments, such as development or testing, where access to real data is unnecessary but representative data is required for testing purposes.</p>
+
+        <h4>Key Objectives of Data Masking:</h4>
+        <ul>
+            <li>To protect sensitive information in non-production environments like development and testing.</li>
+            <li>To ensure that developers, testers, or analysts can still work with the data without exposing the real data values.</li>
+            <li>To maintain the structural and functional integrity of the original data so that software systems still behave as expected during testing.</li>
+        </ul>
+
+        <h4>Techniques for Data Masking:</h4>
+        <h5>Static Data Masking:</h5>
+        <p>In static masking, sensitive data in a database is replaced with masked data, and the masked data is used in non-production environments. The process is one-way: once masked, the data cannot be reverted to its original state.</p>
+        <p><strong>Example:</strong> Replacing a real Social Security Number (SSN) like 123-45-6789 with a masked value like XXX-XX-6789.</p>
+
+        <h5>Dynamic Data Masking:</h5>
+        <p>Dynamic masking modifies data in real time, as it is requested by users, without changing the data at rest in the database. It ensures that sensitive information is masked when retrieved by certain users, while privileged users (e.g., admins) can still access the real data.</p>
+        <p><strong>Example:</strong> A user querying a database for customer credit card information might see **** **** **** 1234 instead of the full credit card number.</p>
+
+        <h5>Shuffling:</h5>
+        <p>Shuffling involves rearranging data within a column to maintain consistency but hide the original values. This maintains realistic but anonymized data sets without changing the data format.</p>
+
+        <h5>Nulling Out:</h5>
+        <p>Sensitive data can be entirely replaced with NULL or empty values. This technique is useful for fields that are only required in production systems.</p>
+        <p><strong>Example:</strong> Replacing email addresses with NULL in a database used for testing an e-commerce website.</p>
+
+        <h5>Substitution:</h5>
+        <p>In substitution, sensitive data is replaced with randomly generated data that maintains the same format.</p>
+        <p><strong>Example:</strong> Real credit card numbers can be replaced with randomly generated valid credit card numbers that fit the same pattern.</p>
+
+        <h4>Example of Data Masking in Practice:</h4>
+        <p>In a healthcare system, developers working on new software features may need to access patient records. However, real patient names, addresses, and health conditions should not be visible. With data masking, sensitive fields like names or Social Security Numbers are replaced with fake data, while other non-sensitive information remains visible for testing.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+
+<div class="task" task-id="db16">
+    <div class="question">
+        <label for="q16"><h5>Question:</h5> What is the primary purpose of data masking?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q1' class="task-form">
+            <input type="radio" name="task16" value="wrong"> To permanently delete sensitive information from databases.<br>
+            <input type="radio" name="task16" value="correct"> To protect sensitive information in non-production environments.<br>
+            <input type="radio" name="task16" value="wrong"> To allow unrestricted access to all data.<br>
+            <span class="feedback" id="q16-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db16 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+
+
+<article>
+<h3 course-id="db17" class="locked">5.2 Anonymization</h3>
+<div class="theory db17">
+    <div class="course-container">
+        <p>Anonymization is the process of irreversibly transforming data in such a way that individuals cannot be identified directly or indirectly from the data. It is often used when sharing data for research or analysis, where the original personal data is no longer necessary.</p>
+
+        <h4>Key Aspects of Anonymization:</h4>
+        <ul>
+            <li><strong>Permanent Data Transformation:</strong> Once anonymized, data cannot be restored to its original form, ensuring that individuals cannot be re-identified, even in the case of a data breach.</li>
+            <li><strong>Data Privacy Compliance:</strong> Anonymization is critical in industries governed by privacy regulations such as GDPR or HIPAA, where protecting personally identifiable information (PII) is mandated.</li>
+        </ul>
+
+        <h4>Techniques for Anonymization:</h4>
+        <h5>Generalization:</h5>
+        <p>Generalization reduces the precision of data to make it less identifiable. Instead of specific details, broader categories are used.</p>
+        <p><strong>Example:</strong> Replacing an individual’s age of 43 with an age range like 40-50 to anonymize the data.</p>
+
+        <h5>Suppression:</h5>
+        <p>In suppression, identifying attributes such as names, addresses, or social security numbers are removed from the dataset entirely.</p>
+        <p><strong>Example:</strong> Removing all personally identifiable information (PII) from a healthcare database before sharing it for public research.</p>
+
+        <h5>Perturbation:</h5>
+        <p>Perturbation introduces noise to the data by slightly modifying values so that it is impossible to identify individuals but statistical properties are preserved for analysis.</p>
+        <p><strong>Example:</strong> Adding small random variations to income data so that no single individual's exact income is revealed, while trends across the dataset remain accurate.</p>
+
+        <h5>K-Anonymity:</h5>
+        <p>K-Anonymity ensures that each individual in the dataset cannot be distinguished from at least k-1 other individuals. The data is generalized until every record is indistinguishable from others within the same group.</p>
+        <p><strong>Example:</strong> If k=5, at least five people will share the same set of attributes, preventing individual identification.</p>
+
+        <h5>Data Pseudonymization:</h5>
+        <p>Pseudonymization replaces identifiable information with pseudonyms (e.g., ID numbers) but keeps a key linking the pseudonym to the original data. While this doesn’t guarantee full anonymization, it ensures that identifiers are no longer visible.</p>
+        <p><strong>Example:</strong> Replacing a person's name with an ID number like User_12345, while the original name is stored separately and only accessible by authorized personnel.</p>
+
+        <h4>Example of Anonymization in Practice:</h4>
+        <p>A social science research institute collects survey data from thousands of individuals about their income, education, and occupation. To protect their privacy, the data is anonymized by generalizing income ranges (e.g., "30,000-50,000 USD") and removing identifiers like names or addresses before the data is shared with external researchers.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+
+<div class="task" task-id="db17">
+    <div class="question">
+        <label for="q2"><h5>Question:</h5> What is a key aspect of anonymization?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q17' class="task-form">
+            <input type="radio" name="task17" value="wrong"> Anonymization can be reversed at any time.<br>
+            <input type="radio" name="task17" value="correct"> Anonymization ensures individuals cannot be identified from the data.<br>
+            <input type="radio" name="task17" value="wrong"> Anonymization is only used for testing data.<br>
+            <span class="feedback" id="q17-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db17 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+         </div>
+    </div>
+</div>
+</div>
+</article>
+
+
+<article>
+<h3 course-id="db18" class="locked">5.3 Differences Between Data Masking and Anonymization</h3>
+<div class="theory db18">
+    <div class="course-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Masking</th>
+                    <th>Anonymization</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Primarily used in non-production environments (e.g., testing, development).</td>
+                    <td>Used to permanently obscure data for privacy, especially when sharing data externally.</td>
+                </tr>
+                <tr>
+                    <td>The original data can still be accessed by authorized users in production.</td>
+                    <td>The original data cannot be restored; anonymization is irreversible.</td>
+                </tr>
+                <tr>
+                    <td>Focuses on hiding sensitive data for limited purposes, like development or testing.</td>
+                    <td>Focuses on protecting privacy when sharing data publicly or with third parties.</td>
+                </tr>
+                <tr>
+                    <td>Allows for realistic but obfuscated data.</td>
+                    <td>Ensures individuals are completely unidentifiable.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+<div class="task" task-id="db18">
+    <div class="question">
+        <label for="q18"><h5>Question:</h5> How does data masking differ from anonymization?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q18' class="task-form">
+            <input type="radio" name="task18" value="wrong"> Data masking permanently deletes data.<br>
+            <input type="radio" name="task18" value="correct"> Data masking is reversible while anonymization is not.<br>
+            <input type="radio" name="task18" value="wrong"> There is no difference; they are the same process.<br>
+            <span class="feedback" id="q18-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db18 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+</section>
+
+
+
+<section> 
+<h2>6. Secure Database Design</h2>
+<article>
+<h3 course-id="db19" class="locked">6.1 Normalization</h3>
+<div class="theory db19">
+    <div class="course-container">
+        <p>Normalization is the process of organizing a database to reduce data redundancy and ensure data integrity. It structures data into tables where each table focuses on a single subject or theme. This method prevents duplication of data, which can lead to inconsistencies, and ensures that the database operates efficiently and securely.</p>
+
+        <h4>Importance of Normalization in Security:</h4>
+        <ul>
+            <li><strong>Reduced Redundancy:</strong> By eliminating duplicated data, the database becomes less prone to inconsistencies, which could otherwise be exploited by attackers.</li>
+            <li><strong>Simpler Updates:</strong> When data is stored in a single, normalized location, updates are easier to manage, reducing the likelihood of overlooking sensitive data.</li>
+            <li><strong>Improved Data Integrity:</strong> Normalized databases enforce relationships between tables using foreign keys, ensuring that the data remains consistent and accurate.</li>
+        </ul>
+
+        <h4>Normalization Levels:</h4>
+        <p>Normalization is typically performed in stages called "normal forms." Here’s a quick overview:</p>
+        <ul>
+            <li><strong>First Normal Form (1NF):</strong> Ensures each table column holds atomic values and each record is unique.</li>
+            <li><strong>Second Normal Form (2NF):</strong> Ensures that non-key attributes are fully dependent on the primary key, eliminating partial dependency.</li>
+            <li><strong>Third Normal Form (3NF):</strong> Ensures that non-key attributes are only dependent on the primary key, reducing transitive dependencies.</li>
+        </ul>
+
+        <h4>Example:</h4>
+        <p>In an e-commerce application, a customer table may include fields for a customer's address. By normalizing the data, an order table could reference the customer table through a customer ID, avoiding redundant address data and improving security.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+
+<div class="task" task-id="db19">
+    <div class="question">
+        <label for="q19"><h5>Question:</h5> What is the primary goal of normalization in database design?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q19' class="task-form">
+            <input type="radio" name="task19" value="wrong"> To create as many tables as possible.<br>
+            <input type="radio" name="task19" value="correct"> To reduce data redundancy and ensure data integrity.<br>
+            <input type="radio" name="task19" value="wrong"> To increase the size of the database.<br>
+            <span class="feedback" id="q19-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db19 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+
+
+<article>
+<h3 course-id="db20" class="locked">6.2 Backup and Recovery Plans</h3>
+<div class="theory db20">
+    <div class="course-container">
+        <p>No database design is complete without a robust Backup and Recovery Plan. In the event of a disaster, system failure, or cyberattack, backups ensure that an organization can quickly restore lost data. A well-designed plan protects against data loss and ensures that backups themselves are secure from tampering.</p>
+
+        <h4>Creating Secure Backups:</h4>
+        <ul>
+            <li><strong>Regular Backups:</strong> Schedule regular backups to minimize data loss. Critical databases may need more frequent backups or even real-time replication.</li>
+            <li><strong>Offsite Backups:</strong> Store backups in a secure, offsite location to protect against physical disasters.</li>
+            <li><strong>Encryption:</strong> All backups should be encrypted to protect against unauthorized access.</li>
+            <li><strong>Versioning:</strong> Implement versioning in your backup plan to maintain multiple copies over time.</li>
+        </ul>
+
+        <h4>Backup Types:</h4>
+        <ul>
+            <li><strong>Full Backup:</strong> A complete copy of the entire database.</li>
+            <li><strong>Incremental Backup:</strong> Only backs up the data that has changed since the last backup.</li>
+            <li><strong>Differential Backup:</strong> Backs up all changes since the last full backup.</li>
+        </ul>
+
+        <h4>Recovery Plan:</h4>
+        <ul>
+            <li><strong>Test Recovery Procedures:</strong> Periodically test the recovery plan to ensure backups can be restored.</li>
+            <li><strong>Role Assignment:</strong> Designate individuals responsible for executing the recovery plan.</li>
+        </ul>
+
+        <h4>Example:</h4>
+        <p>A financial institution schedules daily incremental backups and weekly full backups, all encrypted and stored offsite. It regularly tests its recovery process by simulating data loss scenarios.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+<div class="task" task-id="db20">
+    <div class="question">
+        <label for="q20"><h5>Question:</h5> What is a crucial aspect of a Backup and Recovery Plan?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q20' class="task-form">
+            <input type="radio" name="task20" value="wrong"> Regularly deleting old backups.<br>
+            <input type="radio" name="task20" value="correct"> Scheduling regular backups and testing recovery procedures.<br>
+            <input type="radio" name="task20" value="wrong"> Only backing up data once a year.<br>
+            <span class="feedback" id="q20-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db20 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+
+
+<article>
+<h3 course-id="db21" class="locked">6.3 Auditing and Monitoring</h3>
+<div class="theory db21">
+    <div class="course-container">
+        <p>Auditing and monitoring are crucial in detecting and responding to suspicious activities in a database. These practices track who accesses the database, what changes are made, and how data is being used. By continuously monitoring database activity, organizations can detect security threats early and take appropriate action.</p>
+
+        <h4>Auditing:</h4>
+        <ul>
+            <li><strong>Audit Logs:</strong> Maintain logs that track user activities such as login attempts and data modifications.</li>
+            <li><strong>Tracking Access:</strong> Logs should include information about who accessed what data and when.</li>
+            <li><strong>Compliance Requirements:</strong> Many industries require maintaining audit trails of database activity.</li>
+        </ul>
+
+        <h4>Monitoring:</h4>
+        <ul>
+            <li><strong>Database Activity Monitoring (DAM):</strong> Tools that track transactions and flag suspicious behavior.</li>
+            <li><strong>User Behavior Analytics (UBA):</strong> Analyzes patterns in user behavior to detect abnormal activities.</li>
+            <li><strong>Real-time Alerts:</strong> Monitoring systems should generate alerts for activities that violate policies.</li>
+        </ul>
+
+        <h4>Example:</h4>
+        <p>An online retail company uses a DAM system to track database queries. If an employee accesses customer records outside normal hours, the system alerts the database administrator for investigation.</p>
+        <div class="next"><strong>Next >></strong></div>
+    </div>
+
+
+<div class="task" task-id="db21">
+    <div class="question">
+        <label for="q21"><h5>Question:</h5> What is the primary purpose of auditing in database security?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q21' class="task-form">
+            <input type="radio" name="task21" value="wrong"> To make the database faster.<br>
+            <input type="radio" name="task21" value="correct"> To keep a detailed record of database activities for compliance and investigation.<br>
+            <input type="radio" name="task21" value="wrong"> To permanently delete old data.<br>
+            <span class="feedback" id="q21-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db21 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+</section>
+
+
+<section>
+ <h2>8. Database Firewalls and Intrusion Detection</h2>
+
+<article>
+<h3 course-id="db22" class="locked">8.1 Database Firewalls</h3>
+<div class="theory db22">
+    <div class="course-container">
+        <p>Database firewalls are specialized security mechanisms that monitor and control incoming and outgoing database traffic:</p>
+        <ul>
+            <li><strong>Preventing Unauthorized Access:</strong>
+                <ul>
+                    <li><strong>Firewall Rules:</strong> Predefined rules filter traffic based on criteria like IP address, user authentication, and query validation.</li>
+                    <li><strong>Access Control:</strong> Enforces strict controls by allowing only traffic from trusted sources.</li>
+                    <li><strong>Application-layer Protection:</strong> Focuses on protecting the database at the application layer, providing granular control.</li>
+                </ul>
+            </li>
+            <li><strong>Types of Database Firewalls:</strong>
+                <ul>
+                    <li><strong>Network-based Firewalls:</strong> Deployed at the network perimeter to monitor all traffic to and from the database server.</li>
+                    <li><strong>Host-based Firewalls:</strong> Installed on the database server, filtering traffic directed to the database.</li>
+                    <li><strong>Web Application Firewalls (WAFs):</strong> Inspect incoming web traffic and block malicious SQL queries.</li>
+                </ul>
+            </li>
+        </ul>
+        <h4>Example of Usage:</h4>
+        <p>An organization implements a database firewall to prevent SQL injection attacks by blocking requests that contain suspicious patterns.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+<div class="task" task-id="db22">
+    <div class="question">
+        <label for="q22"><h5>Question:</h5> What is the primary function of a database firewall?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q22' class="task-form">
+            <input type="radio" name="task22" value="wrong"> To increase database size.<br>
+            <input type="radio" name="task22" value="correct"> To monitor and control incoming and outgoing database traffic.<br>
+            <input type="radio" name="task22" value="wrong"> To make the database faster.<br>
+            <span class="feedback" id="q22-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db22 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+
+
+<article>
+<h3 course-id="db23" class="locked">8.2 Intrusion Detection Systems (IDS)</h3>
+<div class="theory db23">
+    <div class="course-container">
+        <p>Intrusion Detection Systems (IDS) are tools that monitor traffic and database activity to detect suspicious behavior:</p>
+        <ul>
+            <li><strong>Monitoring Database Traffic:</strong>
+                <ul>
+                    <li><strong>Traffic Analysis:</strong> Continuously analyzes database traffic for unusual patterns or behaviors.</li>
+                    <li><strong>Real-time Alerts:</strong> Generates alerts for suspicious activities, allowing prompt investigation.</li>
+                </ul>
+            </li>
+            <li><strong>Types of Intrusion Detection Systems:</strong>
+                <ul>
+                    <li><strong>Network-based IDS (NIDS):</strong> Monitors network traffic for external threats.</li>
+                    <li><strong>Host-based IDS (HIDS):</strong> Monitors logs and processes on the database server for signs of unauthorized access.</li>
+                </ul>
+            </li>
+            <li><strong>Behavioral Analysis:</strong> Utilizes anomaly detection and signature-based detection to identify threats.</li>
+        </ul>
+        <h4>Example of Usage:</h4>
+        <p>A company implements an IDS that monitors for multiple failed login attempts, indicating a potential brute-force attack on the database.</p>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+<div class="task" task-id="db23">
+    <div class="question">
+        <label for="q5"><h5>Question:</h5> What is the role of an Intrusion Detection System (IDS)?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q23' class="task-form">
+            <input type="radio" name="task23" value="wrong"> To make database queries faster.<br>
+            <input type="radio" name="task23" value="correct"> To monitor database activity and alert administrators about suspicious behavior.<br>
+            <input type="radio" name="task23" value="wrong"> To store user data securely.<br>
+            <span class="feedback" id="q23-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db23 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+</section>
+
+<section>
+    <h2>Data protection laws and Regulations</h2>
+
+<article>
+<h3 course-id="db24" class="locked">9.1 Data Protection Laws</h3>
+<div class="theory db24">
+    <div class="course-container">
+        <p>Organizations must comply with various data protection laws, including:</p>
+
+        <h4>General Data Protection Regulation (GDPR):</h4>
+        <p>Enacted in May 2018, GDPR regulates how personal data is collected, stored, and processed in the EU.</p>
+        <ul>
+            <li><strong>Key Requirements:</strong>
+                <ul>
+                    <li><strong>Consent:</strong> Explicit consent is required from individuals before collecting their data.</li>
+                    <li><strong>Right to Access:</strong> Individuals can access and request corrections or deletions of their data.</li>
+                    <li><strong>Data Protection Impact Assessments (DPIAs):</strong> Required for high-risk processing activities.</li>
+                    <li><strong>Data Breach Notification:</strong> Must notify individuals and authorities within 72 hours of a breach.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>Health Insurance Portability and Accountability Act (HIPAA):</h4>
+        <p>A U.S. law that establishes standards for protecting sensitive patient health information.</p>
+        <ul>
+            <li><strong>Key Requirements:</strong>
+                <ul>
+                    <li><strong>Privacy Rule:</strong> Sets standards for protecting medical records and personal health information.</li>
+                    <li><strong>Security Rule:</strong> Establishes safeguards for electronic protected health information (ePHI).</li>
+                    <li><strong>Breach Notification Rule:</strong> Requires notification in the event of a breach of unsecured ePHI.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4>California Consumer Privacy Act (CCPA):</h4>
+        <p>Effective January 2020, the CCPA grants California residents rights regarding their personal data.</p>
+        <ul>
+            <li><strong>Key Requirements:</strong>
+                <ul>
+                    <li><strong>Right to Know:</strong> Consumers can request information about their data.</li>
+                    <li><strong>Right to Delete:</strong> Consumers can request the deletion of their personal data.</li>
+                    <li><strong>Opt-out:</strong> Consumers can opt out of the sale of their data.</li>
+                    <li><strong>Non-discrimination:</strong> Businesses cannot discriminate against consumers exercising their rights.</li>
+                </ul>
+            </li>
+        </ul>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+<div class="task" task-id="db25">
+    <div class="question">
+        <label for="q25"><h5>Question:</h5> What is a key requirement of the GDPR?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q25' class="task-form">
+            <input type="radio" name="task25" value="wrong"> Organizations must collect personal data without consent.<br>
+            <input type="radio" name="task25" value="correct"> Organizations must obtain explicit consent from individuals before collecting their personal data.<br>
+            <input type="radio" name="task25" value="wrong"> Individuals cannot access their personal data.<br>
+            <span class="feedback" id="q25-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db25 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+
+
+<article>
+<h3 course-id="db26" class="locked">9.2 Data Breach Response</h3>
+<div class="theory db26">
+    <div class="course-container">
+        <p>In the event of a database breach, having a well-defined response plan is essential for minimizing damage:</p>
+
+        <h4>Immediate Response:</h4>
+        <ul>
+            <li><strong>Contain the Breach:</strong> Identify and isolate affected systems.</li>
+            <li><strong>Assess the Impact:</strong> Determine the extent of the breach and compromised data.</li>
+        </ul>
+
+        <h4>Notification:</h4>
+        <ul>
+            <li><strong>Notify Affected Individuals:</strong> Inform them about the breach and what data was compromised.</li>
+            <li><strong>Notify Regulatory Authorities:</strong> Depending on laws like GDPR, notify authorities within required time frames.</li>
+        </ul>
+
+        <h4>Investigation:</h4>
+        <ul>
+            <li><strong>Conduct a Thorough Investigation:</strong> Analyze how the breach occurred and vulnerabilities exploited.</li>
+            <li><strong>Document Findings:</strong> Maintain documentation of the breach for compliance and potential legal proceedings.</li>
+        </ul>
+
+        <h4>Remediation:</h4>
+        <ul>
+            <li><strong>Implement Remedial Measures:</strong> Address vulnerabilities identified during the investigation.</li>
+            <li><strong>Review and Update Policies:</strong> Ensure data protection policies are current and train employees.</li>
+        </ul>
+
+        <h4>Post-Breach Analysis:</h4>
+        <ul>
+            <li><strong>Evaluate the Response:</strong> Assess the effectiveness of the breach response.</li>
+            <li><strong>Communicate Lessons Learned:</strong> Share insights to enhance overall security awareness.</li>
+        </ul>
+    <div class="next"><strong>Next >></strong></div>
+</div>
+
+<div class="task" task-id="db26">
+    <div class="question">
+        <label for="q26"><h5>Question:</h5> What is the first step in a data breach response plan?</label><br>
+        <p>Select the one that applies:</p>
+        <form id='q7' class="task-form">
+            <input type="radio" name="task26" value="wrong"> Notify affected individuals immediately.<br>
+            <input type="radio" name="task26" value="correct"> Contain the breach and identify its source.<br>
+            <input type="radio" name="task26" value="wrong"> Conduct a thorough investigation first.<br>
+            <span class="feedback" id="q26-feedback"></span>
+        </form>
+        <div class="actions">
+            <button class="check">Check answers</button>
+            <div class="hint-db26 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+            <div class="nextsection"><strong>Next >></strong></div>
+        </div>
+    </div>
+</div>
+</div>
+</article>
+</div>
+</body>
+</html>

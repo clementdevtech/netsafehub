@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Cybersecurity Applications</title>
+    <script type="text/javascript" src="../course_script/function.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/course_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cybersecurity </h1>
+        <div class="rewards">
+        <div id="rewards">
+            Rewards: <span>0</span> points
+        </div>
+        <div id="hearts">
+            Hearts: <span class="heart">❤️</span> <span class="heart">❤️</span> <span class="heart">❤️</span>
+        </div>
+        </div>
+   </header>
+    <div class="course">
+ <section>
+    <h2>1. Operating System Security</h2>
+    <article>
+        <h3 course-id="cabi1" class="locked">1.1 Windows Security</h3>
+        <div class="theory cabi1">
+            <div class="course-container">
+                <h4>User Account Control (UAC)</h4>
+                <p><strong>Purpose:</strong> Prevent unauthorized changes to the operating system.</p>
+                <p><strong>Functionality:</strong> Prompts users for administrative credentials or confirmation before running tasks requiring elevated privileges.</p>
+                <p><strong>Benefits:</strong> Mitigates the risk of malware or unauthorized programs making system-wide changes.</p>
+
+                <h4>Group Policies</h4>
+                <p><strong>Purpose:</strong> Centralized management of security and configuration settings across multiple computers in a network.</p>
+                <ul>
+                    <li>Control password policies (e.g., password length, expiration).</li>
+                    <li>Enforce login restrictions.</li>
+                    <li>Configure firewall rules.</li>
+                    <li>Disable unnecessary services.</li>
+                </ul>
+                <p><strong>Application:</strong> Mainly used in Active Directory environments to enforce uniform security settings.</p>
+
+                <h4>BitLocker</h4>
+                <p><strong>Purpose:</strong> Full disk encryption solution for protecting sensitive data on Windows devices.</p>
+                <p><strong>How It Works:</strong> Encrypts entire volumes on a hard drive, making data inaccessible without proper authentication (password, PIN, or hardware key).</p>
+
+                <h4>Windows Defender</h4>
+                <p><strong>Purpose:</strong> Built-in antivirus and threat protection software.</p>
+                <p><strong>Capabilities:</strong> Real-time scanning, threat detection and removal, and Advanced Threat Protection (ATP) for enterprise users.</p>
+
+                <h4>Patch Management (WSUS)</h4>
+                <p><strong>Windows Server Update Services (WSUS):</strong> A tool for managing and deploying updates within a Windows-based network.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi1">
+                <div class="question">
+                    <label for="q1"><h5>Question:</h5> What is the primary purpose of User Account Control (UAC)?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q1' class="task-form">
+                        <input type="radio" name="task1" value="wrong"> To speed up system processes.<br>
+                        <input type="radio" name="task1" value="correct"> To prevent unauthorized changes to the operating system.<br>
+                        <input type="radio" name="task1" value="wrong"> To disable antivirus software.<br>
+                        <span class="feedback" id="q1-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi1 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi2" class="locked">1.2 Linux Security</h3>
+        <div class="theory cabi2">
+            <div class="course-container">
+                <h4>File Permissions</h4>
+                <p><strong>Purpose:</strong> Manage access rights to files and directories for users, groups, and others.</p>
+                <p><strong>Permissions:</strong> Read, Write, and Execute permissions control who can access or modify files and directories.</p>
+
+                <h4>SELinux / AppArmor</h4>
+                <p><strong>Purpose:</strong> Mandatory access control mechanisms to enforce fine-grained security policies.</p>
+                <ul>
+                    <li><strong>SELinux:</strong> Implemented at the kernel level for comprehensive security, default in Red Hat-based distributions.</li>
+                    <li><strong>AppArmor:</strong> Uses profiles to define security rules, simpler than SELinux, common in Ubuntu.</li>
+                </ul>
+
+                <h4>IPTables / NFTables</h4>
+                <p><strong>Purpose:</strong> Firewalls for controlling inbound and outbound network traffic.</p>
+                <p><strong>Use Cases:</strong> Critical for network security on Linux systems, used to block unauthorized access and filter traffic.</p>
+
+                <h4>SSH Hardening</h4>
+                <p><strong>Best Practices:</strong> Use SSH keys, disable root login, and change default SSH ports for stronger security.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi2">
+                <div class="question">
+                    <label for="q2"><h5>Question:</h5> What is the purpose of SSH hardening on Linux systems?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q2' class="task-form">
+                        <input type="radio" name="task2" value="wrong"> To make SSH faster.<br>
+                        <input type="radio" name="task2" value="correct"> To secure remote access to Linux systems.<br>
+                        <input type="radio" name="task2" value="wrong"> To disable SSH access.<br>
+                        <span class="feedback" id="q2-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi2 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi3" class="locked">1.3 Tools for Security Management</h3>
+        <div class="theory cabi3">
+            <div class="course-container">
+                <h4>Windows Security Baseline (CIS)</h4>
+                <p><strong>Purpose:</strong> Provides predefined security configurations for Windows environments, helping organizations meet industry standards.</p>
+
+                <h4>Ansible / SaltStack (for Linux Automation)</h4>
+                <p><strong>Purpose:</strong> Automate configuration management and security policies across Linux servers.</p>
+                <ul>
+                    <li><strong>Ansible:</strong> Agentless and uses playbooks to manage server configurations.</li>
+                    <li><strong>SaltStack:</strong> Highly scalable and suitable for large infrastructures, used to enforce security configurations.</li>
+                </ul>
+                <p><strong>Use Cases:</strong> Automating security patches, applying firewall rules, managing SSH configurations, and enforcing access controls.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi3">
+                <div class="question">
+                    <label for="q3"><h5>Question:</h5> What is the main purpose of tools like Ansible and SaltStack?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q3' class="task-form">
+                        <input type="radio" name="task3" value="wrong"> To break into systems remotely.<br>
+                        <input type="radio" name="task3" value="correct"> To automate configuration management and security policies.<br>
+                        <input type="radio" name="task3" value="wrong"> To disable firewall rules.<br>
+                        <span class="feedback" id="q3-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi3 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+
+<section>
+    <h2>2. Antivirus and Endpoint Security</h2>
+
+    
+    <article>
+        <h3 course-id="cabi4" class="locked">2.1 Antivirus Software</h3>
+        <div class="theory cabi4">
+            <div class="course-container">
+                <h4>Heuristics-based Detection</h4>
+                <p><strong>Purpose:</strong> Detects new or unknown malware based on behavior rather than signatures.</p>
+                <p><strong>How It Works:</strong> Heuristics algorithms analyze the behavior of files or programs to determine if they exhibit suspicious activities, such as modifying system files or replicating rapidly.</p>
+                <p><strong>Benefits:</strong> Identifies emerging threats before they have known signatures. Reduces reliance on daily updates for malware definitions.</p>
+
+                <h4>Signature-based Detection</h4>
+                <p><strong>Purpose:</strong> Identifies known malware using a database of signatures (unique patterns or characteristics of malware).</p>
+                <p><strong>How It Works:</strong> Compares files and programs against a vast database of known malware signatures. If a match is found, the file is flagged as malicious.</p>
+                <p><strong>Limitations:</strong> Only effective against previously identified malware. Requires frequent updates to the signature database to remain effective against new threats.</p>
+
+                <h4>Real-time Protection</h4>
+                <p><strong>Purpose:</strong> Continuously monitors the system for potential threats and takes action in real time.</p>
+                <p><strong>How It Works:</strong> Scans files, email attachments, downloads, and network activity as they are accessed or transferred.</p>
+                <p><strong>Advantages:</strong> Prevents malware from executing by detecting threats before they cause harm. Alerts the user or automatically quarantines/destroys detected threats.</p>
+
+                <h4>Sandboxing</h4>
+                <p><strong>Purpose:</strong> Safely analyzes suspicious files by running them in a controlled, isolated environment.</p>
+                <p><strong>How It Works:</strong> Suspicious files are executed in a virtual environment (sandbox), preventing them from interacting with the actual system. The behavior of the file is monitored, and if it exhibits malicious actions, it is flagged and prevented from affecting the real environment.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi4">
+                <div class="question">
+                    <label for="q4"><h5>Question:</h5> What is the primary purpose of sandboxing?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q4' class="task-form">
+                        <input type="radio" name="task4" value="wrong"> To speed up system performance.<br>
+                        <input type="radio" name="task4" value="correct"> To safely analyze suspicious files in a controlled environment.<br>
+                        <input type="radio" name="task4" value="wrong"> To permanently delete suspicious files.<br>
+                        <span class="feedback" id="q4-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi4 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi5" class="locked">2.2 Endpoint Detection and Response (EDR)</h3>
+        <div class="theory cabi5">
+            <div class="course-container">
+                <h4>Monitoring</h4>
+                <p><strong>Purpose:</strong> Continuously monitor endpoints (laptops, desktops, servers, mobile devices) for potential security breaches.</p>
+                <p><strong>Functionality:</strong> EDR tools gather data on processes, file changes, network connections, and user activity. Provides real-time visibility into the actions of every endpoint, enabling rapid detection of abnormal behavior.</p>
+                <p><strong>Benefits:</strong> Can quickly detect new or sophisticated threats that might evade traditional antivirus software.</p>
+
+                <h4>Detection</h4>
+                <p><strong>Purpose:</strong> Identify suspicious activities, such as unusual file executions, lateral movement, or abnormal network traffic.</p>
+                <p><strong>How It Works:</strong> Uses machine learning algorithms and threat intelligence to identify patterns that are indicative of an attack. Detects previously unknown threats by recognizing deviations from normal system behavior.</p>
+
+                <h4>Response Automation</h4>
+                <p><strong>Purpose:</strong> Automate the response to detected threats, minimizing the time between detection and containment.</p>
+                <p><strong>How It Works:</strong> EDR tools can automatically isolate affected devices from the network to prevent further spread of malware. Some solutions can also kill malicious processes, delete infected files, and roll back systems to a pre-infected state.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi5">
+                <div class="question">
+                    <label for="q5"><h5>Question:</h5> How does EDR automate the response to detected threats?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q5' class="task-form">
+                        <input type="radio" name="task5" value="wrong"> By disabling the entire network.<br>
+                        <input type="radio" name="task5" value="correct"> By isolating affected devices, killing malicious processes, and deleting infected files.<br>
+                        <input type="radio" name="task5" value="wrong"> By shutting down all endpoints permanently.<br>
+                        <span class="feedback" id="q5-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi5 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi6" class="locked">2.3 Tools for Antivirus and Endpoint Security</h3>
+        <div class="theory cabi6">
+            <div class="course-container">
+                <h4>Antivirus Software Examples</h4>
+                <p><strong>Symantec:</strong> Offers advanced threat protection, including signature-based detection, heuristics, and real-time scanning.</p>
+                <p><strong>Kaspersky:</strong> Provides behavior-based threat detection, anti-phishing, and network protection.</p>
+                <p><strong>McAfee:</strong> Real-time protection, firewall integration, and secure web browsing.</p>
+                <p><strong>Avast:</strong> Free and paid antivirus with real-time protection, malware removal, and anti-ransomware tools.</p>
+
+                <h4>EDR Tools</h4>
+                <p><strong>CrowdStrike Falcon:</strong> Cloud-based EDR solution offering continuous monitoring, AI-driven threat detection, and response capabilities.</p>
+                <p><strong>Carbon Black:</strong> Advanced endpoint protection by analyzing every event on the endpoint and automating responses to complex attacks.</p>
+                <p><strong>Microsoft Defender ATP:</strong> Comprehensive endpoint security platform integrated with Windows, providing seamless monitoring and response.</p>
+                <p><strong>SentinelOne:</strong> AI-powered EDR platform that can autonomously detect, respond to, and remediate threats in real time.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi6">
+                <div class="question">
+                    <label for="q6"><h5>Question:</h5> Which of the following is an EDR tool?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q6' class="task-form">
+                        <input type="radio" name="task6" value="wrong"> Avast.<br>
+                        <input type="radio" name="task6" value="correct"> CrowdStrike Falcon.<br>
+                        <input type="radio" name="task6" value="wrong"> McAfee.<br>
+                        <span class="feedback" id="q6-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi6 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<section>
+    <h2>3. Network Security Tools</h2>
+
+    
+    <article>
+        <h3 course-id="cabi7" class="locked">3.1 Firewalls</h3>
+        <div class="theory cabi7">
+            <div class="course-container">
+                <h4>Stateful Inspection</h4>
+                <p><strong>Purpose:</strong> Tracks the state of active connections and uses this information to make decisions about which network packets to allow or deny.</p>
+                <p><strong>How It Works:</strong> Keeps a table of established connections and monitors their state. If a packet is part of an established or approved connection, it is allowed; otherwise, it is denied.</p>
+                <p><strong>Advantages:</strong> More sophisticated than stateless firewalls, which only check packets independently of the connection state. Offers better performance by only allowing trusted traffic through.</p>
+
+                <h4>Deep Packet Inspection (DPI)</h4>
+                <p><strong>Purpose:</strong> Inspects the actual data (payload) of each packet, not just the headers, to detect and block malicious content or leaks of sensitive information.</p>
+                <p><strong>How It Works:</strong> DPI analyzes packet headers and the content within the packet, looking for signs of attacks, malware, or policy violations. Can be used to identify specific data patterns, such as malicious code or PII (Personally Identifiable Information).</p>
+                <p><strong>Benefits:</strong> Detects threats that simple packet filtering misses, such as data exfiltration or encrypted malware. Can enforce application-specific rules and prioritize or block certain types of traffic.</p>
+
+                <h4>Next-Generation Firewall (NGFW)</h4>
+                <p><strong>Purpose:</strong> Adds advanced features to traditional firewalls, such as application awareness, intrusion detection/prevention, and URL filtering.</p>
+                <p><strong>Key Features:</strong> Application Awareness, IDS/IPS capabilities, URL filtering, and defense against modern threats.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi7">
+                <div class="question">
+                    <label for="q7"><h5>Question:</h5> What is the purpose of Stateful Inspection?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q7' class="task-form">
+                        <input type="radio" name="task7" value="wrong"> To check packet size.<br>
+                        <input type="radio" name="task7" value="correct"> To track the state of active connections and allow/deny packets based on connection state.<br>
+                        <input type="radio" name="task7" value="wrong"> To encrypt network traffic.<br>
+                        <span class="feedback" id="q7-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi7 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <article>
+        <h3 course-id="cabi8" class="locked">3.2 Virtual Private Networks (VPNs)</h3>
+        <div class="theory cabi8">
+            <div class="course-container">
+                <h4>IPsec (Internet Protocol Security)</h4>
+                <p><strong>Purpose:</strong> A suite of protocols used to authenticate and encrypt IP packets, ensuring secure communication over IP networks.</p>
+                <p><strong>How It Works:</strong> IPsec encrypts both the data and the header of each IP packet, ensuring confidentiality and integrity. Uses two modes: Transport Mode and Tunnel Mode.</p>
+                <p><strong>Use Cases:</strong> Commonly used for site-to-site VPNs between corporate offices and remote access VPNs for individuals.</p>
+
+                <h4>SSL/TLS VPNs</h4>
+                <p><strong>Purpose:</strong> Encrypts connections using SSL or TLS protocols, often for securing web-based applications and remote access VPNs.</p>
+                <p><strong>How It Works:</strong> Establishes a secure, encrypted tunnel through the web browser, typically without the need for additional client software.</p>
+                <p><strong>Benefits:</strong> Easier to deploy than IPsec VPNs, as they require only a web browser.</p>
+
+                <h4>VPN Kill Switch</h4>
+                <p><strong>Purpose:</strong> Ensures that your device is disconnected from the internet if the VPN connection drops, preventing accidental exposure of sensitive data.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi8">
+                <div class="question">
+                    <label for="q8"><h5>Question:</h5> Which VPN type typically requires only a web browser to function?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q8' class="task-form">
+                        <input type="radio" name="task8" value="wrong"> IPsec VPN.<br>
+                        <input type="radio" name="task8" value="correct"> SSL/TLS VPN.<br>
+                        <input type="radio" name="task8" value="wrong"> MPLS VPN.<br>
+                        <span class="feedback" id="q8-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi8 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi9" class="locked">3.3 Intrusion Detection and Prevention Systems (IDS/IPS)</h3>
+        <div class="theory cabi9">
+            <div class="course-container">
+                <h4>Signature-based IDS</h4>
+                <p><strong>Purpose:</strong> Detects known attacks by comparing network traffic patterns to a database of signatures.</p>
+                <p><strong>How It Works:</strong> Each signature represents a known attack or vulnerability. The system scans network traffic for these signatures and flags any matches as potential threats.</p>
+                <p><strong>Limitations:</strong> Cannot detect new or unknown attacks (zero-day threats).</p>
+
+                <h4>Anomaly-based IDS</h4>
+                <p><strong>Purpose:</strong> Detects unusual or abnormal network behavior that could indicate an attack.</p>
+                <p><strong>How It Works:</strong> Uses machine learning or statistical models to define what is considered "normal" network behavior. If traffic deviates from these norms, it is flagged as suspicious and potentially harmful.</p>
+
+                <h4>IPS (Inline)</h4>
+                <p><strong>Purpose:</strong> Prevents attacks by actively blocking malicious traffic, whereas IDS solutions only detect and alert administrators about suspicious activity.</p>
+                <p><strong>How It Works:</strong> Positioned directly in the path of network traffic, the IPS inspects every packet that passes through it. If malicious traffic is detected, the IPS automatically drops the packet, blocks the source, or resets the connection.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi9">
+                <div class="question">
+                    <label for="q9"><h5>Question:</h5> What is the main difference between IDS and IPS?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q9' class="task-form">
+                        <input type="radio" name="task9" value="wrong"> IDS encrypts traffic, IPS decrypts it.<br>
+                        <input type="radio" name="task9" value="correct"> IDS detects threats, while IPS actively blocks malicious traffic.<br>
+                        <input type="radio" name="task9" value="wrong"> IDS works only on local networks, IPS works on the internet.<br>
+                        <span class="feedback" id="q9-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi9 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="cabi10" class="locked">3.4 Tools for Network Security</h3>
+        <div class="theory cabi10">
+            <div class="course-container">
+                <h4>Firewall Tools</h4>
+                <p><strong>pfSense:</strong> An open-source firewall and router platform with stateful packet filtering, VPN capabilities, and advanced routing options.</p>
+                <p><strong>Palo Alto Networks:</strong> A leading NGFW provider with features such as application control, IDS/IPS, and cloud integration.</p>
+                <p><strong>Cisco ASA:</strong> A widely used firewall solution with traditional firewall features and VPN support.</p>
+
+                <h4>VPN Tools</h4>
+                <p><strong>OpenVPN:</strong> A popular open-source VPN solution known for its strong encryption, flexibility, and cross-platform support.</p>
+                <p><strong>WireGuard:</strong> A modern, lightweight VPN protocol offering faster performance and easier configuration compared to older VPN solutions like IPsec.</p>
+                <p><strong>Cisco AnyConnect:</strong> A client-based VPN solution commonly used in enterprise environments for secure remote access to internal resources.</p>
+
+                <h4>IDS/IPS Tools</h4>
+                <p><strong>Snort:</strong> An open-source IDS/IPS that performs real-time traffic analysis and packet logging.</p>
+                <p><strong>Suricata:</strong> Another open-source IDS/IPS offering high performance and multi-threaded packet inspection.</p>
+                <p><strong>Zeek:</strong> A powerful network analysis tool providing deep insight into network traffic and detecting anomalies.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi10">
+                <div class="question">
+                    <label for="q10"><h5>Question:</h5> Which VPN tool is known for its modern, lightweight design and faster performance?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q10' class="task-form">
+                        <input type="radio" name="task10" value="wrong"> OpenVPN.<br>
+                        <input type="radio" name="task10" value="correct"> WireGuard.<br>
+                        <input type="radio" name="task10" value="wrong"> Cisco AnyConnect.<br>
+                        <span class="feedback" id="q10-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi10 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<section>
+    <h2>4. Cryptography Applications</h2>
+    <!--p style="margin-left: 5%; width: 90%; background: blueviolet; color: white;">Cryptography is fundamental to ensuring the confidentiality, integrity, and authenticity of information. It plays a critical role in securing communication, protecting sensitive data, and verifying identities in the digital world. The following key concepts provide a deeper understanding of cryptographic applications.</p-->
+
+
+    <article>
+        <h3 course-id="cabi11" class="locked">4.1 Symmetric Encryption</h3>
+        <div class="theory cabi11">
+            <div class="course-container">
+                <h4>AES (Advanced Encryption Standard)</h4>
+                <p><strong>Purpose:</strong> Protects data by using a single key for both encryption (locking the data) and decryption (unlocking the data). It is often used for encrypting large amounts of data efficiently.</p>
+                <p><strong>How It Works:</strong> Both the sender and the receiver use the same secret key for encryption and decryption. The key must be shared securely between the parties, as anyone with the key can decrypt the data.</p>
+                <p><strong>Applications:</strong> Used in securing data at rest (e.g., disk encryption) and data in transit (e.g., secure communication channels like SSL/TLS). Suitable for situations where both parties trust each other and can securely share the key.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi11">
+                <div class="question">
+                    <label for="q11"><h5>Question:</h5> What is the main purpose of symmetric encryption?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q11' class="task-form">
+                        <input type="radio" name="task11" value="correct"> To use a single key for both encryption and decryption.<br>
+                        <input type="radio" name="task11" value="wrong"> To use a public and private key pair for secure communication.<br>
+                        <input type="radio" name="task11" value="wrong"> To verify the identity of the sender using a digital signature.<br>
+                        <span class="feedback" id="q11-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi11 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+  
+    <article>
+        <h3 course-id="cabi12" class="locked">4.2 Asymmetric Encryption</h3>
+        <div class="theory cabi12">
+            <div class="course-container">
+                <h4>RSA (Rivest–Shamir–Adleman)</h4>
+                <p><strong>Purpose:</strong> Secures data by using two keys—a public key for encryption and a private key for decryption. Commonly used for secure communication between parties who have not previously shared a secret key.</p>
+                <p><strong>How It Works:</strong> The public key is shared openly and can be used by anyone to encrypt data. Only the holder of the corresponding private key can decrypt the data.</p>
+                <p><strong>Applications:</strong> Secure data transmission, such as in SSL/TLS protocols for securing websites. Digital signatures for verifying the identity of a sender.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi12">
+                <div class="question">
+                    <label for="q12"><h5>Question:</h5> Which encryption method uses a public and private key pair?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q12' class="task-form">
+                        <input type="radio" name="task12" value="wrong"> Symmetric encryption.<br>
+                        <input type="radio" name="task12" value="correct"> Asymmetric encryption.<br>
+                        <input type="radio" name="task12" value="wrong"> Hashing.<br>
+                        <span class="feedback" id="q12-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi12 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi13" class="locked">4.3 Hashing</h3>
+        <div class="theory cabi13">
+            <div class="course-container">
+                <h4>SHA-256 (Secure Hash Algorithm)</h4>
+                <p><strong>Purpose:</strong> Hashing transforms data of any size into a fixed-size value (hash) that cannot be reversed to the original data. It ensures the integrity of data by detecting any changes to the original input.</p>
+                <p><strong>How It Works:</strong> A hash function processes the input data and generates a unique hash value. If even a single bit of the input data changes, the hash value will change significantly, alerting to possible tampering.</p>
+                <p><strong>Applications:</strong> Verifying the integrity of downloaded files. Storing passwords securely in databases. Blockchain transactions rely on hashing to ensure the integrity of transaction data.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi13">
+                <div class="question">
+                    <label for="q13"><h5>Question:</h5> What is the primary use of hashing?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q13' class="task-form">
+                        <input type="radio" name="task13" value="correct"> To ensure the integrity of data by detecting changes.<br>
+                        <input type="radio" name="task13" value="wrong"> To encrypt and decrypt data using a key.<br>
+                        <input type="radio" name="task13" value="wrong"> To verify the sender's identity.<br>
+                        <span class="feedback" id="q13-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi13 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi14" class="locked">4.4 Public Key Infrastructure (PKI)</h3>
+        <div class="theory cabi14">
+            <div class="course-container">
+                <h4>Key Components</h4>
+                <p><strong>Certificates:</strong> Digital certificates link public keys to individuals or entities, verified by a trusted authority (Certificate Authority, or CA).</p>
+                <p><strong>Certificate Authorities (CAs):</strong> Trusted organizations that issue digital certificates, verifying the identity of the certificate holder.</p>
+                <p><strong>Applications:</strong> Used in securing online transactions (e.g., HTTPS websites), enabling secure email communication, and digital signatures. Facilitates secure VPN connections and network authentication systems.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi14">
+                <div class="question">
+                    <label for="q14"><h5>Question:</h5> What role does a Certificate Authority (CA) play in PKI?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q14' class="task-form">
+                        <input type="radio" name="task14" value="correct"> Verifies the identity of entities and issues digital certificates.<br>
+                        <input type="radio" name="task14" value="wrong"> Encrypts and decrypts data using public and private keys.<br>
+                        <input type="radio" name="task14" value="wrong"> Stores public keys and manages key exchanges.<br>
+                        <span class="feedback" id="q14-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi14 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi15" class="locked">4.5 Digital Signatures</h3>
+        <div class="theory cabi15">
+            <div class="course-container">
+                <h4>How It Works</h4>
+                <p><strong>Purpose:</strong> Digital signatures provide a way to ensure the authenticity and integrity of digital documents, messages, or software. They guarantee that the data has not been altered and that it came from a verified sender.</p>
+                <p><strong>Applications:</strong> Signing software updates to prevent malware from being installed. Verifying the authenticity of email messages and documents. Electronic contracts and legal documents use digital signatures to confirm the identity of signatories.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi15">
+                <div class="question">
+                    <label for="q15"><h5>Question:</h5> What do digital signatures ensure?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q15' class="task-form">
+                        <input type="radio" name="task15" value="correct"> The authenticity and integrity of digital documents.<br>
+                        <input type="radio" name="task15" value="wrong"> That data is encrypted using symmetric encryption.<br>
+                        <input type="radio" name="task15" value="wrong"> That data has been hashed to prevent tampering.<br>
+                        <span class="feedback" id="q15-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi15 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi16" class="locked">4.6 Tools for Cryptography Applications</h3>
+        <div class="theory cabi16">
+            <div class="course-container">
+                <h4>Encryption Tools</h4>
+                <p><strong>VeraCrypt:</strong> A free, open-source disk encryption tool that provides full-disk encryption as well as encryption for specific files and folders.</p>
+                <p><strong>GnuPG (GNU Privacy Guard):</strong> Free software for secure communication and data storage, offering encryption and signing capabilities for files and emails.</p>
+
+                <h4>Certificate Management Tools</h4>
+                <p><strong>OpenSSL:</strong> A widely used open-source toolkit for SSL/TLS, providing encryption for secure communications over computer networks.</p>
+                <p><strong>Let's Encrypt:</strong> A free, automated, and open Certificate Authority (CA) that provides digital certificates for securing websites using SSL/TLS.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi16">
+                <div class="question">
+                    <label for="q16"><h5>Question:</h5> Which tool provides free, automated SSL certificates for securing websites?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q16' class="task-form">
+                        <input type="radio" name="task16" value="wrong"> OpenSSL.<br>
+                        <input type="radio" name="task16" value="correct"> Let's Encrypt.<br>
+                        <input type="radio" name="task16" value="wrong"> GnuPG.<br>
+                        <span class="feedback" id="q16-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi16 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<section>
+    <h2>5. Cloud Security Applications</h2>
+    <!--p>As more businesses move their infrastructure and services to the cloud, securing these environments has become a critical component of cybersecurity. Cloud security addresses various threats to data and applications stored in the cloud, ensuring that access and use of cloud resources remain secure. The following key concepts and tools outline the essentials of cloud security.</p-->
+
+    
+    <article>
+        <h3 course-id="cabi17" class="locked">5.1 Cloud Access Security Brokers (CASB)</h3>
+        <div class="theory cabi17">
+            <div class="course-container">
+                <h4>Cloud Access Security Brokers (CASB)</h4>
+                <p><strong>Purpose:</strong> CASBs act as intermediaries between users and cloud service providers, offering visibility into cloud application usage and enforcing security policies across cloud services.</p>
+                <p><strong>How It Works:</strong> Monitors user activity in real-time to detect unauthorized access and policy violations, enforces Data Loss Prevention (DLP) policies, integrates malware detection, and provides visibility into shadow IT.</p>
+                <p><strong>Key Features:</strong> Visibility, policy enforcement, and malware detection.</p>
+                <p><strong>Applications:</strong> Prevents unauthorized sharing of sensitive data and ensures compliance with regulatory requirements.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi17">
+                <div class="question">
+                    <label for="q17"><h5>Question:</h5> What is the primary function of a CASB?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q17' class="task-form">
+                        <input type="radio" name="task17" value="correct"> To act as an intermediary between users and cloud service providers.<br>
+                        <input type="radio" name="task17" value="wrong"> To manage encryption keys for cloud resources.<br>
+                        <input type="radio" name="task17" value="wrong"> To store data in encrypted cloud services.<br>
+                        <span class="feedback" id="q17-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi17 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi18" class="locked">5.2 Identity and Access Management (IAM)</h3>
+        <div class="theory cabi18">
+            <div class="course-container">
+                <h4>Identity and Access Management (IAM)</h4>
+                <p><strong>Purpose:</strong> IAM is a framework for managing and controlling access to cloud resources. It ensures the right users have appropriate access levels.</p>
+                <p><strong>How It Works:</strong> Assigns roles and permissions based on responsibilities and manages access using policies.</p>
+                <p><strong>Key Features:</strong> Role-Based Access Control (RBAC), granular policies, and audit logs.</p>
+                <p><strong>Applications:</strong> Ensures only authorized employees can access sensitive cloud resources, helping maintain compliance.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi18">
+                <div class="question">
+                    <label for="q18"><h5>Question:</h5> What does IAM primarily manage?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q18' class="task-form">
+                        <input type="radio" name="task18" value="correct"> User access and permissions to cloud resources.<br>
+                        <input type="radio" name="task18" value="wrong"> Data encryption methods in cloud storage.<br>
+                        <input type="radio" name="task18" value="wrong"> Threat detection and malware scanning.<br>
+                        <span class="feedback" id="q18-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi18 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi19" class="locked">5.3 Multi-Factor Authentication (MFA)</h3>
+        <div class="theory cabi19">
+            <div class="course-container">
+                <h4>Multi-Factor Authentication (MFA)</h4>
+                <p><strong>Purpose:</strong> MFA adds an extra layer of security by requiring more than one method of authentication before accessing cloud resources.</p>
+                <p><strong>How It Works:</strong> Users provide two or more verification methods, such as a password and a token or biometric data.</p>
+                <p><strong>Key Features:</strong> One-Time Passwords (OTP), biometric authentication, and security tokens.</p>
+                <p><strong>Applications:</strong> Protects cloud resources like AWS, Azure, and Google Cloud by adding an extra layer of security even if passwords are compromised.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi19">
+                <div class="question">
+                    <label for="q19"><h5>Question:</h5> What does MFA protect cloud resources from?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q19' class="task-form">
+                        <input type="radio" name="task19" value="correct"> Compromised accounts due to weak or stolen passwords.<br>
+                        <input type="radio" name="task19" value="wrong"> Unauthorized physical access to cloud data centers.<br>
+                        <input type="radio" name="task19" value="wrong"> Malware uploaded to cloud servers.<br>
+                        <span class="feedback" id="q19-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi19 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi20" class="locked">5.4 Data Encryption and Security Tools</h3>
+        <div class="theory cabi20">
+            <div class="course-container">
+                <h4>Data Encryption and Security Tools</h4>
+                <p><strong>Purpose:</strong> Encryption ensures the confidentiality and integrity of data stored in and transmitted between cloud services.</p>
+                <p><strong>Data at Rest Encryption:</strong> Encrypts data stored in cloud environments to prevent unauthorized access.</p>
+                <p><strong>Data in Transit Encryption:</strong> Protects data moving between the user and cloud using SSL/TLS.</p>
+                <p><strong>Secure API Endpoints:</strong> Ensures APIs used for cloud applications are secured with encryption and authentication.</p>
+                <p><strong>Key Features:</strong> Key management, SSL/TLS encryption, and API security.</p>
+                <p><strong>Applications:</strong> Encrypting sensitive customer data stored in cloud databases and ensuring secure communication through encrypted API endpoints.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi20">
+                <div class="question">
+                    <label for="q20"><h5>Question:</h5> What does encryption of data at rest protect against?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q20' class="task-form">
+                        <input type="radio" name="task20" value="correct"> Unauthorized access to physical storage devices.<br>
+                        <input type="radio" name="task20" value="wrong"> Unauthorized access while data is being transmitted.<br>
+                        <input type="radio" name="task20" value="wrong"> Unapproved changes to cloud infrastructure.<br>
+                        <span class="feedback" id="q20-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi20 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi21" class="locked">5.5 Tools for Cloud Security Applications</h3>
+        <div class="theory cabi21">
+            <div class="course-container">
+                <h4>CASB Solutions</h4>
+                <p><strong>Microsoft Cloud App Security:</strong> Provides visibility into cloud usage and enforces security policies across cloud applications.</p>
+                <p><strong>Netskope:</strong> Protects against cloud-based threats and provides granular visibility and control over cloud services and data.</p>
+
+                <h4>IAM Tools</h4>
+                <p><strong>AWS IAM:</strong> Centralized control over user access and permissions for AWS resources.</p>
+                <p><strong>Azure Active Directory (AD):</strong> Provides identity management and access control for Microsoft Azure cloud services.</p>
+
+                <h4>Cloud Encryption Tools</h4>
+                <p><strong>AWS Key Management Service (KMS):</strong> Manages encryption keys used to protect data stored on AWS.</p>
+                <p><strong>Google Cloud KMS:</strong> Centralized key management for encrypting data stored on Google Cloud.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi21">
+                <div class="question">
+                    <label for="q21"><h5>Question:</h5> Which service provides centralized key management for Google Cloud?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q21' class="task-form">
+                        <input type="radio" name="task21" value="wrong"> AWS KMS.<br>
+                        <input type="radio" name="task21" value="correct"> Google Cloud KMS.<br>
+                        <input type="radio" name="task21" value="wrong"> Azure Active Directory.<br>
+                        <span class="feedback" id="q21-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi21 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+<section>
+    <h2>6. Penetration Testing Tools</h2>
+    <!--p>Penetration testing is a crucial aspect of cybersecurity, simulating real-world attacks to identify vulnerabilities in networks, systems, and applications. Utilizing various tools and frameworks, penetration testers can effectively assess the security posture of an organization and provide actionable insights to improve defenses.</p-->
+
+
+    <article>
+        <h3 course-id="cabi22" class="locked">6.1 Automated Vulnerability Scanners</h3>
+        <div class="theory cabi22">
+            <div class="course-container">
+                <h4>Automated Vulnerability Scanners</h4>
+                <p><strong>Purpose:</strong> Essential tools for identifying known vulnerabilities, misconfigurations, and missing patches within networks, applications, and systems.</p>
+                <p><strong>How It Works:</strong> Scans are conducted using pre-defined databases of vulnerabilities, allowing the tool to identify weaknesses based on known attack vectors. Reports generated provide detailed information about the vulnerabilities found, including severity ratings, potential impacts, and remediation suggestions.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Network Scanning: Scans entire networks to identify vulnerable devices and services.</li>
+                    <li>Web Application Scanning: Examines web applications for common vulnerabilities such as SQL injection and cross-site scripting (XSS).</li>
+                    <li>Customizable Reports: Generates comprehensive reports tailored to different audiences, from technical teams to management.</li>
+                </ul>
+                <p><strong>Applications:</strong> Regular scanning of network infrastructure to ensure compliance with security policies and conducting pre-audit checks before formal penetration testing engagements to identify areas of concern.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi22">
+                <div class="question">
+                    <label for="q22"><h5>Question:</h5> What is the primary purpose of automated vulnerability scanners?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q22' class="task-form">
+                        <input type="radio" name="task22" value="correct"> To identify known vulnerabilities and misconfigurations.<br>
+                        <input type="radio" name="task22" value="wrong"> To exploit vulnerabilities in applications.<br>
+                        <input type="radio" name="task22" value="wrong"> To perform manual penetration testing.<br>
+                        <span class="feedback" id="q22-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi22 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi23" class="locked">6.2 Penetration Testing Frameworks</h3>
+        <div class="theory cabi23">
+            <div class="course-container">
+                <h4>Metasploit</h4>
+                <p><strong>Purpose:</strong> A widely-used open-source penetration testing framework that enables security professionals to exploit known vulnerabilities in systems and applications.</p>
+                <p><strong>How It Works:</strong> Provides a suite of tools for creating and executing exploits against target systems. Supports various payloads for different platforms, allowing testers to gain control over compromised systems.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Enumeration: Tools to gather information about the target, such as open ports and services running.</li>
+                    <li>Payload Generation: Allows testers to generate payloads that can be used to exploit vulnerabilities.</li>
+                    <li>Exploitation: Facilitates the exploitation of identified vulnerabilities through its extensive library of exploits.</li>
+                </ul>
+                <p><strong>Applications:</strong> Used in red teaming exercises to simulate advanced persistent threats (APTs) and assess an organization’s security response, helping identify weaknesses in system configurations and security controls.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi23">
+                <div class="question">
+                    <label for="q23"><h5>Question:</h5> What is Metasploit primarily used for?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q23' class="task-form">
+                        <input type="radio" name="task23" value="correct"> Exploiting known vulnerabilities in systems.<br>
+                        <input type="radio" name="task23" value="wrong"> Scanning networks for open ports.<br>
+                        <input type="radio" name="task23" value="wrong"> Managing user access to systems.<br>
+                        <span class="feedback" id="q23-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi23 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi24" class="locked">6.3 Web Application Testing Tools</h3>
+        <div class="theory cabi24">
+            <div class="course-container">
+                <h4>Web Application Testing Tools</h4>
+                <p><strong>Purpose:</strong> These tools focus on identifying vulnerabilities specific to web applications, including SQL injection, cross-site scripting (XSS), and misconfigured web servers.</p>
+                <p><strong>How It Works:</strong> Scans web applications for common vulnerabilities using automated testing techniques and offers manual testing capabilities, allowing penetration testers to interact with the application and test for complex vulnerabilities.</p>
+                <p><strong>Key Features:</strong></p>
+                <ul>
+                    <li>Automated Scanning: Quickly identifies security flaws across web applications.</li>
+                    <li>Manual Testing: Provides tools for manually testing applications, including intercepting requests and modifying parameters.</li>
+                    <li>Reporting: Generates detailed reports outlining identified vulnerabilities, their risk levels, and recommended remediation steps.</li>
+                </ul>
+                <p><strong>Applications:</strong> Regularly testing web applications during development to identify security issues before deployment and performing compliance assessments to ensure applications meet security standards.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi24">
+                <div class="question">
+                    <label for="q24"><h5>Question:</h5> What type of vulnerabilities do web application testing tools primarily focus on?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q24' class="task-form">
+                        <input type="radio" name="task24" value="correct"> Vulnerabilities specific to web applications.<br>
+                        <input type="radio" name="task24" value="wrong"> Vulnerabilities in network configurations.<br>
+                        <input type="radio" name="task24" value="wrong"> Malware infections on servers.<br>
+                        <span class="feedback" id="q24-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi24 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+  
+    <article>
+        <h3 course-id="cabi25" class="locked">6.4 Tools</h3>
+        <div class="theory cabi25">
+            <div class="course-container">
+                <h4>Vulnerability Scanners</h4>
+                <p><strong>Nessus:</strong> A widely-used vulnerability scanner that identifies vulnerabilities in networks, systems, and applications.</p>
+                <p><strong>Key Features:</strong> Comprehensive vulnerability database, customizable scans, and detailed reporting capabilities.</p>
+                <p><strong>Applications:</strong> Used for continuous network security monitoring and compliance audits.</p>
+
+                <p><strong>OpenVAS:</strong> An open-source vulnerability scanner that provides powerful scanning capabilities.</p>
+                <p><strong>Key Features:</strong> Regularly updated vulnerability feeds, support for multiple scan configurations, and extensive reporting options.</p>
+                <p><strong>Applications:</strong> Ideal for organizations seeking a cost-effective vulnerability assessment solution.</p>
+
+                <p><strong>Qualys:</strong> A cloud-based vulnerability management tool that offers comprehensive security assessments.</p>
+                <p><strong>Key Features:</strong> Automated scanning, real-time monitoring, and integration with other security tools.</p>
+                <p><strong>Applications:</strong> Used by organizations to continuously monitor and manage vulnerabilities across their environments.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi25">
+                <div class="question">
+                    <label for="q25"><h5>Question:</h5> What is Nessus primarily used for?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q25' class="task-form">
+                        <input type="radio" name="task25" value="correct"> Identifying vulnerabilities in networks and applications.<br>
+                        <input type="radio" name="task25" value="wrong"> Exploiting system vulnerabilities.<br>
+                        <input type="radio" name="task25" value="wrong"> Managing user permissions.<br>
+                        <span class="feedback" id="q25-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi25 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3 course-id="cabi27" class="locked">6.5 Penetration Testing Frameworks</h3>
+        <div class="theory cabi27">
+            <div class="course-container">
+                <h4>Metasploit:</h4>
+                <p><strong>Purpose:</strong> An open-source framework used for developing and executing exploit code against remote targets.</p>
+                <p><strong>Key Features:</strong> Extensive library of exploits, payloads, and auxiliary modules for different penetration testing scenarios.</p>
+                <p><strong>Applications:</strong> Enables security professionals to conduct thorough penetration tests and identify weaknesses in systems.</p>
+
+                <p><strong>Core Impact:</strong> A commercial penetration testing tool that provides comprehensive features for security assessments.</p>
+                <p><strong>Key Features:</strong> Integration with vulnerability scanners, advanced reporting capabilities, and extensive exploit libraries.</p>
+                <p><strong>Applications:</strong> Often used by professional penetration testers and security firms for high-stakes assessments.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi27">
+                <div class="question">
+                    <label for="q26"><h5>Question:</h5> What is Core Impact primarily used for?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q26' class="task-form">
+                        <input type="radio" name="task26" value="correct"> Conducting comprehensive security assessments.<br>
+                        <input type="radio" name="task26" value="wrong"> Performing network scans.<br>
+                        <input type="radio" name="task26" value="wrong"> Managing cloud services.<br>
+                        <span class="feedback" id="q26-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi27 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi27" class="locked">6.6 Web Application Testing Tools</h3>
+        <div class="theory cabi27">
+            <div class="course-container">
+                <h4>Burp Suite:</h4>
+                <p><strong>Purpose:</strong> A powerful web application security testing tool that offers a range of features for manual and automated testing.</p>
+                <p><strong>Key Features:</strong> Intercepting proxy, scanner for automated vulnerability detection, and tools for manual testing and analysis.</p>
+                <p><strong>Applications:</strong> Commonly used by security professionals to identify and exploit web application vulnerabilities.</p>
+
+                <p><strong>OWASP ZAP (Zed Attack Proxy):</strong> An open-source web application security scanner that helps find vulnerabilities in web applications.</p>
+                <p><strong>Key Features:</strong> Active and passive scanning capabilities, customizable alerts, and support for various web application technologies.</p>
+                <p><strong>Applications:</strong> Used by developers and security professionals for testing web applications during the development lifecycle.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi27">
+                <div class="question">
+                    <label for="q27"><h5>Question:</h5> What is Burp Suite primarily used for?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q27' class="task-form">
+                        <input type="radio" name="task27" value="correct"> Testing web application security.<br>
+                        <input type="radio" name="task27" value="wrong"> Scanning network devices.<br>
+                        <input type="radio" name="task27" value="wrong"> Managing user identities.<br>
+                        <span class="feedback" id="q27-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi27 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<section>
+    <h2>7. Incident Response and Forensics Tools</h2>
+    <!--p>Incident response and digital forensics are essential components of cybersecurity, enabling organizations to effectively manage security incidents and investigate potential breaches. The right tools and frameworks are crucial for timely detection, analysis, and resolution of incidents, as well as for preserving evidence in case of legal proceedings.</p-->
+
+   
+    <article>
+        <h3 course-id="cabi28" class="locked">7.1 Security Information and Event Management (SIEM)</h3>
+        <div class="theory cabi28">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>SIEM solutions are designed to collect and analyze security data from across an organization's IT infrastructure. They play a critical role in monitoring, detecting, and responding to potential security incidents in real-time.</p>
+                
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Log Collection:</strong> SIEM systems gather logs and security alerts from various sources, including firewalls, servers, network devices, and applications.</li>
+                    <li><strong>Data Correlation:</strong> Advanced algorithms analyze the collected data, correlating events to identify patterns indicative of security incidents.</li>
+                    <li><strong>Centralized Monitoring:</strong> Provides a single pane of glass for security teams to monitor and respond to incidents efficiently.</li>
+                </ul>
+                
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Real-Time Alerts: Immediate notifications for suspicious activities based on predefined rules and thresholds.</li>
+                    <li>Incident Investigation: Tools for conducting in-depth investigations into alerts, providing context and facilitating quick responses.</li>
+                    <li>Reporting and Compliance: Generates detailed reports for compliance with regulatory requirements and internal policies.</li>
+                </ul>
+                
+                <h4>Applications</h4>
+                <p>Monitoring networks and systems for anomalies and security breaches. Automating incident response processes to minimize response times and mitigate damages.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi28">
+                <div class="question">
+                    <label for="q28"><h5>Question:</h5> What is the primary function of SIEM solutions?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q28' class="task-form">
+                        <input type="radio" name="task28" value="correct"> To collect and analyze security data across IT infrastructure.<br>
+                        <input type="radio" name="task28" value="wrong"> To perform digital forensics on collected evidence.<br>
+                        <input type="radio" name="task28" value="wrong"> To manage user permissions and access control.<br>
+                        <span class="feedback" id="q28-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi28 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi29" class="locked">7.2 Digital Forensics</h3>
+        <div class="theory cabi29">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>Digital forensics involves the systematic collection, preservation, and analysis of data from computers, networks, and other digital devices. It aims to uncover evidence that can be used in legal proceedings and to understand the nature of security incidents.</p>
+                
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Data Collection:</strong> Forensic experts collect digital evidence while ensuring that the integrity of the data is maintained.</li>
+                    <li><strong>Analysis:</strong> Tools and techniques are applied to analyze the data, uncovering information about the nature and impact of incidents.</li>
+                    <li><strong>Documentation:</strong> A detailed chain of custody is established to document every step taken during the forensic process, ensuring that the evidence remains admissible in court.</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Evidence Preservation: Ensures that collected data remains unaltered and secure throughout the investigation process.</li>
+                    <li>Data Recovery: Techniques for recovering deleted or corrupted files that may contain critical evidence.</li>
+                    <li>Expert Testimony: Forensic specialists may be required to provide expert testimony regarding the evidence collected during investigations.</li>
+                </ul>
+
+                <h4>Applications</h4>
+                <p>Investigating data breaches, insider threats, and other security incidents. Supporting legal cases by providing reliable and well-documented digital evidence.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi29">
+                <div class="question">
+                    <label for="q29"><h5>Question:</h5> What is the main goal of digital forensics?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q29' class="task-form">
+                        <input type="radio" name="task29" value="correct"> To uncover evidence for legal proceedings.<br>
+                        <input type="radio" name="task29" value="wrong"> To automate incident response processes.<br>
+                        <input type="radio" name="task29" value="wrong"> To monitor network traffic for anomalies.<br>
+                        <span class="feedback" id="q29-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi29 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- SIEM Tools Section -->
+    <article>
+        <h3 course-id="cabi30" class="locked">7.3 SIEM Tools</h3>
+        <div class="theory cabi30">
+            <div class="course-container">
+                <h4>Splunk</h4>
+                <p><strong>Purpose:</strong> A leading SIEM solution that provides powerful data analytics capabilities for security monitoring and incident response.</p>
+                <p><strong>Key Features:</strong> Real-time data processing, advanced threat detection, and customizable dashboards for monitoring.</p>
+                <p><strong>Applications:</strong> Used by organizations to enhance security visibility and improve incident response capabilities.</p>
+
+                <h4>IBM QRadar</h4>
+                <p><strong>Purpose:</strong> A comprehensive SIEM solution that offers real-time monitoring and analysis of security events.</p>
+                <p><strong>Key Features:</strong> Correlation engine, threat intelligence integration, and incident response automation.</p>
+                <p><strong>Applications:</strong> Ideal for large enterprises seeking to consolidate security monitoring and improve threat detection.</p>
+
+                <h4>ArcSight</h4>
+                <p><strong>Purpose:</strong> A robust SIEM platform that provides security monitoring, compliance, and incident response capabilities.</p>
+                <p><strong>Key Features:</strong> Real-time log analysis, threat detection, and compliance reporting.</p>
+                <p><strong>Applications:</strong> Widely used in regulated industries to ensure compliance with security standards.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi30">
+                <div class="question">
+                    <label for="q30"><h5>Question:</h5> What is the purpose of IBM QRadar?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q30' class="task-form">
+                        <input type="radio" name="task30" value="correct"> To offer real-time monitoring and analysis of security events.<br>
+                        <input type="radio" name="task30" value="wrong"> To recover deleted files during an investigation.<br>
+                        <input type="radio" name="task30" value="wrong"> To automate software deployment across networks.<br>
+                        <span class="feedback" id="q30-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi30 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi31" class="locked">7.4 Digital Forensic Tools</h3>
+        <div class="theory cabi31">
+            <div class="course-container">
+                <h4>Autopsy</h4>
+                <p><strong>Purpose:</strong> An open-source digital forensics platform for analyzing hard drives and smartphones.</p>
+                <p><strong>Key Features:</strong> User-friendly interface, modular design, and support for various file systems and image formats.</p>
+                <p><strong>Applications:</strong> Used by forensic investigators to recover and analyze digital evidence from devices.</p>
+
+                <h4>EnCase</h4>
+                <p><strong>Purpose:</strong> A commercial digital forensic tool that provides comprehensive capabilities for data acquisition and analysis.</p>
+                <p><strong>Key Features:</strong> Disk imaging, file recovery, and extensive reporting capabilities.</p>
+                <p><strong>Applications:</strong> Commonly used by law enforcement and corporate investigators for in-depth forensic analysis.</p>
+
+                <h4>FTK (Forensic Toolkit)</h4>
+                <p><strong>Purpose:</strong> A digital forensic tool that provides powerful data analysis and visualization features.</p>
+                <p><strong>Key Features:</strong> Disk imaging, file recovery, and advanced search capabilities.</p>
+                <p><strong>Applications:</strong> Utilized in investigations to analyze large volumes of data quickly and effectively.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi31">
+                <div class="question">
+                    <label for="q31"><h5>Question:</h5> What is the primary function of Autopsy?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q31' class="task-form">
+                        <input type="radio" name="task31" value="correct"> Analyzing hard drives and smartphones for digital evidence.<br>
+                        <input type="radio" name="task31" value="wrong"> Performing real-time network monitoring.<br>
+                        <input type="radio" name="task31" value="wrong"> Generating compliance reports for regulatory requirements.<br>
+                        <span class="feedback" id="q31-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi31 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+   
+    <article>
+        <h3 course-id="cabi32" class="locked">7.5 Log Analysis Tools</h3>
+        <div class="theory cabi32">
+            <div class="course-container">
+                <h4>ELK Stack (Elasticsearch, Logstash, Kibana)</h4>
+                <p><strong>Purpose:</strong> A powerful open-source stack for collecting, analyzing, and visualizing log data.</p>
+                <p><strong>Key Features:</strong> Centralized log management, real-time data analysis, and customizable dashboards.</p>
+                <p><strong>Applications:</strong> Used by organizations to gain insights from logs and enhance incident response capabilities.</p>
+
+                <h4>Graylog</h4>
+                <p><strong>Purpose:</strong> An open-source log management platform that provides real-time analysis of log data.</p>
+                <p><strong>Key Features:</strong> Centralized logging, customizable alerts, and powerful search capabilities.</p>
+                <p><strong>Applications:</strong> Ideal for monitoring and analyzing security events across IT infrastructures.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi32">
+                <div class="question">
+                    <label for="q32"><h5>Question:</h5> What is the primary function of Graylog?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q32' class="task-form">
+                        <input type="radio" name="task32" value="correct"> Providing real-time analysis of log data.<br>
+                        <input type="radio" name="task32" value="wrong"> Conducting digital forensic investigations.<br>
+                        <input type="radio" name="task32" value="wrong"> Implementing network access controls.<br>
+                        <span class="feedback" id="q32-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi32 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+<section>
+    <h2>8. Password Management and Authentication Tools</h2>
+    <!--p>Effective password management and authentication are essential for safeguarding sensitive information and preventing unauthorized access to systems. By leveraging password vaults, multi-factor authentication (MFA), and single sign-on (SSO) solutions, organizations can significantly enhance their security posture.</p-->
+
+    
+    <article>
+        <h3 course-id="cabi33" class="locked">8.1 Password Vaults</h3>
+        <div class="theory cabi33">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>Password vaults are tools designed to securely store and encrypt user credentials, significantly reducing the risks associated with weak or reused passwords.</p>
+                
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Secure Storage:</strong> Passwords and sensitive information are stored in an encrypted format, making it inaccessible to unauthorized users.</li>
+                    <li><strong>Auto-fill Functionality:</strong> Many password vaults offer browser extensions that automatically fill in login forms, streamlining the login process while ensuring that complex passwords are used.</li>
+                </ul>
+                
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Password Generation: Automatically generates strong, unique passwords for different accounts, reducing the chances of password-related breaches.</li>
+                    <li>Cross-Platform Synchronization: Enables users to access their stored passwords across multiple devices securely.</li>
+                    <li>Security Audits: Provides insights into password strength, alerts for weak or reused passwords, and recommendations for improving security.</li>
+                </ul>
+                
+                <h4>Applications</h4>
+                <p>Helps users manage their credentials effectively, ensuring that they are not using weak or easily guessable passwords. Reduces the likelihood of phishing attacks succeeding due to weak password practices.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi33">
+                <div class="question">
+                    <label for="q33"><h5>Question:</h5> What is the primary function of password vaults?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q33' class="task-form">
+                        <input type="radio" name="task33" value="correct"> To securely store and encrypt user credentials.<br>
+                        <input type="radio" name="task33" value="wrong"> To perform automatic backups of system files.<br>
+                        <input type="radio" name="task33" value="wrong"> To monitor network traffic for anomalies.<br>
+                        <span class="feedback" id="q33-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi33 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi34" class="locked">8.2 Multi-Factor Authentication (MFA)</h3>
+        <div class="theory cabi34">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>MFA adds an additional layer of security by requiring more than one form of verification from users before granting access to an account or system.</p>
+                
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Verification Factors:</strong> Typically involves a combination of something the user knows (password), something the user has (mobile device or hardware token), and something the user is (biometrics).</li>
+                    <li><strong>Challenge-Response:</strong> Upon entering a password, the user is prompted to provide additional verification, such as a code sent to their mobile device or a fingerprint scan.</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Improved Security: Even if a password is compromised, unauthorized access is still prevented without the second factor of authentication.</li>
+                    <li>User Convenience: Many MFA solutions allow users to authenticate via familiar methods, such as SMS codes or mobile apps.</li>
+                </ul>
+
+                <h4>Applications</h4>
+                <p>Used across various platforms, including online banking, email services, and enterprise applications, to protect sensitive information.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi34">
+                <div class="question">
+                    <label for="q34"><h5>Question:</h5> What does MFA add to the authentication process?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q34' class="task-form">
+                        <input type="radio" name="task34" value="correct"> An additional layer of verification.<br>
+                        <input type="radio" name="task34" value="wrong"> A simpler login experience.<br>
+                        <input type="radio" name="task34" value="wrong"> A method to change passwords automatically.<br>
+                        <span class="feedback" id="q34-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi34 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+   
+    <article>
+        <h3 course-id="cabi35" class="locked">8.3 Single Sign-On (SSO)</h3>
+        <div class="theory cabi35">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>SSO solutions enable users to access multiple applications with a single set of login credentials, simplifying the user experience while enhancing security.</p>
+                
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Authentication Token:</strong> Upon successful login, SSO systems provide an authentication token that grants access to various applications without requiring re-authentication.</li>
+                    <li><strong>Centralized Management:</strong> User credentials and access permissions are managed from a central platform, simplifying administration and reducing the likelihood of credential theft.</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Enhanced User Experience: Reduces the number of login prompts and the complexity of remembering multiple passwords.</li>
+                    <li>Improved Security: Minimizes the chances of password fatigue, which can lead to weak password practices.</li>
+                </ul>
+
+                <h4>Applications</h4>
+                <p>Commonly used in enterprise environments to streamline access to internal applications and resources, improving productivity and security.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi35">
+                <div class="question">
+                    <label for="q35"><h5>Question:</h5> What is the main benefit of SSO?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q35' class="task-form">
+                        <input type="radio" name="task35" value="correct"> Simplifying access to multiple applications with one login.<br>
+                        <input type="radio" name="task35" value="wrong"> Increasing the number of passwords required for security.<br>
+                        <input type="radio" name="task35" value="wrong"> Automating software updates for applications.<br>
+                        <span class="feedback" id="q35-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi35 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi36" class="locked">8.4 Password Managers</h3>
+        <div class="theory cabi36">
+            <div class="course-container">
+                <h4>LastPass</h4>
+                <p><strong>Purpose:</strong> A popular password management tool that securely stores passwords and personal information.</p>
+                <p><strong>Key Features:</strong> Offers a password generator, autofill capabilities, and secure sharing options.</p>
+                <p><strong>Applications:</strong> Helps users manage their passwords securely and conveniently across devices.</p>
+
+                <h4>Dashlane</h4>
+                <p><strong>Purpose:</strong> A comprehensive password manager that provides a secure vault for credentials and personal information.</p>
+                <p><strong>Key Features:</strong> Dark web monitoring, password health reports, and easy password sharing.</p>
+                <p><strong>Applications:</strong> Ideal for individuals and teams looking to enhance password security and management.</p>
+
+                <h4>1Password</h4>
+                <p><strong>Purpose:</strong> A user-friendly password manager designed to store and protect sensitive information.</p>
+                <p><strong>Key Features:</strong> Travel mode for secure access during travel, family sharing options, and secure document storage.</p>
+                <p><strong>Applications:</strong> Useful for both personal and professional use, facilitating secure password management.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi36">
+                <div class="question">
+                    <label for="q36"><h5>Question:</h5> Which of the following is a feature of Dashlane?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q36' class="task-form">
+                        <input type="radio" name="task36" value="correct"> Dark web monitoring.<br>
+                        <input type="radio" name="task36" value="wrong"> Video conferencing capabilities.<br>
+                        <input type="radio" name="task36" value="wrong"> Automated software updates.<br>
+                        <span class="feedback" id="q36-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi36 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi37" class="locked">8.5 MFA Solutions</h3>
+        <div class="theory cabi37">
+            <div class="course-container">
+                <h4>Google Authenticator</h4>
+                <p><strong>Purpose:</strong> A mobile app that generates time-based one-time passwords (TOTP) for MFA.</p>
+                <p><strong>Key Features:</strong> Simple interface, supports multiple accounts, and works offline.</p>
+                <p><strong>Applications:</strong> Widely used for securing Google accounts and other services that support TOTP.</p>
+
+                <h4>Duo Security</h4>
+                <p><strong>Purpose:</strong> A comprehensive MFA solution that provides strong authentication for users accessing applications.</p>
+                <p><strong>Key Features:</strong> Push notifications, phone call verification, and device health checks.</p>
+                <p><strong>Applications:</strong> Commonly used in enterprise environments for securing access to sensitive applications and data.</p>
+
+                <h4>Microsoft Authenticator</h4>
+                <p><strong>Purpose:</strong> A mobile app that offers MFA through TOTP and push notifications.</p>
+                <p><strong>Key Features:</strong> Seamless integration with Microsoft accounts, account recovery options, and backup capabilities.</p>
+                <p><strong>Applications:</strong> Ideal for organizations using Microsoft services, providing secure access to various applications.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi37">
+                <div class="question">
+                    <label for="q37"><h5>Question:</h5> Which app is designed to generate time-based one-time passwords (TOTP)?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q37' class="task-form">
+                        <input type="radio" name="task37" value="correct"> Google Authenticator.<br>
+                        <input type="radio" name="task37" value="wrong"> Microsoft Teams.<br>
+                        <input type="radio" name="task37" value="wrong"> Zoom.<br>
+                        <span class="feedback" id="q37-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi37 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi38" class="locked">8.6 SSO Providers</h3>
+        <div class="theory cabi38">
+            <div class="course-container">
+                <h4>Okta</h4>
+                <p><strong>Purpose:</strong> A leading identity and access management platform that offers SSO capabilities.</p>
+                <p><strong>Key Features:</strong> Integration with thousands of applications, adaptive authentication, and user lifecycle management.</p>
+                <p><strong>Applications:</strong> Widely used in enterprises to simplify access management and enhance security.</p>
+
+                <h4>Auth0</h4>
+                <p><strong>Purpose:</strong> A flexible authentication and authorization platform that provides SSO capabilities.</p>
+                <p><strong>Key Features:</strong> Customizable login experiences, social login integration, and extensive documentation.</p>
+                <p><strong>Applications:</strong> Suitable for developers looking to implement authentication solutions in their applications.</p>
+
+                <h4>OneLogin</h4>
+                <p><strong>Purpose:</strong> An identity management platform that offers SSO and access management solutions.</p>
+                <p><strong>Key Features:</strong> User-friendly interface, extensive application integrations, and real-time security analytics.</p>
+                <p><strong>Applications:</strong> Used by organizations to streamline user access to applications while maintaining security.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi38">
+                <div class="question">
+                    <label for="q38"><h5>Question:</h5> What does Okta primarily provide?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q38' class="task-form">
+                        <input type="radio" name="task38" value="correct"> Identity and access management with SSO capabilities.<br>
+                        <input type="radio" name="task38" value="wrong"> Data backup and recovery solutions.<br>
+                        <input type="radio" name="task38" value="wrong"> Network monitoring tools.<br>
+                        <span class="feedback" id="q38-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi38 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+<section>
+    <h2>9. Threat Intelligence Platforms</h2>
+    <!--p>Threat intelligence platforms are essential for organizations seeking to enhance their cybersecurity posture by staying informed about emerging threats and automating incident response processes. By leveraging threat feeds and security orchestration tools, organizations can proactively identify and mitigate risks.</p-->
+
+    
+    <article>
+        <h3 course-id="cabi39" class="locked">9.1 Threat Feeds</h3>
+        <div class="theory cabi39">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>Threat feeds are curated sources of threat intelligence data that provide real-time information on the latest threats, vulnerabilities, and attack techniques.</p>
+                
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Data Aggregation:</strong> Threat feeds collect data from various sources, including cybersecurity blogs, industry reports, threat databases, and real-time alerts from security incidents.</li>
+                    <li><strong>Contextual Information:</strong> They provide contextual details about threats, such as indicators of compromise (IOCs), tactics, techniques, and procedures (TTPs) used by attackers.</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Real-Time Updates: Threat feeds are continuously updated to ensure organizations receive the most current threat information.</li>
+                    <li>Customizable Alerts: Many platforms allow organizations to tailor alerts based on specific threats relevant to their industry or environment.</li>
+                </ul>
+
+                <h4>Applications</h4>
+                <p>Helps organizations improve threat detection capabilities by providing timely information to security teams. Assists in proactive defense measures by enabling security teams to understand and respond to emerging threats quickly.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi39">
+                <div class="question">
+                    <label for="q39"><h5>Question:</h5> What is the main function of threat feeds?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q39' class="task-form">
+                        <input type="radio" name="task39" value="correct"> To provide real-time information on the latest threats and vulnerabilities.<br>
+                        <input type="radio" name="task39" value="wrong"> To automate software updates for security tools.<br>
+                        <input type="radio" name="task39" value="wrong"> To monitor user activity on networks.<br>
+                        <span class="feedback" id="q39-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi39 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+
+    <article>
+        <h3 course-id="cabi40" class="locked">9.2 Security Orchestration, Automation, and Response (SOAR)</h3>
+        <div class="theory cabi40">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>SOAR platforms help organizations automate and orchestrate security operations tasks, enhancing the efficiency of threat detection and response processes.</p>
+
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Automation of Repetitive Tasks:</strong> SOAR tools can automate routine security tasks, such as incident triage, alert enrichment, and reporting.</li>
+                    <li><strong>Orchestration of Security Tools:</strong> They enable integration of various security tools and technologies, allowing for streamlined communication and collaboration among different security systems.</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Playbooks: SOAR platforms often come with predefined playbooks that guide security teams through standardized response procedures for common incidents.</li>
+                    <li>Incident Response: Provide tools for tracking and managing incidents, ensuring timely responses and efficient investigations.</li>
+                </ul>
+
+                <h4>Applications</h4>
+                <p>Increases the speed and efficiency of incident response by reducing the manual effort required for threat detection and resolution. Enhances collaboration between security teams by integrating various security tools into a unified platform.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi40">
+                <div class="question">
+                    <label for="q40"><h5>Question:</h5> What is a primary benefit of using SOAR platforms?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q40' class="task-form">
+                        <input type="radio" name="task40" value="correct"> Automating and orchestrating security operations tasks.<br>
+                        <input type="radio" name="task40" value="wrong"> Replacing all manual security processes.<br>
+                        <input type="radio" name="task40" value="wrong"> Encrypting data in transit.<br>
+                        <span class="feedback" id="q40-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi40 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi41" class="locked">9.3 Threat Intelligence Platforms</h3>
+        <div class="theory cabi41">
+            <div class="course-container">
+                <h4>Recorded Future</h4>
+                <p><strong>Purpose:</strong> A leading threat intelligence platform that provides real-time threat intelligence through data analysis.</p>
+                <p><strong>Key Features:</strong> Machine learning capabilities, contextual threat analysis, and integration with security tools for enhanced visibility.</p>
+                <p><strong>Applications:</strong> Helps organizations make informed decisions about their security posture and respond to threats proactively.</p>
+
+                <h4>ThreatConnect</h4>
+                <p><strong>Purpose:</strong> A comprehensive threat intelligence platform that enables organizations to aggregate and analyze threat data.</p>
+                <p><strong>Key Features:</strong> Collaborative environment for threat sharing, automated workflows, and integration with SIEM and SOAR tools.</p>
+                <p><strong>Applications:</strong> Supports security teams in making data-driven decisions and improving their threat detection and response capabilities.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi41">
+                <div class="question">
+                    <label for="q41"><h5>Question:</h5> What does Recorded Future primarily provide?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q41' class="task-form">
+                        <input type="radio" name="task41" value="correct"> Real-time threat intelligence through data analysis.<br>
+                        <input type="radio" name="task41" value="wrong"> Data storage solutions for sensitive information.<br>
+                        <input type="radio" name="task41" value="wrong"> Network performance monitoring tools.<br>
+                        <span class="feedback" id="q41-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi41 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi42" class="locked">9.4 SOAR Tools</h3>
+        <div class="theory cabi42">
+            <div class="course-container">
+                <h4>Splunk Phantom</h4>
+                <p><strong>Purpose:</strong> A SOAR platform that automates and orchestrates security operations to enhance incident response.</p>
+                <p><strong>Key Features:</strong> Playbook automation, customizable workflows, and integration with numerous security products.</p>
+                <p><strong>Applications:</strong> Streamlines security operations and reduces response times to threats by automating repetitive tasks.</p>
+
+                <h4>Demisto (now part of Palo Alto Networks)</h4>
+                <p><strong>Purpose:</strong> A SOAR solution that integrates threat intelligence with security automation and collaboration features.</p>
+                <p><strong>Key Features:</strong> Interactive incident management, real-time collaboration tools, and extensive integrations with security technologies.</p>
+                <p><strong>Applications:</strong> Enhances the overall efficiency of security operations by providing a centralized platform for incident response.</p>
+
+                <h4>IBM Resilient</h4>
+                <p><strong>Purpose:</strong> An enterprise-grade SOAR platform that focuses on automating incident response processes.</p>
+                <p><strong>Key Features:</strong> Dynamic playbook creation, incident response planning, and compliance management tools.</p>
+                <p><strong>Applications:</strong> Helps organizations improve their incident response capabilities while maintaining compliance with industry regulations.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi42">
+                <div class="question">
+                    <label for="q42"><h5>Question:</h5> What is the primary focus of IBM Resilient?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q42' class="task-form">
+                        <input type="radio" name="task42" value="correct"> Automating incident response processes.<br>
+                        <input type="radio" name="task42" value="wrong"> Conducting vulnerability assessments.<br>
+                        <input type="radio" name="task42" value="wrong"> Encrypting sensitive data.<br>
+                        <span class="feedback" id="q42-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi42 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+<section>
+    <h2>10. Virtualization and Container Security</h2>
+    <!--p>Virtualization and containerization have transformed the way organizations deploy applications and manage IT resources. However, they also introduce unique security challenges that require specialized strategies to mitigate risks and protect sensitive data.</p-->
+
+    <article>
+        <h3 course-id="cabi43" class="locked">10.1 Virtual Machine (VM) Security</h3>
+        <div class="theory cabi43">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>VM security focuses on protecting the virtualized environment, including the hypervisors that manage virtual machines (VMs) and ensuring that VMs are properly isolated from one another to prevent unauthorized access and data breaches.</p>
+
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Hypervisor Security:</strong> Hypervisors, such as VMware ESXi or Microsoft Hyper-V, serve as the interface between the physical hardware and the virtual machines. Securing the hypervisor is crucial, as vulnerabilities in the hypervisor can lead to exploitation of all hosted VMs.</li>
+                    <li><strong>Isolation and Segmentation:</strong> Implementing strong isolation between VMs ensures that even if one VM is compromised, others remain secure. Network segmentation within virtual environments reduces the potential for lateral movement during a breach, limiting an attacker’s ability to spread malware across VMs.</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Access Controls: Strict access controls should be enforced for both the hypervisor and VMs to minimize unauthorized access.</li>
+                    <li>Monitoring and Logging: Continuous monitoring of VM performance and security logs can help detect anomalies or unauthorized access attempts.</li>
+                </ul>
+
+                <h4>Applications</h4>
+                <p>Protects sensitive workloads by preventing unauthorized access and lateral movement within the virtual environment. Enhances overall infrastructure security by ensuring that vulnerabilities in one VM do not compromise others.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi43">
+                <div class="question">
+                    <label for="q43"><h5>Question:</h5> What is the primary focus of VM security?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q43' class="task-form">
+                        <input type="radio" name="task43" value="correct"> Protecting the virtualized environment and ensuring proper isolation of VMs.<br>
+                        <input type="radio" name="task43" value="wrong"> Encrypting all data at rest in physical servers.<br>
+                        <input type="radio" name="task43" value="wrong"> Regularly updating the operating system of physical machines.<br>
+                        <span class="feedback" id="q43-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi43 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- Container Security Section -->
+    <article>
+        <h3 course-id="cabi44" class="locked">10.2 Container Security</h3>
+        <div class="theory cabi44">
+            <div class="course-container">
+                <h4>Purpose</h4>
+                <p>Container security focuses on safeguarding containerized applications and their underlying infrastructure, particularly Docker containers, from vulnerabilities and security threats.</p>
+
+                <h4>How It Works</h4>
+                <ul>
+                    <li><strong>Vulnerability Scanning:</strong> Scanning container images for known vulnerabilities before deployment is critical. This includes assessing both the application code and the libraries included in the image.</li>
+                    <li><strong>Privilege Management:</strong> Limiting container privileges helps reduce the risk of privilege escalation attacks. Containers should run with the least privileges necessary to perform their functions.</li>
+                </ul>
+
+                <h4>Key Features</h4>
+                <ul>
+                    <li>Runtime Protection: Implementing security measures that monitor and protect containers during runtime to detect and prevent unauthorized actions.</li>
+                    <li>Configuration Management: Ensuring that container configurations adhere to security best practices, including image integrity and secure access policies.</li>
+                </ul>
+
+                <h4>Applications</h4>
+                <p>Protects containerized applications from vulnerabilities that could be exploited by attackers. Enhances compliance with security policies by ensuring that containers are configured and managed securely.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi44">
+                <div class="question">
+                    <label for="q44"><h5>Question:</h5> What is a key aspect of container security?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q44' class="task-form">
+                        <input type="radio" name="task44" value="correct"> Scanning container images for known vulnerabilities before deployment.<br>
+                        <input type="radio" name="task44" value="wrong"> Using the default configurations for container deployment.<br>
+                        <input type="radio" name="task44" value="wrong"> Running containers with full privileges to ensure functionality.<br>
+                        <span class="feedback" id="q44-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi44 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi45" class="locked">10.3 VM Security Tools</h3>
+        <div class="theory cabi45">
+            <div class="course-container">
+                <h4>VMware vSphere Security</h4>
+                <p><strong>Purpose:</strong> Provides comprehensive security features for managing VMware environments.</p>
+                <p><strong>Key Features:</strong> Role-based access control, VM encryption, and secure boot for VMs.</p>
+                <p><strong>Applications:</strong> Ensures the secure operation of virtual machines within VMware environments.</p>
+
+                <h4>Xen Hypervisor Security</h4>
+                <p><strong>Purpose:</strong> Focuses on securing the Xen hypervisor, a popular open-source hypervisor.</p>
+                <p><strong>Key Features:</strong> Security features include isolation, access control, and monitoring tools for VM performance.</p>
+                <p><strong>Applications:</strong> Provides a secure environment for running virtual machines on Xen.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi45">
+                <div class="question">
+                    <label for="q45"><h5>Question:</h5> What does VMware vSphere Security primarily offer?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q45' class="task-form">
+                        <input type="radio" name="task45" value="correct"> Comprehensive security features for managing VMware environments.<br>
+                        <input type="radio" name="task45" value="wrong"> Data backup solutions for physical servers.<br>
+                        <input type="radio" name="task45" value="wrong"> Tools for application performance monitoring.<br>
+                        <span class="feedback" id="q45-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi45 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+    
+    <article>
+        <h3 course-id="cabi46" class="locked">10.4 Container Security Tools</h3>
+        <div class="theory cabi46">
+            <div class="course-container">
+                <h4>Docker Bench for Security</h4>
+                <p><strong>Purpose:</strong> A script that checks for common best practices in securing Docker containers.</p>
+                <p><strong>Key Features:</strong> Analyzes the Docker configuration and provides recommendations for enhancing security.</p>
+                <p><strong>Applications:</strong> Helps organizations ensure their Docker containers are configured securely.</p>
+
+                <h4>Aqua Security</h4>
+                <p><strong>Purpose:</strong> A comprehensive container security platform that provides vulnerability scanning and runtime protection.</p>
+                <p><strong>Key Features:</strong> Image scanning, runtime security, and compliance checks for containerized applications.</p>
+                <p><strong>Applications:</strong> Protects containers from vulnerabilities and enforces compliance with security policies.</p>
+
+                <h4>Sysdig Secure</h4>
+                <p><strong>Purpose:</strong> A security tool for container environments that offers monitoring and security capabilities.</p>
+                <p><strong>Key Features:</strong> Real-time monitoring, threat detection, and compliance auditing for containerized applications.</p>
+                <p><strong>Applications:</strong> Enhances the security posture of containerized environments by providing visibility and protection against threats.</p>
+                <div class="next"><strong>Next >></strong></div>
+            </div>
+
+            <div class="task" task-id="cabi46">
+                <div class="question">
+                    <label for="q46"><h5>Question:</h5> What does Aqua Security primarily focus on?</label><br>
+                    <p>Select the one that applies:</p>
+                    <form id='q46' class="task-form">
+                        <input type="radio" name="task46" value="correct"> Providing vulnerability scanning and runtime protection for containerized applications.<br>
+                        <input type="radio" name="task46" value="wrong"> Managing physical server infrastructure.<br>
+                        <input type="radio" name="task46" value="wrong"> Offering cloud storage solutions for data.<br>
+                        <span class="feedback" id="q46-feedback"></span>
+                    </form>
+                    <div class="actions">
+                        <button class="check">Check answers</button>
+                        <div class="hint-cabi46 hint-image"><img src="../photos/hint.jfif" alt="Hint"></div>
+                        <div class="nextsection"><strong>Next >></strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+
+
+
+
+    </div>
+</body>
+</html>
